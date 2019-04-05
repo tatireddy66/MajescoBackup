@@ -1,0 +1,39 @@
+/*************************************************************************/
+/*Great American Insurance Group Style Sheet for Print only - Last Updated   11/17/2011 */
+/***********************************************************************/
+#brandingStripe{
+                display:none;
+}
+#globalSearch{
+                display:none;
+}
+
+.afgLogos{display:none;}
+.footer-Specialty{display:none;}
+.footer-Operations{display:none;}
+.footer-Subsidiaries{display:none;}
+#facebookPost{display:none;}
+#afgDescription{padding-top:20px; clear:both; width:300px;color:#808080;font-size:10px; font-style:italic;}
+.footerHR{display:none;}
+
+#EasyTabs{display:none;}
+
+#breadcrumbContainer{display:none;}
+
+.utilities{
+                display:none;
+}
+#copyrightWrapper{
+                display:none;
+}
+
+.navigation-corporate-mastercontainer
+{
+    display:none !IMPORTANT;
+}
+
+.printLogo img {visibility:visible; padding-bottom:15px;padding-top:10px;}
+
+.frontpageslider-container-div{visibility:hidden;}
+
+.s4-notdlg{display:none;}

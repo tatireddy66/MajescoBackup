@@ -1,0 +1,143 @@
+function fileUpload ( url, cb, customhtml, customdesc ) {
+	var dialogBoxDiv = "<div id='dialog_fileUpload' title='File Upload'></div>";
+	
+	if( $( "#dialog_fileUpload" ).length == 0 ) {
+		$( "#rightColumn" ).append( dialogBoxDiv );
+	}	
+	
+	$( function() {
+		$( "#dialog_fileUpload" ).dialog({
+			autoOpen: false,
+			width: 400,
+			modal: true,
+			resizable: false,
+			resize: "auto"
+		}); 
+	}); 
+	
+	if( (customdesc == "") || (customdesc == undefined) ) {
+		customdesc = "Please click on the browse button and select a file from your computer. "
+		+ 'Then click on the "Upload" button to upload the file.';
+	} 
+	
+	if( (customhtml == "") || (customhtml == undefined) ) {
+		customhtml = "";
+	} 
+	
+	var html = '<form id=FileUploadForm name=FileUploadForm method=post >'
+        + '<div id=__cmt>'+customdesc+'</div>\n'
+	+ "<table style='width:100%;text-align:center;'> \n"
+	+ "<tr class=filenamerow> \n"
+	+ "<td >Filename</td> \n"
+	+ "<td ><input style='width:100%' name=ImagePath id=ImagePath class=filePathImg type=file /></td> \n"
+	+ "</tr> \n"
+	+ "<tr class=uploadprogress style='display:none; text-align:center;'> \n"
+	+ "<td colspan=2><img style='align:center' src='../../images/progressbar.gif'></td> \n"
+	+ "</tr> \n"
+	+ "</table> \n"
+	+ "<div id=customhtml style='margin-top:10px'>" + customhtml + "</div>"
+        + "<div style='margin-top:20px; margin-bottom:20px'>"
+	+ "<input style='WIDTH: 80px; HEIGHT: 22px' id=__Cancel "
+	+ "title='Click here to cancel upload and close this window.' value='Cancel' type='button' name=__Cancel "
+	+ "defaultbutton=''> \n"
+	+ "<input style='WIDTH: 80px; HEIGHT: 22px' id=__Upload style=\"display:none;\""
+	+ "title='Click here to upload file.' value='Upload' type='button' name=__Upload>\n"
+        + "</div>"
+	+ "</form> \n"
+	+ "";
+	
+	var dialogBox = $( "#dialog_fileUpload" );
+	dialogBox.html( html );
+
+	$( '#FileUploadForm #__Upload' ).hide(); 
+	$( '#FileUploadForm #ImagePath' ).change( function() {  
+	  $('#FileUploadForm #__Upload').show(); 
+	}); 
+
+	$( '#FileUploadForm #__Upload' ).click( function() {
+		var datalocation = $('#descr').attr('data-location');
+		if (datalocation == 'app') { 
+			var the_description = $('#descr').val();
+			if (the_description == '') { $('#__cmt').html('<p>You must enter a description to upload this file.</p>'); }
+			else {
+				$('#FileUploadForm .filenamerow').hide();		
+				$('#FileUploadForm #__Upload').hide();		
+				$('#FileUploadForm #__Cancel').hide();		
+				$('#FileUploadForm .uploadprogress').show();		
+
+				$('#FileUploadForm #__cmt').html('Please wait while the file is being uploaded...');
+				$('#FileUploadForm #customhtml').hide();
+				fileUploadExec( $('#FileUploadForm'), url, cb);				
+			}
+		} else {
+			$('#FileUploadForm .filenamerow').hide();		
+			$('#FileUploadForm #__Upload').hide();		
+			$('#FileUploadForm #__Cancel').hide();		
+			$('#FileUploadForm .uploadprogress').show();		
+
+			$('#FileUploadForm #__cmt').html('Please wait while the file is being uploaded...');
+			$('#FileUploadForm #customhtml').hide();
+			fileUploadExec( $('#FileUploadForm'), url, cb);
+		}
+	}); 
+
+	$( '#FileUploadForm #__Cancel' ).click( function() { 
+		closeUpload(); 
+		$( '#file_upload' ).remove();
+	}); 
+
+	
+	var form = $( "#FileUploadForm" );
+	form.attr( "target","file_upload" );
+	form.attr( "method","post" );
+	form.attr( "enctype","multipart/form-data" );
+	form.attr( "encoding","multipart/form-data" );
+	
+	dialogBox.dialog( "open" );
+}
+
+function closeUpload() {
+	var dialogBox = $( "#dialog_fileUpload" );
+	dialogBox.dialog( "close" );
+}
+
+function fileUploadExec( form, url, cb ) {
+	var ifrm;	
+	
+	if( $( "#file_upload" ).length == 0 ) {	
+		var iframeAttr = "name=\"file_upload\""
+		+ " id=\"file_upload\""
+		+ " style=\"width: 0px; height: 0px; border: 0px; \"";
+		ifrm = $( "<iframe " + iframeAttr + " /> ").appendTo("body"); 
+		ifrm = document.createElement("iframe"); 
+	}
+	var ifrmness = $( "#file_upload" );
+
+    var prm=form.serialize();
+    if (prm!='') {
+       	if (url.indexOf('?')<0)	url+='?'+prm
+		else url=url+'&'+prm;
+	}
+	form.attr('action', url);
+	ifrmness.load( function() {
+		ifrmness.unbind("load");
+		var response = ifrmness.contents().find( 'body' ).html(); 
+		//resultsBox.html( response ); 
+		$('#FileUploadForm .uploadprogress').hide();		
+		//Global.ShowProgress();	
+		//resultsBox.dialog( "open" );
+        try {
+	  		if (typeof cb !== 'undefined' && cb !== '') {
+				var r = cb(response);
+				if (typeof r != 'undefined' && r!='') response=r;
+			}
+			$('#FileUploadForm #__cmt').html(response);
+			if ($('#FileUploadForm #__cmt').text() == "") 
+			    $('#FileUploadForm #__cmt').text('An error occurred while uploading the file. Please use Refresh to check if the attachment needs to be uploaded again. Sorry for the inconveniences.');
+			$('#FileUploadForm #__Cancel').val('OK');
+			$('#FileUploadForm #__Cancel').attr('title','Click here to close this window.');
+			$('#FileUploadForm #__Cancel').show();		
+		} catch(er) { alert(er)}
+	});	
+	form.submit();
+}

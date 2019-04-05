@@ -1,0 +1,11 @@
+[t69]
+FileName1=t69.htm
+URL1=http://ueatworkuat.maxprocessing.com/doc_lock_status.max?AJAX_ACTION=UnLockALLatLogOut&USR_ID=16769&t=1466686992072
+Total=1
+RequestHeaderFile=t69_RequestHeader.txt
+RequestBodyFile=t69_RequestBody.txt
+ResponseHeaderFile=t69_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_69.xml
+[ProtocolInfo]
+ProtocolId=QTWeb

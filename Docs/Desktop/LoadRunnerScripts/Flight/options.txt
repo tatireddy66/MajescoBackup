@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-IC:\Users\tatire661841.MAJESCO\Desktop\Desktop\LoadRunnerScripts\Flight
+-IC:\Program Files (x86)\HP\LoadRunner\include
+-ec:\users\tatire661841.majesco\desktop\desktop\loadrunnerscripts\flight\\logfile.log
+c:\users\tatire661841.majesco\desktop\desktop\loadrunnerscripts\flight\\combined_Flight.c
+c:\users\tatire661841.majesco\desktop\desktop\loadrunnerscripts\flight\\pre_cci.c

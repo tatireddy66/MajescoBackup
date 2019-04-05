@@ -1,0 +1,46 @@
+.EditorText .moneyField {
+font-family:sans-serif, verdana, arial; 
+text-align:left; 
+color:#000; 
+}
+
+.EditorText .moneyFly {
+width: auto;
+overflow: visible;
+background-color: LightYellow;
+border: 1px solid black;
+box-shadow: 2px 2px 2px #888888;
+z-index: 5000;
+}
+
+input:disabled + .moneyField {
+
+	color: #A0A0A0;  
+
+}
+
+input[disabled] + .moneyField {
+
+    color: #A0A0A0;  
+}
+
+.moneyOver {
+overflow: hidden;
+  /*background-color:#fff;*/
+  z-index:1;
+  pointer-events: none;
+}
+
+.ctrlOver {
+  z-index: 2;
+  background-color: #FFF;
+  pointer-events: none;
+}
+
+.ctrlNorm {
+  z-index: 2;
+  background-color: #FFF;
+  pointer-events: none;
+}
+
+

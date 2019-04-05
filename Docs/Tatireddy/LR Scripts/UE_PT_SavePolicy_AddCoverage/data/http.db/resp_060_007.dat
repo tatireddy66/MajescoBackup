@@ -1,0 +1,80 @@
+PolPopup = new function() {
+  return {
+    usePopup : false,
+    popup : null,
+    open: function(SessionID, OpenItemID)
+    {
+       var url = 'polwindow.htm?ID='+SessionID+'&CLMID='+OpenItemID;
+       if (PolPopup.popup) {
+
+         if (PolPopup.popup.closed) {
+           PolPopup.popup=null;
+         }
+
+       }
+       if (!PolPopup.popup) PolPopup.popup=window.open(url, '_blank', 'height=500,width=780,location=1,menubar=0,resizable=1,scrollbars=1,titlebar=1,toolbar=0,directories=1');
+       else PolPopup.popup.focus();
+       return true;
+    },
+    close: function()
+    {
+      if (PolPopup.popup) {
+        PolPopup.popup.close();
+        PolPopup.popup=null;
+      }
+    }
+  }
+}
+
+
+function PolClick(SessionID, OpenItemID, CallBack)
+{
+  try {
+    if (PolPopup.usePopup) {
+      PolPopup.open(SessionID, OpenItemID);
+      return;
+    }
+
+    var wd=$("#poldialog");
+    if (wd.length==0) {
+      $('#middle').before('<div id=poldialog></div>');
+      wd=$("#poldialog");
+      wd.dialog({
+        autoOpen: false,
+        width: 750,
+        modal: false,
+        resizable: false,
+        autoResize: true,
+        canMinimize: true,
+        canMaximize: true,
+        funcMaximize: function(t) {
+          if (PolPopup.open(SessionID)) {
+            PolPopup.usePopup=true;
+            $('#poldialog').dialog("close");
+            return true;
+          }
+        },
+        title: "Claim Stuff"
+      });
+
+      $("#poldialog").dialog("open").parent('div').css('top','100px');
+      CustomTemplate('claims_egl_page1.max?preprocess=true&id='+SessionID+'&CLMID='+OpenItemID, wd, 'PolScript', function() {
+        $("#poldialog").dialog("open");
+        if (PolScript.OnLoad) PolScript.OnLoad();
+        //if (typeof OpenItemID!='undefined') PolScript.EditItem(OpenItemID,CallBack);
+      });
+    } else {
+      if ($('#poldialog').parents(".ui-dialog").is(":visible")){
+        wd.dialog("close");
+      } else {
+        wd.dialog("open");
+        if (PolScript.Reload) PolScript.Reload();
+        //if (typeof OpenItemID!='undefined') PolScript.EditItem(OpenItemID,CallBack);
+      }
+     //   wd.dialog("close");
+	//	$('#poldialog').html('');
+    }
+  } catch(err) {
+   alert(err);
+  }
+}

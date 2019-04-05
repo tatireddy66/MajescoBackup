@@ -1,0 +1,13 @@
+[t10]
+FileName1=t10_gen_204.htm
+URL1=https://www.google.com/gen_204?atyp=i&zx=1544013431402&ogsr=1&ei=cMYHXKeRKaqk_Qatk6qoDg&ct=6&cad=i&id=19008564&loc=webhp&prid=1&ogd=co.in&ogprm=up&ic=3
+Total=2
+ContentType=text/html
+SnapshotXmlFile=snapshot_10.xml
+RequestHeaderFile=t10_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t10_ResponseHeader.txt
+FileName2=t10_l.html
+URL2=https://translate.googleapis.com/translate_a/l?client=chrome&hl=en&key=dummytoken&alpha=1
+[ProtocolInfo]
+ProtocolId=QTWeb

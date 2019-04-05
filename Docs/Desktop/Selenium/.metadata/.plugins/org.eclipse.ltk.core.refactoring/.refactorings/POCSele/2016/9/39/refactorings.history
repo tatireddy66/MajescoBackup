@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move package &apos;com.generic.pagefactory&apos; to &apos;POC_Selenium/src&apos;&#x0D;&#x0A;- Original project: &apos;POCSele&apos;&#x0D;&#x0A;- Destination element: &apos;POC_Selenium/src&apos;&#x0D;&#x0A;- Original element: &apos;POCSele/src/com.generic.pagefactory&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move package" destination="=POC_Selenium/src" element1="/src&lt;com.generic.pagefactory" flags="589830" fragments="1" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.movePackages" stamp="1474268449891" version="1.0"/>
+</session>

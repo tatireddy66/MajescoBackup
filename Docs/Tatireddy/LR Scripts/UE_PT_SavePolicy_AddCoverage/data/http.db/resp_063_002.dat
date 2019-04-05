@@ -1,0 +1,253 @@
+require(['jquery'], function($){
+
+(function ($) {
+	
+  $.fn.uetaxonomy = function(action, options) {
+    /* checking input parameters */
+	var noaction=false;
+	if (typeof action=='string') {
+	  action=action.toLowerCase();
+	} else if ((typeof action=='object')||(typeof action=='undefined')){
+	  noaction=true;
+	  options=action;
+	  action='init';
+	}
+	/* extending options */
+	var
+	  defopts = {
+	    "itemname" : "forms",
+		"displayname" : null,
+		"url" : "uetaxonomy.max?ACTION=GETCATLIST",
+		"callback" : null,
+		"cls" : "uehidingcat"
+	  };
+    var opts = $.extend( {}, defopts, options );
+	
+	
+  function init(cmp)
+  {
+    var cls = opts.cls;
+    var $this = $(cmp);
+    var nm=$this.attr('name');
+	for (var i = 1; i<=4; i++){
+	  var inm=nm+'_cat'+i;
+	  var sel='.'+cls+'[name="'+inm+'"]';
+      if ($(sel).length==0)
+	    $this=$this.after('<input name="'+inm+'" type=hidden class="'+cls+'">');
+	 }
+  }
+  
+  function initVals(cmp)
+  {
+    var cls = opts.cls;
+    var $this = $(cmp);
+    var nm=$this.attr('name');
+	for (var i = 1; i<=4; i++){
+	  var inm=nm+'_cat'+i;
+	  var sel='.'+cls+'[name="'+inm+'"]';
+      if (($(sel).length>0)&&(typeof opts['cat'+i]!='undefined'))
+	    $this.val(opts['cat'+i]);
+	}
+  }
+  
+  function buildOptions(arr, selected)
+  {
+    var res = '';
+	var issel = false;
+    $.each(arr, function (k,v) {
+	  k=Object.keys(v)[0];
+	  v=v[k];
+	  if (k==selected) {
+	    issel=true;
+  	    res+='<option value="'+k+'" selected>'+v+'</option>';
+	 } else 
+	   res+='<option value="'+k+'">'+v+'</option>';
+	});
+	if (issel) res='<option value="">None</option>'+res
+	else res='<option value="" selected>None</option>'+res;
+	return res;
+  }
+  
+  function applyArrayToDropdown(data, dropdown, selected)
+  {
+  	 var j = $.parseJSON(data);
+	 var res = buildOptions(j, selected);
+	 dropdown.html(res);
+  }
+  
+  function hideHereAndAfter(nm)
+  {
+      nm = parseInt(nm);
+	  if (isNaN(nm)) return;
+	  for (var i=nm; i<=4; i++){ 
+        $('#catrow'+i).hide();
+        $('#catdd'+i).val('');
+      }
+
+  }
+
+  function initDialogBody( dlg )
+  {
+	dlg.html('<table style="width:100%"><tbody>\
+	 <tr class="catrow" id="catrow1" style=""><td class="firstcol">Category 1</td><td><select class="catdd" name=catdd1 id=catdd1><option value="">None</option></select></td></tr>\
+	 <tr class="catrow" id="catrow2" style="display: none"><td class="firstcol">Category 2</td><td><select class="catdd" name=catdd2 id=catdd2><option value="">None</option></select></td></tr>\
+	 <tr class="catrow" id="catrow3" style="display: none"><td class="firstcol">Category 3</td><td><select class="catdd" name=catdd3 id=catdd3><option value="">None</option></select></td></tr>\
+	 <tr class="catrow" id="catrow4" style="display: none"><td class="firstcol">Category 4</td><td><select class="catdd" name=catdd4 id=catdd4><option value="">None</option></select></td></tr>\
+	</tbody></table>');
+	$('#__taxonomydialog .catdd').change(function(){
+	  var v=$(this).val();
+      var n = parseInt($(this).attr('name').substring(5));
+      if (isNaN(n)) return;
+	  if (v=='') {
+	    hideHereAndAfter(n+1);
+	  } else {
+	    $.get(opts.url+'&ITEMNAME='+encodeURIComponent(opts.itemname)+'&PARENT='+v, null, function(data, textStatus){
+			if (textStatus=='success') {
+    	      var nx=n+1;
+			  var nextdd= $('#__taxonomydialog #catdd'+nx);
+		      applyArrayToDropdown(data, nextdd);
+			  nextdd.val('');
+			  if ($('#catrow'+nx+' option').length>1) {
+			    $('#catrow'+nx).show();
+   			    hideHereAndAfter(nx+1);
+			  } else {
+			    // no need to show "NONE" only
+			    hideHereAndAfter(nx);
+			  }
+			  var nvl=opts['_vl'+nx];
+			  if ((typeof nvl!='undefined')&&(nvl!='')) {
+			    opts['_vl'+nx]='';
+			    nextdd.val(nvl).change();
+			  }
+  		    } 
+		  });
+	  }
+	});
+  }
+	
+	
+	function getText()
+	{
+	  res = '';
+	  for (var i = 1; i<=4; i++) {
+	    v = $('#__taxonomydialog #catdd'+i).val();
+		txt = $('#__taxonomydialog #catdd'+i+' option:selected').text();
+		if (v!='') {
+		  if (res!='') res += '/'+txt
+		  else res = txt;
+		}
+	  }
+	  return res;
+	}
+
+    var jobj = $(this);
+    opts = $.extend( {}, opts, jobj.data('uetaxonomy-options')  );
+    jobj.data('uetaxonomy-options', opts);
+
+	
+    if (opts.displayname == null)  opts.displayname = opts.itemname;
+	if (action=='init'){
+	  this.each( function() { init(this) });
+	}
+	// init values. new set of values could be passed on any call!
+	this.each( function() { initVals(this) });
+	
+	if (action=='show'){
+		if ( $('#__taxonomydialog').length!=0) {
+			//alert('Release/Remove 1...');
+          $('#__taxonomydialog').dialog('release');		
+		  $('#__taxonomydialog').remove();
+		}
+		$(body).append('<div id=__taxonomydialog class="taxonomydialog"></div>');
+		initDialogBody( $('#__taxonomydialog') );
+		
+		var dlg=$('#__taxonomydialog').dialog({
+			autoOpen: false,
+			width: 480,
+			modal: true,
+			resizable: false,
+			autoResize: true,
+			canMinimize: true,
+			canMaximize: true,
+			close: function(event, ui){ 
+				//alert('Close callback 1...'); 
+				//cleanup
+				$('#__taxonomydialog').dialog('release');		
+				$('#__taxonomydialog').remove();
+				return; },
+			title: 'Applying category for '+opts.displayname,
+			buttons: {
+              "Cancel": function(){ 
+			  
+			  if (typeof opts.cancelcallback == 'function') {
+				  var res= getText();
+				  var obj = {
+				    'cat1': $('#__taxonomydialog #catdd1').val()
+				    ,'cat2': $('#__taxonomydialog #catdd2').val()
+					,'cat3': $('#__taxonomydialog #catdd3').val()
+					,'cat4': $('#__taxonomydialog #catdd4').val()
+					,'text': res
+				  };
+  		          opts.cancelcallback(obj);
+				}
+				//alert('Closing 1...');
+				$(this).dialog('close');
+				//cleanup
+				$('#__taxonomydialog').dialog('release');		
+				$('#__taxonomydialog').remove();
+			  },
+			  "OK": function(){ 
+ 		        var res= getText();
+				jobj.each( function() {
+				  var ctrl=$(this);
+				  var nm=ctrl.attr('name');
+				  for (var i = 1; i<=4; i++){
+	                var inm=nm+'_cat'+i;
+	                var sel='.'+opts.cls+'[name="'+inm+'"]';
+  				    $(sel).val( $('#__taxonomydialog #catdd'+i).val() );
+                  }
+				  ctrl.val(res);
+				});
+				
+			    if (typeof opts.callback == 'function') {
+				  var obj = {
+				    'cat1': $('#__taxonomydialog #catdd1').val()
+				    ,'cat2': $('#__taxonomydialog #catdd2').val()
+					,'cat3': $('#__taxonomydialog #catdd3').val()
+					,'cat4': $('#__taxonomydialog #catdd4').val()
+					,'text': res
+				  };
+  		          opts.callback(obj);
+				}
+				//alert('Closing 2...');
+ 			    $(this).dialog('close');
+				// cleanup
+				$('#__taxonomydialog').dialog('release');		
+				$('#__taxonomydialog').remove();
+			  }
+			}
+		});
+		$.get(opts.url+'&ITEMNAME='+encodeURIComponent(opts.itemname), null, function(data, textStatus){
+			if (textStatus=='success') {
+		      applyArrayToDropdown(data, $('#__taxonomydialog #catdd1'));
+			  /* checking if values already exist */
+			  var iv=$(jobj).attr('name');
+			  var vl1=$('input[name="'+iv+'_cat1"]').val();
+			  // catching the rest of values
+			  opts._vl2=$('input[name="'+iv+'_cat2"]').val(); 
+			  opts._vl3=$('input[name="'+iv+'_cat3"]').val();
+  		      opts._vl4=$('input[name="'+iv+'_cat4"]').val();
+			  if (vl1!='') {
+			    $('#__taxonomydialog #catdd1').val(vl1).change();
+			  }
+     		  dlg.dialog('open');
+			} else  
+			  alert('server error');
+		  });
+	}
+   	return this;
+  };
+}(jQuery))
+
+// require()
+});

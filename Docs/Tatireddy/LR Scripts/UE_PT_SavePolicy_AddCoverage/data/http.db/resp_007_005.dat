@@ -1,0 +1,52 @@
+function tbw_filter(tableObj){var tableId=tableObj.attr("id");tableObj.data('lastaction','filter');var add_params=TableWalkerCheck(tableObj);var results=TableWalkerAjax(tableObj,add_params,true);if(tableObj.data('perpage')>results){tableObj.data('currentpage',1);var perpage=tableObj.data('perpage');tableObj.data('nextpage',(1+parseInt(perpage)));add_params=TableWalkerCheck(tableObj);}
+TableWalkerAjax(tableObj,add_params);tbw_dialog(tableObj,tableId);}
+function tbw_checkType(tableId){var tableObj=$('#'+tableId);var dialog=$("#dialog_"+tableId);var selbox=$('#sel_'+tableId);var typeBox=$('#sel_'+tableId+'_type');var textfield=$('[name=\"f_text\"]',dialog);var startdate=$('[name=\"f_startDate\"]',dialog);var enddate=$('[name=\"f_endDate\"]',dialog);var filterColumn=$('[column="'+selbox.val()+'"]',tableObj);if(typeBox.val()==filterColumn.attr('filter')){typeBox.data('lastvalue',typeBox.val());selbox.data('lastvalue',selbox.val());}else{typeBox.val(filterColumn.attr('filter'));$('option:selected',typeBox).attr('selected','selected');typeBox.data('lastvalue',typeBox.val());selbox.data('lastvalue',selbox.val());}
+if(typeBox.val()=='date'){$('.tbw_filter_text').hide();$('.tbw_filter_date').show();var dateVal=$('[column="'+selbox.val()+'"]',tableObj).data('f_value');if(dateVal!=undefined&&dateVal!=""){dateVal=dateVal.split("|");startdate.val(dateVal[0]);enddate.val(dateVal[1]);}}else if(typeBox.val()=='text'){$('.tbw_filter_date').hide();$('.tbw_filter_text').show();var val=$('[column="'+selbox.val()+'"]',tableObj).data('f_value');if(val!=undefined)
+textfield.val(val);}}
+function tbw_dialog(tableObj,tableId){var dialogBox=$("#dialog_"+tableId);var value="";var values=new Array();var colOptions=new Array();var filterOptions=new Array();var colOptionsII=new Array();filterOptions['text']="<option value='text'>Text</option>";filterOptions['date']="<option value='date'>Date</option>";var thcell=TableWalkerHeaderCheck(tableObj);$('thead tr '+thcell,tableObj).each(function(index){var column=$(this).attr('column');var columnFilter=$(this).attr('filter');var columnText=$(this).text();if(column!='__RowNum'&&column!=""&&column!=undefined&&columnFilter!=""&&columnFilter!=undefined){colOptions[index]="<option value='"+column+"'>"+columnText+"</option>";colOptionsII[index]=column;}});var selValue=$('#sel_'+tableId).data('lastvalue');var selValue_name=$('#sel_'+tableId).data('lastvalue_name');var typeValue=$('#sel_'+tableId+'_type').data('lastvalue');var fieldValue=$('[name=\"f_text\"]',dialogBox).data('lastvalue');var sdateValue=$('[name=\"f_startDate\"]',dialogBox).data('lastvalue');var edateValue=$('[name=\"f_endDate\"]',dialogBox).data('lastvalue');if(selValue!=''&&selValue!=undefined&&selValue_name!=""&&selValue_name!=undefined){$.each(colOptions,function(index){if(colOptionsII[index]==selValue){colOptions[index]="<option value='"+selValue+"' selected>"+selValue_name+"</option>";}});}
+if(typeValue!=''&&typeValue!=undefined){if(typeValue=="text"){filterOptions['text']="<option value='"+typeValue+"' selected> Text </option>";}else if(typeValue=="date"){filterOptions['date']="<option value='"+typeValue+"' selected> Date </option>";}}
+if(fieldValue!=''&&fieldValue!=undefined)
+value=fieldValue;if(sdateValue!=''&&sdateValue!=undefined||edateValue!=''&&edateValue!=undefined){values[0]=sdateValue;values[1]=edateValue;}else{values[0]="";values[1]="";}
+var customHtml=$('#dcustom_'+tableId+'',dialogBox).html();if(customHtml==""||customHtml==undefined||customHtml==null)
+customHtml="";var html=""
++"<table class='tbw_filter_tableL'> \n"
++" <tr> \n"
++"  <td>Filter Column</td> \n"
++"  <td><select id='sel_"+tableId+"'>"+colOptions+"</select></td> \n"
++" </tr> \n"
++" <tr class='tbw_filtertype_hide'> \n"
++"  <td>Filter Type</td> \n"
++"  <td><select id='sel_"+tableId+"_type'>"+filterOptions['text']+filterOptions['date']+"</select></td> \n"
++" </tr> \n"
++" <tr class='tbw_filter_text'> \n"
++"  <td>Filter Text</td> \n"
++"  <td><input name='f_text' type='text' value='"+value+"' /></td> \n"
++" </tr> \n"
++" <tr class='tbw_filter_date'> \n"
++"  <td>Start Date</td> \n"
++"  <td><input name='f_startDate' class='f_datePicker' type='text'  value='"+values[0]+"'/></td> \n"
++" </tr> \n"
++" <tr class='tbw_filter_date'> \n"
++"  <td>End Date</td> \n"
++"  <td><input name='f_endDate' class='f_datePicker' type='text'  value='"+values[1]+"'/></td> \n"
++" </tr> \n"
++"</table> \n";var filter_rows="";var filters=false;var headers=$("thead tr",tableObj).children(thcell);$(headers).each(function(index){var th=$(this);if(th.data("filtered")!=""&&th.data("filtered")!=undefined){filter_rows=filter_rows
++"<table class='tbw_filter_tableR'> \n"
++" <tr> \n"
++"  <td column='"+th.attr("column")+"' class='tbwf_click2edit'>"+th.text()+"</td> \n"
++"  <td column='"+th.attr("column")+"' style='width:17px;'><img src='../images/inactivex.png' class='f_clearFilters' title='Click here to clear the filter for this column.'/></td> \n"
++" </tr> \n"
++"</table> \n";filters=true;}});if(filters===true){html=html
++"<div class='tbw_filter_tableR'> \n"
++filter_rows
++"</div> \n";$("#dialog_"+tableId).data("width.dialog",500);}
+html=html
++"<div style='clear:both'></div> \n"
++"<table class='filter_control_tbl'> \n  <tr> \n"
++"<td><input class='tbw_f_text tbw_filter_text' type='submit' id='f_submitText' value='Filter' title='Click here to filter results.' /> \n"
++"<input class='tbw_f_date tbw_filter_date' type='submit' id='f_submitDates' value='Filter' title='Click here to filter results.' /> </td>\n"
++"<td><button class='f_clearAllFilters' title='Click here to clear all filters.'>Clear Filters</button></td> \n"
++"</tr> \n </table> \n"
++"<div id='dcustom_"+tableId+"'> "+customHtml+"</div> \n";dialogBox.html(html);dialogBox.dialog("open");var typeBox=$('#sel_'+tableId+'_type');$('.tbw_filtertype_hide').hide();tbw_checkType(tableId);tbw_filterEvents(tableObj,tableId);}
+function tbw_filterEvents(tableObj,tableId){var dialog=$('#dialog_'+tableId);var selbox=$('#sel_'+tableId);var typeBox=$('#sel_'+tableId+'_type');var textfield=dialog.find('[name="f_text"]');var startdate=$('[name="f_startDate"]',dialog);var enddate=$('[name="f_endDate"]',dialog);var thcell=TableWalkerHeaderCheck(tableObj);$('.tbwf_click2edit').ready(function(){$(".tbwf_click2edit").unbind("click");$('.tbwf_click2edit').click(function(){var col=$(this).attr("column");selbox.val(col);tbw_checkType(tableId);});});$('.tbw_f_text').ready(function(){$(".tbw_f_text").unbind("click");$('.tbw_f_text').click(function(){var value=dialog.find('[name="f_text"]').val();selbox.data('lastvalue',selbox.val());selbox.data('lastvalue_name',$('#sel_'+tableId+' option:selected').text());textfield.data('lastvalue',value);var filterColumn=$('[column="'+selbox.val()+'"]',tableObj);filterColumn.data('f_value',value);filterColumn.data('filtered','text');tbw_filter(tableObj);});});$(function(){startdate.datepicker();enddate.datepicker();$('.ui-datepicker').css({'top':'0px','left':'0px','position':'absolute'});});$('.tbw_f_date').ready(function(){$(".tbw_f_date").unbind("click");$('.tbw_f_date').click(function(){var values=new Array();values['start']=startdate.val();values['end']=enddate.val();selbox.data('lastvalue',selbox.val());selbox.data('lastvalue_name',$('#sel_'+tableId+' option:selected').text());startdate.data('lastvalue',values['start']);enddate.data('lastvalue',values['end']);var filterColumn=$('[column="'+selbox.val()+'"]',tableObj);filterColumn.data('f_value',values['start']+'|'+values['end']);filterColumn.data('filtered','date');tbw_filter(tableObj);});});$('.f_clearFilters').ready(function(){$(".f_clearFilters").unbind("click");$('.f_clearFilters').click(function(){var column=$(this).parent().attr('column');var filters=false;$('[column="'+column+'"]',tableObj).removeData('filtered');$('[column="'+column+'"]',tableObj).removeData('f_value');$(this).parent().parent().remove();tbw_filter(tableObj);var headers=$('thead tr',tableObj).children(thcell);$(headers).each(function(index){var th=$(this);if(th.data('filtered')!=''&&th.data('filtered')!=undefined){filters=true;}});if(filters===false){$('#dialog_'+tableId).data('width.dialog',310);}});});$('.f_clearAllFilters').ready(function(){$(".f_clearAllFilters").unbind("click");$('.f_clearAllFilters').click(function(){var filters=false;var headers=$('thead tr',tableObj).children(thcell);$(headers).each(function(index){var th=$(this);th.removeData('filtered');th.removeData('f_value');});tbw_filter(tableObj);dialog.html('');$('#dialog_'+tableId).data('width.dialog',310);dialog.dialog('close');});});tbw_checkType(tableId);selbox.change(function(){tbw_checkType(tableId);});typeBox.change(function(){tbw_checkType(tableId);});}
+$(".tbw_filter_btn").unbind("live");$(".tbw_filter_btn").live("click",function(e){var filterparent=$(this).parent();var tableId=filterparent.data("tableId");var tableObj=$("#"+tableId);tbw_dialog(tableObj,tableId);});

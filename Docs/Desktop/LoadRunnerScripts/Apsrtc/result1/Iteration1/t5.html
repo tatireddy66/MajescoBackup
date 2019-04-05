@@ -1,0 +1,55 @@
+
+
+<div id="ForwardBoardPtsDiv" class="b-d-point">
+    Boarding Point
+    <select name="onwardBoardId" id="ForwardBoardId"  class="b-d-point-select">
+    	
+	    	<option value="">
+				Select One
+			</option>
+			
+				<option value="22361">
+					PUTTANA HALLI BNG - 05:00 
+				</option>
+			
+				<option value="23228">
+					ITIGATE DOORVANINAGAR - 05:30 
+				</option>
+			
+				<option value="22131">
+					KR.PURAM - 05:40 
+				</option>
+			
+	</select>
+	
+    Dropping Point
+    <select name="onwardDroppingId" id="ForwardDroppingId"  class="b-d-point-select">
+    	
+				
+				<option value="14911">
+					TIRUPATHI - 11:30 
+				</option>
+			
+	</select>
+      
+    Concession
+    <select name="concessionId" id="concessionId" class="b-d-point-select"><option value="1347688949874">GENERAL PUBLIC</option>
+<option value="1347689071865">CAT CARD</option>
+<option value="1347689190997">SENIOR CITIZEN</option></select>
+    
+    <input type="button"  name="OnwardLayoutBtn" id="fwLtBtn" 
+					 	value="Show layout"
+						class="b-d-point-btn"
+						onclick="displayLayoutDiv('Forward');" />
+						
+</div>
+
+<div id="ShowLayoutDiv">
+</div>
+<div id="BookingConcessionDivID">
+	<input type="hidden" name="maxPassengerAllowed" value="0" id="maxPassengerAllowed">
+</div>
+<script type="text/javascript">
+	if(document.getElementById("ForwardBoardId") != null)
+		document.getElementById("ForwardBoardId").focus();
+</script>

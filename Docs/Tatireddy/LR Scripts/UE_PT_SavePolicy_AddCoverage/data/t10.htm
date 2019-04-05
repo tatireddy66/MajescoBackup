@@ -1,0 +1,85 @@
+<stingray>
+ <status>success</status>
+ <id>AD09471A1B1F4A118D56834EED7E7D8950B3CF</id>
+ <vrmname>TOPMENU</vrmname>
+ <servermode>3</servermode>
+ <target>menu</target>
+ <callback>0</callback>
+<html><![CDATA[
+<ul>
+ <li><a class=Default style="CURSOR: pointer" onclick='Communication.LinkRequest("AppList.max");'>Main Menu</a>
+  <ul>
+  </ul>
+ </li>
+</ul>
+<ul>
+ <li><a class=Default style="CURSOR: pointer" onclick='Communication.LinkRequest("AppList.max?ITEMCODE=POLICY");'>Policy</a>
+  <ul>
+
+
+
+<li><a class=Default style="CURSOR: pointer" onclick='Communication.LinkRequest("archive.max");'>Archive</a></li>
+
+
+<li><a class=Default style="CURSOR: pointer" onclick='Communication.LinkRequest("PAYMENT_BY_CONTACT.max");'>Premium Invoice Processing</a></li>
+
+
+  </ul>
+ </li>
+</ul>
+<ul>
+ <li><a class=Default style="CURSOR: pointer" onclick='Communication.LinkRequest("AppList.max?ITEMCODE=CLAIM");'>Claims</a>
+  <ul>
+<li><a class=Default style="CURSOR: pointer" onclick='Communication.LinkRequest("claims_financial_dashboard.max");'>Claims Financial Dashboard</a></li>
+
+
+<li><a class=Default style="CURSOR: pointer" onclick='Communication.LinkRequest("claiminfo_approvereserves.max");'>Approve Reserves</a></li>
+<li><a class=Default style="CURSOR: pointer" onclick='Communication.LinkRequest("claiminfo_approvepayments.max");'>Approve Payments</a></li>
+<li><a class=Default style="CURSOR: pointer" onclick='Communication.LinkRequest("claiminfo_makedeposit.max");'>Make Claim Deposit</a></li>
+<li><a class=Default style="CURSOR: pointer" onclick='Communication.LinkRequest("claiminfo_vouchers.max");'>Refund Voucher</a></li>
+
+
+
+
+
+  </ul>
+ </li>
+</ul>
+
+<ul>
+ <li><a class=Default style="CURSOR: pointer" onclick='Communication.LinkRequest("AppList.max?ITEMCODE=ADMIN");'>System Administration</a>
+  <ul>
+<li><a class=Default style="CURSOR: pointer" onclick='Communication.LinkRequest("AppList.max?ITEMCODE=ADMINUSER");'>User / Entity Maintenance</a></li>
+<li><a class=Default style="CURSOR: pointer" onclick='Communication.LinkRequest("Eod_Params.max");'>Daily Parameters</a></li>
+<li><a class=Default style="CURSOR: pointer" onclick='Communication.LinkRequest("rate_flow_edit.max");'>Rate Flow</a></li>
+<li><a class=Default style="CURSOR: pointer" onclick='Communication.LinkRequest("Rate_Tables.max");'>Rate Management</a></li>
+<li><a class=Default style="CURSOR: pointer" onclick='Communication.LinkRequest("EODActReports.max");'>Activity Reports</a></li>
+<li><a class=Default style="CURSOR: pointer" onclick='Communication.LinkRequest("EditWelcome.max");'>Edit Welcome Message</a></li>
+<li><a class=Default style="CURSOR: pointer" onclick='Communication.LinkRequest("setup_holidays.max");'>Setup Holidays</a></li>
+
+<li><a class=Default style="CURSOR: pointer" onclick='Communication.LinkRequest("Test_Email.max");'>Send E-mail</a></li>
+
+
+
+<li><a class=Default style="CURSOR: pointer" onclick='Communication.LinkRequest("Examples.max");'>Examples</a></li>
+  </ul>
+ </li>
+</ul>
+<ul>
+ <li><A class=Default style="CURSOR: pointer" onclick="
+var answer = confirm('Are you sure you want to log out from United Educators  System?')
+if(answer){
+  Communication.CustomRequest('doc_lock_status.max?AJAX_ACTION=UnLockALLatLogOut&USR_ID=16769', function(AjaxResp){
+  if (window.location.href.indexOf('e2valueadv.max')!=-1) {
+    var s=window.location.href.replace('e2valueadv.max', 'login.max');
+    s=s.replace(s.substring(s.indexOf('login.max')+10,s.length),'preprocess=true');
+    window.location.assign(s);
+  }else{
+    window.location.reload();
+  }
+  });
+} else {return;};">Log Out</A></li>
+</ul>
+<div style="clear:both;"> </div>
+]]></html>
+</stingray>

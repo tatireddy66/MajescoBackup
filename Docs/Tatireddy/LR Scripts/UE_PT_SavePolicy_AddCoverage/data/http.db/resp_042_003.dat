@@ -1,0 +1,28 @@
+<stingray>
+ <status>success</status>
+ <id>AD09471A1B1F4A118D56834EED7E7D8950B3CF</id>
+ <vrmname>CLAIMS_MODIFY2</vrmname>
+ <servermode>3</servermode>
+ <target></target>
+ <callback>0</callback>
+<html><![CDATA[{
+"CauseOfLoss_DD":"
+<option value="-1"title="Please select a Loss Cause...">Please select a Loss Cause...</option>
+<option value="AIRCRAFT"title="Aircraft">Aircraft</option>
+<option value="ALCOHCOL"title="Alcohol & Drugs">Alcohol & Drugs</option>
+<option value="ASSAULT"title="Assault">Assault</option>
+<option value="ATHLETIC"title="Athletic">Athletic</option>
+<option value="ProResp"title="Crisis Communications">Crisis Communications</option>
+<option value="DEF&PRIV"title="Defamation & Privacy Rights">Defamation & Privacy Rights</option>
+<option value="LOSIM24"title="Duplicate">Duplicate</option>
+<option value="ENV"title="Environment">Environment</option>
+<option value="NO"title="No Coverage">No Coverage</option>
+<option value="OTHER"title="Other">Other</option>
+<option value="PRODUCTS"title="Products/completed">Products/completed</option>
+<option value="PROF"title="Professional Liability">Professional Liability</option>
+<option value="PROPERTY"title="Property Damage">Property Damage</option>
+<option value="CTBD"title="TBD">TBD</option>
+<option value="TITLEIX"title="Title IX">Title IX</option>
+<option value="VET"title="Veterinary Malpractice">Veterinary Malpractice</option>",
+}]]></html>
+</stingray>

@@ -1,0 +1,9 @@
+POST /safebrowsing/gethash?client=chromium&appver=46.0.2490.80&pver=3.0&key=dummytoken&ext=0 HTTP/1.1
+Host: safebrowsing.google.com
+Connection: keep-alive
+Content-Length: 21
+Content-Type: text/plain
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36
+Accept-Encoding: gzip, deflate
+Cookie: NID=144=CLKYLqZaCWO-9uxv7H-NbUVeJsgoGF1rRF7IcSLPeUjZqa0iQ7CJF2qUgGXmzf2XK84xxlnL_Kso6T7wqwgW8wQtAD_Gt8eIU3rOXj4HK2hGXdVAPiKe-DUjFYt_7wZG7GmUxra0lLB9M2yeR4ufmzvc1EaPryxM_u2AcqC-88c
+

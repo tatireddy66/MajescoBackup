@@ -1,0 +1,11 @@
+[t53]
+FileName1=t53.htm
+URL1=http://ueatworkuat.maxprocessing.com/claiminfo_coverages.max?AJAX_ACTION=GetScheduleTable&CLID=120715&t=1466686889385
+Total=1
+RequestHeaderFile=t53_RequestHeader.txt
+RequestBodyFile=t53_RequestBody.txt
+ResponseHeaderFile=t53_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_53.xml
+[ProtocolInfo]
+ProtocolId=QTWeb

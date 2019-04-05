@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="2.9" jmeter="3.0 r1743807">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">5</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1510123942000</longProp>
+        <longProp name="ThreadGroup.end_time">1510123942000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <CacheManager guiclass="CacheManagerGui" testclass="CacheManager" testname="HTTP Cache Manager" enabled="true">
+          <boolProp name="clearEachIteration">false</boolProp>
+          <boolProp name="useExpires">false</boolProp>
+        </CacheManager>
+        <hashTree/>
+        <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+          <collectionProp name="CookieManager.cookies"/>
+          <boolProp name="CookieManager.clearEachIteration">false</boolProp>
+          <stringProp name="CookieManager.policy">standard</stringProp>
+          <stringProp name="CookieManager.implementation">org.apache.jmeter.protocol.http.control.HC4CookieHandler</stringProp>
+        </CookieManager>
+        <hashTree/>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction Controller" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">false</boolProp>
+        </TransactionController>
+        <hashTree/>
+        <SoapSampler guiclass="SoapSamplerGui" testclass="SoapSampler" testname="SOAP/XML-RPC Request" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="SoapSampler.URL_DATA">https://sstuat.td.afg:1024/sst/ldap_4?WSDL</stringProp>
+          <stringProp name="HTTPSamper.xml_data">&quot;&lt;S:Envelope xmlns:S=&quot;&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&quot;&gt;
+  &lt;S:Header&gt;
+    &lt;wsse:Security S:actor=&quot;&quot;http://schemas.xmlsoap.org/soap/actor/next&quot;&quot; S:mustUnderstand=&quot;&quot;0&quot;&quot; xmlns:SOAP-ENV=&quot;&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&quot; xmlns:sso=&quot;&quot;http://www.actional.com&quot;&quot; xmlns:wsse=&quot;&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd&quot;&quot; xmlns:wsu=&quot;&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;&quot;&gt;
+      &lt;wsse:BinarySecurityToken EncodingType=&quot;&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary&quot;&quot; ValueType=&quot;&quot;sso:SiteMinderSSOSecurityToken&quot;&quot; wsu:Id=&quot;&quot;TOKEN_-745127732&quot;&quot;&gt;RHyrJt50fmIPBN8djuGvV+X8XF4qSwjRR3Y2SgOAVvRWxr8MpQwRMfCxtE0NXEWcOcra0/Mi5l1YWrRr/nP+3uCaivUhJkLtzevEHC6bevC+3z9bIkcL4WuiS1InnLptM9U+ZXBVRvDXcBAQR0MiCVFp7lsHJUFMEgV1lhJVaKld/Eqi9b3p+CXIjWhOkF71JBSIdhb8YIjdpJMt8QCSrGDkJcxgKw3qMs8d1g4BENS8VpC0i1NPoeGdrjWwp1m+bumOUEMAp0FnBan+FVGOFlxLm0elTCaENkAi+VDPh+QNAMGA7tjaDLrX5LBpHKs/8PsMCv1KlJn9VCABpGHS+5CRY1vAxdezBUsEoTnk8vV36TLmakAlhFx3NwLpxP95FlJLr4Qw2d4WO0jwOw5JqyeOP0YsOsgYnUr1yEw/BmSHiWrHqolYn4ntYqCZscig8nG03U551cdh+l8MuJ5omH6JGbXiIDdBET5wCMTIFgKjRdymcElwvrnVuLwSjzml4ymB4uiLssyRmlowkLxG+rNsPYOHKAdsoMTJ2vJyDPvodtr55HxYyY6eT4md6gnk/Heg+Dg45hqdHyCG0OMmiwSSanabxkt0Kp8mn1He7V0UJb3jAHAivipFrFRaf8Dd/5To88NaUJaniqiZp2htD8ezdAtdHGtCt83v/fKqX1zGD+uiN1OzwU+VTHvyG7v0zuz2o3mAtWi5vLXtV+aK49Yh9gcQyrNIMfdDmG/cw6bPyKy+HNpF1UWQWcgdHwebkFVaien6QKWTDAcrV07DvLCQ0JlzdmEgUxaDxYoF3PwcMqLhEyYqxiqEoLDt1Jz9LHIOfLd9hGhiyVb9kfGrIrZIeC+L8N4AVSaLFU8iqivn0fp7TBvUCybVnes757nZDYEhAWL5SZY6c7XPmP2BMyR5KLkRDuWbE9wFNFr6H9vFU4ERAAf84qzS/wpQKE2zLCA2NS5Q2i5FpsdGwz/kR8JvdyjUZkaO4p4SlTnbmZYdWyec7DL5u96N6zF1iC9wtF4cvN4gMkJdYxyxLmEBMLlLXESmXe5Ftx53mj+gjkPQRpjuy/yERimYX+uo5xXf1qD9LDSZz3m5pqHaOtjWBaEZn2AoinxQBKziYowJpHUvU73ck2gZmT0oolKD7nT2n3txsZucx+QaYbT4mIuccB7J9Mvg5NxI&lt;/wsse:BinarySecurityToken&gt;
+    &lt;/wsse:Security&gt;
+  &lt;/S:Header&gt;
+  &lt;S:Body&gt;
+    &lt;ns2:getGroupMembership xmlns:ns2=&quot;&quot;http://ldap.services.gaic.com/&quot;&quot;&gt;
+      &lt;person&gt;
+        &lt;vid&gt;tperftest3&lt;/vid&gt;
+      &lt;/person&gt;
+      &lt;deepSearch&gt;true&lt;/deepSearch&gt;
+    &lt;/ns2:getGroupMembership&gt;
+  &lt;/S:Body&gt;
+&lt;/S:Envelope&gt;&quot;
+</stringProp>
+          <stringProp name="SoapSampler.xml_data_file"></stringProp>
+          <stringProp name="SoapSampler.SOAP_ACTION"></stringProp>
+          <stringProp name="SoapSampler.SEND_SOAP_ACTION">false</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">false</boolProp>
+        </SoapSampler>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

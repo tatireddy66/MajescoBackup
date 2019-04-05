@@ -1,0 +1,15 @@
+[t22]
+FileName1=t22.htm
+URL1=http://ueatworkuat.maxprocessing.com/CLAIMS_EGL_PAGE1.max?t=1466686690972
+Total=3
+RequestHeaderFile=t22_RequestHeader.txt
+RequestBodyFile=t22_RequestBody.txt
+ResponseHeaderFile=t22_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_22.xml
+FileName2=t22_sort_asc.png
+URL2=http://ueatworkuat.maxprocessing.com/images/DataTable/sort_asc.png
+FileName3=t22_sort_both.png
+URL3=http://ueatworkuat.maxprocessing.com/images/DataTable/sort_both.png
+[ProtocolInfo]
+ProtocolId=QTWeb

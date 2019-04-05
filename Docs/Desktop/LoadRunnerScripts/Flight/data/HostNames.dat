@@ -1,0 +1,12 @@
+[hosts]
+127.0.0.1=
+www.bing.com=
+ieonline.microsoft.com=
+www.google.com=
+www.gstatic.com=
+translate.googleapis.com=
+adservice.google.com=
+safebrowsing.google.com=
+ssl.gstatic.com=
+id.google.com=
+clients1.google.com=

@@ -1,0 +1,10 @@
+GET /gen_204?atyp=i&zx=1544013455014&ogsr=1&ei=jMYHXKvOOsmm_QaAx4TABw&ct=6&cad=i&id=19008564&loc=web&prid=1&ogd=co.in&ogprm=up&ic=4 HTTP/1.1
+Host: www.google.com
+Connection: keep-alive
+Accept: image/webp,image/*,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36
+Referer: https://www.google.com/
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: en-US,en;q=0.8
+Cookie: OGP=-19009353:; NID=146=RWoqafrckiDgBEUhfPO0bV7NzsVUvZ4S-CFlZw2p2nruhsE68hbaq_xMKjEdk33DlOlP6P_ZXkaufjvzbSegTB9kZsqYe-sN11sZlxW9hflx4LyQNl5el3PrP--rs_6-p3bBxoTWsPi8IOylkR_JFJZPBIOM-WUD_bHlQOAq7SI; 1P_JAR=2018-12-5-12; OGPC=19009353-1:19008563-4:
+

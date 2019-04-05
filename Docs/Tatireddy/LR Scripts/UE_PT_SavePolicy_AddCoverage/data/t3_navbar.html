@@ -1,0 +1,33 @@
+function NavBarButtonClick(btn) 
+{
+  if (CustomScript.OnNavBarNavigate) { 
+    if (CustomScript.OnNavBarNavigate(btn)) 
+      Communication.SerialRequest($("#rightColumn"),false,btn);
+  } 
+  else 
+    Communication.SerialRequest($("#rightColumn"),false,btn);  
+}
+
+function resizeNavButtons(){
+  var btnSpacing = 4;
+  var btnCount = $("#navigationBar li div :button").size();
+  var btnWidth = Math.floor(($("#rightColumn").width()/btnCount)-btnSpacing);
+  var largestLabel="";
+  var largestLength=0;
+  $("#navigationBar li div :button").each(function(){
+    var lblValue = $(this).attr("value");
+    var lblLength=  lblValue.length;
+	if(lblLength > largestLength){
+		largestLabel = lblValue;
+		largestLength = lblLength;
+	}
+  });
+    var mySpan=$("<span style=\"font-family:Verdana,Arial,Helvetica,sans-serif,Trebuchet MS;font-size:10pt;display:none;\">" + largestLabel + "</span>");
+	mySpan.appendTo("body");
+    var largestLabelWidth=mySpan.width() + 4;
+	mySpan.remove();
+  if(largestLabelWidth > btnWidth){
+	btnWidth=largestLabelWidth;
+  }
+  $("#navigationBar li div :button").css("width", btnWidth+"px");
+}

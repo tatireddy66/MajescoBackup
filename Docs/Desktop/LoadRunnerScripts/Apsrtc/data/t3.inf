@@ -1,0 +1,13 @@
+[t3]
+FileName1=t3.htm
+URL1=http://www.apsrtconline.in/oprs-web/booking/ticket/linking.do?txtJourneyDate=18/11/2017&txtReturnJourneyDate=For%20Roundtrip&endPlaceId=14911&startPlaceId=1386430615487&X=1510893045750
+Total=2
+RequestHeaderFile=t3_RequestHeader.txt
+RequestBodyFile=t3_RequestBody.txt
+ResponseHeaderFile=t3_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_3.xml
+FileName2=t3_Loader.gif
+URL2=http://www.apsrtconline.in/oprs-web/_assets/images/progressbar/Loader.gif
+[ProtocolInfo]
+ProtocolId=QTWeb

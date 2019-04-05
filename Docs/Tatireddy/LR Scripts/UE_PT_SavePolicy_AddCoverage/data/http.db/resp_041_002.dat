@@ -1,0 +1,11 @@
+<stingray>
+ <status>success</status>
+ <id>AD09471A1B1F4A118D56834EED7E7D8950B3CF</id>
+ <vrmname>CLAIMS_MODIFY2</vrmname>
+ <servermode>3</servermode>
+ <target></target>
+ <callback>0</callback>
+<html><![CDATA[{
+"PolicyListTable": "<table id=\"PolList\" name=\"PolList\" class=\"display\">\n<thead>\n  <tr>\n    <th class=\"select_col\">Sel</th>\n    <th class=\"policy_col\">Policy No.</th>\n    <th class=\"status_col\">Status</th>\n    <th class=\"inc_date_col\">Inc. Date</th>\n    <th class=\"eff_date_col\">Eff. Date</th>\n    <th class=\"exp_date_col\">Exp. Date</th>\n    <th class=\"product_col\">Prod(s)</th>\n    <th class=\"cov_col\">Coverages</th>\n    <th class=\"limit_col\">Limit</th>\n    <th class=\"ded_col\">SIR/Ded.</th>\n  </tr>\n</thead>\n<tbody>\n<tr style=\"\">\n  <td class=\"select_col\">\n      <input egv=\"210838\" CovTrigger=CM policyv=\"139431\" productv=\"LPL\" endorsmentv=\"\" onclick=\"CustomScript.MarkAsSelected(this, 'CM','139431','210838', 'LPL', '');\" id=\"139431\" class=\"PolList\" title=\"Please click here to select this document.\"tabIndex=\"0\" value=\"PL\" type=\"checkbox\" name=\"LPD201500068800\" checked>\n  </td>\n  <td class=\"select_col\" id=\"egPDC_ID\" value=\"210838\">\n      <a onclick=\"CustomScript.Policy_Document(139431);\">LPD201500068800</a>\n  </td>\n  <td class=\"policy_col\" value=\"Expired (EN/2/1)\" id=\"TxDescriptionCol\">Expired (EN/2/1)</td>\n  <td class=\"inc_date_col\" value=\"6/1/2014\" id=\"InceptionCol\">6/1/2014</td>\n  <td class=\"eff_date_col\" value=\"6/1/2015\" id=\"EffectiveCol\">6/1/2015</td>\n  <td class=\"exp_date_col\" value=\"5/31/2016\" id=\"ExpirationCol\">5/31/2016</td>\n  <td class=\"product_col\" value=\"LPL\" id=\"ProductsCol\">LPL</td>\n  <td class=\"cov_col\">Limited Professional Liability</td>\n  <td class=\"limit_col\">$1,000,000.00/ $2,000,000.00</td>  \n  <td class=\"ded_col\">$10,000.00</td>\n</tr>\n</tbody>\n</table>"
+}]]></html>
+</stingray>

@@ -1,0 +1,116 @@
+[API Trapper      (1958: dec)] Recording in 32-bit mode: C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+[API Trapper      ( e70:20f4)] Recording in 32-bit mode: C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+[Network Analyzer (1958:1368)] ------------------------------------------------------------------------------------------
+[Network Analyzer (1958:1368)] Load Network Traffic Analyzers:
+[Network Analyzer (1958:1368)]     Analyzer Module: WPLUS (value=)
+[Network Analyzer (1958:1368)]     Analyzer Module: WebBase (value=GetHttpProtocolAnalyzer:api_http_filter.dll)
+[Network Analyzer (1958:1368)]     + Network Analyzer: api_http_filter.dll @ GetHttpProtocolAnalyzer Loaded!
+[Network Analyzer (1958:1368)]     + Interception Auditors: WinInetWplusInterceptionAudit:api_http_filter.dll
+[Network Analyzer (1958:1368)]     Analyzer Module: QTWeb (value=GetWebSocketProtocolAnalyzer:WebSocketAnalyzer.dll)
+[Network Analyzer (1958:1368)]     + Network Analyzer: WebSocketAnalyzer.dll @ GetWebSocketProtocolAnalyzer Loaded!
+[Network Analyzer (1958:1368)]     Analyzer Module: local_server (value=)
+[Network Analyzer (1958:1368)] ------------------------------------------------------------------------------------------
+[Network Analyzer (1958:1db8)] Address lookup for IND-ARLIDW70093 = 172.17.41.107
+[Network Analyzer (1958:1ee4)] Address lookup for IND-ARLIDW70093 = 172.17.41.107
+[Network Analyzer (1958:1ee4)] Request Connection: Remote Server @ 172.17.5.40:135   (Service=)  (Sid=  1)  PROXIED!
+[Network Analyzer (1958:1db8)]   (Sid:  1) Client -> Server @ : 116 bytes 
+[Network Analyzer (1958:1db8)]   (Sid:  1) Server -> Client : 84 bytes 
+[Network Analyzer (1958:1db8)]   (Sid:  1) Client -> Server @ : 156 bytes 
+[Network Analyzer (1958:1db8)]   (Sid:  1) Server -> Client : 152 bytes 
+[Network Analyzer (1958:1ee4)] Address lookup for IND-ARLIDW70093 = 172.17.41.107
+[Network Analyzer (1958:1ee4)] Request Connection: Remote Server @ 172.17.5.40:49155   (Service=)  (Sid=  2)  PROXIED!
+[Network Analyzer (1958:1368)] Address lookup for IND-ARLIDW70093 = 172.17.41.107
+[Network Analyzer (1958:1db8)]   (Sid:  2) Client -> Server @ : 1962 bytes 
+[Network Analyzer (1958:1368)] Request Connection: Remote Server @ 192.168.250.11:8080   (Service=)  (Sid=  3)  PROXIED!
+[Network Analyzer (1958:1368)] Address lookup for IND-ARLIDW70093 = 172.17.41.107
+[Web Request      (1958:1db8)] "CONNECT mtalk.google.com:5228"   
+[Network Analyzer (1958:1db8)]   (Sid:  3) Client -> Server @ : 101 bytes (Service=HTTP)
+[Network Analyzer (1958:1368)] Request Connection: Remote Server @ 192.168.250.11:8080   (Service=)  (Sid=  4)  PROXIED!
+[Web Request      (1958:1db8)] "CONNECT clients4.google.com:443"   
+[Network Analyzer (1958:1db8)]   (Sid:  4) Client -> Server @ : 228 bytes (Service=HTTP)
+[Network Analyzer (1958:1368)] Address lookup for IND-ARLIDW70093 = 172.17.41.107
+[Network Analyzer (1958:1db8)]   (Sid:  3) Server -> Client : 880 bytes  (Service=HTTP)
+[Network Analyzer (1958:1db8)]   (Sid:  3) Connection Terminated (by Server)
+[Network Analyzer (1958:1368)] Request Connection: Remote Server @ 192.168.250.11:8080   (Service=)  (Sid=  5)  PROXIED!
+[Network Analyzer (1958:1368)] Address lookup for IND-ARLIDW70093 = 172.17.41.107
+[Web Request      (1958:1db8)] "CONNECT translate.googleapis.com:443"   
+[Network Analyzer (1958:1db8)]   (Sid:  5) Client -> Server @ : 238 bytes (Service=HTTP)
+[Network Analyzer (1958:1368)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid=  6)  PROXIED!
+[Web Request      (1958:1db8)] "GET /cgi-bin/welcome.pl?page=search"   
+[Network Analyzer (1958:1db8)]   (Sid:  6) Client -> Server @ : 402 bytes (Service=HTTP)
+[Network Analyzer (1958:1db8)]   (Sid:  4) Server -> Client : 131 bytes 
+[Network Analyzer (1958:1db8)]   (Sid:  2) Server -> Client : 261 bytes 
+[Network Analyzer (1958:1db8)]   (Sid:  5) Server -> Client : 131 bytes 
+[Network Analyzer (1958:1db8)]   (Sid:  6) Server -> Client : 844 bytes  (Service=HTTP)
+[Network Analyzer (1958:1db8)]   (Sid:  2) Client -> Server @ : 220 bytes 
+[Web Request      (1958:1db8)] "GET /cgi-bin/nav.pl?page=menu&in=flights"   
+[Network Analyzer (1958:1db8)]   (Sid:  6) Client -> Server @ : 470 bytes (Service=HTTP)
+[Network Analyzer (1958:1368)] Address lookup for IND-ARLIDW70093 = 172.17.41.107
+[Network Analyzer (1958:1368)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid=  7)  PROXIED!
+[Network Analyzer (1958:1db8)]   (Sid:  6) Server -> Client : 1749 bytes  (Service=HTTP)
+[Network Analyzer (1958:1db8)]   (Sid:  2) Server -> Client : 105 bytes 
+[Web Request      (1958:1db8)] "GET /cgi-bin/reservations.pl?page=welcome"   
+[Network Analyzer (1958:1db8)]   (Sid:  7) Client -> Server @ : 471 bytes (Service=HTTP)
+[Network Analyzer (1958:1db8)]   (Sid:  2) Client -> Server @ : 252 bytes 
+[Network Analyzer (1958:1368)] Address lookup for IND-ARLIDW70093 = 172.17.41.107
+[Network Analyzer (1958:1368)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid=  8)  PROXIED!
+[Network Analyzer (1958:1368)] Address lookup for IND-ARLIDW70093 = 172.17.41.107
+[Network Analyzer (1958:1db8)]   (Sid:  7) Server -> Client : 4235 bytes  (Service=HTTP)
+[Network Analyzer (1958:1db8)]   (Sid:  2) Server -> Client : 204 bytes 
+[Network Analyzer (1958:1db8)]   (Sid:  7) Server -> Client : 286 bytes  (Service=HTTP)
+[Network Analyzer (1958:1368)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid=  9)  PROXIED!
+[Network Analyzer (1958:1db8)]   (Sid:  2) Client -> Server @ : 140 bytes 
+[Web Request      (1958:1db8)] "GET /WebTours/images/in_flights.gif"   
+[Network Analyzer (1958:1db8)]   (Sid:  6) Client -> Server @ : 394 bytes (Service=HTTP)
+[Web Request      (1958:1db8)] "GET /WebTours/images/itinerary.gif"   
+[Network Analyzer (1958:1db8)]   (Sid:  8) Client -> Server @ : 393 bytes (Service=HTTP)
+[Network Analyzer (1958:1368)] Address lookup for IND-ARLIDW70093 = 172.17.41.107
+[Network Analyzer (1958:1db8)]   (Sid:  6) Server -> Client : 1023 bytes  (Service=HTTP)
+[Network Analyzer (1958:1db8)]   (Sid:  8) Server -> Client : 1031 bytes  (Service=HTTP)
+[Network Analyzer (1958:1db8)]   (Sid:  2) Server -> Client : 140 bytes 
+[Network Analyzer (1958:1368)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 10)  PROXIED!
+[Web Request      (1958:1db8)] "GET /WebTours/images/home.gif"   
+[Network Analyzer (1958:1db8)]   (Sid:  9) Client -> Server @ : 388 bytes (Service=HTTP)
+[Network Analyzer (1958:1db8)]   (Sid:  9) Server -> Client : 986 bytes  (Service=HTTP)
+[Web Request      (1958:1db8)] "GET /WebTours/images/signoff.gif"   
+[Network Analyzer (1958:1db8)]   (Sid: 10) Client -> Server @ : 391 bytes (Service=HTTP)
+[Network Analyzer (1958:1db8)]   (Sid: 10) Server -> Client : 1049 bytes  (Service=HTTP)
+[Web Request      (1958:1db8)] "GET /WebTours/images/button_next.gif"   
+[Network Analyzer (1958:1db8)]   (Sid: 10) Client -> Server @ : 396 bytes (Service=HTTP)
+[Network Analyzer (1958:1db8)]   (Sid: 10) Server -> Client : 1055 bytes  (Service=HTTP)
+[Network Analyzer (1958:1368)] Address lookup for IND-ARLIDW70093 = 172.17.41.107
+[Network Analyzer (1958:1368)] Request Connection: Remote Server @ 192.168.250.11:8080   (Service=)  (Sid= 11)  PROXIED!
+[Web Request      (1958:1db8)] "GET /favicon.ico"   
+[Network Analyzer (1958:1db8)]   (Sid: 10) Client -> Server @ : 345 bytes (Service=HTTP)
+[Web Request      (1958:1db8)] "CONNECT clients1.google.com:443"   
+[Network Analyzer (1958:1db8)]   (Sid: 11) Client -> Server @ : 228 bytes (Service=HTTP)
+[Network Analyzer (1958:1db8)]   (Sid: 10) Server -> Client : 424 bytes  (Service=HTTP)
+[Network Analyzer (1958:1f60)]   (Sid:  4) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:DHE-RSA-AES256-SHA)
+[Network Analyzer (1958:1db8)]   (Sid: 11) Server -> Client : 131 bytes 
+[Network Analyzer (1958:1f60)]   (Sid:  4) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES128-GCM-SHA256)
+[Network Analyzer (1958:1368)] Address lookup for IND-ARLIDW70093 = 172.17.41.107
+[Network Analyzer (1958:1368)] Request Connection: Remote Server @ 192.168.250.11:8080   (Service=)  (Sid= 12)  PROXIED!
+[Network Analyzer (1958:1368)] Address lookup for IND-ARLIDW70093 = 172.17.41.107
+[Web Request      (1958:1db8)] "CONNECT ssl.gstatic.com:443"   
+[Network Analyzer (1958:1db8)]   (Sid: 12) Client -> Server @ : 220 bytes (Service=HTTP)
+[Network Analyzer (1958:1368)] Request Connection: Remote Server @ 192.168.250.11:8080   (Service=)  (Sid= 13)  PROXIED!
+[Web Request      (1958:1db8)] "CONNECT ssl.gstatic.com:443"   
+[Network Analyzer (1958:1db8)]   (Sid: 13) Client -> Server @ : 220 bytes (Service=HTTP)
+[Network Analyzer (1958:1e68)]   (Sid:  5) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:DHE-RSA-AES256-SHA)
+[Network Analyzer (1958:1db8)]   (Sid: 12) Server -> Client : 131 bytes 
+[Web Request      (1958:1db8)] "GET /chrome-variations/seed?osname=win"   
+[Network Analyzer (1958:1db8)]   (Sid:  4) Client -> Server @ : 335 bytes (SSL)(Service=HTTP)
+[Network Analyzer (1958:1db8)]   (Sid: 13) Server -> Client : 131 bytes 
+[Network Analyzer (1958:1db8)]   (Sid:  4) Server -> Client : 309 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1958:1db8)]   (Sid:  6) Connection Terminated (by Server)
+[Network Analyzer (1958:1db8)]   (Sid:  7) Connection Terminated (by Server)
+[Network Analyzer (1958:1db8)]   (Sid:  8) Connection Terminated (by Server)
+[Network Analyzer (1958:1db8)]   (Sid:  9) Connection Terminated (by Server)
+[Network Analyzer (1958:1db8)]   (Sid: 10) Connection Terminated (by Server)
+[Network Analyzer (1958:1db8)]   (Sid:  4) Connection Terminated (by Server)
+[Network Analyzer (1958:1e68)]   (Sid:  5) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES128-GCM-SHA256)
+[Network Analyzer (1958:1db8)]   (Sid: 13) Connection Terminated (by Client)
+[Network Analyzer (1958:1db8)]   (Sid: 12) Connection Terminated (by Client)
+[Network Analyzer (1958:1a90)]   (Sid: 11) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:DHE-RSA-AES256-SHA)
+[Net An. Error    (1958:1a90)]   (Sid: 11) Negotiate Client -> Proxy SSL Handshake Failed!!!
+[Network Analyzer (1958:1db8)]   (Sid: 11) Connection Terminated (by Client)

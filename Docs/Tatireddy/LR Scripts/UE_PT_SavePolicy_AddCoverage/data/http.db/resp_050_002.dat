@@ -1,0 +1,15 @@
+<stingray>
+ <status>success</status>
+ <id>AD09471A1B1F4A118D56834EED7E7D8950B3CF</id>
+ <vrmname>CLAIMINFO_COVERAGES</vrmname>
+ <servermode>3</servermode>
+ <target></target>
+ <callback>0</callback>
+<html><![CDATA[{
+"ReserveExist":"",
+"ClaimReserveExist":"0",
+"CodeClaimClosed":"0"
+"paymentmade":"",
+"CovLetterClosed":"0"
+}]]></html>
+</stingray>

@@ -1,0 +1,20 @@
+Virtual User Script started at : 27-02-2017 18:14:05
+Starting action vuser_init.
+Web Turbo Replay of LoadRunner 12.53.0 for Windows 7; build 1203 (Feb 27 2017 19:13:20)  	[MsgId: MMSG-26983]
+Run mode: HTML  	[MsgId: MMSG-26993]
+Replay user agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36  	[MsgId: MMSG-26988]
+Run-Time Settings file: "D:\Tatireddy\LR Scripts\Flight\\default.cfg"  	[MsgId: MMSG-27141]
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Maximum number of concurrent connections per server: 6  	[MsgId: MMSG-26989]
+Starting action Action.
+Action.c(4): web_url("welcome.pl") started  	[MsgId: MMSG-26355]
+Action.c(4): Error -26610: HTTP Status-Code=502 (Connection refused) for "http://127.0.0.1:1080/cgi-bin/welcome.pl?page=search"  	[MsgId: MERR-26610]
+Action.c(4): web_url("welcome.pl") highest severity level was "ERROR", 666 body bytes, 215 header bytes  	[MsgId: MMSG-26388]
+Ending action Action.
+Ending iteration 1.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.

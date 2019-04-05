@@ -1,0 +1,33 @@
+Virtual User Script started at : 28-06-2016 14:19:01
+Starting action vuser_init.
+Web Turbo Replay of LoadRunner 12.53.0 for Windows 7; build 1203 (Jun 28 2016 19:13:20)  	[MsgId: MMSG-26983]
+Run mode: HTML  	[MsgId: MMSG-26993]
+Replay user agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko  	[MsgId: MMSG-26988]
+Run-Time Settings file: "D:\Tatireddy\LR Scripts\WebTours\\default.cfg"  	[MsgId: MMSG-27141]
+Warning -27070: Replay statistic collection is not supported by the WinInet Replay and is ignored  	[MsgId: MWAR-27070]
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Maximum number of concurrent connections per server: 6  	[MsgId: MMSG-26989]
+Starting action Action.
+Action.c(3): web_url("index.htm") started  	[MsgId: MMSG-26355]
+Action.c(3): Detected non-resource "http://127.0.0.1:1080/WebTours/header.html" in "http://127.0.0.1:1080/WebTours/index.htm"  	[MsgId: MMSG-26574]
+Action.c(3): Detected non-resource "http://127.0.0.1:1080/cgi-bin/welcome.pl?signOff=true" in "http://127.0.0.1:1080/WebTours/index.htm"  	[MsgId: MMSG-26574]
+Action.c(3): Found resource "http://127.0.0.1:1080/WebTours/images/hp_logo.png" in HTML "http://127.0.0.1:1080/WebTours/header.html"  	[MsgId: MMSG-26659]
+Action.c(3): Found resource "http://127.0.0.1:1080/WebTours/images/webtours.png" in HTML "http://127.0.0.1:1080/WebTours/header.html"  	[MsgId: MMSG-26659]
+Action.c(3): Detected non-resource "http://127.0.0.1:1080/cgi-bin/nav.pl?in=home" in "http://127.0.0.1:1080/cgi-bin/welcome.pl?signOff=true"  	[MsgId: MMSG-26574]
+Action.c(3): Detected non-resource "http://127.0.0.1:1080/WebTours/home.html" in "http://127.0.0.1:1080/cgi-bin/welcome.pl?signOff=true"  	[MsgId: MMSG-26574]
+Action.c(3): Found resource "http://127.0.0.1:1080/WebTours/images/mer_login.gif" in HTML "http://127.0.0.1:1080/cgi-bin/nav.pl?in=home"  	[MsgId: MMSG-26659]
+Action.c(3): web_url("index.htm") was successful, 10079 body bytes, 2370 header bytes  	[MsgId: MMSG-26386]
+Action.c(13): web_set_sockets_option started  	[MsgId: MMSG-26355]
+Action.c(13): Warning -27488: "web_set_sockets_option" has no effect on WinInet replay  	[MsgId: MWAR-27488]
+Action.c(13): web_set_sockets_option highest severity level was "warning"  	[MsgId: MMSG-26391]
+Action.c(15): web_reg_save_param_ex started  	[MsgId: MMSG-26355]
+Action.c(15): Error -26396: The "param=flight" argument (number 1) is unrecognized or misplaced  	[MsgId: MERR-26396]
+Action.c(15): Registering web_reg_save_param_ex highest severity level was "ERROR"  	[MsgId: MMSG-26389]
+Ending action Action.
+Ending iteration 1.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.

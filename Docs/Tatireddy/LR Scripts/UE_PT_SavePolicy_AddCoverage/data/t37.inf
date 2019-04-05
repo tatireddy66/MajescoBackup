@@ -1,0 +1,11 @@
+[t37]
+FileName1=t37.htm
+URL1=http://ueatworkuat.maxprocessing.com/claims_modify2.max?AJAX_ACTION=SaveSelectedRTR&SelectedRTR=0&t=1466686838943
+Total=1
+RequestHeaderFile=t37_RequestHeader.txt
+RequestBodyFile=t37_RequestBody.txt
+ResponseHeaderFile=t37_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_37.xml
+[ProtocolInfo]
+ProtocolId=QTWeb

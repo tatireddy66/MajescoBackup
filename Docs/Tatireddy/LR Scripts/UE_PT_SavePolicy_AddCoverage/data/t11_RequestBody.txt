@@ -1,0 +1,4 @@
+"id=AD09471A1B1F4A118D56834EED7E7D8950B3CF&sccstmp=0&SubmitAct=ClaimsSearch&ClaimsProducts=-1&L"
+"ossDate=&ClaimsStartDate=&ClaimsEndDate=&ClaimsClaimantName=&ClaimsClaimStatus=1&ClaimsMemberN"
+"ame=&ClaimsAnalyst=-1&ClaimsMemberNum=&ClaimsLoss=-1&ClaimsStateMemberInstitution=-1&ClaimsWro"
+"ng=-1&ClaimsPolicyCode=&ClaimsClaimNum=&ClaimsAddFactors=-1"

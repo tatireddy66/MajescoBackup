@@ -1,0 +1,11 @@
+[t5]
+FileName1=t5.htm
+URL1=http://www.apsrtconline.in/oprs-web/ajax/forward/layout/boardPoints.do?ajaxAction=fw&txtJourneyDate=18/11/2017&serviceId=18991&startPlaceId=1386430615487&routeCode=1498819286672&endPlaceId=14911&serviceCategoryId=1498918074521&X=1510893064682
+Total=1
+RequestHeaderFile=t5_RequestHeader.txt
+RequestBodyFile=t5_RequestBody.txt
+ResponseHeaderFile=t5_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_5.xml
+[ProtocolInfo]
+ProtocolId=QTWeb

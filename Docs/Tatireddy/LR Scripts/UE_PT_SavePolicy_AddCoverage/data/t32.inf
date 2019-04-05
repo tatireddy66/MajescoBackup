@@ -1,0 +1,13 @@
+[t32]
+FileName1=t32.htm
+URL1=http://ueatworkuat.maxprocessing.com/claims_modify2.max?Action=BUILDPOLDATATABLE&NewclaimMadeDate=06/01/2016&cmd_change=1&NewdateOfLoss=04/04/2016&IsShowAllPolicy=1&t=1466686797860
+Total=2
+RequestHeaderFile=t32_RequestHeader.txt
+RequestBodyFile=t32_RequestBody.txt
+ResponseHeaderFile=t32_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_32.xml
+FileName2=t32_title.gif
+URL2=http://ueatworkuat.maxprocessing.com/images/title.gif
+[ProtocolInfo]
+ProtocolId=QTWeb

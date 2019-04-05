@@ -1,0 +1,8 @@
+rpmOid              "rpmO","id":"             ","rpmClass":
+rpmclassid                 "id":"             ","name":"
+rpmCid                "rpmC","id":"            ","name":"ClassConnector
+rpmEid                "rpmE","id":"              ","name":"
+rpmOR                     },"id":"             ","rpmClass":
+rpmsession           "active":true},"          ":{"@type":"rpmOR","source"
+
+

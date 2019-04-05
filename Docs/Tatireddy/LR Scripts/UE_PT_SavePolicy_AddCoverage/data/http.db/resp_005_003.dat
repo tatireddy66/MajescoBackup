@@ -1,0 +1,13 @@
+.taxonomydialog {
+  font-size:  10px;
+  text-align: left;
+}
+
+.taxonomydialog .firstcol {
+  width: 25%
+}
+
+.taxonomydialog .catdd
+{ 
+  width: 100%
+}

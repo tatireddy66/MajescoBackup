@@ -1,0 +1,13 @@
+POST http://ueatworkuat.maxprocessing.com/claims_modify2.max?Action=BUILDPOLDATATABLE&NewclaimMadeDate=06/01/2016&cmd_change=1&NewdateOfLoss=04/04/2016&IsShowAllPolicy=1&t=1466686797860 HTTP/1.1
+Host: ueatworkuat.maxprocessing.com
+Proxy-Connection: keep-alive
+Content-Length: 51
+Accept: application/xml, text/xml, */*; q=0.01
+Origin: http://ueatworkuat.maxprocessing.com
+X-Requested-With: XMLHttpRequest
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36
+Content-Type: application/x-www-form-urlencoded
+Referer: http://ueatworkuat.maxprocessing.com/login.max?preprocess=true
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US,en;q=0.8
+

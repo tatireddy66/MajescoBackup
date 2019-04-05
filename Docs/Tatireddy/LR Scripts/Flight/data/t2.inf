@@ -1,0 +1,12 @@
+[t2]
+FileName1=t2_seed.html
+URL1=https://clients4.google.com/chrome-variations/seed?osname=win
+Total=4
+ContentType=application/octet-stream
+SnapshotXmlFile=snapshot_2.xml
+FileName2=t2_client_model_v5_variation_0.html
+URL2=https://ssl.gstatic.com/safebrowsing/csd/client_model_v5_variation_0.pb
+FileName3=t2_l.html
+URL3=https://translate.googleapis.com/translate_a/l?client=chrome&hl=en&key=AIzaSyBOti4mM-6x9WDnZIjIeyEU21OpBXqWBgw&alpha=1
+FileName4=t2_client_model_v5_ext_variation_0.html
+URL4=https://ssl.gstatic.com/safebrowsing/csd/client_model_v5_ext_variation_0.pb

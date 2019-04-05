@@ -1,0 +1,11 @@
+[t39]
+FileName1=t39.htm
+URL1=http://ueatworkuat.maxprocessing.com/claims_modify2.max?Action=BUILDPOLDATATABLE&NewclaimMadeDate=06/01/2016&cmd_change=1&NewdateOfLoss=04/04/2016&IsShowAllPolicy=0&t=1466686848553
+Total=1
+RequestHeaderFile=t39_RequestHeader.txt
+RequestBodyFile=t39_RequestBody.txt
+ResponseHeaderFile=t39_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_39.xml
+[ProtocolInfo]
+ProtocolId=QTWeb

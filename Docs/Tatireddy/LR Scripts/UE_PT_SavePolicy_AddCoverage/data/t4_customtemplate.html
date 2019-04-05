@@ -1,0 +1,113 @@
+function ResetScriptObj(ScriptObjName)
+{
+  try {
+      var obj = window[ScriptObjName];
+      if (typeof(obj)!='undefined') 
+        jQuery.each(obj, function (field, value) { obj[field] = null; });
+  } catch(err) {
+  }
+}
+
+
+  function Script(_name, params, body) {
+  this.Name = _name;
+  this.Params = params;
+  this.Body = body;
+  }
+
+function ApplyScriptToObj(ScriptText, ScriptObjName, doReset)
+{
+
+   function GetFunctions(str) {
+         var arr = new Array();
+      try {
+         var fns = str.split("function ");
+         if (fns == null) return arr;
+         for (var i = 1; i < fns.length; i++) {
+            var fn = fns[i];
+            var _name = fn.substring(0, fn.indexOf("{"));
+            exp = /\([^\)]+\)/g;
+            var params = _name.match(exp);
+            if (params == null || params.length == 0) params = "";
+            else params = params[0];
+            params = params.replace("(", "").replace(")", "");
+            if (_name.indexOf("(") > -1) _name = _name.substring(0, _name.indexOf("("));
+            var body = fn.substring(fn.indexOf("{") + 1);
+            body = body.substring(0, body.lastIndexOf("}"));
+            var funct = new Script(_name, params, body);
+            //alert("'" + _name + "'\n\n'" + params + "'\n\n'" + body + "'");
+            arr.push(funct);
+         }
+      } catch (err) { 
+	  }
+         return arr;
+   }
+
+
+   try {
+     var fnsdebug = ScriptText.split("function "); 
+     var fns = GetFunctions(ScriptText); 
+     if (typeof(window[ScriptObjName])=='undefined') {
+       window[ScriptObjName]=new function(){ return };
+     }
+     var obj = window[ScriptObjName];
+
+     if (typeof(doReset)=='undefined') doReset=true;
+
+     if (doReset) {
+       if (ScriptObjName=='CustomScript')  {
+         CustomScript.Reset();
+       } else { 
+         ResetScriptObj(ScriptObjName)   
+       }
+    }
+
+     //if (!DoNotReset) ResetScriptObj(ScriptObjName);
+     var loadScripts = true;
+     for (var i = 0; i < fns.length; i++) {
+        var fn = fns[i];
+        try {
+           obj[fn.Name] = new Function(fn.Params, fn.Body);
+        } catch (err) {
+         loadScripts = false;
+         alert("Error binding custom function '" + fn.Name + "': " + err.message);
+         return false;
+        }
+     }
+     return true;
+   } catch(err){ alert(err) }
+}
+
+
+function CustomTemplate(url, targetobj, scriptobjname, callback, resetscript) 
+{
+  Communication.CustomRequest(url, function(html){
+    try {
+    $(targetobj).html(html);
+    var edt=$(targetobj).find(".EditableContent");  
+    if (edt.length>0) { 
+      var h=edt.html();
+      $(targetobj).html('');
+      $(targetobj).html(h);
+    }
+
+    $(targetobj).find(".component").each(function () {
+       try {
+          //$(this).css("display", "none");
+          var ctrl = Helper.GetEditorComponent($(this));
+          if (typeof(ctrl) != 'undefined')  {
+             if ($(this).hasClass('ScriptingContainer')) {
+               var txt= $(this).find("pre").text(); 
+               ApplyScriptToObj(txt, scriptobjname, resetscript); 
+               Helper.RemoveComponentID(ctrl);
+             } else 
+               ctrl.DefaultMode();
+          }
+       } catch (err) {
+          Log.Add("Editor.EnableEditor", err, LogType.Error);
+       }
+    });
+    if (callback) callback();
+    } catch(err) { alert(err) }
+  })
+}

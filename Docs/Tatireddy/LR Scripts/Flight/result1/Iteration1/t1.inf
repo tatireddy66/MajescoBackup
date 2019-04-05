@@ -1,0 +1,13 @@
+[t1]
+SnapshotXmlFile=snapshot_1.xml
+ContentType=text/html
+StepName=Url: welcome.pl
+Total=1
+FileName1=t1.html
+RequestHeaderFile=t1_RequestHeader.txt
+ResponseHeaderFile=t1_ResponseHeader.txt
+RawStepEndTime=0
+RawStepName=welcome.pl
+RequestBodyFile=t1_RequestBody.txt
+RawStepStartTime=1488199446077
+URL1=http://127.0.0.1:1080/cgi-bin/welcome.pl?page=search

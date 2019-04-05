@@ -1,0 +1,50 @@
+/* The purpose of this file is to provide a place for CSS styles that can be manually updated by Corporate Communications */
+
+/* Retina GAIG Logo */
+#bannerLogo {
+    float: left;
+    width: 650px;
+    height: 78px;
+    background-image: url('/Style%20Library/GAIG_CorporateMaster/images/GAIGlogo_165x78.png');
+    background-repeat: no-repeat;
+    background-size: 165px 78px;
+    margin: 15px 0px 15px 23px;
+}
+
+/* USA & Canada navigation 
+Effects P&IM, FICA, ELD...
+
+*/
+.leftnavigation-countryheader-continer {
+    font-size: 14px !important;
+    color: #666666;
+    background-color: #daebec;
+    padding-top: 8px;
+    padding-bottom: 5px;
+    padding-right: 3px;
+    padding-left: 15px;
+    height: 20px;
+    font-family: "proxima-nova-condensed-1","proxima-nova-condensed-2", "Arial Narrow" !Important;
+}
+
+.leftnavigation-countryheader-item-selected {
+    color:#003366;
+    font-weight: bold;
+}
+
+.leftnavigation-countryheader-item-selected a {
+    text-decoration: underline;
+}
+
+.leftnavigation-countryheader-item a, .leftnavigation-countryheader-item a:visited {
+	color:#003366;
+}
+
+.leftnavigation-countryheader-item a:hover {
+	color:#003366;
+}
+
+.leftnavigation-countryheader-separator {
+	margin:0 5px;
+	color:#003366;
+}

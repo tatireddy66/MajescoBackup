@@ -1,0 +1,11 @@
+[t55]
+FileName1=t55.htm
+URL1=http://ueatworkuat.maxprocessing.com/claiminfo_coverages.max?AJAX_ACTION=UpdateCoverage&CovID=95547&ischecked=1&t=1466686902418
+Total=1
+RequestHeaderFile=t55_RequestHeader.txt
+RequestBodyFile=t55_RequestBody.txt
+ResponseHeaderFile=t55_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_55.xml
+[ProtocolInfo]
+ProtocolId=QTWeb

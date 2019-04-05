@@ -1,0 +1,72 @@
+2017/11/10 12:47:33 INFO  - jmeter.util.JMeterUtils: Setting Locale to en_IN 
+2017/11/10 12:47:33 INFO  - jmeter.JMeter: Loading user properties from: D:\Tatireddy\JMeter\apache-jmeter-3.0\apache-jmeter-3.0\bin\user.properties 
+2017/11/10 12:47:33 INFO  - jmeter.JMeter: Loading system properties from: D:\Tatireddy\JMeter\apache-jmeter-3.0\apache-jmeter-3.0\bin\system.properties 
+2017/11/10 12:47:33 INFO  - jmeter.JMeter: Copyright (c) 1998-2016 The Apache Software Foundation 
+2017/11/10 12:47:33 INFO  - jmeter.JMeter: Version 3.0 r1743807 
+2017/11/10 12:47:33 INFO  - jmeter.JMeter: java.version=1.8.0_151 
+2017/11/10 12:47:33 INFO  - jmeter.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM 
+2017/11/10 12:47:33 INFO  - jmeter.JMeter: os.name=Windows 7 
+2017/11/10 12:47:33 INFO  - jmeter.JMeter: os.arch=amd64 
+2017/11/10 12:47:33 INFO  - jmeter.JMeter: os.version=6.1 
+2017/11/10 12:47:33 INFO  - jmeter.JMeter: file.encoding=Cp1252 
+2017/11/10 12:47:33 INFO  - jmeter.JMeter: Max memory     =523763712 
+2017/11/10 12:47:33 INFO  - jmeter.JMeter: Available Processors =4 
+2017/11/10 12:47:33 INFO  - jmeter.JMeter: Default Locale=English (India) 
+2017/11/10 12:47:33 INFO  - jmeter.JMeter: JMeter  Locale=English (India) 
+2017/11/10 12:47:33 INFO  - jmeter.JMeter: JMeterHome=D:\Tatireddy\JMeter\apache-jmeter-3.0\apache-jmeter-3.0 
+2017/11/10 12:47:33 INFO  - jmeter.JMeter: user.dir  =D:\Tatireddy\JMeter\apache-jmeter-3.0\apache-jmeter-3.0\bin 
+2017/11/10 12:47:33 INFO  - jmeter.JMeter: PWD       =D:\Tatireddy\JMeter\apache-jmeter-3.0\apache-jmeter-3.0\bin 
+2017/11/10 12:47:33 INFO  - jmeter.JMeter: IP: 172.17.41.109 Name: IND-ARLIDW70093 FullName: IND-ARLIDW70093.majesco.com 
+2017/11/10 12:47:33 INFO  - jmeter.engine.RemoteJMeterEngineImpl: Starting backing engine on 1099 
+2017/11/10 12:47:33 INFO  - jmeter.engine.RemoteJMeterEngineImpl: System property 'java.rmi.server.hostname' is not defined, using localHost address 
+2017/11/10 12:47:33 INFO  - jmeter.engine.RemoteJMeterEngineImpl: Local IP address=172.17.41.109 
+2017/11/10 12:47:33 INFO  - jmeter.engine.RemoteJMeterEngineImpl: IP address is a site-local address; this may cause problems with remote access.
+	Can be overridden by defining the system property 'java.rmi.server.hostname' - see jmeter-server script file 
+2017/11/10 12:47:33 INFO  - jmeter.engine.RemoteJMeterEngineImpl: Creating RMI registry (server.rmi.create=true) 
+2017/11/10 12:47:34 INFO  - jmeter.engine.RemoteJMeterEngineImpl: Bound to registry on port 1099 
+2017/11/10 12:50:12 INFO  - jmeter.samplers.SampleEvent: List of sample_variables: [] 
+2017/11/10 12:50:12 INFO  - jmeter.protocol.http.control.CookieManager: Settings: Delete null: true Check: true Allow variable: true Save: false Prefix: COOKIE_ 
+2017/11/10 12:50:12 INFO  - jmeter.protocol.http.control.CacheManager: Will only cache the following methods: [GET] 
+2017/11/10 12:50:12 INFO  - jmeter.samplers.BatchSampleSender: Using batching for this run. Thresholds: num=100, time=60000 
+2017/11/10 12:50:12 INFO  - jmeter.samplers.DataStrippingSampleSender: Using DataStrippingSampleSender for this run 
+2017/11/10 12:50:12 INFO  - jmeter.protocol.http.sampler.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser 
+2017/11/10 12:50:12 INFO  - jmeter.protocol.http.sampler.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser 
+2017/11/10 12:50:12 INFO  - jmeter.protocol.http.sampler.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser 
+2017/11/10 12:50:12 INFO  - jmeter.protocol.http.sampler.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser 
+2017/11/10 12:50:12 INFO  - jmeter.protocol.http.sampler.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser 
+2017/11/10 12:50:12 INFO  - jmeter.protocol.http.sampler.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser 
+2017/11/10 12:50:12 INFO  - jmeter.engine.RemoteJMeterEngineImpl: Creating JMeter engine on host 127.0.0.1 base '.' 
+2017/11/10 12:50:12 INFO  - jmeter.engine.RemoteJMeterEngineImpl: Remote client host: 172.17.41.109 
+2017/11/10 12:50:12 INFO  - jmeter.services.FileServer: Default base='D:\Tatireddy\JMeter\apache-jmeter-3.0\apache-jmeter-3.0\bin' 
+2017/11/10 12:50:12 INFO  - jmeter.services.FileServer: Set new base='.' 
+2017/11/10 12:50:12 INFO  - jmeter.engine.StandardJMeterEngine: Applying properties {} 
+2017/11/10 12:50:12 INFO  - jmeter.engine.RemoteJMeterEngineImpl: Running test 
+2017/11/10 12:50:12 INFO  - jmeter.engine.StandardJMeterEngine: Running the test! 
+2017/11/10 12:50:12 INFO  - jmeter.samplers.SampleEvent: List of sample_variables: [] 
+2017/11/10 12:50:12 INFO  - jmeter.engine.util.CompoundVariable: Note: Function class names must contain the string: '.functions.' 
+2017/11/10 12:50:12 INFO  - jmeter.engine.util.CompoundVariable: Note: Function class names must not contain the string: '.gui.' 
+2017/11/10 12:50:12 INFO  - jmeter.engine.StandardJMeterEngine: Starting ThreadGroup: 1 : Thread Group 
+2017/11/10 12:50:12 INFO  - jmeter.engine.StandardJMeterEngine: Starting 1 threads for group Thread Group. 
+2017/11/10 12:50:12 INFO  - jmeter.engine.StandardJMeterEngine: Thread will continue on error 
+2017/11/10 12:50:12 INFO  - jmeter.threads.ThreadGroup: Starting thread group number 1 threads 1 ramp-up 1 perThread 1000.0 delayedStart=false 
+2017/11/10 12:50:12 INFO  - jmeter.protocol.http.sampler.HTTPHCAbstractImpl: Local host = IND-ARLIDW70093 
+2017/11/10 12:50:12 INFO  - jmeter.protocol.http.sampler.HTTPHC3Impl: HTTP request retry count = 0 
+2017/11/10 12:50:12 INFO  - jmeter.threads.ThreadGroup: Started thread group number 1 
+2017/11/10 12:50:12 INFO  - jmeter.engine.StandardJMeterEngine: All thread groups have been started 
+2017/11/10 12:50:12 INFO  - jmeter.samplers.SampleResult: Note: Sample TimeStamps are START times 
+2017/11/10 12:50:12 INFO  - jmeter.samplers.SampleResult: sampleresult.default.encoding is set to ISO-8859-1 
+2017/11/10 12:50:12 INFO  - jmeter.samplers.SampleResult: sampleresult.useNanoTime=true 
+2017/11/10 12:50:12 INFO  - jmeter.samplers.SampleResult: sampleresult.nanoThreadSleep=5000 
+2017/11/10 12:50:12 INFO  - jmeter.threads.JMeterThread: Thread started: Thread Group 1-1 
+2017/11/10 12:50:12 WARN  - jmeter.control.TransactionController: Could not fetch SamplePackage 
+2017/11/10 12:50:12 INFO  - jmeter.util.JsseSSLManager: Using default SSL protocol: TLS 
+2017/11/10 12:50:12 INFO  - jmeter.util.JsseSSLManager: SSL session context: per-thread 
+2017/11/10 12:50:13 INFO  - jmeter.util.SSLManager: JmeterKeyStore Location:  type JKS 
+2017/11/10 12:50:13 INFO  - jmeter.util.SSLManager: KeyStore created OK 
+2017/11/10 12:50:13 WARN  - jmeter.util.SSLManager: Keystore file not found, loading empty keystore 
+2017/11/10 12:50:16 INFO  - jmeter.threads.JMeterThread: Thread is done: Thread Group 1-1 
+2017/11/10 12:50:16 INFO  - jmeter.threads.JMeterThread: Thread finished: Thread Group 1-1 
+2017/11/10 12:50:16 INFO  - jmeter.engine.StandardJMeterEngine: Notifying test listeners of end of test 
+2017/11/10 12:50:16 INFO  - jmeter.samplers.DataStrippingSampleSender: Test Ended on 127.0.0.1 
+2017/11/10 12:50:16 INFO  - jmeter.samplers.BatchSampleSender: Test Ended on 127.0.0.1 
+2017/11/10 12:50:16 INFO  - jmeter.engine.StandardJMeterEngine: Test has ended on host 127.0.0.1 

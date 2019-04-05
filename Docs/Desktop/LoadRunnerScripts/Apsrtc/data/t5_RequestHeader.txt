@@ -1,0 +1,15 @@
+POST http://www.apsrtconline.in/oprs-web/ajax/forward/layout/boardPoints.do?ajaxAction=fw&txtJourneyDate=18/11/2017&serviceId=18991&startPlaceId=1386430615487&routeCode=1498819286672&endPlaceId=14911&serviceCategoryId=1498918074521&X=1510893064682 HTTP/1.1
+Accept: text/html, */*; q=0.01
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+X-Requested-With: XMLHttpRequest
+Referer: http://www.apsrtconline.in/oprs-web/avail/services.do
+Accept-Language: en-IN
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+Host: www.apsrtconline.in
+Content-Length: 59
+DNT: 1
+Proxy-Connection: Keep-Alive
+Pragma: no-cache
+Cookie: JSESSIONID=3HkchTlLgcDyTyGBsQy0vZXJjvsLS2Bd1YGdLg1Xh2GVsjQPJLTFkqs1nrcTyZPt!1628198587!-1574871768; _ga=GA1.2.712127139.1510893013; _gid=GA1.2.1356801977.1510893013; _gat=1
+

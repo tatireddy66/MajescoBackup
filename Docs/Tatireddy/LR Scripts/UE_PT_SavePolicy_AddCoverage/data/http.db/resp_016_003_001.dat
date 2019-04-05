@@ -1,0 +1,45 @@
+<stingray>
+ <status>success</status>
+ <id>AD09471A1B1F4A118D56834EED7E7D8950B3CF</id>
+ <vrmname>CLAIMS_SEARCH_RESULT</vrmname>
+ <servermode>3</servermode>
+ <target>middle</target>
+ <callback>1</callback>
+<html><![CDATA[<div style="width: 878px;" id="rightColumn" class="right column component EditableContent" stingraytarget="" ref="EditableContent">
+<div class="component EditorLabel" ref="EditorLabel"><label class="PageTitle" title="">Search Results</label></div>
+<div class="component DynamicContainer" ref="DynamicContainer">
+<h3 class="handle">Claim Search Results</h3>
+<div class="component EditorLabel" ref="EditorLabel"><label class="Default" title="" tabindex="-1"></label>
+<table class="TableWalker" id="SearchResults">
+<thead>
+<tr>
+<td filter="text" column="MemberName" style="text-align:left">Member Name</td>
+<td style="text-align:left" filter="text" column="ClaimCode">Claim Number</td>
+<td filter="text" column="Name" style="text-align:left">Claimant Name</td>
+<td filter="text" column="AdjusterName" style="text-align:left">Analyst</td>
+<td filter="date" column="DateOfLoss" style="text-align:left">Date </td>
+<td filter="text" column="FT" style="text-align:left">Product</td>
+<td filter="text" column="CStatus" style="text-align:left">Status</td>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+</label></label></div></div>
+<div style="HEIGHT: 42px" class="component StaticContainer borderless" ref="StaticContainer">
+<h3 style="VISIBILITY: hidden" class="handle"></h3>
+<div style="WIDTH: 160px; HEIGHT: 32px; TOP: -37px; LEFT: -15px" class="component EditorSubmitButton" ref="EditorSubmitButton" definition="Communication.SerialRequest($(&quot;#rightColumn&quot;), false, this)" function="CLICK"><input style="WIDTH: 150px; HEIGHT: 22px" id="Cancel" title="Please click here to return to the Claims System Main Menu" tabindex="0" name="Cancel" value="Exit to Main Menu" type="button" defaultbutton="false" class=""> </div>
+
+
+</div>
+<div style="display: none;" class="component ScriptingContainer" ref="ScriptingContainer">
+<h3 class="handle" lasttoggle="1">Javascript Functions</h3><pre style="display: none;">function OnLoad(){
+ scroll(0,0);
+ initTableWalker( "claims_search_result" , "SearchResults", true, 10 );
+}
+
+</pre></div></div>
+<div style="CLEAR: both"></div>
+<div id="FooterSeparator"></div>
+]]></html>
+</stingray>

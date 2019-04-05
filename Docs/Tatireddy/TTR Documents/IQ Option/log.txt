@@ -1,0 +1,63 @@
+[2018-03-12 14:55:51.612] [IQ Option] [error] Failed to remove 'files\': No error
+[2018-03-12 14:55:52.818] [IQ Option] [error] Unable to open file: C:\Users\tatire661841.MAJESCO\AppData\Roaming\IQ Option\host-cfg.dat
+[2018-03-12 14:55:52.818] [IQ Option] [error] Error opening: C:\Users\tatire661841.MAJESCO\AppData\Roaming\IQ Option\host-cfg.dat; No such file or directory
+[2018-03-12 14:55:52.843] [IQ Option] [error] Localization data is missing: strings_in
+[2018-03-12 14:55:53.994] [IQ Option] [error] Unable to open file: C:\Users\TATIRE~1.MAJ\AppData\Local\Temp\/IQ Option/bwelfnbfndfkvjvfrzcrtedayltdnclz.png.dat
+[2018-03-12 14:56:14.016] [IQ Option] [error] Curl request to https://static.iqoption.com/traderoom/help_support.png has failed: (28) Operation timed out after 20015 milliseconds with 0 out of 0 bytes received
+[2018-03-12 14:56:14.017] [IQ Option] [error] Unable to open file: C:\Users\TATIRE~1.MAJ\AppData\Local\Temp\/IQ Option/bwelfnbfndfkvjvfrzcrtedayltdnclz.png.dat
+[2018-03-12 14:56:24.100] [IQ Option] [error] Curl request to https://statsglt.iqoption.com/log/performance has failed: (28) Operation timed out after 30014 milliseconds with 0 out of 0 bytes received
+[2018-03-12 14:56:32.645] [IQ Option] [error] Curl request to https://iqoption.com/api/configuration has failed: (35) Unknown SSL protocol error in connection to iqoption.com:443 
+[2018-03-12 14:56:34.021] [IQ Option] [error] Curl request to https://static.iqoption.com/traderoom/help_support.png has failed: (28) Operation timed out after 20015 milliseconds with 0 out of 0 bytes received
+[2018-03-12 14:56:34.022] [IQ Option] [error] Unable to open file: C:\Users\TATIRE~1.MAJ\AppData\Local\Temp\/IQ Option/bwelfnbfndfkvjvfrzcrtedayltdnclz.png.dat
+[2018-03-12 14:57:12.647] [IQ Option] [error] Curl request to https://iqoption.com/api/appinit has failed: (35) Unknown SSL protocol error in connection to iqoption.com:443 
+[2018-03-12 14:57:24.799] [IQ Option] [error] Curl request to https://statsglt.iqoption.com/log/performance has failed: (28) Operation timed out after 30014 milliseconds with 0 out of 0 bytes received
+[2018-03-12 14:57:32.647] [IQ Option] [error] Curl request to http://updates.iqoption.com/api/v1/info has failed: (56) Recv failure: Connection was reset
+[2018-03-12 14:57:42.803] [IQ Option] [error] Curl request to https://auth.iqoption.com/api/v1.0/login has failed: (28) Operation timed out after 30015 milliseconds with 0 out of 0 bytes received
+[2018-03-13 12:26:34.736] [IQ Option] [error] Failed to remove 'files\': No error
+[2018-03-13 12:26:35.696] [IQ Option] [error] Unable to open file: C:\Users\tatire661841.MAJESCO\AppData\Roaming\IQ Option\host-cfg.dat
+[2018-03-13 12:26:35.696] [IQ Option] [error] Error opening: C:\Users\tatire661841.MAJESCO\AppData\Roaming\IQ Option\host-cfg.dat; No such file or directory
+[2018-03-13 12:26:35.721] [IQ Option] [error] Localization data is missing: strings_in
+[2018-03-13 12:26:36.843] [IQ Option] [error] Unable to open file: C:\Users\TATIRE~1.MAJ\AppData\Local\Temp\/IQ Option/bwelfnbfndfkvjvfrzcrtedayltdnclz.png.dat
+[2018-03-13 12:26:56.852] [IQ Option] [error] Curl request to https://static.iqoption.com/traderoom/help_support.png has failed: (28) Operation timed out after 20015 milliseconds with 0 out of 0 bytes received
+[2018-03-13 12:26:56.853] [IQ Option] [error] Unable to open file: C:\Users\TATIRE~1.MAJ\AppData\Local\Temp\/IQ Option/bwelfnbfndfkvjvfrzcrtedayltdnclz.png.dat
+[2018-03-13 12:27:06.940] [IQ Option] [error] Curl request to https://statsglt.iqoption.com/log/performance has failed: (28) Operation timed out after 30015 milliseconds with 0 out of 0 bytes received
+[2018-03-13 12:27:15.227] [IQ Option] [error] Curl request to https://iqoption.com/api/configuration has failed: (35) Unknown SSL protocol error in connection to iqoption.com:443 
+[2018-03-13 12:27:16.869] [IQ Option] [error] Curl request to https://static.iqoption.com/traderoom/help_support.png has failed: (28) Operation timed out after 20015 milliseconds with 0 out of 0 bytes received
+[2018-03-13 12:27:16.870] [IQ Option] [error] Unable to open file: C:\Users\TATIRE~1.MAJ\AppData\Local\Temp\/IQ Option/bwelfnbfndfkvjvfrzcrtedayltdnclz.png.dat
+[2018-03-13 12:27:46.724] [IQ Option] [error] Curl request to https://auth.iqoption.com/api/v1.0/login has failed: (28) Operation timed out after 30014 milliseconds with 0 out of 0 bytes received
+[2018-03-13 12:28:04.230] [IQ Option] [error] Curl request to https://iqoption.com/api/appinit has failed: (35) Unknown SSL protocol error in connection to iqoption.com:443 
+[2018-03-13 12:28:06.650] [IQ Option] [error] Curl request to https://statsglt.iqoption.com/log/performance has failed: (28) Operation timed out after 30014 milliseconds with 0 out of 0 bytes received
+[2018-03-13 12:28:14.232] [IQ Option] [error] Curl request to http://updates.iqoption.com/api/v1/info has failed: (56) Recv failure: Connection was reset
+[2018-03-13 12:28:34.235] [IQ Option] [error] Curl request to http://event.iqoption.com//api/v1/events has failed: (56) Recv failure: Connection was reset
+[2018-03-13 12:28:34.235] [IQ Option] [error] IQAnalytics: network communication error
+[2018-03-13 12:28:54.237] [IQ Option] [error] Curl request to https://iqoption.com/api/glclient/build/patch/info?platform=win_gl&from=741_11_0972 has failed: (35) Unknown SSL protocol error in connection to iqoption.com:443 
+[2018-03-13 12:28:54.239] [IQ Option] [error] Curl request to http://event.iqoption.com//api/v1/events has failed: (56) Recv failure: Connection was reset
+[2018-03-13 12:28:54.239] [IQ Option] [error] IQAnalytics: network communication error
+[2018-03-13 12:29:06.633] [IQ Option] [error] Curl request to https://statsglt.iqoption.com/v1/time-api/add has failed: (28) Operation timed out after 30015 milliseconds with 0 out of 0 bytes received
+[2018-03-13 12:29:06.636] [IQ Option] [error] Curl request to https://statsglt.iqoption.com/log/performance has failed: (28) Operation timed out after 30015 milliseconds with 0 out of 0 bytes received
+[2018-03-13 12:29:34.240] [IQ Option] [error] Curl request to http://iqoption.com/api/glclient/build/patch/?platform=win_gl&from=741_11_0972 has failed: (56) Recv failure: Connection was reset
+[2018-03-13 12:29:34.240] [IQ Option] [error] Unable to open file: C:\Users\TATIRE~1.MAJ\AppData\Local\Temp\/IQ Option//Update/iqUpdate.ustore
+[2018-03-13 12:29:34.240] [IQ Option] [error] Updater: Download update failed
+[2018-03-13 12:30:06.591] [IQ Option] [error] Curl request to https://statsglt.iqoption.com/log/performance has failed: (28) Operation timed out after 30015 milliseconds with 0 out of 0 bytes received
+[2018-03-13 12:30:06.623] [IQ Option] [error] Curl request to https://statsglt.iqoption.com/v1/time-api/add has failed: (28) Operation timed out after 30014 milliseconds with 0 out of 0 bytes received
+[2018-03-13 12:31:06.544] [IQ Option] [error] Curl request to https://statsglt.iqoption.com/log/performance has failed: (28) Operation timed out after 30014 milliseconds with 0 out of 0 bytes received
+[2018-03-13 12:32:06.500] [IQ Option] [error] Curl request to https://statsglt.iqoption.com/log/performance has failed: (28) Operation timed out after 30014 milliseconds with 0 out of 0 bytes received
+[2018-03-13 12:33:06.502] [IQ Option] [error] Curl request to https://statsglt.iqoption.com/log/performance has failed: (28) Operation timed out after 30014 milliseconds with 0 out of 0 bytes received
+[2018-03-13 12:34:06.473] [IQ Option] [error] Curl request to https://statsglt.iqoption.com/log/performance has failed: (28) Operation timed out after 30014 milliseconds with 0 out of 0 bytes received
+[2018-03-13 12:35:06.447] [IQ Option] [error] Curl request to https://statsglt.iqoption.com/log/performance has failed: (28) Operation timed out after 30015 milliseconds with 0 out of 0 bytes received
+[2018-03-13 12:36:06.405] [IQ Option] [error] Curl request to https://statsglt.iqoption.com/log/performance has failed: (28) Operation timed out after 30014 milliseconds with 0 out of 0 bytes received
+[2018-03-13 12:37:06.388] [IQ Option] [error] Curl request to https://statsglt.iqoption.com/log/performance has failed: (28) Operation timed out after 30015 milliseconds with 0 out of 0 bytes received
+[2018-03-13 12:38:06.329] [IQ Option] [error] Curl request to https://statsglt.iqoption.com/log/performance has failed: (28) Operation timed out after 30015 milliseconds with 0 out of 0 bytes received
+[2018-03-13 12:39:06.335] [IQ Option] [error] Curl request to https://statsglt.iqoption.com/log/performance has failed: (28) Operation timed out after 30015 milliseconds with 0 out of 0 bytes received
+[2018-03-13 12:39:24.334] [IQ Option] [error] Curl request to https://auth.iqoption.com/api/v1.0/login has failed: (28) Operation timed out after 30015 milliseconds with 0 out of 0 bytes received
+[2018-03-13 12:40:06.300] [IQ Option] [error] Curl request to https://statsglt.iqoption.com/log/performance has failed: (28) Operation timed out after 30015 milliseconds with 0 out of 0 bytes received
+[2018-03-13 12:40:14.325] [IQ Option] [error] Curl request to http://event.iqoption.com//api/v1/events has failed: (56) Recv failure: Connection was reset
+[2018-03-13 12:40:14.325] [IQ Option] [error] IQAnalytics: network communication error
+[2018-03-13 12:40:25.301] [IQ Option] [error] Curl request to http://event.iqoption.com//api/v1/events has failed: (56) Recv failure: Connection was reset
+[2018-03-13 12:40:25.301] [IQ Option] [error] IQAnalytics: network communication error
+[2018-03-13 12:41:06.240] [IQ Option] [error] Curl request to https://statsglt.iqoption.com/log/performance has failed: (28) Operation timed out after 30014 milliseconds with 0 out of 0 bytes received
+[2018-03-13 12:42:06.196] [IQ Option] [error] Curl request to https://statsglt.iqoption.com/log/performance has failed: (28) Operation timed out after 30015 milliseconds with 0 out of 0 bytes received
+[2018-03-13 12:43:06.202] [IQ Option] [error] Curl request to https://statsglt.iqoption.com/log/performance has failed: (28) Operation timed out after 30015 milliseconds with 0 out of 0 bytes received
+[2018-03-13 12:44:06.160] [IQ Option] [error] Curl request to https://statsglt.iqoption.com/log/performance has failed: (28) Operation timed out after 30015 milliseconds with 0 out of 0 bytes received
+[2018-03-13 12:45:06.110] [IQ Option] [error] Curl request to https://statsglt.iqoption.com/log/performance has failed: (28) Operation timed out after 30015 milliseconds with 0 out of 0 bytes received
+[2018-03-13 12:45:19.079] [IQ Option] [error] Curl request to https://auth.iqoption.com/api/v1.0/login has failed: (28) Operation timed out after 30015 milliseconds with 0 out of 0 bytes received

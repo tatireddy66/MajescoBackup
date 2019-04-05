@@ -1,0 +1,11 @@
+[t18]
+FileName1=t18.htm
+URL1=http://ueatworkuat.maxprocessing.com/CLAIMS_EGL_PAGE1.max?preprocess=true&AJAX_ACTION=tbw&TBW_TBLID=Lawsuit_Table&RULE=CLAIMS_EGL_PAGE1&CURRENT=1&NEXT=11&CURRENT=1&NEXT=11&t=1466686673121
+Total=1
+RequestHeaderFile=t18_RequestHeader.txt
+RequestBodyFile=t18_RequestBody.txt
+ResponseHeaderFile=t18_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_18.xml
+[ProtocolInfo]
+ProtocolId=QTWeb

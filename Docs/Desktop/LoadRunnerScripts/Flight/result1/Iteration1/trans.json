@@ -1,0 +1,12 @@
+[
+    {
+        "transactionName": "GoogleHomepage",
+        "rawStartTime": 1544013600216,
+        "rawEndTime": 1544013603118
+    },
+    {
+        "transactionName": "Search_flights",
+        "rawStartTime": 1544013603125,
+        "rawEndTime": 1544013610486
+    }
+]

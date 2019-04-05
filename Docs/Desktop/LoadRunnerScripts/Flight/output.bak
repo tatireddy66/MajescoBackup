@@ -1,0 +1,29 @@
+Virtual User Script started at : 05-12-2018 18:05:35
+Starting action vuser_init.
+Web Turbo Replay of LoadRunner 12.53.0 for Windows 7; build 1203 (Dec 05 2018 19:13:20)  	[MsgId: MMSG-26983]
+Run mode: HTML  	[MsgId: MMSG-26993]
+Replay user agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko  	[MsgId: MMSG-26988]
+Run-Time Settings file: "C:\Users\tatire661841.MAJESCO\Desktop\Desktop\LoadRunnerScripts\Flight\\default.cfg"  	[MsgId: MMSG-27141]
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Maximum number of concurrent connections per server: 6  	[MsgId: MMSG-26989]
+Starting action Action.
+Action.c(3): web_set_sockets_option started  	[MsgId: MMSG-26355]
+Action.c(3): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+Action.c(6): web_reg_save_param_ex started  	[MsgId: MMSG-26355]
+Action.c(6): Registering web_reg_save_param_ex was successful  	[MsgId: MMSG-26390]
+Action.c(16): web_url("index.htm") started  	[MsgId: MMSG-26355]
+Action.c(16): Downloading resource "http://127.0.0.1:1080/favicon.ico" (specified by argument number 10)  	[MsgId: MMSG-26577]
+Action.c(16): Downloading resource "https://www.bing.com/favicon.ico" (specified by argument number 13)  	[MsgId: MMSG-26577]
+Action.c(16): Error -26610: HTTP Status-Code=502 (Connection refused) for "http://127.0.0.1:1080/WebTours/index.htm"  	[MsgId: MERR-26610]
+Action.c(16): Warning -26610: HTTP Status-Code=502 (Connection refused) for "http://127.0.0.1:1080/favicon.ico"  	[MsgId: MWAR-26610]
+Action.c(16): Notify: Saving Parameter "userSession = ".
+Action.c(16): Error -35061: No match found for the requested parameter "userSession". Either the specified boundaries were not found in the response or the matched text is longer than current max html parameter size of 256 bytes. The total length of the response is 1569 bytes. You can use "web_set_max_html_param_len" to increase the max parameter size.  	[MsgId: MERR-35061]
+Action.c(16): web_url("index.htm") highest severity level was "ERROR", 1569 body bytes, 975 header bytes  	[MsgId: MMSG-26388]
+Ending action Action.
+Ending iteration 1.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.

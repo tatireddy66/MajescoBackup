@@ -1,0 +1,15 @@
+HTTP/1.1 204 No Content
+Date: Wed, 05 Dec 2018 12:40:07 GMT
+Pragma: no-cache
+Expires: Fri, 01 Jan 1990 00:00:00 GMT
+Cache-Control: no-cache, no-store, must-revalidate
+Content-Type: text/html
+Server: scaffolding on HTTPServer2
+Content-Length: 0
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+Alt-Svc: quic=":443"; ma=2592000; v="44,43,39,35"
+Age: 0
+Connection: close
+Via: HTTPS/1.1 localhost.localdomain
+

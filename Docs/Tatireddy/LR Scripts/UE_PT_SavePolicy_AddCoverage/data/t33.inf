@@ -1,0 +1,13 @@
+[t33]
+FileName1=t33.htm
+URL1=http://ueatworkuat.maxprocessing.com/claims_modify2.max?AJAX_ACTION=SaveSelectedRTR&SelectedRTR=0&t=1466686806222
+Total=2
+RequestHeaderFile=t33_RequestHeader.txt
+RequestBodyFile=t33_RequestBody.txt
+ResponseHeaderFile=t33_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_33.xml
+FileName2=t33_info.gif
+URL2=http://ueatworkuat.maxprocessing.com/images/info.gif
+[ProtocolInfo]
+ProtocolId=QTWeb

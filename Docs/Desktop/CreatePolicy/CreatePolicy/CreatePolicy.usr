@@ -1,0 +1,100 @@
+[General]
+Type=Web2UI
+DefaultCfg=default.cfg
+MajorVersion=12
+MinorVersion=53
+ParameterFile=
+GlobalParameterFile=
+NewFunctionHeader=1
+LastActiveAction=Script-View
+DevelopTool=Vugen
+LastModifyVer=12.53.0.1203
+ActiveTypes=Web2UI
+AdditionalTypes=Web2UI
+GenerateTypes=Web2UI
+ParamLeftBrace={
+ParamRightBrace=}
+ScriptLanguage=C
+RunType=cci
+DisableRegenerate=0
+Description=
+LastCodeGenerationVer=
+ScriptLocale=en-IN
+[Actions]
+vuser_init=vuser_init.c
+Action=Action.c
+Script-View=Script-View.c
+vuser_end=vuser_end.c
+[VisibleActions]
+vuser_init=0
+Action=0
+vuser_end=0
+Script-View=1
+[VuserProfiles]
+Profiles=Default Profile
+[CfgFiles]
+Default Profile=default.cfg
+[RunLogicFiles]
+Default Profile=default.usp
+[ExtraFiles]
+C-functions.c=
+globals.h=
+JS-functions.js=
+[Interpreters]
+vuser_init=cci
+Action=cci
+Script-View=no
+vuser_end=cci
+[Recorded Actions]
+vuser_init=0
+Action=0
+Script-View=1
+vuser_end=0
+[Modified Actions]
+vuser_init=0
+Action=0
+Script-View=0
+vuser_end=0
+[Replayed Actions]
+vuser_init=1
+Action=1
+Script-View=1
+vuser_end=1
+[TransactionsOrder]
+Order="01_Url Load__*delimiter*__02_Login__*delimiter*__03_StartNewPolicy__*delimiter*__04_Choose Company__*delimiter*__05_Policy and Product Info_Next__*delimiter*__06_Producers_Add__*delimiter*__07_Producers_Next__*delimiter*__08_Done With Producers__*delimiter*__09_CommercialAuto_Next__*delimiter*__10_State Coverage Limits_Add__*delimiter*__11_AddingStatelimits_next__*delimiter*__12_Done with State coverage__*delimiter*__13_Covered Auto Symbols_Next__*delimiter*__14_Locations_Add__*delimiter*__15_Locations_Next__*delimiter*__16_Donw with Locations__*delimiter*__17_Drivers_Add__*delimiter*__18_Drivers_Next__*delimiter*__19_Done With Drivers__*delimiter*__20_Vehicles_Add__*delimiter*__21_Done With Vehicles__*delimiter*__22_Additional Coverages_Next__*delimiter*__23_Additional Interest_Add__*delimiter*__24_Additional Interest_Next__*delimiter*__25_Done With_Additional Interest__*delimiter*__26_Calculate Premium__*delimiter*__27_Premium Summary_Next__*delimiter*__28_Complete__*delimiter*__29_Book__*delimiter*__30_Sign Out"
+[StateManagement]
+LastReplayStatus=1
+[ActiveReplay]
+LastReplayedRunName=result1
+ActiveRunName=
+[Transactions]
+"01_Url Load"=
+02_Login=
+03_StartNewPolicy=
+"04_Choose Company"=
+"05_Policy and Product Info_Next"=
+06_Producers_Add=
+07_Producers_Next=
+"08_Done With Producers"=
+09_CommercialAuto_Next=
+"10_State Coverage Limits_Add"=
+11_AddingStatelimits_next=
+"12_Done with State coverage"=
+"13_Covered Auto Symbols_Next"=
+14_Locations_Add=
+15_Locations_Next=
+"16_Donw with Locations"=
+17_Drivers_Add=
+18_Drivers_Next=
+"19_Done With Drivers"=
+20_Vehicles_Add=
+"21_Done With Vehicles"=
+"22_Additional Coverages_Next"=
+"23_Additional Interest_Add"=
+"24_Additional Interest_Next"=
+"25_Done With_Additional Interest"=
+"26_Calculate Premium"=
+"27_Premium Summary_Next"=
+28_Complete=
+29_Book=
+"30_Sign Out"=

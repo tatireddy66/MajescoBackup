@@ -1,0 +1,8 @@
+POST /service/update2?cup2key=6:4216953270&cup2hreq=ce2dcf56f178cd5541242603e15e5cf1e4503451ba1e3c3401050d78e585e20e HTTP/1.1
+Host: clients2.google.com
+Connection: keep-alive
+Content-Length: 1374
+Content-Type: application/xml
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+

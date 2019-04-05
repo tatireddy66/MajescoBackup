@@ -1,0 +1,15 @@
+[t22]
+FileName1=t22_gen_204.htm
+URL1=https://www.google.com/gen_204?atyp=i&ct=phandle&cad=0,det:0&ei=jMYHXJWIOaq7ggf-84HYDQ&zx=1544013459714
+Total=3
+ContentType=text/html
+SnapshotXmlFile=snapshot_22.xml
+RequestHeaderFile=t22_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t22_ResponseHeader.txt
+FileName2=t22_YMzmnwYLVewpqNtAjl_uht1raXi6FifhyBWxdH8tpLc.html
+URL2=https://www.google.com/js/bg/YMzmnwYLVewpqNtAjl_uht1raXi6FifhyBWxdH8tpLc.js
+FileName3=t22_ecr.html
+URL3=https://www.google.com/async/ecr?ei=jMYHXJWIOaq7ggf-84HYDQ&lei=jMYHXJWIOaq7ggf-84HYDQ&safe=active&yv=3&async=encoded_cache_key:ChMIlf6Pq9qI3wIVqp3gCh3-eQDbEgIYAg,version_info:I2O3ImdADs4XcOpsBYikpV5TivnldxY,attempt:1,_fmt:jspb
+[ProtocolInfo]
+ProtocolId=QTWeb

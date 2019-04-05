@@ -1,0 +1,13 @@
+[t8]
+FileName1=t8.htm
+URL1=http://ueatworkuat.maxprocessing.com/applist.max?preprocess=true&AJAX_ACTION=tbw&TBW_TBLID=resulttable&RULE=applist&CURRENT=1&NEXT=11&CURRENT=1&NEXT=11&t=1466686619827
+Total=2
+RequestHeaderFile=t8_RequestHeader.txt
+RequestBodyFile=t8_RequestBody.txt
+ResponseHeaderFile=t8_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_8.xml
+FileName2=t8_32px-Crystal_Clear_action_info.png
+URL2=http://ueatworkuat.maxprocessing.com/images/32px-Crystal_Clear_action_info.png
+[ProtocolInfo]
+ProtocolId=QTWeb

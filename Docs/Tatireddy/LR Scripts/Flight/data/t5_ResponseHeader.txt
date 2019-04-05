@@ -1,0 +1,15 @@
+HTTP/1.1 200 OK
+Content-Type: text/proto
+X-Content-Type-Options: nosniff
+Content-Encoding: gzip
+Date: Mon, 11 Jul 2016 13:31:45 GMT
+Server: AutoFill Server
+Cache-Control: private
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+Alternate-Protocol: 443:quic
+Alt-Svc: quic=":443"; ma=2592000; v="35,34,33,32,31,30,29,28,27,26,25"
+Content-Length: 32
+Age: 0
+Via: HTTPS/1.1 ind-mhp2lfp001
+

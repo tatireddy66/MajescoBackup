@@ -1,0 +1,405 @@
+<stingray>
+ <status>success</status>
+ <id>AD09471A1B1F4A118D56834EED7E7D8950B3CF</id>
+ <vrmname>CLAIMS_EGL_PAGE1</vrmname>
+ <servermode>3</servermode>
+ <target>middle</target>
+ <callback>1</callback>
+<html><![CDATA[<div class="right column component EditableContent" id="rightColumn" style="width: 870px;" stingraytarget="" ref="EditableContent">
+    <div class="component EditorLabel" ref="EditorLabel" style="">
+        <label class="PageTitle" title="" tabindex="-1" style=" ">Summary</label>
+    </div>
+   <div class="component EditorLabel" ref="EditorLabel"><label class="Default" tabindex="-1"></label>
+<div>
+    <table style="width:865px">
+        <tbody>
+            <tr>
+                <td colspan=8>&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan=8>&nbsp;</td>
+            </tr>
+
+            <tr>
+                <td style="text-align:left">
+                    <label class="Default">Claim #</label>
+                </td>
+                <td>
+                    <label class="InfoColor">155988</label>
+                </td>
+                <td style="text-align:left">
+                    <label class="Default">Claimant</label>
+                </td>
+                <td>
+                    <label class="InfoColor">Perf183 Test183</label>
+                </td>
+                <td style="text-align:left">
+                    <label class="Default">Policy #</label>
+                </td>
+                <td>
+                    <table></table>
+                </td>
+                <td style="text-align:left">
+                    <label class="Default">Institution</label>
+                </td>
+                <td>
+                    <label class="InfoColor"><a onclick="Communication.LinkRequest('account_information.max?Account_id=001U0000009BDp9IAG&AccountType=Institution');">Worcester Polytechnic Institute (688)</a></label>
+                </td>
+            </tr>
+
+            <tr>
+                <td style="text-align:left">
+                    <label class="Default">Product</label>
+                </td>
+                <td>
+                    <label class="InfoColor"></label>
+                </td>
+                <td style="text-align:left">
+                    <label class="Default">DOL</label>
+                </td>
+                <td>
+                    <label class="InfoColor">4/4/2016</label>
+                </td>
+                <td style="text-align:left">
+                    <label class="Default">Status</label>
+                </td>
+                <td>
+                    <label class="InfoColor">Open</label>
+                </td>
+                <td style="text-align:left">
+                    <label class="Default">Analyst</label>
+                </td>
+                <td>
+                    <label class="InfoColor">Dina Hazen</label>
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="component DynamicContainer borderless" id="claimbarinfo" ref="DynamicContainer" style="height: auto;">
+    <h3 id="toggleheaderinfo" style="CURSOR: pointer; color:white; font-size: 10pt;" class="handle"
+        onclick="GlobalScript.GetClaimFinancialDetail(70433);GlobalScript.Toggleheader();">
+      <span style="DISPLAY: none;" id="header_toggle_minus" class="stat">-</span>
+      <span style="DISPLAY: inline;" id="header_toggle_plus" class="stat">+</span>Claim Financial Summary</h3>
+    <div id="divClaimFinancialDetail" style="overflow: hidden;height: auto;"></div>
+</div>
+    <tr>
+          <td colspan=8>&nbsp;</td>
+    </tr>
+<ul id="navigationBar" style="list-style-type:none;margin:auto;padding:0; width:100%; text-align: left;">
+<li style="display: inline;margin:0px; padding: 0px;list-style-type: none;">
+  <DIV style="display: inline;padding:0px; margin:0px; position:relative; HEIGHT:23px; left:0px; CURSOR:default;"
+  class="component EditorSubmitButton"   ref="EditorSubmitButton" condition definition="NavBarButtonClick(this);" function="CLICK">
+  <INPUT style="CURSOR:POINTER; WIDTH:auto; padding:0px 5px 0px 5px; margin:0px; HEIGHT:23px; margin-top:5px; background-color:#E0E0E0; border-color:#303030;"
+    class="ClNavbarSave" id="CLAIMS_EGL_PAGE1" name="CLAIMS_EGL_PAGE1" title="Please click here to view the Summary tab." value="Summary" CauseValidation="false" type=button />
+  </DIV>
+</li><li style="display: inline;margin:0px; padding: 0px;list-style-type: none;">
+  <DIV style="display: inline;padding:0px; margin:0px; position:relative; HEIGHT:23px; left:0px; CURSOR:default;"
+  class="component EditorSubmitButton"   ref="EditorSubmitButton" condition definition="NavBarButtonClick(this);" function="CLICK">
+  <INPUT style="CURSOR:POINTER; WIDTH:auto; padding:0px 5px 0px 5px; margin:0px; HEIGHT:23px; margin-top:5px; "
+    class="ClNavbarSave" id="CLAIMS_MODIFY2" name="CLAIMS_MODIFY2" title="Please click here to view the Claim Details tab." value="Claim Details" CauseValidation="false" type=button />
+  </DIV>
+</li><li style="display: inline;margin:0px; padding: 0px;list-style-type: none;">
+  <DIV style="display: inline;padding:0px; margin:0px; position:relative; HEIGHT:23px; left:0px; CURSOR:default;"
+  class="component EditorSubmitButton"   ref="EditorSubmitButton" condition definition="NavBarButtonClick(this);" function="CLICK">
+  <INPUT style="CURSOR:POINTER; WIDTH:auto; padding:0px 5px 0px 5px; margin:0px; HEIGHT:23px; margin-top:5px; "
+    class="ClNavbarSave" id="CLAIMINFO_CLAIMANTS" name="CLAIMINFO_CLAIMANTS" title="Please click here to view the Claimant tab." value="Claimant" CauseValidation="false" type=button />
+  </DIV>
+</li><li style="display: inline;margin:0px; padding: 0px;list-style-type: none;">
+  <DIV style="display: inline;padding:0px; margin:0px; position:relative; HEIGHT:23px; left:0px; CURSOR:default;"
+  class="component EditorSubmitButton"   ref="EditorSubmitButton" condition definition="NavBarButtonClick(this);" function="CLICK">
+  <INPUT style="CURSOR:POINTER; WIDTH:auto; padding:0px 5px 0px 5px; margin:0px; HEIGHT:23px; margin-top:5px; "
+    class="ClNavbarSave" id="CLAIMINFO_COVERAGES" name="CLAIMINFO_COVERAGES" title="Please click here to view the Coverage tab." value="Coverage" CauseValidation="false" type=button />
+  </DIV>
+</li><li style="display: inline;margin:0px; padding: 0px;list-style-type: none;">
+  <DIV style="display: inline;padding:0px; margin:0px; position:relative; HEIGHT:23px; left:0px; CURSOR:default;"
+  class="component EditorSubmitButton"   ref="EditorSubmitButton" condition definition="NavBarButtonClick(this);" function="CLICK">
+  <INPUT style="CURSOR:POINTER; WIDTH:auto; padding:0px 5px 0px 5px; margin:0px; HEIGHT:23px; margin-top:5px; "
+    class="ClNavbarSave" id="CLAIMINFO_CONTACT" name="CLAIMINFO_CONTACT" title="Please click here to view the Contacts tab." value="Contacts" CauseValidation="false" type=button />
+  </DIV>
+</li><li style="display: inline;margin:0px; padding: 0px;list-style-type: none;">
+  <DIV style="display: inline;padding:0px; margin:0px; position:relative; HEIGHT:23px; left:0px; CURSOR:default;"
+  class="component EditorSubmitButton"   ref="EditorSubmitButton" condition definition="NavBarButtonClick(this);" function="CLICK">
+  <INPUT style="CURSOR:POINTER; WIDTH:auto; padding:0px 5px 0px 5px; margin:0px; HEIGHT:23px; margin-top:5px; "
+    class="ClNavbarSave" id="CLAIMINFO_NOTES" name="CLAIMINFO_NOTES" title="Please click here to view the Notes tab." value="Notes" CauseValidation="false" type=button />
+  </DIV>
+</li><li style="display: inline;margin:0px; padding: 0px;list-style-type: none;">
+  <DIV style="display: inline;padding:0px; margin:0px; position:relative; HEIGHT:23px; left:0px; CURSOR:default;"
+  class="component EditorSubmitButton"   ref="EditorSubmitButton" condition definition="NavBarButtonClick(this);" function="CLICK">
+  <INPUT style="CURSOR:POINTER; WIDTH:auto; padding:0px 5px 0px 5px; margin:0px; HEIGHT:23px; margin-top:5px; "
+    class="ClNavbarSave" id="CLAIMINFO_ATTACHMENTS" name="CLAIMINFO_ATTACHMENTS" title="Please click here to view the Documents tab." value="Documents" CauseValidation="false" type=button />
+  </DIV>
+</li><li style="display: inline;margin:0px; padding: 0px;list-style-type: none;">
+  <DIV style="display: inline;padding:0px; margin:0px; position:relative; HEIGHT:23px; left:0px; CURSOR:default;"
+  class="component EditorSubmitButton"   ref="EditorSubmitButton" condition definition="NavBarButtonClick(this);" function="CLICK">
+  <INPUT style="CURSOR:POINTER; WIDTH:auto; padding:0px 5px 0px 5px; margin:0px; HEIGHT:23px; margin-top:5px; "
+    class="ClNavbarSave" id="CLAIMSINFO_LITIGATION" name="CLAIMSINFO_LITIGATION" title="Please click here to view the Litigation tab." value="Litigation" CauseValidation="false" type=button />
+  </DIV>
+</li><li style="display: inline;margin:0px; padding: 0px;list-style-type: none;">
+  <DIV style="display: inline;padding:0px; margin:0px; position:relative; HEIGHT:23px; left:0px; CURSOR:default;"
+  class="component EditorSubmitButton"   ref="EditorSubmitButton" condition definition="NavBarButtonClick(this);" function="CLICK">
+  <INPUT style="CURSOR:POINTER; WIDTH:auto; padding:0px 5px 0px 5px; margin:0px; HEIGHT:23px; margin-top:5px; "
+    class="ClNavbarSave" id="CLAIMINFO_FINANCIAL" name="CLAIMINFO_FINANCIAL" title="Please click here to view the Financials tab." value="Financials" CauseValidation="false" type=button />
+  </DIV>
+</li><li style="display: inline;margin:0px; padding: 0px;list-style-type: none;">
+  <DIV style="display: inline;padding:0px; margin:0px; position:relative; HEIGHT:23px; left:0px; CURSOR:default;"
+  class="component EditorSubmitButton"   ref="EditorSubmitButton" condition definition="NavBarButtonClick(this);" function="CLICK">
+  <INPUT style="CURSOR:POINTER; WIDTH:auto; padding:0px 5px 0px 5px; margin:0px; HEIGHT:23px; margin-top:5px; "
+    class="ClNavbarSave" id="CLAIMINFO_HISTORY" name="CLAIMINFO_HISTORY" title="Please click here to view the History tab." value="History" CauseValidation="false" type=button />
+  </DIV>
+</li><li style="display: inline;margin:0px; padding: 0px;list-style-type: none;">
+  <DIV style="display: inline;padding:0px; margin:0px; position:relative; HEIGHT:23px; left:0px; CURSOR:default;"
+  class="component EditorSubmitButton"   ref="EditorSubmitButton" condition definition="NavBarButtonClick(this);" function="CLICK">
+  <INPUT style="CURSOR:POINTER; WIDTH:auto; padding:0px 5px 0px 5px; margin:0px; HEIGHT:23px; margin-top:5px; "
+    class="ClNavbarSave" id="CLAIMINFO_TASKS" name="CLAIMINFO_TASKS" title="Please click here to view the Tasks tab." value="Tasks" CauseValidation="false" type=button />
+  </DIV>
+</li>
+</ul>
+ <table style="width:100%;">
+ 
+       
+  
+	
+        
+	
+        </table>
+<label></label></div>
+   <div class="component DynamicContainer" ref="DynamicContainer" cli-cond="" style="">
+      <h3 class="handle">Litigation Summary</h3>
+      <div style="CURSOR: default; TOP: 0px; LEFT: 3px;" class="component EditorLabel" ref="EditorLabel">
+                <label class="Default" title="" tabindex="-1"></label>
+<table width="100%" id="Lawsuit_Table" class="TableWalker">
+<thead>
+<tr style="text-align:left;">
+<td style="text-align:left;">Court</td>
+<td style="text-align:left;">Trial Date</td>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<label></label>
+      </div>
+      <div class="component StaticContainer borderless" ref="StaticContainer" cli-cond="" style="height: 100px;">
+         <h3 class="handle" style="visibility: hidden;"></h3>
+
+         
+         <div class="component EditorText" ref="EditorText" cli-cond="" mp-help="" style="width: 664px; left: 130px; top: -10px; position: absolute; height: 22px;"><span class="notRequired" style="width: 658px; height: 15px; left: 4px; top: 1px; cursor: text; font-size: 0.6em;"></span><input id="mediation_date" name="mediation_date" maxlength="30" class="" tabindex="2" title="Mediation date information is here." style="width: 664px;" value="" type="text" disabled=""></div>
+         
+         <div class="component EditorLabel" ref="EditorLabel" cli-cond="" mp-help="" style="left: 15px; top: -10px;"><label class="DefaultBold" tabindex="-1" title="" style=" ">Mediation Date</label></div>
+         
+         <div class="component EditorText" ref="EditorText" cli-cond="" mp-help="" style="width: 663px; left: 130px; top: 30px; position: absolute; height: 22px;"><span class="notRequired" style="width: 657px; height: 15px; left: 4px; top: 1px; cursor: text; font-size: 0.6em;"></span><input id="defense_counsel" name="defense_counsel" maxlength="30" class="" style="width: 663px;" tabindex="3" title="Defense counsel information is here." value="" type="text" disabled=""></div>
+         
+         <div class="component EditorLabel" ref="EditorLabel" cli-cond="" mp-help="" style="left: 5px; top: 30px;"><label class="DefaultBold" tabindex="-1" title="" style=" ">Defense Counsel</label></div>
+      </div>
+   </div>
+   <div class="component DynamicContainer" ref="DynamicContainer" cli-cond="" style="">
+      <h3 class="handle">Claim Summary</h3>
+      <div class="component StaticContainer borderless" ref="StaticContainer" cli-cond="" style="height: 100px;">
+         <h3 class="handle" style="visibility: hidden;"></h3>
+         <div class="component EditorLabel" ref="EditorLabel" cli-cond="" mp-help="" style="left: 0px; top: 0px;"><label class="DefaultBold" tabindex="-1" title="" style=" ">Loss Description</label></div>
+         <div ref="EditorMemo" style="width: 715px; height: 100px; left: 125px; top: 5px; position: absolute;" class="component EditorMemo" cli-cond="" mp-help="" edithtml="false" spellcheck="false">
+            <span class="EditorMemoSpan notRequired" style="width: 715px; height: 100px;"></span>
+            <textarea id="loss_description" name="loss_description" class="" style="width: 715px; height: 100px;color:#000000;" tabindex="4" title="Loss description information is here." disabled="">PT LoSS Description</textarea>
+            <div class="ckEditorDiv" style="display: none;">PT LoSS Description</div>
+         </div>
+      </div>
+      <div class="component DynamicContainer borderless" ref="DynamicContainer" cli-cond="" style="border: 0px;" id="RelatedClaims_Container">
+         <h3 class="handle" style="visibility:hidden;"></h3>
+         <div class="component EditorLabel" ref="EditorLabel" cli-cond="" mp-help="" style="left: 1.803955078125px; top: 84.9857864379883px;"><label class="DefaultBold" tabindex="-1" title="" style=" ">Related Claims</label></div>
+         <div class="component EditorLabel" ref="EditorLabel" cli-cond="" mp-help="" style="left: 1px; top: 113px;"><label class="Default" tabindex="-1" title="Related claims are listed here." style=" " id="tbw_RelClaims"><table class="TableWalker" id="tbw_RelClaims">
+<thead>
+  <tr>
+   <td column="ClaimNumber" filter="text">Claim Number</td>
+   <td column="MemberName" filter="text" >Member Name</td>
+   <td column="ClaimantName" filter="text" >Claimant Name</td>
+  </tr>
+</thead>
+<tbody>
+</tbody>
+</table></label></div>
+      </div>
+      <div class="component StaticContainer borderless" ref="StaticContainer" cli-cond="" style="position: relative; height: 250px;">
+         <h3 class="handle" style="visibility: hidden;"></h3>
+         <div class="component EditorLabel" ref="EditorLabel" cli-cond="" mp-help="" style="left: 15px; top: 15px;"><label class="DefaultBold" tabindex="-1" title="" style=" ">Reported Date</label></div>
+         
+         <div class="component EditorLabel" ref="EditorLabel" cli-cond="" mp-help="" style="left: 15px; top: 85px;"><label class="DefaultBold" tabindex="-1" title="" style=" ">Claim Supervisor</label></div>
+         <div class="component EditorLabel" ref="EditorLabel" cli-cond="" mp-help="" style="left: 15px; top: 50px; position: absolute; width: 105px; height: 18px;"><label class="DefaultBold" tabindex="-1" title="" style=" ">Reserve Status</label></div>
+         <div class="component EditorLabel" ref="EditorLabel" cli-cond="" mp-help="" style="left: 15px; top: 115px;"><label class="DefaultBold" tabindex="-1" title="" style=" ">Claim Type</label></div>
+         <div class="component EditorLabel" ref="EditorLabel" cli-cond="" mp-help="" style="left: 313px; top: 10px;"><label class="DefaultBold" tabindex="-1" title="" style=" ">Member State</label></div>
+         <div class="component EditorLabel" ref="EditorLabel" cli-cond="" mp-help="" style="left: 498px; top: 10px;"><label class="DefaultBold" tabindex="-1" title="" style=" ">Loss State</label></div>
+         <div class="component EditorText" ref="EditorText" filter="DATE" param="" dtype="DATE" cli-cond="" mp-help="" style="width: 158px; left: 130px; top: 15px; position: absolute; height: 22px;"><span class="notRequired" style="width: 152px; height: 15px; left: 4px; top: 1px; cursor: text; font-size: 0.6em;"></span><input id="report_date1" name="report_date1" maxlength="30" class="" tabindex="5" title="Claim report date information is here." style="width: 158px;" value="3/24/2016" type="text" readonly="" disabled=""></div>
+         <div class="component EditorDropDown" ref="EditorDropDown" cli-cond="" mp-help="" style="width: 85px; height: 35px; left: 403px; top: -10px; position: absolute;">
+            <span class="notRequired" style="cursor: default;"></span><br>
+            <select id="member_state1" name="member_state1" size="1" class="" style="width: 79px;" value="" tabindex="0" title="Member state information is here." readonly="" disabled="">
+               <option value="MA">MA</option>
+            </select>
+         </div>
+         <div class="component EditorDropDown" ref="EditorDropDown" cli-cond="" mp-help="" style="width: 90px; height: 35px; left: 563px; top: -10px; position: absolute;">
+            <span class="notRequired" style="cursor: default;"></span><br>
+            <select id="loss_state1" name="loss_state1" size="1" class="" tabindex="0" title="Claim loss state information is here." style="width: 84px;" readonly="" disabled="">
+               <option value="GA">GA</option>
+            </select>
+         </div>
+         
+         
+         
+         <div class="component EditorText" ref="EditorText" cli-cond="" mp-help="" style="width: 198px; left: 130px; top: 120px; position: absolute; height: 22px;">
+             <span class="notRequired" style="width: 190px; height: 15px; left: 4px; top: 1px; cursor: text; font-size: 0.6em;"></span>
+             <input id="claim_type1" name="claim_type1" maxlength="30" class="" style="width: 196px;" tabindex="9" title="Claim type is shown here." value="Claim" type="text" disabled=""></div>
+             <div class="component EditorText" ref="EditorText" cli-cond="" mp-help="" style="width: 198px; left: 130px; top: 50px; position: absolute; height: 22px;">
+                <span class="notRequired" style="width: 190px; height: 15px; left: 4px; top: 1px; cursor: text; font-size: 0.6em;"></span>
+                <input id="reserve_status1" name="reserve_status1" maxlength="30" class="" tabindex="7" title="Reserve status information is here." style="width: 196px;" value="C: No loss expected" type="text" valuelessattrs="disabled"></div>
+                
+             
+             <input type="hidden" id="SupervisorID" name="SupervisorID" value=""/>
+         <div function="CLICK" definition="CustomScript.SaveSupervisor();" class="component EditorSubmitButton" ref="EditorSubmitButton" style="width: 130px; height: 30px; left: 324px; top: 80px; position: absolute;" cli-cond="" mp-help="">
+                    <input type="button" value="Save Supervisor" id="SaveDetail" name="SaveDetail" class="" style="width: 120px; height: 20px;" title="Please click here to save the Claim Detail." tabindex="0" defaultbutton="false" valuelessattrs="">
+                </div><div class="component EditorText" ref="EditorText" cli-cond="" mp-help="" style="width: 194px; left: 130px; top: 85px; position: absolute; height: 22px;>
+                <span class=" notrequired"="">
+                <input id="supervisor_name1" name="supervisor_name1" maxlength="30" class="" tabindex="8" title="Claim supervisor name is here." style="width: 194px;" value="Vicki Higman" type="text" valuelessattrs="">
+             </div></div>
+
+      <div class="component EditorLabel" ref="EditorLabel" cli-cond="" mp-help="" style="left: 0px; top: 300px; z-index: 0;"><label class="DefaultBold" tabindex="-1" title="" style=" ">Policy Information</label></div>
+      <div class="component EditorLabel" ref="EditorLabel" cli-cond="" mp-help="" style="left: 0px; top: 325px; z-index: 0;"><label class="Default" tabindex="-1" title="Policy information is here." style=" " id="tbw_CSpolInfo"><table class="TableWalker" id="tbw_CSpolInfo">
+<thead>
+<tr>
+<td align="left">Coverage</td>
+<td align="left">Limit (Per Claim)</td>
+<td align="left">Limit (Aggregate)</td>
+<td align="left">Deductible/SIR</td>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table></label></div>
+   </div>
+   <div class="component DynamicContainer" ref="DynamicContainer" cli-cond="" style="" id="claimDetail">
+    <h3 class="handle">Claim Detail</h3>
+    <div class="component StaticContainer borderless" ref="StaticContainer" cli-cond="" style="height: 200px;">
+        <h3 class="handle" style="visibility: hidden;"></h3>
+        <div class="component EditorLabel" ref="EditorLabel" cli-cond="" mp-help="" style="left: 40px; top: 0px;">
+            <label class="DefaultBold" tabindex="-1" title="" style=" ">Cause Of Loss</label>
+        </div>
+        <div class="component EditorLabel" ref="EditorLabel" cli-cond="" mp-help="" style="left: 10px; top: 40px;">
+            <label class="DefaultBold" tabindex="-1" title="" style=" ">Additional Factors</label>
+        </div>
+        <div class="component EditorLabel" ref="EditorLabel" cli-cond="" mp-help="" style="left: 0px; top: 80px;">
+            <label class="DefaultBold" tabindex="-1" title="" style=" ">Injury Driving Claim</label>
+        </div>
+        <div class="component EditorLabel" ref="EditorLabel" cli-cond="" mp-help="" style="left: 5px; top: 120px;">
+            <label class="DefaultBold" tabindex="-1" title="" style=" ">Coord. Of Coverage</label>
+        </div>
+        <div class="component EditorLabel" ref="EditorLabel" cli-cond="" mp-help="" style="left: 654px; top: 0px;">
+            <label class="DefaultBold" tabindex="-1" title="" style=" ">Report To Reinsurers</label>
+        </div>
+        <div class="component EditorLabel" ref="EditorLabel" cli-cond="" mp-help="" style="left: 486px; top: 80px;">
+            <label class="DefaultBold" tabindex="-1" title="" style=" ">Loss Location</label>
+        </div>
+        <div class="component EditorLabel" ref="EditorLabel" cli-cond="" mp-help="" style="left: 482px; top: 0px;">
+            <label class="DefaultBold" tabindex="-1" title="" style=" ">Watch List Item</label>
+        </div>
+        <div class="component EditorLabel" ref="EditorLabel" cli-cond="" mp-help="" style="left: 220px; top: 120px;">
+            <label class="DefaultBold" tabindex="-1" title="" style=" ">Hybrid Claim</label>
+        </div>
+        <div class="component EditorText" ref="EditorText" style="width: 318px; left: 131px; top: 40px; position: absolute; height: 22px;" cli-cond="" mp-help=""><span class="notRequired" style="width: 310px; height: 15px; left: 4px; top: 1px; cursor: text; font-size: 0.6em;"></span>
+            <input id="Text" name="Text" maxlength="30" class="" style="width: 316px;" value="" type="text" title="Cause of loss information is here." tabindex="12" disabled="">
+        </div>
+        <div class="component EditorText" ref="EditorText" style="width: 317px; left: 131px; top: 0px; position: absolute; height: 22px;" cli-cond="" mp-help=""><span class="notRequired" style="width: 309px; height: 15px; left: 4px; top: 1px; cursor: text; font-size: 0.6em;"></span>
+            <input id="additional_factors" name="additional_factors" maxlength="30" class="" value="" type="text" title="Additional factors is here." tabindex="10" style="width: 315px;" disabled="">
+        </div>
+        <div class="component EditorText" ref="EditorText" style="width: 319px; left: 131px; top: 80px; position: absolute; height: 22px;" cli-cond="" mp-help=""><span class="notRequired" style="width: 311px; height: 15px; left: 4px; top: 1px; cursor: text; font-size: 0.6em;"></span>
+            <input id="injury_claim" name="injury_claim" maxlength="30" class="" value="" type="text" title="Injury driving claim information is here." tabindex="14" style="width: 317px;" disabled="">
+        </div>
+        <div class="component EditorText" ref="EditorText" cli-cond="" mp-help="" style="width: 32px; left: 131.142852783203px; top: 120px; position: absolute; height: 22px;"><span class="notRequired" style="width: 24px; height: 15px; left: 4px; top: 1px; cursor: text; font-size: 0.6em;"></span>
+            <input id="coord_textfield" name="coord_textfield" maxlength="30" class="" tabindex="16" title="Coord of coverage answer is here." style="width: 30px;" value="No" type="text" disabled="">
+        </div>
+        <div class="component EditorText" ref="EditorText" cli-cond="" mp-help="" style="width: 32px; left: 306px; top: 120px; position: absolute; height: 22px;"><span class="notRequired" style="width: 24px; height: 15px; left: 4px; top: 1px; cursor: text; font-size: 0.6em;"></span>
+            <input id="hybrid_textfield" name="hybrid_textfield" maxlength="30" class="" tabindex="0" title="Hybrid claim answer is here." disabled="" style="width: 30px;" value="No" type="text">
+        </div>
+        <div class="component EditorText" ref="EditorText" cli-cond="" mp-help="" style="width: 33px; left: 792px; top: 0px; position: absolute; height: 22px;"><span class="notRequired" style="width: 25px; height: 15px; left: 4px; top: 1px; cursor: text; font-size: 0.6em;"></span>
+            <input id="reinsurer_textfield" name="reinsurer_textfield" maxlength="30" class="" tabindex="11" title="Reinsurer answer is here." style="width: 31px;" disabled="" value="No" type="text">
+        </div>
+        <div class="component EditorText" ref="EditorText" cli-cond="" mp-help="" style="width: 32px; left: 591px; top: 0px; position: absolute; height: 22px;"><span class="notRequired" style="width: 24px; height: 15px; left: 4px; top: 1px; cursor: text; font-size: 0.6em;"></span>
+            <input id="watchlist_textfield" name="watchlist_textfield" maxlength="30" class="" tabindex="15" title="Watch list answer is here." style="width: 30px;" disabled="" value="No" type="text">
+        </div>
+        <div class="component EditorText" ref="EditorText" cli-cond="" mp-help="" style="width: 245px; left: 580px; top: 80px; position: absolute; height: 22px;"><span class="notRequired" style="width: 237px; height: 15px; left: 4px; top: 1px; cursor: text; font-size: 0.6em;"></span>
+            <input id="Text3" name="Text3" maxlength="30" class="" tabindex="13" title="Loss location information is here." style="width: 243px;" value="" disabled="" type="text">
+        </div>
+        <div class="component EditorLabel" ref="EditorLabel" cli-cond="" mp-help="" style="left: 485px; top: 40px;">
+            <label class="DefaultBold" tabindex="-1" title="" style=" ">Wrongful Act</label>
+        </div>
+        
+    <div class="component EditorText" ref="EditorText" style="width: 245px; left: 580px; top: 40px; position: absolute; height: 22px;" cli-cond="" mp-help=""><span class="notRequired" style="width: 237px; height: 15px; left: 4px; top: 1px; cursor: text; font-size: 0.6em;"></span>
+            <input disabled="true" id="WRNG1" name="WRNG1" maxlength="30" class="" style="width: 243px;" tabindex="0" title="This is the first wrongful act for this claim." value="" type="text">
+        </div></div>
+    <div class="component EditorLabel" ref="EditorLabel" cli-cond="" mp-help="" style="left: 0px; top: 120px; z-index: 0;">
+        <label class="DefaultBold" tabindex="-1" title="" style=" ">Current Plan Of Action</label>
+    </div>
+
+    <div class="component StaticContainer borderless" ref="StaticContainer" cli-cond="" style="height: 55px;">
+        <h3 class="handle" style="visibility: hidden;"></h3>
+        
+    
+    <div ref="EditorMemo" style="width: 725px; height: 45px; left: -5px; top: -25px; position: absolute;" class="component EditorMemo" cli-cond="" mp-help="" edithtml="false" spellcheck="false"><span class="EditorMemoSpan notRequired" style="width: 725px; height: 45px;"></span>
+            <textarea id="PlanOfAction" name="PlanOfAction" class="" style="width: 725px; height: 45px;" tabindex="0" title="This is the current plan of action." valuelessattrs=""></textarea>
+            <div class="ckEditorDiv" style="display: none;"></div>
+        </div><div function="CLICK" definition="Communication.SerialRequest($(&quot;#rightColumn&quot;),false,this)" class="component EditorSubmitButton" ref="EditorSubmitButton" style="width: 103px; height: 37px; left: 730px; top: -20px; position: absolute;" cli-cond="" mp-help="">
+    <input type="button" value="Save" id="SaveDetail" name="SaveDetail" class="" style="width: 93px; height: 27px;" title="Please click here to save the Claim Detail." tabindex="0" defaultbutton="false" valuelessattrs="">
+    </div></div>
+</div>
+   <div class="component ScriptingContainer" style="display: none;" ref="ScriptingContainer" cli-cond="">
+      <h3 class="handle" lasttoggle="2">Javascript Functions</h3>
+      <pre style="display: none;">function OnLoad()
+{
+    $('#RelatedClaims_Container').hide();
+    $('#tbw_RelClaims').ready(function () {
+        var tbwobj1 = $('#tbw_RelClaims');
+        initTableWalker('CLAIMS_EGL_PAGE1', tbwobj1, true, 10);
+    });
+    $('#tbw_CSpolInfo').ready(function () {
+        var tbwobj2 = $('#tbw_CSpolInfo');
+        initTableWalker('CLAIMS_EGL_PAGE1', tbwobj2, true, 5);
+    });
+
+    initTableWalker('CLAIMS_EGL_PAGE1', $('#Lawsuit_Table'), true, 10);
+    
+    scroll(0,0);
+
+  $("#supervisor_name1").autocomplete("claims_egl_page1.max", {
+       selectFirst:false, delay:10,
+       max:20,cacheLength:0,
+       extraParams: {
+           AJAX_ACTION: "GetSupervisors",
+           PreProcess: "false",
+           ID:"AD09471A1B1F4A118D56834EED7E7D8950B3CF"
+       }
+  });
+
+  $("#supervisor_name1").bind('result', function (ev, data, v) {
+    var resp = v.split('&amp;nbsp;&amp;nbsp;');
+    var supId = $(resp[1]).html();
+    $('#supervisor_name1').val(resp[0]);
+    $('#SupervisorID').attr('value', supId);
+  });
+}
+
+function SaveSupervisor(){
+    var clmid = '70433';
+    var supID = $('#SupervisorID').val();
+
+    Communication.CustomRequest('claims_egl_page1.max?AJAX_ACTION=SaveSupervisor&amp;SUPID=' + supID + '&amp;CLMID=' + clmid, function(AjaxResp){
+              if (AjaxResp == 1){
+                     jAlert('Supervisor is saved successfully!', 'Success');
+              }
+        });
+}
+</pre>
+   </div>
+</div>
+<div style="CLEAR: both"></div>
+<div id="FooterSeparator"></div>
+]]></html>
+</stingray>

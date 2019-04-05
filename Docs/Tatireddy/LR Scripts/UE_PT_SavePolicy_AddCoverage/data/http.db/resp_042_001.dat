@@ -1,0 +1,3412 @@
+<stingray>
+ <status>success</status>
+ <id>AD09471A1B1F4A118D56834EED7E7D8950B3CF</id>
+ <vrmname>CLAIMS_MODIFY2</vrmname>
+ <servermode>3</servermode>
+ <target>middle</target>
+ <callback>1</callback>
+<html><![CDATA[         <div class="right column component EditableContent" id="rightColumn" style="width: 878px;" stingraytarget="" ref="EditableContent">
+    <div class="component EditorLabel" ref="EditorLabel">
+        <label tabindex="-1" title="" class="PageTitle">Claim Details</label>
+    </div>
+    <div class="component EditorLabel" ref="EditorLabel">
+        <label tabindex="-1" title="" class="Default"></label>
+<div>
+    <table style="width:865px">
+        <tbody>
+            <tr>
+                <td colspan=8>&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan=8>&nbsp;</td>
+            </tr>
+
+            <tr>
+                <td style="text-align:left">
+                    <label class="Default">Claim #</label>
+                </td>
+                <td>
+                    <label class="InfoColor">155988</label>
+                </td>
+                <td style="text-align:left">
+                    <label class="Default">Claimant</label>
+                </td>
+                <td>
+                    <label class="InfoColor">Perf183 Test183</label>
+                </td>
+                <td style="text-align:left">
+                    <label class="Default">Policy #</label>
+                </td>
+                <td>
+                    <table>
+<tr>
+<td>
+<label class="InfoColor">
+    <!--<a title="Please click to view this policy." onclick="Communication.LinkRequest('PolInfo_InsInfo.max?RECID=139431&amp;FromNav=1');">-->
+LPD201500068800
+<!--</a>-->
+</label>
+</td>
+</tr></table>
+                </td>
+                <td style="text-align:left">
+                    <label class="Default">Institution</label>
+                </td>
+                <td>
+                    <label class="InfoColor"><a onclick="Communication.LinkRequest('account_information.max?Account_id=001U0000009BDp9IAG&AccountType=Institution');">Worcester Polytechnic Institute (688)</a></label>
+                </td>
+            </tr>
+
+            <tr>
+                <td style="text-align:left">
+                    <label class="Default">Product</label>
+                </td>
+                <td>
+                    <label class="InfoColor"></label>
+                </td>
+                <td style="text-align:left">
+                    <label class="Default">DOL</label>
+                </td>
+                <td>
+                    <label class="InfoColor">4/4/2016</label>
+                </td>
+                <td style="text-align:left">
+                    <label class="Default">Status</label>
+                </td>
+                <td>
+                    <label class="InfoColor">Open</label>
+                </td>
+                <td style="text-align:left">
+                    <label class="Default">Analyst</label>
+                </td>
+                <td>
+                    <label class="InfoColor">Dina Hazen</label>
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="component DynamicContainer borderless" id="claimbarinfo" ref="DynamicContainer" style="height: auto;">
+    <h3 id="toggleheaderinfo" style="CURSOR: pointer; color:white; font-size: 10pt;" class="handle"
+        onclick="GlobalScript.GetClaimFinancialDetail(70433);GlobalScript.Toggleheader();">
+      <span style="DISPLAY: none;" id="header_toggle_minus" class="stat">-</span>
+      <span style="DISPLAY: inline;" id="header_toggle_plus" class="stat">+</span>Claim Financial Summary</h3>
+    <div id="divClaimFinancialDetail" style="overflow: hidden;height: auto;"></div>
+</div>
+    <tr>
+          <td colspan=8>&nbsp;</td>
+    </tr>
+<ul id="navigationBar" style="list-style-type:none;margin:auto;padding:0; width:100%; text-align: left;">
+<li style="display: inline;margin:0px; padding: 0px;list-style-type: none;">
+  <DIV style="display: inline;padding:0px; margin:0px; position:relative; HEIGHT:23px; left:0px; CURSOR:default;"
+  class="component EditorSubmitButton"   ref="EditorSubmitButton" condition definition="NavBarButtonClick(this);" function="CLICK">
+  <INPUT style="CURSOR:POINTER; WIDTH:auto; padding:0px 5px 0px 5px; margin:0px; HEIGHT:23px; margin-top:5px; "
+    class="ClNavbarSave" id="CLAIMS_EGL_PAGE1" name="CLAIMS_EGL_PAGE1" title="Please click here to view the Summary tab." value="Summary" CauseValidation="false" type=button />
+  </DIV>
+</li><li style="display: inline;margin:0px; padding: 0px;list-style-type: none;">
+  <DIV style="display: inline;padding:0px; margin:0px; position:relative; HEIGHT:23px; left:0px; CURSOR:default;"
+  class="component EditorSubmitButton"   ref="EditorSubmitButton" condition definition="NavBarButtonClick(this);" function="CLICK">
+  <INPUT style="CURSOR:POINTER; WIDTH:auto; padding:0px 5px 0px 5px; margin:0px; HEIGHT:23px; margin-top:5px; background-color:#E0E0E0; border-color:#303030;"
+    class="ClNavbarSave" id="CLAIMS_MODIFY2" name="CLAIMS_MODIFY2" title="Please click here to view the Claim Details tab." value="Claim Details" CauseValidation="false" type=button />
+  </DIV>
+</li><li style="display: inline;margin:0px; padding: 0px;list-style-type: none;">
+  <DIV style="display: inline;padding:0px; margin:0px; position:relative; HEIGHT:23px; left:0px; CURSOR:default;"
+  class="component EditorSubmitButton"   ref="EditorSubmitButton" condition definition="NavBarButtonClick(this);" function="CLICK">
+  <INPUT style="CURSOR:POINTER; WIDTH:auto; padding:0px 5px 0px 5px; margin:0px; HEIGHT:23px; margin-top:5px; "
+    class="ClNavbarSave" id="CLAIMINFO_CLAIMANTS" name="CLAIMINFO_CLAIMANTS" title="Please click here to view the Claimant tab." value="Claimant" CauseValidation="false" type=button />
+  </DIV>
+</li><li style="display: inline;margin:0px; padding: 0px;list-style-type: none;">
+  <DIV style="display: inline;padding:0px; margin:0px; position:relative; HEIGHT:23px; left:0px; CURSOR:default;"
+  class="component EditorSubmitButton"   ref="EditorSubmitButton" condition definition="NavBarButtonClick(this);" function="CLICK">
+  <INPUT style="CURSOR:POINTER; WIDTH:auto; padding:0px 5px 0px 5px; margin:0px; HEIGHT:23px; margin-top:5px; "
+    class="ClNavbarSave" id="CLAIMINFO_COVERAGES" name="CLAIMINFO_COVERAGES" title="Please click here to view the Coverage tab." value="Coverage" CauseValidation="false" type=button />
+  </DIV>
+</li><li style="display: inline;margin:0px; padding: 0px;list-style-type: none;">
+  <DIV style="display: inline;padding:0px; margin:0px; position:relative; HEIGHT:23px; left:0px; CURSOR:default;"
+  class="component EditorSubmitButton"   ref="EditorSubmitButton" condition definition="NavBarButtonClick(this);" function="CLICK">
+  <INPUT style="CURSOR:POINTER; WIDTH:auto; padding:0px 5px 0px 5px; margin:0px; HEIGHT:23px; margin-top:5px; "
+    class="ClNavbarSave" id="CLAIMINFO_CONTACT" name="CLAIMINFO_CONTACT" title="Please click here to view the Contacts tab." value="Contacts" CauseValidation="false" type=button />
+  </DIV>
+</li><li style="display: inline;margin:0px; padding: 0px;list-style-type: none;">
+  <DIV style="display: inline;padding:0px; margin:0px; position:relative; HEIGHT:23px; left:0px; CURSOR:default;"
+  class="component EditorSubmitButton"   ref="EditorSubmitButton" condition definition="NavBarButtonClick(this);" function="CLICK">
+  <INPUT style="CURSOR:POINTER; WIDTH:auto; padding:0px 5px 0px 5px; margin:0px; HEIGHT:23px; margin-top:5px; "
+    class="ClNavbarSave" id="CLAIMINFO_NOTES" name="CLAIMINFO_NOTES" title="Please click here to view the Notes tab." value="Notes" CauseValidation="false" type=button />
+  </DIV>
+</li><li style="display: inline;margin:0px; padding: 0px;list-style-type: none;">
+  <DIV style="display: inline;padding:0px; margin:0px; position:relative; HEIGHT:23px; left:0px; CURSOR:default;"
+  class="component EditorSubmitButton"   ref="EditorSubmitButton" condition definition="NavBarButtonClick(this);" function="CLICK">
+  <INPUT style="CURSOR:POINTER; WIDTH:auto; padding:0px 5px 0px 5px; margin:0px; HEIGHT:23px; margin-top:5px; "
+    class="ClNavbarSave" id="CLAIMINFO_ATTACHMENTS" name="CLAIMINFO_ATTACHMENTS" title="Please click here to view the Documents tab." value="Documents" CauseValidation="false" type=button />
+  </DIV>
+</li><li style="display: inline;margin:0px; padding: 0px;list-style-type: none;">
+  <DIV style="display: inline;padding:0px; margin:0px; position:relative; HEIGHT:23px; left:0px; CURSOR:default;"
+  class="component EditorSubmitButton"   ref="EditorSubmitButton" condition definition="NavBarButtonClick(this);" function="CLICK">
+  <INPUT style="CURSOR:POINTER; WIDTH:auto; padding:0px 5px 0px 5px; margin:0px; HEIGHT:23px; margin-top:5px; "
+    class="ClNavbarSave" id="CLAIMSINFO_LITIGATION" name="CLAIMSINFO_LITIGATION" title="Please click here to view the Litigation tab." value="Litigation" CauseValidation="false" type=button />
+  </DIV>
+</li><li style="display: inline;margin:0px; padding: 0px;list-style-type: none;">
+  <DIV style="display: inline;padding:0px; margin:0px; position:relative; HEIGHT:23px; left:0px; CURSOR:default;"
+  class="component EditorSubmitButton"   ref="EditorSubmitButton" condition definition="NavBarButtonClick(this);" function="CLICK">
+  <INPUT style="CURSOR:POINTER; WIDTH:auto; padding:0px 5px 0px 5px; margin:0px; HEIGHT:23px; margin-top:5px; "
+    class="ClNavbarSave" id="CLAIMINFO_FINANCIAL" name="CLAIMINFO_FINANCIAL" title="Please click here to view the Financials tab." value="Financials" CauseValidation="false" type=button />
+  </DIV>
+</li><li style="display: inline;margin:0px; padding: 0px;list-style-type: none;">
+  <DIV style="display: inline;padding:0px; margin:0px; position:relative; HEIGHT:23px; left:0px; CURSOR:default;"
+  class="component EditorSubmitButton"   ref="EditorSubmitButton" condition definition="NavBarButtonClick(this);" function="CLICK">
+  <INPUT style="CURSOR:POINTER; WIDTH:auto; padding:0px 5px 0px 5px; margin:0px; HEIGHT:23px; margin-top:5px; "
+    class="ClNavbarSave" id="CLAIMINFO_HISTORY" name="CLAIMINFO_HISTORY" title="Please click here to view the History tab." value="History" CauseValidation="false" type=button />
+  </DIV>
+</li><li style="display: inline;margin:0px; padding: 0px;list-style-type: none;">
+  <DIV style="display: inline;padding:0px; margin:0px; position:relative; HEIGHT:23px; left:0px; CURSOR:default;"
+  class="component EditorSubmitButton"   ref="EditorSubmitButton" condition definition="NavBarButtonClick(this);" function="CLICK">
+  <INPUT style="CURSOR:POINTER; WIDTH:auto; padding:0px 5px 0px 5px; margin:0px; HEIGHT:23px; margin-top:5px; "
+    class="ClNavbarSave" id="CLAIMINFO_TASKS" name="CLAIMINFO_TASKS" title="Please click here to view the Tasks tab." value="Tasks" CauseValidation="false" type=button />
+  </DIV>
+</li>
+</ul>
+ <table style="width:100%;">
+ 
+       
+  
+	
+        
+	
+        </table>
+<label></label>
+    </div>
+    <input type="hidden" name="PDC_IDList" value="210838">
+<input type="hidden" name="PolicyIDList" value="139431">
+<input type="hidden" name="ProductList" value="LPL">
+<input type="hidden" name="LOB_IDList" value="PL">
+<input type="hidden" name="EndorsementsList" value="LPL,">
+<input type="hidden" name="CovTriggerList" value="CM">
+    <style>
+#PolList_wrapper {
+  overflow: hidden;
+  margin: 0.25em 0.5em;
+}
+
+#PolList {
+   border: 1px solid #ccc;
+   width: 100%;
+}
+#PolList th:not(:first) { padding-right: 2em }
+.select_col {  padding: 0; width: 1em; font-size: 10px; }
+.policy_col { width: 3em; font-size: 11px; }
+.status_col { width: 3em; font-size: 11px; }
+.inc_date_col { width: 3em; font-size: 11px; }
+.eff_date_col { width: 3em; font-size: 11px; }
+.exp_date_col { width: 3em; font-size: 11px; }
+.product_col { width: 3em; font-size: 11px; }
+.cov_col { width: 3em; font-size: 11px; }
+.limit_col { width: 3em; font-size: 11px; }
+.ded_col { width: 3em; font-size: 11px; }
+.PolInclude { width: 3em; font-size: 11px; }
+
+table.dataTable tr.odd { background-color: #eaeaea}
+table.dataTable tr.even { background-color: white; }
+table.dataTable tr.odd td.sorting_1 { background-color: #eaeaea;  }
+table.dataTable tr.odd td.sorting_2 { background-color: #eaeaea; }
+table.dataTable tr.odd td.sorting_3 { background-color: #eaeaea; }
+table.dataTable tr.even td.sorting_1 { background-color: #eaeaea; }
+table.dataTable tr.even td.sorting_2 { background-color: #eaeaea; }
+table.dataTable tr.even td.sorting_3 { background-color: #eaeaea; }
+
+div.dataTables_wrapper {width: 860px; margin: 0px auto; }
+div#PolList_paginate { text-align: center; width:100%;}
+div#PolList_paginate { padding-top: 10px;}
+div#PolList_paginate { padding-top: 10px;}
+div#PolList_filter { padding-bottom: 10px; padding-top: 10px;}
+div#PolList_length { padding-bottom: 10px; padding-top: 10px;}
+div#PolList_wrapper { margin:0px 0px 0px 2px;}
+</style>
+   <div class="component StaticContainer borderless" id="dialogContent" style="width: 500px; height: 220px; text-align: left; font-family: Verdana, Arial, Helvetica, sans-serif, 'Trebuchet MS'; font-size: 10pt; margin-top: 0px; display: none; background-position: 0% 100%; background-repeat: no-repeat;" ref="StaticContainer">
+      <h3 class="handle" style="visibility: hidden;"></h3>
+      <div class="component EditorText" id="add_email_div" style="left: 10px; top: 20px; width: 297px;" ref="EditorText" cli-cond="" mp-help="">
+         <span class="notRequired" style="left: 4px; top: 1px; width: 289px; height: 15px; font-size: 1em; cursor: text;"></span>
+         <input name="Email" tabindex="0" title="Please enter an email address." class="ac_input" id="Email" style="width: 295px;" maxlength="100" value="" autocomplete="on" type="text">
+      </div>
+      <div class="component EditorMemo" style="left: 10px; top: 80px; width: 295px; height: 80px; position: absolute;" spellcheck="false" ref="EditorMemo" cli-cond="" mp-help="" edithtml="false">
+         <span class="EditorMemoSpan notRequired" style="width: 295px; height: 80px;"></span>
+         <textarea name="AttachEmailAddress" tabindex="0" title="Added email addresses go here." id="AttachEmailAddress" style="width: 295px; height: 80px;" readonly="readonly" class=""></textarea>
+         <div class="ckEditorDiv" style="display: none;"></div>
+      </div>
+      <div style="left: 10px; top: 200px; width: 295px; height: 10px; position: absolute;">
+          <label tabindex="-1" title="" class="Default" id="attachment_response"></label>
+      </div>
+      <div class="component EditorSubmitButton" style="left: 310px; top: 20px; width: 101px; height: 28px; position: absolute;" ref="EditorSubmitButton" cli-cond="" definition="CustomScript.addEmail();" function="CLICK" mp-help=""><input name="addEmailButton" tabindex="0" title="Please click to add an email address." id="addEmailButton" style="width: 91px; height: 18px;" value="Add Email" defaultbutton="false" class="" type="button"></div>
+      <div class="component EditorSubmitButton" style="left: 310px; top: 75px; width: 98px; height: 28px;" ref="EditorSubmitButton" cli-cond="" definition="CustomScript.removeEmail();" function="CLICK" mp-help=""><input name="removeEmailButton" tabindex="0" title="Please click to remove the selected email address." id="removeEmailButton" style="width: 88px; height: 18px;" value="Remove" defaultbutton="false" class="" type="button"></div>
+      <div class="component EditorSubmitButton" style="left: 310px; top: 100px; width: 98px; height: 28px;" ref="EditorSubmitButton" cli-cond="" definition="CustomScript.send_attachments();" function="CLICK" mp-help="">
+         <input name="sendEmailButton" tabindex="0" title="Please click to send an email." id="sendEmailButton" style="width: 88px; height: 18px;" value="Send Email" defaultbutton="false" class="" type="button">
+      </div>
+    </div>
+    <div class="component StaticContainer" id="Claim Status" style="top: 0px; width: 863px; height: 120px;" ref="StaticContainer" cli-cond="">
+        <h3 class="handle" style="visibility: visible;">Claim Status</h3>
+        <div class="component EditorRadio" style="left: 460px; top: 65px;" ref="EditorRadio" cli-cond="" definition="CustomScript.CheckNoCoverageSelection('radio');" function="CLICK" mp-help="">
+            <input name="cCD_FileType" tabindex="0" title="Please click here to select Claim." id="cCD_FileType" value="CLAIM" valuelessattrs="checked" class="" type="radio">
+        <span class="required" style="cursor: pointer;">Claim</span></div>
+        <div class="component EditorRadio" style="left: 530px; top: 65px;" ref="EditorRadio" cli-cond="" definition="CustomScript.CheckNoCoverageSelection('radio');" function="CLICK" mp-help="">
+            <input name="cCD_FileType" tabindex="0" title="Please click here to select Incident." id="cCD_FileType" value="INCIDENT" valuelessattrs="" class="" type="radio">
+        <span class="required" style="cursor: pointer;">Incident</span></div>
+        <div class="component EditorRadio" style="left: 615px; top: 65px;" ref="EditorRadio" cli-cond="" definition="CustomScript.CheckNoCoverageSelection('radio');" function="CLICK" mp-help="">
+            <input name="cCD_FileType" tabindex="0" title="Please click here to select No Coverage." id="cCD_FileType" value="No" valuelessattrs="" class="" type="radio">
+        <span class="required" style="cursor: pointer;">No Coverage</span></div>
+        <div class="component EditorDropDown" style="left: 5px; top: 20px; width: 156px; height: 35px;" ref="EditorDropDown" cli-cond="" definition="CustomScript.checkIfClosed();" function="CHANGE" mp-help="">
+            <span class="required" style="cursor: default;">Status</span>
+            <br>
+            <select name="claimStatus" tabindex="0" title="Please select a status for this claim." id="claimStatus" style="width: 150px;" size="1" valuelessattrs="" class=""><option value="Open" title="Open" selected>Open</option><option value="ReOpen"title="Re-opened">Re-opened</option><option value="Closed"title="Closed with Payment">Closed with Payment</option><option value="CWP"title="Closed without payment">Closed without payment</option><option value="CCH"title="Closed Claims Handling">Closed Claims Handling</option></select>
+        </div>
+        <input type="hidden" id="hStatusID" value="Open">
+<input type="hidden" id="hRepToReinsuer" value="0">
+<input type="hidden" name="hSelectedReinsuer" id="hSelectedReinsuer" value="0">
+        <div class="component EditorLabel" style="left: -5px; top: 85px; width: 500px;" ref="EditorLabel">
+            <label tabindex="-1" title="" class="Default" id="statusReasonMessage" style="color: red; display: none;"></label>
+        </div>
+        <div class="component EditorDropDown" style="left: 170px; top: 20px; width: 219px; height: 35px; position: absolute;" ref="EditorDropDown" cli-cond="" definition="CustomScript.checkIfClosedreason();" function="CHANGE" mp-help=""><span class="notRequired" id="spcloseReason" style="cursor: default;">Close Reason</span>
+            <br>
+            <select name="closeReason" tabindex="0" title="Please select a reason for closing this claim." id="closeReason" style="width: 213px;" size="1" class=""><option value="-1"title="Please select a close status reason...">Please select a close status reason...</option><option value="Close"title="Close">Close</option><option value="Dismissal"title="Dismissal">Dismissal</option><option value="Drop"title="Drop">Drop</option><option value="Settlement"title="Settlement">Settlement</option><option value="Verdict Defense"title="Verdict Defense">Verdict Defense</option><option value="Verdict Plaintiff"title="Verdict Plaintiff">Verdict Plaintiff</option><option value="No Coverage"title="No Coverage">No Coverage</option></select>
+        </div>
+        <div class="component EditorLabel" style="left: 465px; top: 0px;" ref="EditorLabel">
+            <label tabindex="-1" title="" class="Default">Claim Reported By</label>
+        </div>
+        <div class="component EditorLabel" style="left: 465px; top: 45px;" ref="EditorLabel" cli-cond="" mp-help="">
+            <label tabindex="-1" title="" class="Default">Claim File Type</label>
+        </div>
+        <div class="component EditorRadio" style="left: 460px; top: 20px;" ref="EditorRadio">
+            <input name="clReportedBy" tabindex="0" title="Please select if this claim was reported by a member." id="clReportedBy" value="MEM" valuelessattrs="checked" class="" type="radio"><span class="required" style="cursor: pointer;">Member</span>
+        </div>
+        <div class="component EditorRadio" style="left: 540px; top: 20px;" ref="EditorRadio">
+            <input name="clReportedBy" tabindex="0" title="Please select if this claim was reported by a broker." id="clReportedBy" value="BRK" valuelessattrs="" class="" type="radio"><span class="required" style="cursor: pointer;">Broker</span>
+        </div>
+
+    <div class="component EditorRadio" style="left: 610px; top: 20px;" ref="EditorRadio" cli-cond="" mp-help="">
+            <input name="clReportedBy" tabindex="0" title="Please select if this claim was reported by a Member Attorney." id="clReportedBy" value="ATR" valuelessattrs="" class="" type="radio">
+        <span class="required" style="cursor: pointer;">Member Attorney</span></div>
+    <div class="component EditorRadio" style="left: 755px; top: 20px;" ref="EditorRadio" cli-cond="" mp-help="">
+            <input name="clReportedBy" tabindex="0" title="Please select if this claim was reported by a broker." id="clReportedBy" value="OTH" valuelessattrs="" class="" type="radio">
+        <span class="required" style="cursor: pointer;">Other</span></div>
+        </div>
+
+    <div class="component DynamicContainer" id="FNOLAttachments" style="display: none;" ref="DynamicContainer" cli-cond="">
+        <h3 class="handle">FNOL Attachments</h3>
+        <div class="component EditorLabel" ref="EditorLabel">
+            <label tabindex="-1" title="" class="Default"></label>
+        </div>
+        <div class="component StaticContainer borderless" style="height: 25px;" ref="StaticContainer">
+            <h3 class="handle" style="visibility: hidden;"></h3>
+            <div class="component EditorSubmitButton" style="left: -5px; top: -30px; width: 180px; height: 30px;" ref="EditorSubmitButton" cli-cond="" definition="CustomScript.EmailAttachments(1)" function="CLICK" mp-help="">
+                <input name="emailFNOLAttToStaff" tabindex="0" title="Please click here to email the selected FNOL attachments to a UE staff member." id="emailFNOLAttToStaff" style="width: 170px; height: 20px;" value="Email To UE Staff Member" defaultbutton="false" class="" type="button">
+            </div>
+            <div class="component EditorSubmitButton" style="left: 175px; top: -30px; width: 160px; height: 30px;" ref="EditorSubmitButton" cli-cond="" definition="CustomScript.EmailAttachments(2)" function="CLICK" mp-help="">
+                <input name="emailFNOLAttToOutside" tabindex="0" title="Please click here to send the selected FNOL attachments to an outside party." id="emailFNOLAttToOutside" style="width: 150px; height: 20px;" value="Email To Outside Party" defaultbutton="false" class="" type="button">
+            </div>
+            <div class="component EditorSubmitButton" style="left: 335px; top: -30px; width: 175px; height: 30px;" ref="EditorSubmitButton" cli-cond="" definition="CustomScript.UnlockFNOLDocuments()" function="CLICK" mp-help="">
+                <input name="unlockFNOLAtt" tabindex="0" title="Please click here to unlock FNOL documents." id="unlockFNOLAtt" style="width: 165px; height: 20px;" value="Unlock FNOL Attachments" defaultbutton="false" class="" type="button">
+            </div>
+            <div class="component EditorSubmitButton" style="left: 715px; top: -30px; width: 120px; height: 30px;" ref="EditorSubmitButton" cli-cond="" definition="CustomScript.UploadFNOLAttachment();" function="CLICK" mp-help="">
+                <input name="addFNOLAtt" tabindex="0" title="Please click here to add an FNOL attachment." id="addFNOLAtt" style="width: 110px; height: 20px;" value="Add Attachment" defaultbutton="false" class="" type="button">
+            </div>
+        </div>
+    </div>
+    <div class="component DynamicContainer" ref="DynamicContainer">
+        <h3 class="handle" style="cursor: pointer;" onclick="CustomScript.ToggleSection(this);">
+             <span class="stat" id="agy_lit_toggle_minus" style="display: none;">+</span>
+             <span class="stat" id="agy_lit_toggle_plus" style="display: inline;">-</span>Policy Selection</h3>
+        <div class="component StaticContainer borderless" id="policy_selection_input" style="height: 60px;" ref="StaticContainer" cli-cond="">
+            <h3 class="handle" style="visibility: hidden;"></h3>
+            <div class="component EditorLabel" style="left: -5px; top: -25px;" ref="EditorLabel" cli-cond="" mp-help="">
+                <label tabindex="-1" title="" class="Default" id="PerOccDateLabel">Claim's Made Date</label>
+            </div>
+            <div class="component EditorText" style="left: 110px; top: -25px; width: 149px;" ref="EditorText" cli-cond="" definition="CustomScript.policySelectionRefresh(true);" function="CHANGE" dtype="DATE|DATE" param="|6/23/2016 9:00:31 AM" filter="DATE|LESSTHANEQUALS" mp-help="">
+                <span class="notRequired" id="spLossReportDate" style="left: 4px; top: 1px; width: 143px; height: 15px; font-size: 0.6em; cursor: text;">Claim's Made Date</span>
+                <input name="PerOccDate" tabindex="0" title="Please enter the date the claim is made." class="hasDatepicker" id="PerOccDate" style="width: 149px;" maxlength="30" value="06/01/2016" type="text">
+            </div>
+            <div class="component EditorLabel" style="left: 315px; top: -25px;" ref="EditorLabel" cli-cond="" mp-help="">
+                <label tabindex="-1" title="" class="Default" id="sPerOccDateL">Loss Date</label>
+            </div>
+            <div class="component EditorText" style="left: 390px; top: -25px; width: 149px;" ref="EditorText" cli-cond="" definition="CustomScript.policySelectionRefresh(true);" function="CHANGE" dtype="DATE|DATE" param="|6/23/2016 9:00:31 AM" filter="DATE|LESSTHANEQUALS" mp-help=""><span class="required" id="sPerOccDate" style="left: 4px; top: 1px; width: 143px; height: 15px; font-size: 0.6em; cursor: text;">Loss Date</span>
+                <input name="cCD_DateOfLoss" tabindex="0" title="Please enter a per occurrence date. " class="hasDatepicker" id="cCD_DateOfLoss" style="width: 149px;" maxlength="30" value="04/04/2016" type="text">
+            </div>
+            <div class="component EditorLabel" style="left: 580px; top: -25px;" ref="EditorLabel" cli-cond="" mp-help="">
+                <label tabindex="-1" title="" class="Default" id="sDateOfLossL">Loss Report Date</label>
+            </div>
+            <div class="component EditorText" style="left: 685px; top: -25px; width: 149px;" ref="EditorText" cli-cond="" dtype="DATE|DATE" param="|6/23/2016 9:00:31 AM" filter="DATE|LESSTHANEQUALS" mp-help=""><span class="required" id="sDateOfLoss" style="left: 4px; top: 1px; width: 143px; height: 15px; font-size: 0.6em; cursor: text;"></span>
+                <input name="cCD_LossReportDate" tabindex="0" title="Please enter the claim loss date." class="hasDatepicker" id="cCD_LossReportDate" style="width: 149px;" maxlength="30" value="03/24/2016" type="text">
+            </div>
+            <div class="component EditorLabel" style="left: -5px; top: 5px;" ref="EditorLabel" cli-cond="" mp-help="">
+                <label tabindex="-1" title="" class="Default" id="hybrid_L">Hybrid Claim:</label>
+            </div>
+            <!--The web eidtor may change the type of hidden fields to text so I added the below inline style to prevent the hidden field from ever showing up on the screen-->
+
+
+
+        <div class="component EditorCheckBox" style="left: 700px; top: 5px;" ref="EditorCheckBox" cli-cond="" definition="CustomScript.policySelectionRefresh(true);" function="CHANGE" mp-help=""><input name="ShowAllPolicy" tabindex="0" title="" id="ShowAllPolicy" value="1" class="" type="checkbox"><span class="notRequired" style="cursor: pointer;">Show All Policies</span></div>
+        <!--<div class="component EditorText" style="left: 80px; top: 7px; width: 37px; height: 22px; position: absolute;" ref="EditorText" cli-cond="" mp-help="">
+<span class="notRequired" style="left: 4px; top: 1px; width: 31px; height: 15px; font-size: 0.6em; cursor: text;"></span>
+<input name="hybrid" tabindex="0" title="" class="DefaultBold" id="hybrid" style="width: 37px; font-weight: bold;" maxlength="30" value="#scDEG_Hybrid#" valuelessattrs="readonly"></div>-->
+        <div class="component EditorRadio" style="left: 80px; top: 5px;" ref="EditorRadio">
+            <input name="hybrid" tabindex="0" title="Please select if this claim is hybrid" id="hybrid" value="Yes" valuelessattrs="" class="" type="radio"><span class="required" style="cursor: pointer;">Yes</span>
+        </div>
+        <div class="component EditorRadio" style="left: 130px; top: 5px;" ref="EditorRadio">
+            <input name="hybrid" tabindex="0" title="Please select if this claim is not hybrid." id="hybrid" value="No" valuelessattrs="checked" class="" type="radio"><span class="required" style="cursor: pointer;">No</span>
+        </div>
+</div>
+        <div id="PolicyListContainer"><link rel="stylesheet" href="../../style/DataTable/DataTable.css" type="text/css" />
+<div id="PolicyListTable"><table id="PolList" name="PolList" class="display">
+<thead>
+  <tr>
+    <th class="select_col">Sel</th>
+    <th class="policy_col">Policy No.</th>
+    <th class="status_col">Status</th>
+    <th class="inc_date_col">Inc. Date</th>
+    <th class="eff_date_col">Eff. Date</th>
+    <th class="exp_date_col">Exp. Date</th>
+    <th class="product_col">Prod(s)</th>
+    <th class="cov_col">Coverages</th>
+    <th class="limit_col">Limit</th>
+    <th class="ded_col">SIR/Ded.</th>
+  </tr>
+</thead>
+<tbody>
+</tbody>
+</table></div></div>
+        <div class="component StaticContainer borderless" style="height: 120px;" ref="StaticContainer">
+            <h3 class="handle" style="visibility: hidden;"></h3>
+            <div class="component EditorMemo" style="left: -5px; top: -5px; width: 840px; height: 80px;" spellcheck="false" ref="EditorMemo" cli-cond="" definition="CustomScript.polSelNote('70433');" function="BLUR" mp-help="" edithtml="false"><span class="EditorMemoSpan notRequired" style="width: 840px; height: 80px;">Comments</span>
+                <textarea name="PolSelNote" tabindex="0" title="Please enter logic for policy selection." id="PolSelNote" style="width: 840px; height: 80px;" class=""></textarea>
+                <div class="ckEditorDiv" style="display: none;"></div>
+            </div>
+            <div class="component EditorLabel" style="left: -5px; top: -30px;" ref="EditorLabel" cli-cond="" mp-help="">
+                <label tabindex="-1" title="" class="Default">Comments</label>
+            </div>
+        </div>
+    </div>
+    <div class="component DynamicContainer" ref="DynamicContainer" cli-cond="">
+        <h3 class="handle">Claim Coding Information</h3>
+        <div class="component StaticContainer" id="cci_div1" style="border: 0px currentColor; border-image: none; height: 50px; position: relative;" ref="StaticContainer" cli-cond="">
+    <h3 class="handle" style="visibility: hidden;"></h3>            
+    <div class="component EditorDropDown" style="left: 0px; top: 0px; width: 276px; height: 35px;" ref="EditorDropDown" cli-cond="" definition="CustomScript.enforceCOLUnique();CustomScript.repToReinsurerSetter();" function="CHANGE" mp-help="">
+        <span class="required" id="ftdiv1" style="cursor: default;">CLAIMCLAIM</span>
+        <select name="firstCause" tabindex="15" title="Please select a cause of loss." id="firstCause" style="width: 270px;" size="1" valuelessattrs="" class=""><option value="-1"title="Please select a Loss Cause...">Please select a Loss Cause...</option><option value="ACCIDE"title="Accident - causes injury to people">Accident - causes injury to people</option><option value="ACCIDE1"title="Accident - causes injury to property">Accident - causes injury to property</option><option value="AIRCRAFT" title="Aircraft" selected>Aircraft</option><option value="ALCOHCOL"title="Alcohol & Drugs">Alcohol & Drugs</option><option value="ANTITRST"title="Antitrust">Antitrust</option><option value="ASSAULT"title="Assault">Assault</option><option value="ASSAUL1"title="Assault - sexual - perp <18">Assault - sexual - perp <18</option><option value="ASSAUL2"title="Assault - sexual - perp 18 or older">Assault - sexual - perp 18 or older</option><option value="ASSAUL"title="Assault Civil">Assault Civil</option><option value="ATHLETIC"title="Athletic">Athletic</option><option value="ATHLET"title="Athletic activity - other">Athletic activity - other</option><option value="ATHLET1"title="Athletic activity - varsity">Athletic activity - varsity</option><option value="AthlTBI"title="Athletic TBI">Athletic TBI</option><option value="BRCHCONT"title="Breach of Contract">Breach of Contract</option><option value="BRCHFID"title="Breach of Fiduciary Duty">Breach of Fiduciary Duty</option><option value="CRD"title="Civil rights deprivation">Civil rights deprivation</option><option value="CONSP"title="Conspiracy">Conspiracy</option><option value="CONDISCH"title="Constructive Discharge">Constructive Discharge</option><option value="CONFRAUD"title="Consumer Fraud Statute">Consumer Fraud Statute</option><option value="CONVUJEN"title="Conversion/Unjust Enrichment">Conversion/Unjust Enrichment</option><option value="CRTM"title="Copyright/trademark">Copyright/trademark</option><option value="ProResp"title="Crisis Communications">Crisis Communications</option><option value="DEFAME"title="Defamation">Defamation</option><option value="DEF&PRIV"title="Defamation & Privacy Rights">Defamation & Privacy Rights</option><option value="DISAGE"title="Discrimination-Age">Discrimination-Age</option><option value="DISDISAB"title="Discrimination-Disability">Discrimination-Disability</option><option value="DISGENDR"title="Discrimination-Gender">Discrimination-Gender</option><option value="DISMARRG"title="Discrimination-Marital Status">Discrimination-Marital Status</option><option value="DISORIG"title="Discrimination-National Origin">Discrimination-National Origin</option><option value="DISOTHER"title="Discrimination-Other">Discrimination-Other</option><option value="DISRACE"title="Discrimination-Race">Discrimination-Race</option><option value="DISRELIG"title="Discrimination-Religious">Discrimination-Religious</option><option value="DISRETAL"title="Discrimination-Retaliation">Discrimination-Retaliation</option><option value="DISRVDIS"title="Discrimination-Reverse Discrimination">Discrimination-Reverse Discrimination</option><option value="DISSEXOR"title="Discrimination-Sexual Orientation">Discrimination-Sexual Orientation</option><option value="NDR"title="Drowning/near drowning">Drowning/near drowning</option><option value="DUEPROCS"title="Due Process Violation">Due Process Violation</option><option value="LOSIM24"title="Duplicate">Duplicate</option><option value="EDUMALPR"title="Educational Malpractice">Educational Malpractice</option><option value="EMPBENLI"title="Employee Benefit Liability">Employee Benefit Liability</option><option value="ENV"title="Environment">Environment</option><option value="FAILINDM"title="Failure to Indemnify">Failure to Indemnify</option><option value="FAILSUPR"title="Failure to Supervise">Failure to Supervise</option><option value="FALSARST"title="False Arrest/Imprisonment">False Arrest/Imprisonment</option><option value="FALSCLM"title="False Claim Act">False Claim Act</option><option value="FALSLGHT"title="False Light">False Light</option><option value="FERPA"title="FERPA">FERPA</option><option value="FREX"title="Fire/Explosion">Fire/Explosion</option><option value="FSTAMNDV"title="First Amendment Violation">First Amendment Violation</option><option value="FLSA"title="FLSA">FLSA</option><option value="FLMA"title="FMLA">FMLA</option><option value="FRAUDMIS"title="Fraud/Misrepresentation">Fraud/Misrepresentation</option><option value="INCIDNT"title="Incident">Incident</option><option value="EMOTDIST"title="Int'l Infliction of Emotional Distress">Int'l Infliction of Emotional Distress</option><option value="INTPROP"title="Intellectual Property/Copyright">Intellectual Property/Copyright</option><option value="INVPRIV"title="Invasion of Privacy">Invasion of Privacy</option><option value="MALPROSC"title="Malicious Prosecution">Malicious Prosecution</option><option value="MEDCT"title="Medical/Counseling Treatment">Medical/Counseling Treatment</option><option value="NCAU"title="Natural Causes">Natural Causes</option><option value="NEGL"title="Negligence">Negligence</option><option value="NO"title="No Coverage">No Coverage</option><option value="OPENRECS"title="Open Records/Meetings Laws">Open Records/Meetings Laws</option><option value="OTHER"title="Other">Other</option><option value="OTHSTATU"title="Other Statutory Violations">Other Statutory Violations</option><option value="POLL"title="Pollution">Pollution</option><option value="PRODUCTS"title="Products/completed">Products/completed</option><option value="PROF"title="Professional Liability">Professional Liability</option><option value="PROPERTY"title="Property Damage">Property Damage</option><option value="RPRIV"title="Reputation/Privacy">Reputation/Privacy</option><option value="SELFIN"title="Self-inflicted/Suicide/Intentional harm">Self-inflicted/Suicide/Intentional harm</option><option value="SEXASSAUL"title="Sexual Harassment">Sexual Harassment</option><option value="STF"title="Slip/trip/fall">Slip/trip/fall</option><option value="CTBD"title="TBD">TBD</option><option value="THEFTB"title="Theft/Burglary/Vandalism">Theft/Burglary/Vandalism</option><option value="TITLEIX"title="Title IX">Title IX</option><option value="VEHICL"title="Vehicle">Vehicle</option><option value="VET"title="Veterinary Malpractice">Veterinary Malpractice</option><option value="WATERC"title="Watercraft">Watercraft</option><option value="WSTLBLOW"title="Whistleblower violations">Whistleblower violations</option><option value="WRNGTERM"title="Wrongful Termination">Wrongful Termination</option></select>
+    </div>
+    <div class="component EditorDropDown" style="left: 290px; top: 0px; width: 276px; height: 35px;" ref="EditorDropDown" cli-cond="" definition="CustomScript.enforceCOLUnique();|" function="CHANGE|FOCUS" mp-help="">
+        <span class="notRequired" id="fcdiv2" style="cursor: default;">Second Cause of Loss</span>
+        <select name="secondCause" tabindex="16" title="" id="secondCause" style="width: 270px;" size="1" valuelessattrs="" class=""><option value="-1"title="Please select a Loss Cause...">Please select a Loss Cause...</option><option value="ANTITRST"title="Antitrust">Antitrust</option><option value="BRCHCONT"title="Breach of Contract">Breach of Contract</option><option value="BRCHFID"title="Breach of Fiduciary Duty">Breach of Fiduciary Duty</option><option value="CONSP"title="Conspiracy">Conspiracy</option><option value="CONDISCH"title="Constructive Discharge">Constructive Discharge</option><option value="CONFRAUD"title="Consumer Fraud Statute">Consumer Fraud Statute</option><option value="CONVUJEN"title="Conversion/Unjust Enrichment">Conversion/Unjust Enrichment</option><option value="ProResp"title="Crisis Communications">Crisis Communications</option><option value="DEFAME"title="Defamation">Defamation</option><option value="DISAGE"title="Discrimination-Age">Discrimination-Age</option><option value="DISDISAB"title="Discrimination-Disability">Discrimination-Disability</option><option value="DISGENDR"title="Discrimination-Gender">Discrimination-Gender</option><option value="DISMARRG"title="Discrimination-Marital Status">Discrimination-Marital Status</option><option value="DISORIG"title="Discrimination-National Origin">Discrimination-National Origin</option><option value="DISOTHER"title="Discrimination-Other">Discrimination-Other</option><option value="DISRACE"title="Discrimination-Race">Discrimination-Race</option><option value="DISRELIG"title="Discrimination-Religious">Discrimination-Religious</option><option value="DISRETAL"title="Discrimination-Retaliation">Discrimination-Retaliation</option><option value="DISRVDIS"title="Discrimination-Reverse Discrimination">Discrimination-Reverse Discrimination</option><option value="DISSEXOR"title="Discrimination-Sexual Orientation">Discrimination-Sexual Orientation</option><option value="DUEPROCS"title="Due Process Violation">Due Process Violation</option><option value="LOSIM24"title="Duplicate">Duplicate</option><option value="EDUMALPR"title="Educational Malpractice">Educational Malpractice</option><option value="EMPBENLI"title="Employee Benefit Liability">Employee Benefit Liability</option><option value="FAILINDM"title="Failure to Indemnify">Failure to Indemnify</option><option value="FAILSUPR"title="Failure to Supervise">Failure to Supervise</option><option value="FALSARST"title="False Arrest/Imprisonment">False Arrest/Imprisonment</option><option value="FALSCLM"title="False Claim Act">False Claim Act</option><option value="FALSLGHT"title="False Light">False Light</option><option value="FERPA"title="FERPA">FERPA</option><option value="FSTAMNDV"title="First Amendment Violation">First Amendment Violation</option><option value="FLSA"title="FLSA">FLSA</option><option value="FLMA"title="FMLA">FMLA</option><option value="FRAUDMIS"title="Fraud/Misrepresentation">Fraud/Misrepresentation</option><option value="INCIDNT"title="Incident">Incident</option><option value="EMOTDIST"title="Int'l Infliction of Emotional Distress">Int'l Infliction of Emotional Distress</option><option value="INTPROP"title="Intellectual Property/Copyright">Intellectual Property/Copyright</option><option value="INVPRIV"title="Invasion of Privacy">Invasion of Privacy</option><option value="MALPROSC"title="Malicious Prosecution">Malicious Prosecution</option><option value="NEGL"title="Negligence">Negligence</option><option value="NO"title="No Coverage">No Coverage</option><option value="OPENRECS"title="Open Records/Meetings Laws">Open Records/Meetings Laws</option><option value="OTHER"title="Other">Other</option><option value="OTHSTATU"title="Other Statutory Violations">Other Statutory Violations</option><option value="TITLEIX"title="Title IX">Title IX</option><option value="WSTLBLOW"title="Whistleblower violations">Whistleblower violations</option><option value="WRNGTERM"title="Wrongful Termination">Wrongful Termination</option></select>
+    </div>
+    <div class="component EditorDropDown" style="left: 575px; top: 0px; width: 276px; height: 35px;" ref="EditorDropDown" cli-cond="" definition="CustomScript.enforceCOLUnique();|" function="CHANGE|FOCUS" mp-help="">
+        <span class="notRequired" id="fcdiv3" style="cursor: default;">Third Cause of Loss</span>
+        <select name="thirdCause" tabindex="17" title="Please select a cause of loss." id="thirdCause" style="width: 270px;" size="1" valuelessattrs="" class=""><option value="-1"title="Please select a Loss Cause...">Please select a Loss Cause...</option><option value="ANTITRST"title="Antitrust">Antitrust</option><option value="BRCHCONT"title="Breach of Contract">Breach of Contract</option><option value="BRCHFID"title="Breach of Fiduciary Duty">Breach of Fiduciary Duty</option><option value="CONSP"title="Conspiracy">Conspiracy</option><option value="CONDISCH"title="Constructive Discharge">Constructive Discharge</option><option value="CONFRAUD"title="Consumer Fraud Statute">Consumer Fraud Statute</option><option value="CONVUJEN"title="Conversion/Unjust Enrichment">Conversion/Unjust Enrichment</option><option value="ProResp"title="Crisis Communications">Crisis Communications</option><option value="DEFAME"title="Defamation">Defamation</option><option value="DISAGE"title="Discrimination-Age">Discrimination-Age</option><option value="DISDISAB"title="Discrimination-Disability">Discrimination-Disability</option><option value="DISGENDR"title="Discrimination-Gender">Discrimination-Gender</option><option value="DISMARRG"title="Discrimination-Marital Status">Discrimination-Marital Status</option><option value="DISORIG"title="Discrimination-National Origin">Discrimination-National Origin</option><option value="DISOTHER"title="Discrimination-Other">Discrimination-Other</option><option value="DISRACE"title="Discrimination-Race">Discrimination-Race</option><option value="DISRELIG"title="Discrimination-Religious">Discrimination-Religious</option><option value="DISRETAL"title="Discrimination-Retaliation">Discrimination-Retaliation</option><option value="DISRVDIS"title="Discrimination-Reverse Discrimination">Discrimination-Reverse Discrimination</option><option value="DISSEXOR"title="Discrimination-Sexual Orientation">Discrimination-Sexual Orientation</option><option value="DUEPROCS"title="Due Process Violation">Due Process Violation</option><option value="LOSIM24"title="Duplicate">Duplicate</option><option value="EDUMALPR"title="Educational Malpractice">Educational Malpractice</option><option value="EMPBENLI"title="Employee Benefit Liability">Employee Benefit Liability</option><option value="FAILINDM"title="Failure to Indemnify">Failure to Indemnify</option><option value="FAILSUPR"title="Failure to Supervise">Failure to Supervise</option><option value="FALSARST"title="False Arrest/Imprisonment">False Arrest/Imprisonment</option><option value="FALSCLM"title="False Claim Act">False Claim Act</option><option value="FALSLGHT"title="False Light">False Light</option><option value="FERPA"title="FERPA">FERPA</option><option value="FSTAMNDV"title="First Amendment Violation">First Amendment Violation</option><option value="FLSA"title="FLSA">FLSA</option><option value="FLMA"title="FMLA">FMLA</option><option value="FRAUDMIS"title="Fraud/Misrepresentation">Fraud/Misrepresentation</option><option value="INCIDNT"title="Incident">Incident</option><option value="EMOTDIST"title="Int'l Infliction of Emotional Distress">Int'l Infliction of Emotional Distress</option><option value="INTPROP"title="Intellectual Property/Copyright">Intellectual Property/Copyright</option><option value="INVPRIV"title="Invasion of Privacy">Invasion of Privacy</option><option value="MALPROSC"title="Malicious Prosecution">Malicious Prosecution</option><option value="NEGL"title="Negligence">Negligence</option><option value="NO"title="No Coverage">No Coverage</option><option value="OPENRECS"title="Open Records/Meetings Laws">Open Records/Meetings Laws</option><option value="OTHER"title="Other">Other</option><option value="OTHSTATU"title="Other Statutory Violations">Other Statutory Violations</option><option value="TITLEIX"title="Title IX">Title IX</option><option value="WSTLBLOW"title="Whistleblower violations">Whistleblower violations</option><option value="WRNGTERM"title="Wrongful Termination">Wrongful Termination</option></select>
+    </div>
+    <!--
+    <div style="width: 276px; height: 36px; top: 25px; left: 0px;" id="f2Cause_div" class="component EditorDropDown" ref="EditorDropDown" function="CHANGE|FOCUS" definition="CustomScript.enforceCOLUnique();|" cli-cond="" mp-help="">
+        <span style="cursor: default;" class="notRequired" id="ftdiv2"></span>
+        <select style="width: 270px;" id="f2Cause" title="Please select a cause of loss." tabindex="15" size="1" name="f2Cause" class=""></select>
+    </div>
+    <div style="width: 276px; height: 36px; top: 25px; left: 0px;" id="f3Cause_div" class="component EditorDropDown" ref="EditorDropDown" function="CHANGE|FOCUS" definition="CustomScript.enforceCOLUnique();|" cli-cond="" mp-help=""><span style="cursor: default;" class="required" id="ftdiv3"></span>
+        <select style="width: 270px;" id="f3Cause" title="Please select a cause of loss." tabindex="15" size="1" name="f3Cause" class=""></select>
+    </div>
+    -->
+</div>
+        <div class="component StaticContainer" style="border: 0px currentColor; border-image: none; height: 305px; position: relative;" ref="StaticContainer" cli-cond="">
+    <h3 class="handle" style="visibility: hidden;"></h3>
+    <div class="component EditorDropDown" style="left: 0px; top: -40px; width: 276px; height: 35px;" ref="EditorDropDown" cli-cond="" mp-help=""><span class=" required" id="addFactors" style="cursor: default;">Additional Factors</span>
+        <select name="additionalFactor1" tabindex="18" title="Please select an additional factor." id="additionalFactor1" style="width: 270px;" size="1" valuelessattrs="" class=""><option value="-1"title="Please select an Additional Factor...">Please select an Additional Factor...</option><option value="ABUSE"title="Alcohol/Drugs/Substance Abuse">Alcohol/Drugs/Substance Abuse</option><option value="DEFECT"title="Defective Condition">Defective Condition</option><option value="GREEK"title="Greek Organization">Greek Organization</option><option value="HAZING"title="Hazing">Hazing</option><option value="LEASED"title="Leased">Leased</option><option value="MORE"title="More than one of the above">More than one of the above</option><option value="NONE"title="None">None</option><option value="ARISK"title="Risk transfer issue">Risk transfer issue</option><option value="ATBD"title="TBD">TBD</option></select>
+    </div>
+    <div class="component EditorDropDown" style="left: 0px; top: 4px; width: 276px; height: 36px;" ref="EditorDropDown" cli-cond="" definition="CustomScript.enforceWAUnique();" function="CHANGE" mp-help=""><span class="required" id="wrongfulact" style="cursor: default;">Wrongful Act</span>
+        <select name="wrongfullAct1" tabindex="19" title="Please select a wrongful act." id="wrongfullAct1" style="width: 270px;" size="1" valuelessattrs="" class="">
+<option value="-1"title="Please select a Wrongful Act...">Please select a Wrongful Act...</option>
+<option value="ACDMFREE"title="Academic Freedom">Academic Freedom</option>
+<option value="ACCOMM"title="Accommodation">Accommodation</option>
+<option value="ACCRED"title="Accreditation">Accreditation</option>
+<option value="ADDMIS"title="Admission">Admission</option>
+<option value="ARREST"title="Arrest">Arrest</option>
+<option value="ATHLTIC"title="Athletics">Athletics</option>
+<option value="BENEFIT"title="Benefits">Benefits</option>
+<option value="COPYRGHT"title="Copyright">Copyright</option>
+<option value="DEMOTE"title="Demotion">Demotion</option>
+<option value="DISCHRG"title="Discharge">Discharge</option>
+<option value="DISPACDM"title="Discipline, Academic">Discipline, Academic</option>
+<option value="DISPCOND"title="Discipline, Conduct">Discipline, Conduct</option>
+<option value="DISMISS"title="Dismissal/Expulsion">Dismissal/Expulsion</option>
+<option value="DSTLRN"title="Distance Learning">Distance Learning</option>
+<option value="FINAID"title="Financial Aid">Financial Aid</option>
+<option value="FRCWTHDR"title="Forced Withdraw">Forced Withdraw</option>
+<option value="FREERELG"title="Freedom of Religion">Freedom of Religion</option>
+<option value="FREESPCH"title="Freedom of Speech">Freedom of Speech</option>
+<option value="GRADES"title="Grades">Grades</option>
+<option value="HARSHOST"title="Harrassment-Hostile Environment">Harrassment-Hostile Environment</option>
+<option value="HARSQPQ"title="Harrassment-QPQ">Harrassment-QPQ</option>
+<option value="HIRING"title="Hiring">Hiring</option>
+<option value="HOUSING"title="Housing">Housing</option>
+<option value="INDEMNF"title="Indemnification">Indemnification</option>
+<option value="JOBTRANS"title="Job Transfer">Job Transfer</option>
+<option value="LEAVE"title="Leave">Leave</option>
+<option value="MEETINGS"title="Meetings">Meetings</option>
+<option value="MISREP"title="Misrepresentation">Misrepresentation</option>
+<option value="WNONE"title="NONE">NONE</option>
+<option value="PATENT"title="Patent">Patent</option>
+<option value="PERF"title="Performance Evaluation">Performance Evaluation</option>
+<option value="PROFM"title="Professional Misconduct">Professional Misconduct</option>
+<option value="CLOSED"title="Program Closure">Program Closure</option>
+<option value="PROMO"title="Promotion">Promotion</option>
+<option value="PUBLICTN"title="Publication">Publication</option>
+<option value="REC"title="Records">Records</option>
+<option value="REF"title="References">References</option>
+<option value="RIF"title="RIF/Layoff">RIF/Layoff</option>
+<option value="SEARCH"title="Search">Search</option>
+<option value="SUSP"title="Suspension">Suspension</option>
+<option value="WTBD"title="TBD">TBD</option>
+<option value="TENURE"title="Tenure Denial">Tenure Denial</option>
+<option value="TEN_REV"title="Tenure Revocation">Tenure Revocation</option>
+<option value="TRADE"title="Trademark">Trademark</option>
+<option value="TUITION"title="Tuition">Tuition</option>
+<option value="WAGES"title="Wages/Salary">Wages/Salary</option></select>
+    </div>
+    <div class="component EditorDropDown" style="left: 290px; top: 5px; width: 276px; height: 36px;" ref="EditorDropDown" cli-cond="" definition="CustomScript.enforceWAUnique();" function="CHANGE" mp-help=""><span class="required" id="wrongfulact2" style="cursor: default;">Second Wrongful Act</span>
+        <select name="secondWrongfullAct1" tabindex="20" title="Please select a wrongful act." id="secondWrongfullAct1" style="width: 270px;" size="1" valuelessattrs="" class="">
+<option value="-1"title="Please select a Wrongful Act...">Please select a Wrongful Act...</option>
+<option value="ACDMFREE"title="Academic Freedom">Academic Freedom</option>
+<option value="ACCOMM"title="Accommodation">Accommodation</option>
+<option value="ACCRED"title="Accreditation">Accreditation</option>
+<option value="ADDMIS"title="Admission">Admission</option>
+<option value="ARREST"title="Arrest">Arrest</option>
+<option value="ATHLTIC"title="Athletics">Athletics</option>
+<option value="BENEFIT"title="Benefits">Benefits</option>
+<option value="COPYRGHT"title="Copyright">Copyright</option>
+<option value="DEMOTE"title="Demotion">Demotion</option>
+<option value="DISCHRG"title="Discharge">Discharge</option>
+<option value="DISPACDM"title="Discipline, Academic">Discipline, Academic</option>
+<option value="DISPCOND"title="Discipline, Conduct">Discipline, Conduct</option>
+<option value="DISMISS"title="Dismissal/Expulsion">Dismissal/Expulsion</option>
+<option value="DSTLRN"title="Distance Learning">Distance Learning</option>
+<option value="FINAID"title="Financial Aid">Financial Aid</option>
+<option value="FRCWTHDR"title="Forced Withdraw">Forced Withdraw</option>
+<option value="FREERELG"title="Freedom of Religion">Freedom of Religion</option>
+<option value="FREESPCH"title="Freedom of Speech">Freedom of Speech</option>
+<option value="GRADES"title="Grades">Grades</option>
+<option value="HARSHOST"title="Harrassment-Hostile Environment">Harrassment-Hostile Environment</option>
+<option value="HARSQPQ"title="Harrassment-QPQ">Harrassment-QPQ</option>
+<option value="HIRING"title="Hiring">Hiring</option>
+<option value="HOUSING"title="Housing">Housing</option>
+<option value="INDEMNF"title="Indemnification">Indemnification</option>
+<option value="JOBTRANS"title="Job Transfer">Job Transfer</option>
+<option value="LEAVE"title="Leave">Leave</option>
+<option value="MEETINGS"title="Meetings">Meetings</option>
+<option value="MISREP"title="Misrepresentation">Misrepresentation</option>
+<option value="WNONE"title="NONE">NONE</option>
+<option value="PATENT"title="Patent">Patent</option>
+<option value="PERF"title="Performance Evaluation">Performance Evaluation</option>
+<option value="PROFM"title="Professional Misconduct">Professional Misconduct</option>
+<option value="CLOSED"title="Program Closure">Program Closure</option>
+<option value="PROMO"title="Promotion">Promotion</option>
+<option value="PUBLICTN"title="Publication">Publication</option>
+<option value="REC"title="Records">Records</option>
+<option value="REF"title="References">References</option>
+<option value="RIF"title="RIF/Layoff">RIF/Layoff</option>
+<option value="SEARCH"title="Search">Search</option>
+<option value="SUSP"title="Suspension">Suspension</option>
+<option value="WTBD"title="TBD">TBD</option>
+<option value="TENURE"title="Tenure Denial">Tenure Denial</option>
+<option value="TEN_REV"title="Tenure Revocation">Tenure Revocation</option>
+<option value="TRADE"title="Trademark">Trademark</option>
+<option value="TUITION"title="Tuition">Tuition</option>
+<option value="WAGES"title="Wages/Salary">Wages/Salary</option></select>
+    </div>
+    <div class="component EditorDropDown" style="left: 0px; top: 50px; width: 276px; height: 35px;" ref="EditorDropDown" cli-cond="" definition="CustomScript.repToReinsurerSetter();" function="CHANGE" mp-help=""><span class=" required" id="spInjTypeCode" style="cursor: default;">Injury Driving the Claim</span>
+        <select name="cDEG_InjTypeCode1" tabindex="21" title="Please select an injury." id="cDEG_InjTypeCode1" style="width: 270px;" size="1" valuelessattrs="" class="">
+<option value="-1"title="Please select an Injury...">Please select an Injury...</option>
+<option value="AMP"title="Amputation">Amputation</option>
+<option value="ATHTBI"title="Athletic TBI">Athletic TBI</option>
+<option value="BACK"title="Back/Neck">Back/Neck</option>
+<option value="BONE"title="Broken Bone">Broken Bone</option>
+<option value="BURN"title="Burn">Burn</option>
+<option value="DENTAL"title="Dental">Dental</option>
+<option value="DISEASE"title="Disease">Disease</option>
+<option value="ECON"title="Economic only">Economic only</option>
+<option value="EMOT"title="Emotional Distress">Emotional Distress</option>
+<option value="FATAL"title="Fatality">Fatality</option>
+<option value="INTER"title="Internal Injury">Internal Injury</option>
+<option value="LACER"title="Laceration">Laceration</option>
+<option value="INJIM1"title="Minor Injuries">Minor Injuries</option>
+<option value="INJIM2"title="Multiple Injuries">Multiple Injuries</option>
+<option value="NO_COV"title="No Coverage">No Coverage</option>
+<option value="NO_INJ"title="No Injury Identified">No Injury Identified</option>
+<option value="PARA"title="Paralysis">Paralysis</option>
+<option value="SOFT"title="Soft Tissue">Soft Tissue</option>
+<option value="ITBD"title="TBD">TBD</option>
+<option value="TBI"title="TBI">TBI</option>
+<option value="EYE_EAR"title="Vision/Hearing">Vision/Hearing</option></select>
+    </div>
+    <div class="component EditorDropDown" style="left: 290px; top: 50px; width: 276px; height: 36px;" ref="EditorDropDown"><span class=" required" id="lossLocation" style="cursor: default;">Loss Location</span>
+        <select name="lossLocation1" tabindex="22" title="Please select a loss location." id="lossLocation1" style="width: 270px;" size="1" valuelessattrs="" class="">
+<option value="-1"title="Please select a Location...">Please select a Location...</option>
+<option value="C-NONRES"title="Campus - non-residence">Campus - non-residence</option>
+<option value="C_OUT"title="Campus - outdoors">Campus - outdoors</option>
+<option value="C_RES"title="Campus - residence">Campus - residence</option>
+<option value="FOR"title="Foreign">Foreign</option>
+<option value="NC-NRES"title="Non-campus - non-residence">Non-campus - non-residence</option>
+<option value="NC_OUT"title="Non-campus - outdoors">Non-campus - outdoors</option>
+<option value="NC_RES"title="Non-campus - residence">Non-campus - residence</option>
+<option value="LTBD"title="TBD">TBD</option></select>
+    </div>
+    <div class="component EditorDropDown" style="left: 575px; top: 50px; width: 276px; height: 35px;" ref="EditorDropDown" cli-cond="" definition="CustomScript.CheckNoCoverageSelection('DropDown');" function="CHANGE" mp-help="">
+        <span class="required" id="ReserveStatus1Label" style="cursor: default;">Reserve Status</span>
+        <select name="ReserveStatus1" tabindex="23" title="Please select a reserve status." id="ReserveStatus1" style="width: 270px;" size="1" valuelessattrs="" class=""><option value="-1"title="Please select a Reserve Status...">Please select a Reserve Status...</option><option value="1"title="A+: Reserve established (>50K)">A+: Reserve established (>50K)</option><option value="2"title="A: Reserve established">A: Reserve established</option><option value="3"title="B+: High likelihood reserve will be required">B+: High likelihood reserve will be required</option><option value="4"title="B: Possibility of a future loss">B: Possibility of a future loss</option><option value="5" title="C: No loss expected" selected>C: No loss expected</option><option value="6"title="D: see manual">D: see manual</option><option value="7"title="E: Aggregate Deductible (Public Schools only)">E: Aggregate Deductible (Public Schools only)</option><option value="8"title="NC - No coverage">NC - No coverage</option><option value="9"title="R - Report only">R - Report only</option></select>
+    </div>
+    <div class="component EditorDropDown" style="left: 575px; top: 5px; width: 276px; height: 35px;" ref="EditorDropDown" cli-cond="" mp-help="">
+        <span class="required" id="litStatus1Label" style="cursor: default;">Litigation Status</span>
+        <br>
+        <select name="litStatus1" tabindex="0" title="Please select a litigation status for this claim." id="litStatus1" style="width: 270px;" size="1" valuelessattrs="" class=""><option value="-1"title="Please select a Litigation Status...">Please select a Litigation Status...</option><option value="342"title="Agency Complaint">Agency Complaint</option><option value="324" title="Demand Letter" selected>Demand Letter</option><option value="323"title="No Pending Litigation">No Pending Litigation</option><option value="344"title="Suit filed in Federal Court">Suit filed in Federal Court</option><option value="343"title="Suit filed in State Court">Suit filed in State Court</option></select>
+    </div>
+    
+    <div class="component EditorLabel" style="left: 0px; top: 105px;" ref="EditorLabel" cli-cond="" mp-help="">
+        <label tabindex="-1" title="" class="Default" id="reportedToReinsurerL">Report To Reinsurer</label>
+    </div>
+    <div class="component EditorRadio" style="left: 120px; top: 105px;" ref="EditorRadio" cli-cond="" mp-help="">
+        <input name="reportedToReinsurer" tabindex="14" title="Please select if reported to reinsurer." id="reportedToReinsurer" value="1" #sreptoreinsuer#="" class="" type="radio">
+        <span class="notRequired" style="cursor: pointer;">Yes</span></div>
+    <div class="component EditorRadio" style="left: 175px; top: 105px;" ref="EditorRadio" cli-cond="" mp-help="">
+        <input name="reportedToReinsurer" tabindex="14" title="Pleae select if not reported to reinsurer." id="reportedToReinsurer" value="0" checked="" class="" type="radio">
+        <span class="notRequired" style="cursor: pointer;">No</span>                
+    </div>
+    <div class="component EditorRadio" style="left: 370px; top: 105px;" ref="EditorRadio" cli-cond="" mp-help=""><input name="WatchListItem" tabindex="0" title="This is a watch list item" id="WatchListItem" value="1" class="" type="radio">
+        <span class="notRequired" style="cursor: pointer;">Yes</span>                
+    </div>
+    <div class="component EditorRadio" style="left: 420px; top: 105px;" ref="EditorRadio" cli-cond="" mp-help="">
+        <input name="WatchListItem" tabindex="0" title="This is not a watch list item" id="WatchListItem" value="0" class="" type="radio">
+        <span class="notRequired" style="cursor: pointer;">No</span></div>
+    <div class="component EditorLabel" style="left: 270px; top: 105px;" ref="EditorLabel" cli-cond="" mp-help="">
+        <label tabindex="-1" title="" class="Default">Watch List Item</label>                
+    </div>
+    
+    <div class="component EditorMemo" style="left: 0px; top: 170px; width: 840px; height: 100px;" spellcheck="false" ref="EditorMemo" cli-cond="" mp-help="" edithtml="false">
+        <span class="EditorMemoSpan required" id="lossDescription" style="width: 840px; height: 100px; display: none;">Loss Description</span>
+        <textarea name="cCD_LossDesc1" tabindex="24" title="Please enter loss description." id="cCD_LossDesc1" style="width: 840px; height: 100px;" class="">PT LoSS Description</textarea>
+        <div class="ckEditorDiv" style="display: none;">PT LoSS Description</div>
+    </div>
+                    
+<div class="component EditorDropDown" style="left: 575px; top: 95px; width: 276px; height: 35px;" ref="EditorDropDown" cli-cond="" mp-help="">
+        <span class="required" id="ReserveStatus1Label" style="cursor: default;">Loss State</span>
+        <select name="LossState" tabindex="23" title="Please select a loss state." id="LossState" style="width: 270px;" size="1" class="">
+<option value="-1"title="Please select a loss state...">Please select a loss state...</option>
+<option value="AL"title="Alabama">Alabama</option>
+<option value="AK"title="Alaska">Alaska</option>
+<option value="ALL"title="All States">All States</option>
+<option value="AZ"title="Arizona">Arizona</option>
+<option value="AR"title="Arkansas">Arkansas</option>
+<option value="CA"title="California">California</option>
+<option value="CO"title="Colorado">Colorado</option>
+<option value="CT"title="Connecticut">Connecticut</option>
+<option value="DE"title="Delaware">Delaware</option>
+<option value="DC"title="District of Columbia">District of Columbia</option>
+<option value="FL"title="Florida">Florida</option>
+<option value="GA" title="Georgia" selected>Georgia</option>
+<option value="GU"title="Guam">Guam</option>
+<option value="HI"title="Hawaii">Hawaii</option>
+<option value="ID"title="Idaho">Idaho</option>
+<option value="IL"title="Illinois">Illinois</option>
+<option value="IN"title="Indiana">Indiana</option>
+<option value="IA"title="Iowa">Iowa</option>
+<option value="KS"title="Kansas">Kansas</option>
+<option value="KY"title="Kentucky">Kentucky</option>
+<option value="LA"title="Louisiana">Louisiana</option>
+<option value="ME"title="Maine">Maine</option>
+<option value="MD"title="Maryland">Maryland</option>
+<option value="MA"title="Massachusetts">Massachusetts</option>
+<option value="MI"title="Michigan">Michigan</option>
+<option value="MN"title="Minnesota">Minnesota</option>
+<option value="MS"title="Mississippi">Mississippi</option>
+<option value="MO"title="Missouri">Missouri</option>
+<option value="MT"title="Montana">Montana</option>
+<option value="NE"title="Nebraska">Nebraska</option>
+<option value="NV"title="Nevada">Nevada</option>
+<option value="NH"title="New Hampshire">New Hampshire</option>
+<option value="NJ"title="New Jersey">New Jersey</option>
+<option value="NM"title="New Mexico">New Mexico</option>
+<option value="NY"title="New York">New York</option>
+<option value="NC"title="North Carolina ">North Carolina </option>
+<option value="ND"title="North Dakota">North Dakota</option>
+<option value="OH"title="Ohio">Ohio</option>
+<option value="OK"title="Oklahoma">Oklahoma</option>
+<option value="OR"title="Oregon">Oregon</option>
+<option value="PA"title="Pennsylvania">Pennsylvania</option>
+<option value="PR"title="Puerto Rico">Puerto Rico</option>
+<option value="RI"title="Rhode Island">Rhode Island</option>
+<option value="SC"title="South Carolina">South Carolina</option>
+<option value="SD"title="South Dakota">South Dakota</option>
+<option value="TN"title="Tennessee">Tennessee</option>
+<option value="TX"title="Texas">Texas</option>
+<option value="UT"title="Utah">Utah</option>
+<option value="VT"title="Vermont">Vermont</option>
+<option value="VI"title="Virgin Islands">Virgin Islands</option>
+<option value="VA"title="Virginia">Virginia</option>
+<option value="WA"title="Washington">Washington</option>
+<option value="WV"title="West Virginia">West Virginia</option>
+<option value="WI"title="Wisconsin">Wisconsin</option>
+<option value="WY"title="Wyoming">Wyoming</option></select>
+    </div><div class="component EditorLabel" style="left: 0px; top: 145px;" ref="EditorLabel" cli-cond="" mp-help=""><label tabindex="-1" title="" class="Required">Loss Description</label></div></div>
+    </div>
+    <div class="component DynamicContainer" style="left: -3px; top: 0px;" ref="DynamicContainer" cli-cond="">
+        <h3 class="handle" style="cursor: pointer;" onclick="CustomScript.ToggleSection(this);">
+<span class="stat" id="agy_lit_toggle_minus" style="display: none;">+</span>
+<span class="stat" id="agy_lit_toggle_plus" style="display: inline;">-</span>Analyst Assignment</h3>
+<div>
+        <div class="component StaticContainer borderless" style="height: 30px;" ref="StaticContainer">
+            <h3 class="handle" style="visibility: hidden;"></h3>
+            <div class="component EditorRadio" style="left: 0px; top: -25px;" ref="EditorRadio" cli-cond="" mp-help="">
+                <input name="claimGroup" tabindex="25" title="Please click here to select comprehensive claims group/ca." id="claimGroup" onclick="CustomScript.toggleGroups('bCCG_CA_BOX');" value="CCG_CA" valuelessattrs="checked" class="" type="radio">
+            <span class="required" style="cursor: pointer;" name="claimGroupradio">Comprehensive Claims Group/CA</span></div>
+            <div class="component EditorRadio" style="left: 510px; top: -25px;" ref="EditorRadio">
+                <input name="claimGroup" tabindex="25" title="Please click here to select specialty claims group." id="claimGroup" onclick="CustomScript.toggleGroups('bSCG_BOX');" value="SCG" valuelessattrs="" class="" type="radio">
+                <span class="required" style="cursor: pointer;" name="claimGroupradio">Specialty Claims Group</span>
+            </div>
+            <div class="component EditorRadio" style="left: 250px; top: -25px;" ref="EditorRadio" cli-cond="" mp-help="">
+                <input name="claimGroup" tabindex="0" title="Please click here to select comprehensive claims group/cmc." id="claimGroup" onclick="CustomScript.toggleGroups('bCCG_CMC_BOX');" value="CCG_CMC" valuelessattrs="" class="" type="radio">
+            <span class="required" style="cursor: pointer;" name="claimGroupradio">Comprehensive Claims Group/CMC</span></div>
+        </div>
+        <div id="box0">
+             <label id="analystgroup"></label>
+        </div>
+        <div class="component EditorLabel" id="box1" style="margin: 0px; padding: 0px;" ref="EditorLabel">
+            <label tabindex="-1" title="" class="Default"></label>
+<table class="TableMaster" id="bccg_ca_results">
+<thead>
+<tr>
+<th width="10%">Sel</th>
+<th width="35%">Analyst Name</th>
+<th width="35%">Claims Count</th>
+<th width="20%">Open in Last 5 Business Days</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td title="Please click here to select this analyst."><div><span class="required"></span><input id="iCCG874" name="cCD_ClaimAdjuster" type="radio"   value="874" tabindex="26" /></div></td>
+<td>Aisha Fallen</td>
+<td>42</td>
+<td>0</td>
+</tr>
+<tr>
+<td title="Please click here to select this analyst."><div><span class="required"></span><input id="iCCG875" name="cCD_ClaimAdjuster" type="radio"   value="875" tabindex="26" /></div></td>
+<td>Angela Alkire</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td title="Please click here to select this analyst."><div><span class="required"></span><input id="iCCG881" name="cCD_ClaimAdjuster" type="radio" checked  value="881" tabindex="26" /></div></td>
+<td>Dina Hazen</td>
+<td>2416</td>
+<td>85</td>
+</tr>
+<tr>
+<td title="Please click here to select this analyst."><div><span class="required"></span><input id="iCCG8437" name="cCD_ClaimAdjuster" type="radio"   value="8437" tabindex="26" /></div></td>
+<td>Donna Esposito</td>
+<td>138</td>
+<td>0</td>
+</tr>
+<tr>
+<td title="Please click here to select this analyst."><div><span class="required"></span><input id="iCCG884" name="cCD_ClaimAdjuster" type="radio"   value="884" tabindex="26" /></div></td>
+<td>Glenda Atkinson</td>
+<td>147</td>
+<td>0</td>
+</tr>
+<tr>
+<td title="Please click here to select this analyst."><div><span class="required"></span><input id="iCCG892" name="cCD_ClaimAdjuster" type="radio"   value="892" tabindex="26" /></div></td>
+<td>Kenneth June</td>
+<td>79</td>
+<td>0</td>
+</tr>
+<tr>
+<td title="Please click here to select this analyst."><div><span class="required"></span><input id="iCCG894" name="cCD_ClaimAdjuster" type="radio"   value="894" tabindex="26" /></div></td>
+<td>Laura Morales</td>
+<td>95</td>
+<td>0</td>
+</tr>
+<tr>
+<td title="Please click here to select this analyst."><div><span class="required"></span><input id="iCCG898" name="cCD_ClaimAdjuster" type="radio"   value="898" tabindex="26" /></div></td>
+<td>Nikole Alcala</td>
+<td>73</td>
+<td>0</td>
+</tr>
+<tr>
+<td title="Please click here to select this analyst."><div><span class="required"></span><input id="iCCG8424" name="cCD_ClaimAdjuster" type="radio"   value="8424" tabindex="26" /></div></td>
+<td>NYSIR Analyst</td>
+<td>75</td>
+<td>0</td>
+</tr>
+<tr>
+<td title="Please click here to select this analyst."><div><span class="required"></span><input id="iCCG15955" name="cCD_ClaimAdjuster" type="radio"   value="15955" tabindex="26" /></div></td>
+<td>Pamela Buchanan</td>
+<td>132</td>
+<td>0</td>
+</tr>
+<tr>
+<td title="Please click here to select this analyst."><div><span class="required"></span><input id="iCCG902" name="cCD_ClaimAdjuster" type="radio"   value="902" tabindex="26" /></div></td>
+<td>Rick Donato</td>
+<td>125</td>
+<td>0</td>
+</tr>
+<tr>
+<td title="Please click here to select this analyst."><div><span class="required"></span><input id="iCCG904" name="cCD_ClaimAdjuster" type="radio"   value="904" tabindex="26" /></div></td>
+<td>Samantha Ware</td>
+<td>136</td>
+<td>0</td>
+</tr>
+<tr>
+<td title="Please click here to select this analyst."><div><span class="required"></span><input id="iCCG906" name="cCD_ClaimAdjuster" type="radio"   value="906" tabindex="26" /></div></td>
+<td>Susannah Reynolds</td>
+<td>145</td>
+<td>0</td>
+</tr>
+<tr>
+<td title="Please click here to select this analyst."><div><span class="required"></span><input id="iCCG907" name="cCD_ClaimAdjuster" type="radio"   value="907" tabindex="26" /></div></td>
+<td>Tracey Altadonna</td>
+<td>92</td>
+<td>0</td>
+</tr>
+<tr>
+<td title="Please click here to select this analyst."><div><span class="required"></span><input id="iCCG909" name="cCD_ClaimAdjuster" type="radio"   value="909" tabindex="26" /></div></td>
+<td>Vicki Higman</td>
+<td>48</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<label></label>
+        </div>
+        <div class="component EditorLabel" id="box4" style="margin: 0px; padding: 0px;" ref="EditorLabel" cli-cond="" mp-help="">
+            <label tabindex="-1" title="" class="Default"></label>
+<table class="TableMaster" id="bccg_cmc_results">
+<thead>
+<tr>
+<th width="10%">Sel</th>
+<th width="35%">Analyst Name</th>
+<th width="35%">Claims Count</th>
+<th width="20%">Open in Last 5 Business Days</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td title="Please click here to select this analyst."><div><span class="required"></span><input id="iCCG910" name="cCD_ClaimAdjuster" type="radio"  value="910" tabindex="26" /></div></td>
+<td>Arden Colley</td>
+<td>133</td>
+<td>0</td>
+</tr>
+<tr>
+<td title="Please click here to select this analyst."><div><span class="required"></span><input id="iCCG880" name="cCD_ClaimAdjuster" type="radio"  value="880" tabindex="26" /></div></td>
+<td>Denise Crowley</td>
+<td>148</td>
+<td>0</td>
+</tr>
+<tr>
+<td title="Please click here to select this analyst."><div><span class="required"></span><input id="iCCG15952" name="cCD_ClaimAdjuster" type="radio"  value="15952" tabindex="26" /></div></td>
+<td>Joanne Owens</td>
+<td>147</td>
+<td>0</td>
+</tr>
+<tr>
+<td title="Please click here to select this analyst."><div><span class="required"></span><input id="iCCG15969" name="cCD_ClaimAdjuster" type="radio"  value="15969" tabindex="26" /></div></td>
+<td>Matt OBrien</td>
+<td>8</td>
+<td>0</td>
+</tr>
+<tr>
+<td title="Please click here to select this analyst."><div><span class="required"></span><input id="iCCG16462" name="cCD_ClaimAdjuster" type="radio"  value="16462" tabindex="26" /></div></td>
+<td>Michele Hutchinson</td>
+<td>122</td>
+<td>0</td>
+</tr>
+<tr>
+<td title="Please click here to select this analyst."><div><span class="required"></span><input id="iCCG899" name="cCD_ClaimAdjuster" type="radio"  value="899" tabindex="26" /></div></td>
+<td>Rebecca Ambrose</td>
+<td>133</td>
+<td>0</td>
+</tr>
+<tr>
+<td title="Please click here to select this analyst."><div><span class="required"></span><input id="iCCG911" name="cCD_ClaimAdjuster" type="radio"  value="911" tabindex="26" /></div></td>
+<td>Rose Anunda</td>
+<td>135</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<label></label>
+        </div>
+        <div class="component EditorLabel" id="box2" style="margin: 0px; padding: 0px;" ref="EditorLabel" cli-cond="" mp-help="">
+            <label tabindex="-1" title="" class="Default"></label>
+<table class="TableMaster" id="bscg_results">
+<thead>
+<tr>
+<th width="10%">Sel</th>
+<th width="35%">Analyst Name</th>
+<th width="35%">Claims Count</th>
+<th width="20%">Open in Last 5 Business Days</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td title="Please click here to select this analyst."><div><span class="required"></span><input id="iSCG879" name="cCD_ClaimAdjuster" type="radio"  value="879" tabindex="26" /></div></td>
+<td>Dena Kaufmann</td>
+<td>73</td>
+<td>0</td>
+</tr>
+<tr>
+<td title="Please click here to select this analyst."><div><span class="required"></span><input id="iSCG908" name="cCD_ClaimAdjuster" type="radio"  value="908" tabindex="26" /></div></td>
+<td>Tracy McPherson</td>
+<td>82</td>
+<td>0</td>
+</tr>
+<tr>
+<td title="Please click here to select this analyst."><div><span class="required"></span><input id="iSCG15953" name="cCD_ClaimAdjuster" type="radio"  value="15953" tabindex="26" /></div></td>
+<td>Kelsey Feeheley</td>
+<td>80</td>
+<td>0</td>
+</tr>
+<tr>
+<td title="Please click here to select this analyst."><div><span class="required"></span><input id="iSCG876" name="cCD_ClaimAdjuster" type="radio"  value="876" tabindex="26" /></div></td>
+<td>Carla Marcolin</td>
+<td>78</td>
+<td>0</td>
+</tr>
+<tr>
+<td title="Please click here to select this analyst."><div><span class="required"></span><input id="iSCG15956" name="cCD_ClaimAdjuster" type="radio"  value="15956" tabindex="26" /></div></td>
+<td>Jenny Casey</td>
+<td>84</td>
+<td>0</td>
+</tr>
+<tr>
+<td title="Please click here to select this analyst."><div><span class="required"></span><input id="iSCG905" name="cCD_ClaimAdjuster" type="radio"  value="905" tabindex="26" /></div></td>
+<td>Sarah Braughler</td>
+<td>45</td>
+<td>0</td>
+</tr>
+<tr>
+<td title="Please click here to select this analyst."><div><span class="required"></span><input id="iSCG896" name="cCD_ClaimAdjuster" type="radio"  value="896" tabindex="26" /></div></td>
+<td>Louise Cobbs</td>
+<td>32</td>
+<td>0</td>
+</tr>
+<tr>
+<td title="Please click here to select this analyst."><div><span class="required"></span><input id="iSCG882" name="cCD_ClaimAdjuster" type="radio"  value="882" tabindex="26" /></div></td>
+<td>Douglas Onley</td>
+<td>48</td>
+<td>0</td>
+</tr>
+<tr>
+<td title="Please click here to select this analyst."><div><span class="required"></span><input id="iSCG877" name="cCD_ClaimAdjuster" type="radio"  value="877" tabindex="26" /></div></td>
+<td>Christine McHugh</td>
+<td>80</td>
+<td>0</td>
+</tr>
+<tr>
+<td title="Please click here to select this analyst."><div><span class="required"></span><input id="iSCG900" name="cCD_ClaimAdjuster" type="radio"  value="900" tabindex="26" /></div></td>
+<td>Rhonda Hurwitz</td>
+<td>41</td>
+<td>0</td>
+</tr>
+<tr>
+<td title="Please click here to select this analyst."><div><span class="required"></span><input id="iSCG897" name="cCD_ClaimAdjuster" type="radio"  value="897" tabindex="26" /></div></td>
+<td>Michael Krackov</td>
+<td>48</td>
+<td>0</td>
+</tr>
+<tr>
+<td title="Please click here to select this analyst."><div><span class="required"></span><input id="iSCG15962" name="cCD_ClaimAdjuster" type="radio"  value="15962" tabindex="26" /></div></td>
+<td>Alicia Williams</td>
+<td>84</td>
+<td>0</td>
+</tr>
+<tr>
+<td title="Please click here to select this analyst."><div><span class="required"></span><input id="iSCG15957" name="cCD_ClaimAdjuster" type="radio"  value="15957" tabindex="26" /></div></td>
+<td>Kristin Scaduto</td>
+<td>116</td>
+<td>0</td>
+</tr>
+<tr>
+<td title="Please click here to select this analyst."><div><span class="required"></span><input id="iSCG15963" name="cCD_ClaimAdjuster" type="radio"  value="15963" tabindex="26" /></div></td>
+<td>KarenAnn Broe</td>
+<td>82</td>
+<td>0</td>
+</tr>
+<tr>
+<td title="Please click here to select this analyst."><div><span class="required"></span><input id="iSCG16255" name="cCD_ClaimAdjuster" type="radio"  value="16255" tabindex="26" /></div></td>
+<td>Lisa Barnett</td>
+<td>80</td>
+<td>0</td>
+</tr>
+<tr>
+<td title="Please click here to select this analyst."><div><span class="required"></span><input id="iSCG895" name="cCD_ClaimAdjuster" type="radio"  value="895" tabindex="26" /></div></td>
+<td>Laura Olariu</td>
+<td>83</td>
+<td>0</td>
+</tr>
+<tr>
+<td title="Please click here to select this analyst."><div><span class="required"></span><input id="iSCG878" name="cCD_ClaimAdjuster" type="radio"  value="878" tabindex="26" /></div></td>
+<td>Cristina Wallace</td>
+<td>81</td>
+<td>0</td>
+</tr>
+<tr>
+<td title="Please click here to select this analyst."><div><span class="required"></span><input id="iSCG16524" name="cCD_ClaimAdjuster" type="radio"  value="16524" tabindex="26" /></div></td>
+<td>Joe McCullough</td>
+<td>95</td>
+<td>0</td>
+</tr>
+<tr>
+<td title="Please click here to select this analyst."><div><span class="required"></span><input id="iSCG886" name="cCD_ClaimAdjuster" type="radio"  value="886" tabindex="26" /></div></td>
+<td>Jim Smith</td>
+<td>44</td>
+<td>0</td>
+</tr>
+<tr>
+<td title="Please click here to select this analyst."><div><span class="required"></span><input id="iSCG15961" name="cCD_ClaimAdjuster" type="radio"  value="15961" tabindex="26" /></div></td>
+<td>Ashlee Hodge</td>
+<td>73</td>
+<td>0</td>
+</tr>
+<tr>
+<td title="Please click here to select this analyst."><div><span class="required"></span><input id="iSCG893" name="cCD_ClaimAdjuster" type="radio"  value="893" tabindex="26" /></div></td>
+<td>Kimberly Cole</td>
+<td>76</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<label></label>
+        </div>
+        <div class="component EditorLabel" id="box3" style="left: auto; top: 0px; margin-top: 0px;" ref="EditorLabel">
+            <label tabindex="-1" title="" class="Default"></label>
+<table class="TableMaster" id="ccg_claims">
+<thead>
+<tr>
+<td>Claim Number</td>
+<td>Claimant Name</td>
+<td>Product</td>
+<td>Analyst</td>
+<td>Claim Status</td>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>155988</td>
+<td>Perf183 Test183</td>
+<td> PL</td>
+<td>Dina Hazen</td>
+<td>Open</td>
+</tr>
+<tr>
+<td>155830</td>
+<td>Perf162 Test162</td>
+<td> GL</td>
+<td>Dina Hazen</td>
+<td>Open</td>
+</tr>
+<tr>
+<td>155728</td>
+<td>Perf58 Test58</td>
+<td> GL</td>
+<td>Dina Hazen</td>
+<td>Open</td>
+</tr>
+<tr>
+<td>155621</td>
+<td>Perf552 Test552</td>
+<td> GL</td>
+<td>Dina Hazen</td>
+<td>Open</td>
+</tr>
+<tr>
+<td>155518</td>
+<td>Perf448 Test448</td>
+<td> GL</td>
+<td>Dina Hazen</td>
+<td>Open</td>
+</tr>
+<tr>
+<td>155419</td>
+<td>Perf344 Test344</td>
+<td></td>
+<td>Dina Hazen</td>
+<td>Open</td>
+</tr>
+<tr>
+<td>155313</td>
+<td>Perf241 Test241</td>
+<td></td>
+<td>Dina Hazen</td>
+<td>Open</td>
+</tr>
+<tr>
+<td>155225</td>
+<td>Perf135 Test135</td>
+<td></td>
+<td>Dina Hazen</td>
+<td>Open</td>
+</tr>
+<tr>
+<td>155172</td>
+<td>Perf344 Test344</td>
+<td></td>
+<td>Dina Hazen</td>
+<td>Open</td>
+</tr>
+<tr>
+<td>155070</td>
+<td>Perf240 Test240</td>
+<td></td>
+<td>Dina Hazen</td>
+<td>Open</td>
+</tr>
+<tr>
+<td>154969</td>
+<td>Perf136 Test136</td>
+<td></td>
+<td>Dina Hazen</td>
+<td>Open</td>
+</tr>
+<tr>
+<td>154909</td>
+<td>Perf344 Test344</td>
+<td></td>
+<td>Dina Hazen</td>
+<td>Open</td>
+</tr>
+<tr>
+<td>154806</td>
+<td>Perf239 Test239</td>
+<td></td>
+<td>Dina Hazen</td>
+<td>Open</td>
+</tr>
+<tr>
+<td>154706</td>
+<td>Perf135 Test135</td>
+<td></td>
+<td>Dina Hazen</td>
+<td>Open</td>
+</tr>
+<tr>
+<td>154647</td>
+<td>Perf344 Test344</td>
+<td></td>
+<td>Dina Hazen</td>
+<td>Open</td>
+</tr>
+<tr>
+<td>154541</td>
+<td>Perf239 Test239</td>
+<td></td>
+<td>Dina Hazen</td>
+<td>Open</td>
+</tr>
+<tr>
+<td>154440</td>
+<td>Perf136 Test136</td>
+<td></td>
+<td>Dina Hazen</td>
+<td>Open</td>
+</tr>
+<tr>
+<td>154395</td>
+<td>Perf266 Test266</td>
+<td> GL</td>
+<td>Dina Hazen</td>
+<td>Open</td>
+</tr>
+<tr>
+<td>154293</td>
+<td>Perf162 Test162</td>
+<td> GL</td>
+<td>Dina Hazen</td>
+<td>Open</td>
+</tr>
+<tr>
+<td>154192</td>
+<td>Perf58 Test58</td>
+<td> GL</td>
+<td>Dina Hazen</td>
+<td>Open</td>
+</tr>
+<tr>
+<td>154088</td>
+<td>Perf552 Test552</td>
+<td> GL</td>
+<td>Dina Hazen</td>
+<td>Open</td>
+</tr>
+<tr>
+<td>153984</td>
+<td>Perf446 Test446</td>
+<td> GL</td>
+<td>Dina Hazen</td>
+<td>Open</td>
+</tr>
+<tr>
+<td>153875</td>
+<td>Perf342 Test342</td>
+<td> GL</td>
+<td>Dina Hazen</td>
+<td>Open</td>
+</tr>
+<tr>
+<td>153781</td>
+<td>Perf241 Test241</td>
+<td> GL</td>
+<td>Dina Hazen</td>
+<td>Open</td>
+</tr>
+<tr>
+<td>153691</td>
+<td>Perf139 Test139</td>
+<td> GL</td>
+<td>Dina Hazen</td>
+<td>Open</td>
+</tr>
+</tbody>
+</table>
+<label></label>
+        </div>
+        </div>
+    </div>
+    <div class="component DynamicContainer" ref="DynamicContainer">
+        <h3 class="handle">Notes</h3>
+        <div class="component EditorLabel" ref="EditorLabel">
+            <label tabindex="-1" title="" class="Default"></label>
+<table cellspacing="1" cellpadding="1" width="100%" id="resulttable" class="TableWalker">
+<thead>
+<tr>
+<td column="Name" width="15%">User Name</td>
+<td column="cAS_Subject" width="15%">Type</td>
+<td column="cAC_DateTime" width="15%">Create Date</td>
+<td column="cAC_Subject" width="20%">Subject</td>
+<td column="cAC_Comment" width="40%">Note</td>
+<td column="category" width="40%">Category</td>
+<td column="ImageLink" width="40%" style="display:none;">Image</td>
+<td width="10%">Delete Entry</td>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<label></label>
+        </div>
+        <div class="component StaticContainer borderless" id="notediv" style="height: 50px; position: relative;" ref="StaticContainer">
+            <h3 class="handle" style="visibility: hidden;"></h3>
+            <div class="component EditorSubmitButton" style="left: 720px; top: -25px; width: 125px; height: 32px;" ref="EditorSubmitButton" cli-cond="" definition="CustomScript.shownotes()" function="CLICK" mp-help="">
+                <input name="addNotes" tabindex="27" title="Please click here to add a note." id="addNotes" style="width: 115px; height: 22px;" value="Add Note" defaultbutton="false" class="" type="button">
+            </div>
+            <div class="component StaticContainer borderless" id="INPUT_NOTE" style="height: 210px;" ref="StaticContainer">
+                        <div class="component EditorLabel" style="left: 20px; top: -10px;" ref="EditorLabel">
+                            <label tabindex="-1" title="" class="Default">User</label>
+                        </div>
+                        <div class="component EditorLabel" style="left: 0px; top: 15px;" ref="EditorLabel">
+                            <label tabindex="-1" title="" class="Default" id="Subjectlabel">Subject</label>
+                        </div>
+                        <div class="component EditorLabel" style="left: 20px; top: 40px;" ref="EditorLabel">
+                            <label tabindex="-1" title="" class="Default" id="Notelabel">Note</label>
+                        </div>
+
+                         <div class="component EditorLabel" style="left: 455px; top: 15px;" ref="EditorLabel">
+                            <label tabindex="-1" title="" class="Default">Category</label>
+                        </div>
+
+
+                        <div class="component EditorLabel" style="left: 455px; top: -10px;" ref="EditorLabel">
+                            <label tabindex="-1" title="" class="Default" id="Typelabel">Type</label>
+                        </div>
+                         <div class="component EditorText" style="left: 515px; top: -10px; width: 157px;" ref="EditorText" dtype="STRING" param="" filter="DATE">
+                         <span class="required" style="font-size: 1em; cursor: text;"></span>
+                            <select name="NoteType" tabindex="3" title="Please select a type for the note." id="NoteType" style="width: 300px;" size="1" valuelessattrs="">
+<option value="-1" >Select Type. . . </option>
+<option value="2"> 18 month</option>
+<option value="1"> 9 month</option>
+<option value="4"> 90 day</option>
+<option value="34"> Authority</option>
+<option value="7"> Background</option>
+<option value="18"> Billing</option>
+<option value="12"> Closing</option>
+<option value="25"> Conflict</option>
+<option value="6"> Coverage</option>
+<option value="3"> CSummary</option>
+<option value="17"> Medicare</option>
+<option value="16"> PTT</option>
+<option value="11"> Q Update</option>
+<option value="8"> Reserves</option>
+<option value="9"> Settlement</option>
+<option value="19"> Significant Event</option>
+<option value="5"> Status</option>
+<option value="10"> Supervisor Review</option>
+<option value="13"> Transfer</option>
+<option value="33"> Watchlist</option></select>
+                        </div>
+
+
+
+
+                        <div class="component EditorText" style="left: 60px; top: -10px; width: 337px; height: 22px; position: absolute;" ref="EditorText">
+                            <span class="notRequired" style="width: 306px; height: 18px; font-size: 0.6em; cursor: text;"></span>
+                            <input name="userName" tabindex="90" title="" id="userName" style="width: 310px;" maxlength="60" readonly="readonly" value="Subrat Dash" class="" type="text">
+                        </div>
+                        <div class="component EditorText" style="left: 60px; top: 15px; width: 337px; height: 22px; position: absolute;" ref="EditorText">
+                            <span class="notRequired" style="width: 305px; height: 18px; font-size: 0.6em; cursor: text;"></span>
+                            <input name="notesSubject" tabindex="95" title="" id="notesSubject" style="width: 309px;" maxlength="30" value="" class="" type="text">
+                        </div>
+                        <div class="component EditorText" style="left: 515px; top: 15px; width: 157px; height: 22px; position: absolute;" ref="EditorText">
+                            <span class="notRequired" style="width: 305px; height: 18px; font-size: 0.6em; cursor: text;"></span>
+                            <input name="notesCategory" tabindex="96" title="" id="notesCategory" style="width: 300px;" maxlength="30" readonly="readonly" value="Claim/FNOL" class="" type="text">
+                        </div>
+                        <div class="component EditorMemo" style="left: 60px; top: 45px; width: 783px; height: 80px; position: absolute;" spellcheck="false" ref="EditorMemo" cli-cond="" mp-help="" edithtml="false">
+                            <span class="EditorMemoSpan notRequired" style="width: 783px; height: 80px;"></span>
+                            <textarea name="notesDescription" tabindex="97" title="" id="notesDescription" style="width: 783px; height: 80px;" value="" class=""></textarea>
+                        <div class="ckEditorDiv" style="display: none;"></div></div>
+                        <div class="component EditorSubmitButton" style="left: -5px; top: 138px; width: 112px; height: 38px;" ref="EditorSubmitButton" cli-cond="" definition="CustomScript.SaveNote(false);" function="CLICK" mp-help="">
+                            <input name="al_notesSave" tabindex="98" title="" id="al_notesSave" style="width: 102px; height: 28px;" value="Save" defaultbutton="false" class="" type="button">
+                        </div>
+                        <div class="component EditorSubmitButton" style="left: 105px; top: 138px; width: 112px; height: 38px;" ref="EditorSubmitButton" cli-cond="" definition="CustomScript.SaveNote(true);" function="CLICK" mp-help="">
+                            <input name="al_notesUpdate" tabindex="99" title="" id="al_notesUpdate" style="width: 102px; height: 28px;" value="Add Another" defaultbutton="false" class="" type="button">
+                        </div>
+                        <div class="component EditorSubmitButton" style="left: 470px; top: 138px; width: 112px; height: 38px;" ref="EditorSubmitButton" cli-cond="" definition="CustomScript.clearnote();" function="CLICK" mp-help="">
+                            <input name="al_notesAddAnother" tabindex="100" title="" id="al_notesAddAnother" style="width: 102px; height: 28px;" value="Clear" defaultbutton="false" class="" type="button">
+                        </div>
+                        <div class="component EditorSubmitButton" style="left: 580px; top: 138px; width: 112px; height: 28px;" ref="EditorSubmitButton" definition="CustomScript.CancelNote();" function="CLICK">
+                            <input name="al_notesCancel" tabindex="101" title="" id="notesCancel" style="width: 102px; height: 28px;" value="Cancel" defaultbutton="false" class="" type="button">
+                        </div>
+                        <div class="component EditorLabel" style="left: 310px; top: 138px; width: 30px; height: 38px;" ref="EditorLabel">
+                            <input name="noteID" tabindex="0" title="" id="noteID" style="visibility: hidden;" value="" type="text">
+                            <div class="component EditorLabel" style="left: 310px; top: 138px; width: 30px; height: 38px;" ref="EditorLabel" cli-cond="" mp-help="">
+                                <input name="al_EditFlag" tabindex="440" title="" id="al_EditFlag" value="" type="hidden">
+                            </div>
+                        </div>
+                    </div>
+        </div>
+    </div>
+    <div class="component DynamicContainer" style="top: 460px; display: none;" ref="DynamicContainer">
+        <h3 class="handle">Triage Attachments</h3>
+        <div class="component EditorLabel" style="left: 521px; top: 72px;" ref="EditorLabel">
+            <label tabindex="-1" title="" class="Default"></label>
+        </div>
+        <div class="component StaticContainer borderless" style="height: 35px;" ref="StaticContainer">
+            <h3 class="handle" style="visibility: hidden;"></h3>
+            <div class="component EditorSubmitButton" style="left: 720px; top: -25px; width: 125px; height: 32px;" ref="EditorSubmitButton" cli-cond="" definition="CustomScript.UploadClaimsAttachment();" function="CLICK" mp-help="">
+                <input name="AddAttachments" tabindex="28" title="Please click here to add an attachment." id="AddAttachments" style="width: 115px; height: 22px;" value="Add Attachment" defaultbutton="false" class="" type="button">
+            </div>
+            <div class="component EditorSubmitButton" style="left: 545px; top: -25px; width: 170px; height: 32px;" ref="EditorSubmitButton" cli-cond="" definition="CustomScript.UnlockTriageDocuments();" function="CLICK" mp-help="">
+                <input name="unlockTriageDoc" tabindex="28" title="Please click here to unlock triage attacment." id="unlockTriageDoc" style="width: 160px; height: 22px;" value="Unlock Triage Attachment" defaultbutton="false" class="" type="button">
+            </div>
+        </div>
+    </div>
+    <div class="component ValidationContainer" style="display: none; z-index: 1000;" ref="ValidationContainer" cli-cond="">
+    <h3 class="handle">Validation Errors</h3>
+    <div></div>
+    </div>
+
+        <div class="component EditorLabel" style="left: 240px; width: 380px; height: 17px; position: absolute;" ref="EditorLabel" cli-cond="" mp-help="">
+                <label tabindex="-1" title="" class="Default" id="lblSaveConfirmation" style="color: blue; display: none;">Your change was saved successfully. Please wait while loading.</label>
+        </div>
+    <div class="component ScriptingContainer" style="display: none; z-index: 1000;" ref="ScriptingContainer" cli-cond="">
+        <h3 class="handle" lasttoggle="1">Javascript Functions</h3>
+        <pre style="display: none;">function OnLoad() {
+    scroll(0, 0);
+
+    //Add css file to the header
+    var dt_css_link = $("&lt;link&gt;", {
+        rel: "stylesheet",
+        type: "text/css",
+        href: "../../style/DataTable/DataTable.css"
+    });
+
+    dt_css_link.appendTo('head');
+
+    /*if('1' != '1')
+    {
+        $("#cancel").removeAttr('disabled');
+        $("#CLAIMS_EGL_PAGE1").removeAttr('disabled');
+        $("#CLAIMS_MODIFY2").removeAttr('disabled');
+        $("#CLAIMINFO_CLAIMANTS").removeAttr('disabled');
+        $("#CLAIMINFO_COVERAGES").removeAttr('disabled');
+        $("#CLAIMINFO_CONTACT").removeAttr('disabled');
+        $("#CLAIMINFO_NOTES").removeAttr('disabled');
+        $("#CLAIMINFO_ATTACHMENTS").removeAttr('disabled');
+        $("#CLAIMSINFO_LITIGATION").removeAttr('disabled');
+        $("#CLAIMINFO_FINANCIAL").removeAttr('disabled');
+        $("#CLAIMINFO_HISTORY").removeAttr('disabled');
+        $("#CLAIMINFO_TASKS").removeAttr('disabled');
+
+    //$('#rightColumn input[type=checkbox]').attr('disabled','disabled');
+    } */
+    $('#dialogContent').hide();
+    $('#dialog').remove();
+    $('#dialog #ue_name').remove();
+    $('#dialog #AttachEmailAddress').remove();
+
+    $('#emailFNOLAttToStaff').attr('disabled', 'disabled');
+    $('#emailFNOLAttToOutside').attr('disabled', 'disabled');
+
+     $('#INPUT_NOTE').hide();
+
+    CustomScript.policyDropDownLists('disabled');
+    CustomScript.ShowHIdeStatus();
+    CustomScript.watchlistitem();
+
+    if ('1'!='1')
+    {
+        $('input[name="claimGroup"]').attr('disabled','disabled');
+        $('input[name="cCD_ClaimAdjuster"]').attr('disabled','disabled');
+    }
+
+
+    $('#cCD_Phone').focus();
+    $('#cCD_ClaimAdjuster').val('881');
+    var sel = $('input[name="claimGroup"]:checked');
+    if (sel.length === 0) {
+        $('#box0').hide();
+        $('#box1').hide();
+        $('#box2').hide();
+        $('#box3').hide();
+        $('#box4').hide();
+    } else if ($(sel).val() == 'CCG_CA') {
+        $('#box2').hide();
+        $('#box4').hide();
+        $('#iCCG881').attr('checked', 'checked');
+    } else if ($(sel).val() == 'CCG_CMC') {
+        $('#box2').hide();
+        $('#box1').hide();
+        $('#iCCG881').attr('checked', 'checked');
+        $('#analystgroup').val('bCCG_CMC_BOX');
+    } else {
+        $('#box1').hide();
+        $('#box4').hide();
+        $('#iSCG881').attr('checked', 'checked');
+    }
+
+    initTableWalker('claims_modify2', $('#resulttable'), true, 10);
+    initTableWalker('claims_modify2', $('#ImagesList'), true, 10);
+    //initTableWalker('claims_modify2', $('#PolList'), true, 10);
+
+    $('#PolList').ready(function () {
+           CustomScript.policySelectionRefresh(false);
+    });
+
+    $('#AttList').ready(function () {
+        initTableWalker('claims_modify2', $('#AttList'), true, 10);
+    });
+
+    CustomScript.claimid = '70433';
+    CustomScript.claimcode = '155988';
+
+    var lobValues = $('input[name=LOB_IDList]').val().split(',');
+    var endorsementsValues = $('input[name=EndorsementsList]').val().split(',');
+    var covTriggers = $('input[name=CovTriggerList]').val().split(',');
+
+    var statusis = 'Open';
+
+    if (lobValues != "" &amp;&amp; endorsementsValues != ""){
+        CustomScript.UpdateClaimCodingInfomation(lobValues, endorsementsValues, false,false,false);
+    }
+
+    if(statusis != 'TRIAGE')
+    {
+         $('#sPerOccDate').removeClass('notRequired');
+         $('#sPerOccDate').addClass('required');
+         $('#sDateOfLoss').removeClass('notRequired');
+         $('#sDateOfLoss').addClass('required');
+         $('#sPerOccDateL').css('color', '#800000');
+         $('#sDateOfLossL').css('color', '#800000');
+    }
+
+    if(statusis == 'TRIAGE')
+    {
+         $('#sPerOccDate').removeClass('notRequired');
+         $('#sPerOccDate').addClass('required');
+         $('#sPerOccDateL').css('color', '#800000');
+         CustomScript.ClaimCodingNotRequired();
+    }
+
+
+    //old value of cause drop down
+    var oldVal;
+
+    var ft = $('input[name="cCD_FileType"]:checked');
+
+    if (ft.length &gt; 0) {
+        CustomScript.changeFileType(ft.val());
+    }
+    CustomScript.enforceCOLUnique();
+    //$('input[type=radio][value=""]').first().attr('checked', 'checked');
+
+    $('[value="hyy"],[value="hyn"]').removeAttr('checked');
+
+    if('1' != '1')
+    {
+        $('#rightColumn input').attr('disabled','disabled');
+        $('#rightColumn input[type=checkbox]').attr('disabled','disabled');
+        $('#rightColumn input[type=radio]').attr('disabled','disabled');
+        $('#rightColumn select').attr('disabled', 'disabled');
+
+        $("#cancel").removeAttr('disabled');
+        $("#CLAIMS_EGL_PAGE1").removeAttr('disabled');
+        $("#CLAIMS_MODIFY2").removeAttr('disabled');
+        $("#CLAIMINFO_CLAIMANTS").removeAttr('disabled');
+        $("#CLAIMINFO_COVERAGES").removeAttr('disabled');
+        $("#CLAIMINFO_CONTACT").removeAttr('disabled');
+        $("#CLAIMINFO_NOTES").removeAttr('disabled');
+        $("#CLAIMINFO_ATTACHMENTS").removeAttr('disabled');
+        $("#CLAIMSINFO_LITIGATION").removeAttr('disabled');
+        $("#CLAIMINFO_FINANCIAL").removeAttr('disabled');
+        $("#CLAIMINFO_HISTORY").removeAttr('disabled');
+        $("#CLAIMINFO_TASKS").removeAttr('disabled');
+    }
+
+    Global.ShowProgress();
+  if($("#PolList").dataTable().length==0)
+  {
+    var table = $("#PolList").dataTable({
+        "fnCreatedRow": function( nRow, aData, iDataIndex ) {
+              // Bold the grade for all 'A' grade browsers
+              if ( aData[2] == "Cancelled (CN)" )
+              {
+                 $('td', nRow).css('background-color', '#E7D8E3');
+                 //$('td', nRow).css('color', 'black');
+                 //$('td a', nRow).css('color', 'black');
+              }
+         },
+        "aaSorting": [[ 1, "desc" ]],
+        "sPaginationType": "full_numbers",
+        "bInfo": false,
+        "bAutoWidth": false,
+        "sDefaultContent": " "
+    });
+}
+Global.HideProgress();
+}
+
+//Teddy - This function is used to display policy document
+
+function Policy_Document(pdid,id)
+{
+    if(id===undefined)
+    {
+    jAlert("To view documents for this policy please use ImageRight","Warning");
+    }
+    else
+    Communication.ModalWindow('Policy_Documents.max?preprocess=true&amp;id='+ id + '&amp;SUBACTION=BUILDPOLDOC&amp;RECID=' + pdid );
+}
+
+function watchlistitem()
+{
+        Communication.CustomRequest('claims_modify2.max?AJAX_ACTION=watchlistitem', function(AjaxResp){
+              if (AjaxResp == 1){
+                      $('[name=WatchListItem][value=1]').attr('checked','checked');
+                      $('[name=WatchListItem][value=0]').removeAttr('checked');
+              }
+              else {
+                      $('[name=WatchListItem][value=0]').attr('checked','checked');
+                      $('[name=WatchListItem][value=1]').removeAttr('checked');
+              }
+        });
+}
+
+//this enforces the uniqueness of the cause of loss drop down lists
+function enforceCOLUnique()
+{
+    var COL1 = $('#firstCause').val();
+    var COL2 = $('select[name=secondCause]').val();
+    var COL3 = $('#thirdCause').val();
+    $('#firstCause option').removeAttr('disabled');
+    $('select[name=secondCause] option').removeAttr('disabled');
+    $('#thirdCause option').removeAttr('disabled');
+    if (COL1 != '-1')
+    {
+        $('select[name=secondCause] option[value=' + COL1 + ']').attr('disabled', 'disabled');
+        $('#thirdCause option[value=' + COL1 + ']').attr('disabled', 'disabled');
+    }
+    if (COL2 != '-1')
+    {
+        $('#firstCause option[value=' + COL2 + ']').attr('disabled', 'disabled');
+        $('#thirdCause option[value=' + COL2 + ']').attr('disabled', 'disabled');
+    }
+    if (COL3 != '-1')
+    {
+        $('select[name=secondCause] option[value=' + COL3 + ']').attr('disabled', 'disabled');
+        $('#firstCause option[value=' + COL3 + ']').attr('disabled', 'disabled');
+    }
+}
+
+//Ziad - this enforces the uniqueness of the wrongful drop down lists
+function enforceWAUnique()
+{
+     var COL1 = $('#wrongfullAct1').val();
+     var COL2 = $('#secondWrongfullAct1').val();
+     $('#wrongfullAct1 option').removeAttr('disabled');
+     $('#secondWrongfullAct1 option').removeAttr('disabled');
+     if(COL1 != '-1')
+     {
+         $('#secondWrongfullAct1 option[value='+COL1+']').attr('disabled', 'disabled');
+     }
+     if(COL2 != '-1')
+     {
+         $('#wrongfullAct1 option[value='+COL2+']').attr('disabled', 'disabled');
+     }
+}
+
+function checkIfClosedreason(){
+
+var closeStatus = $('#claimStatus').val();
+var status2 = $('#closeReason').val()
+
+    if (closeStatus == 'CCH'){
+       Communication.CustomRequest('claims_modify2.max?AJAX_ACTION=CloseReasonT&amp;status2=' + status2, function(AjaxResp){
+              var message = '';
+              var result = JSON.parse(AjaxResp);
+              //Close Reason start here
+              if(result.IsSettlementFlag == '0' &amp;&amp; status2 == 'Settlement'){
+                  message += ' \u2022 &lt;strong&gt;Settlement&lt;/strong&gt; section in Litigation page is required. Please complete this section before continue.\n';
+                  $('#closeReason').val('-1')
+              }
+              //else if(result.IsSettlementFlag == '1' &amp;&amp; status2 != 'Settlement'){
+              //    message += ' \u2022 This claim has a settlement, the status should be &lt;strong&gt;settlement&lt;/strong&gt;.\n';
+              //}
+
+              if(result.IsDismissedFlag == '0' &amp;&amp; status2 == 'Dismissal'){
+                  message += ' \u2022 &lt;strong&gt;MSJ Decided&lt;/strong&gt; or &lt;strong&gt;MTD Decided&lt;/strong&gt; field of Lawsuit section in Litigation page is required. Please complete this section before continue.\n';
+                  $('#closeReason').val('-1')
+              }
+              //else if(result.IsDismissedFlag == '1' &amp;&amp; status2 != 'Dismissal'){
+              //    message += ' \u2022 This claim has a &lt;strong&gt;MSJ Decided&lt;/strong&gt; or &lt;strong&gt;MTD Order&lt;/strong&gt;, the status should be &lt;strong&gt;Dismissal&lt;/strong&gt;.\n';
+              //}
+
+              if(result.IsPlaintiffFlag == '0' &amp;&amp; status2 == 'Verdict Plaintiff'){
+                  message += ' \u2022 &lt;strong&gt;Trial Outcome&lt;/strong&gt; field of Lawsuit section in Litigation page should be &lt;strong&gt;Plaintiffs Verdict&lt;/strong&gt;. Please complete this section before continue.\n';
+                  $('#closeReason').val('-1')
+              }
+              //else if(result.IsPlaintiffFlag == '1' &amp;&amp; status2 != 'Verdict Plaintiff'){
+              //    message += ' \u2022 This claim has a &lt;strong&gt;Trial Outcome&lt;/strong&gt; of &lt;strong&gt;Plaintiffs Verdict&lt;/strong&gt;, the status should be &lt;strong&gt;Verdict Plaintiff&lt;/strong&gt;.\n';
+              //}
+
+              if(result.IsDefenseFlag == '0' &amp;&amp; status2 == 'Verdict Defense'){
+                  message += ' \u2022 &lt;strong&gt;Trial Outcome&lt;/strong&gt; field of Lawsuit section in Litigation page should be &lt;strong&gt;Defendants Verdict&lt;/strong&gt; is required. Please complete this section before continue.\n';
+                  $('#closeReason').val('-1')
+              }
+              //else if(result.IsDefenseFlag == '1' &amp;&amp; status2 != 'Verdict Defense'){
+              //    message += ' \u2022 This claim has a &lt;strong&gt;Trial Outcome&lt;/strong&gt; of &lt;strong&gt;Defendants Verdict&lt;/strong&gt;, the status should be &lt;strong&gt;Verdict Defense&lt;/strong&gt;.\n';
+              //}
+
+              if(result.IsNoCoverageFlag == '0' &amp;&amp; status2 == 'No Coverage'){
+                  message += ' \u2022 &lt;strong&gt;Reserve status&lt;/strong&gt; of Claim Coding Information section should be &lt;strong&gt;No Coverage&lt;/strong&gt; is required. Please complete this section before continue.\n';
+                  $('#closeReason').val('-1')
+              }
+
+              //if(result.IsDropFlag == '0' &amp;&amp; status2 == 'Drop'){  //This is checking from data base previous saved claim type but we need current claim type
+              if($('input[name=cCD_FileType]:checked').val() != 'CLAIM' &amp;&amp; status2 == 'Drop') {
+                  message += ' \u2022 The matter &lt;strong&gt;(claim file type)&lt;/strong&gt; should be &lt;strong&gt;claim&lt;/strong&gt;. Please complete this section before continue.\n';
+                  $('#closeReason').val('-1')
+              }
+
+              if(message != '')
+                 jAlert(message);
+        });
+    }
+    else {
+        if(!$('input[name=cCD_FileType][value=No]').is(':checked') &amp;&amp; status2 == 'No Coverage'){
+            jAlert(' \u2022 &lt;strong&gt;Reserve status&lt;/strong&gt; of Claim Coding Information section should be &lt;strong&gt;No Coverage&lt;/strong&gt; is required. Please complete this section before continue.\n');
+            $('#closeReason').val('-1')
+        }
+    }
+}
+
+
+function ShowHIdeStatus(){
+    
+    if ($('#claimStatus').val() == 'Closed'|| $('#claimStatus').val() == 'CCH'||$('#claimStatus').val() == 'CWP') {
+         $('#spcloseReason').removeClass('notRequired');
+         $('#spcloseReason').addClass('required');
+         $('#closeReason').parent().show();
+    }  
+    else
+    {
+        $('#closeReason').parent().hide();
+    }
+}
+
+function checkIfClosed()
+{
+    var isBilling = '1';
+    if($('#claimStatus').val() == 'Open') {
+         $('#closeReason').parent().hide();
+    }
+    else if ( $('#claimStatus').val() == 'Closed') {
+        var userID = '16769';      
+            $('#spcloseReason').removeClass('notRequired');
+            $('#spcloseReason').addClass('required');
+            $('#closeReason').parent().show();        
+        Communication.CustomRequest('claims_modify2.max?AJAX_ACTION=CheckBillGroup&amp;USERID=' + userID, function(AjaxResp){
+             var result = JSON.parse(AjaxResp);
+             if(result.IsBill != '1') {
+                 jAlert('Only user from billing group can select &lt;strong&gt;' + $('#claimStatus :selected').text() + '&lt;/strong&gt;!');
+                 $('#claimStatus').val($('#hStatusID').val());
+                 CustomScript.ShowHIdeStatus();
+             }
+        });
+    }
+    else if ( $('#claimStatus').val() == 'CWP') {
+        var clmid = '70433';
+            $('#spcloseReason').removeClass('notRequired');
+            $('#spcloseReason').addClass('required');
+            $('#closeReason').parent().show();
+
+        Communication.CustomRequest('claims_modify2.max?AJAX_ACTION=PaymentExist&amp;CLMID=' + clmid, function(AjaxResp){
+             var result = JSON.parse(AjaxResp);
+             if(result.IsFinancialCheck != '1' &amp;&amp; isBilling != '1') {
+                 jAlert('This claim has payment, cannot be closed as &lt;strong&gt;' + $('#claimStatus :selected').text() + '&lt;/strong&gt; status!');
+                 $('#claimStatus').val($('#hStatusID').val());
+                 CustomScript.ShowHIdeStatus();
+             }
+        });
+
+    }
+    else if ($('#claimStatus').val() == 'CCH') {
+        $('#spcloseReason').removeClass('notRequired');
+        $('#spcloseReason').addClass('required');
+        $('#closeReason').parent().show();
+
+        Communication.CustomRequest('claims_modify2.max?AJAX_ACTION=statusisCCH', function(AjaxResp){
+              var message = '';
+              var result = JSON.parse(AjaxResp);
+
+              //IsELLFlag
+              if(result.IsELLFlag == '1') {
+                  message += ' \u2022 The Claim contains ELL. Please complete Cause of Loss, Claimant Role and Wrongful Act.\n'
+              }
+
+              //IsGLFlag
+              if(result.IsGLFlag == '1') {
+                  message += ' \u2022 The Claim contains GL. Please complete Cause of Loss, Claimant Role, Loss Location, Additional Factor and Injury Code.\n'
+              }
+
+              //IsReinsurerFlag
+              if(result.IsReinsurerFlag == '1') {
+                  message += ' \u2022 Please make sure reinsurance reporting form is completed and sent to Guy Carpenter.\n'
+              }
+
+              if(message != '')
+                 jAlert(message);
+        });
+    } else
+    {
+        $('#closeReason').parent().hide();
+    }
+}
+//this function changes the values of the reserve status drop down and the no cverage radio button based on user input.
+function CheckNoCoverageSelection(e)
+{
+    //var e = window.event || e;
+    //var target = e.target || e.srcElement;
+
+    if(e == 'DropDown')                 // no coverage dropdown
+    {
+      if($('#ReserveStatus1').val() == '8')
+      {
+         $('input[name=cCD_FileType][value=No]').attr('checked', 'checked');
+         CustomScript.requiredAttribute(false);
+      }
+      else if(($('#ReserveStatus1').val() == '-1'))
+      {
+         CustomScript.requiredAttribute(false);
+      }
+      else
+      {
+         $('input[name=cCD_FileType][value=No]').removeAttr('checked');
+         if ($('#claimStatus').val() != 'TRIAGE') {
+              CustomScript.requiredAttribute(true);
+         }
+      }
+    }
+    if(e == 'radio')          // no coverage radio
+    {
+      if($('input[name=cCD_FileType]:checked').val() == 'No')
+      {
+         $('#ReserveStatus1').val('8');
+         CustomScript.requiredAttribute(false);
+      }
+      else if ($('input[name=cCD_FileType]').is(':checked') &amp;&amp; $('#ReserveStatus1').val() == '8')
+      {
+         $('#ReserveStatus1').val('5');
+         if ($('#claimStatus').val() != 'TRIAGE') {
+              CustomScript.requiredAttribute(true);
+         }
+      }
+    }
+}
+
+//Ziad - this will remove the required attribute from the injury driving the claim drop down if no coverage is selected
+function requiredAttribute(flag)
+{
+     if(flag)
+     {
+         $('#spInjTypeCode').removeClass('notRequired');
+         $('#spInjTypeCode').addClass('required');
+     }
+     else
+     {
+         $('#spInjTypeCode').removeClass('required');
+         $('#spInjTypeCode').addClass('notRequired');
+     }
+}
+
+function toggleGroups(group) {
+    $('#box3').show();
+    $(':radio[name="cCD_ClaimAdjuster"]').attr('checked', false);
+    if (group == 'bCCG_CA_BOX') {
+        $('#box1').show();
+        $('#box2').hide();
+        $('#box4').hide();
+        $('#analystgroup').val(group);
+    } else if (group == 'bCCG_CMC_BOX') {
+        $('#box1').hide();
+        $('#box2').hide();
+        $('#box4').show();
+        $('#analystgroup').val(group);
+    } else {
+        $('#box1').hide();
+        $('#box2').show();
+        $('#box4').hide();
+        $('#analystgroup').val(group);
+    }
+}
+
+function updateClaims(table) {
+    adjusters = new Array();
+    $('input[name="' + table + '"]:checked').each(function (i) {
+        adjusters[i] = $(this).val();
+    });
+    Communication.CustomRequest('claims_modify2.max?AJAX_ACTION=' + table + '&amp;ADJLIST=' + adjusters.join(','), function (AjaxResp) {
+        var tab = JSON.parse(AjaxResp);
+        $('.sData #' + tab.nid).parents('.TableMasterWrapper').replaceWith(tab.table);
+        var ctrl = Helper.GetEditorComponent($('h3:contains("Analyst Assignment")').parent());
+        if (typeof (ctrl) != 'undefined') ctrl.DefaultMode();
+
+    });
+}
+
+function RunFileUpload() {
+    return;
+    //var fu_url = 'fileupload.max?t=06232016090036&amp;ID=AD09471A1B1F4A118D56834EED7E7D8950B3CF&amp;Upload_Action=CLAIM_ATTACH'
+    var fu_url = '../../upload.htm?t=06232016090036&amp;ID=AD09471A1B1F4A118D56834EED7E7D8950B3CF&amp;Upload_Action=CLAIM_ATTACH' + '&amp;cCD_ClaimCode=' + CustomScript.claimcode + '&amp;CLMID=' + CustomScript.claimid + '&amp;cCD_ID=' + CustomScript.claimid + '&amp;Note=Claim Attachment&amp;cb=attach';
+    CustomScript.windowUploader = window.open(fu_url, 'CLAIMATTACHS', 'height=691,width=735, toolbar=no, directories=no, status=yes, menubar=no, scrollbars=yes, resizable=yes, modal=yes');
+    //fileUpload ( fu_url, CustomScript.attach, '', '' );
+}
+
+function UploadClaimsAttachment() {
+    var fu_url = '../../upload.htm?t=06232016090036&amp;cCD_ClaimCode=155988&amp;CLMID=70433&amp;ID=AD09471A1B1F4A118D56834EED7E7D8950B3CF&amp;Upload_Action=AttchUploadMod&amp;Note=Claim Attachment&amp;itemname=Claims&amp;cb=attach&amp;Current_USRID=16769';
+    CustomScript.windowUploader = window.open(fu_url, 'CLAIMATTACHMENTS', 'height=691,width=735, toolbar=no, directories=no, status=yes, menubar=no, scrollbars=yes, resizable=yes, modal=yes');
+}
+
+function UploadFNOLAttachment() {
+    var fu_url = '../../upload.htm?t=06232016090036&amp;MemberID=688&amp;CLMID=70433&amp;ID=AD09471A1B1F4A118D56834EED7E7D8950B3CF&amp;Upload_Action=FNOL_Claims_Att&amp;Note=FNOL&amp;itemname=Claims&amp;Current_USRID=16769&amp;cb=attachFNOL';
+    CustomScript.windowUploader = window.open(fu_url, 'ADDFNOL', 'height=691,width=735, toolbar=no, directories=no, status=yes, menubar=no, scrollbars=yes, resizable=yes, modal=yes');
+}
+
+function DoUpload2() {
+    if (CustomScript.claimid === '') {
+        //New claim with no claimcode, need to create a barebones entry first
+        Communication.CustomRequest('claims_modify2.max?SubmitAct=AddAttachments', function (AjaxResp) {
+            var resp = JSON.parse(AjaxResp);
+            CustomScript.claimid = resp.claimid;
+            CustomScript.claimcode = resp.claimcode;
+            CustomScript.RunFileUpload();
+        });
+    } else {
+        CustomScript.RunFileUpload();
+    }
+}
+
+function attachFNOL() {
+    TableWalkerAjax($('#AttList'));
+}
+
+function attach() {
+    TableWalkerAjax($('#ImagesList'));
+}
+
+function claimattach_rmv(id) {
+    var url = 'claiminfo_Attachments.max?AJAX_ACTION=REMOVEATT&amp;CLMCODE=155988&amp;AID=' + id;
+    Communication.CustomRequest(url,
+        function (AjaxResp) {
+            TableWalkerAjax($('#ImagesList'));
+        }
+    );
+}
+
+function fnolattach_rmv(id) {
+    var url = 'claiminfo_Attachments.max?AJAX_ACTION=REMOVEATT&amp;CLMCODE=155988&amp;AID=' + id;
+    Communication.CustomRequest(url,
+        function (AjaxResp) {
+            TableWalkerAjax($('#AttList'));
+        }
+    );
+}
+
+function deleteRecord(id) {
+    var y = confirm("Are you sure you want to delete this note?");
+    if (y === true) {
+        Communication.CustomRequest('claiminfo_notes.max?AJAX_ACTION=RemoveNote&amp;NoteID=' + id, function (AjaxResp) {
+            TableWalkerAjax($('#resulttable'));
+            CustomScript.clearnote();
+            $('#INPUT_NOTE').hide();
+            $('#addNotes').show();
+            $('#notediv').height(50);
+             });
+    }
+}
+
+function changeFileType(val) {
+    if (val == 'No')
+    {
+        $('#PD_PolicyCode span').removeClass( "required" );
+        $('#PD_InceptionDate span').removeClass( "required" );
+        $('#cDEG_InjTypeCode span').removeClass( "required" );
+
+        $('input[name=cCD_FileType][value=No]').attr('checked', 'checked');
+
+        //var nc = $('#firstCause option:contains("No")').val();
+        //$('#firstCause').val(nc);
+    }
+    else
+    {
+        $('#PD_PolicyCode span').addClass( "required" );
+        $('#PD_InceptionDate span').addClass( "required" );
+        if ('ALL' == 'GL') {
+            $('#cDEG_InjTypeCode span').addClass( "required" );
+        }
+    }
+}
+
+function reloadTableWalkers(tid) {
+    var elements;
+    elements = $('#' + tid);
+    elements.each(function () {
+        var id = $(this).attr('id');
+        var obj = $('#' + id, $('#middle'));
+        obj.data({
+            currentpage: 1,
+            nextpage: parseInt(obj.data('perpage')) + 1
+        });
+        TableWalkerAjax(obj, TableWalkerCheck(obj), obj.attr('cb'));
+    });
+}
+
+//This will disable all the drop down lists for the claim coding section until the user makes a selection
+function policyDropDownLists()
+{
+   //disabled
+   //CustomScript.StyleControl($('#sPerOccDateL'), $('#sPerOccDate'), 'disabled');
+   CustomScript.StyleControl($('#sDateOfLossL'), $('#sDateOfLoss'), 'disabled');
+
+   //CustomScript.StyleControl($('#reportedToReinsurerL'), $('input[name=reportedToReinsurer]'), 'disabled');
+   //CustomScript.StyleControl($('#hybrid_L'), $('input[name=hybrid_radio]'), 'disabled');
+
+   CustomScript.StyleControl($('#ftdiv1'), $('#firstCause'), 'disabled');
+   CustomScript.StyleControl($('#wrongfulact'), $('#wrongfullAct1'), 'disabled');
+   //CustomScript.StyleControl($('#lossDescription'), $('#cCD_LossDesc1'), 'disabled');
+   CustomScript.StyleControl($('#fcdiv2'), $('#secondCause'), 'disabled');
+   CustomScript.StyleControl($('#fcdiv3'), $('#thirdCause'), 'disabled');
+   CustomScript.StyleControl($('#wrongfulact2'), $('#secondWrongfullAct1'), 'disabled');
+   //CustomScript.StyleControl($('#litStatus1Label'), $('#litStatus1'), 'disabled');
+   //CustomScript.StyleControl($('#ReserveStatus1Label'), $('#ReserveStatus1'), 'disabled');
+   CustomScript.StyleControl($('#addFactors'), $('#additionalFactor1'), 'disabled');
+   CustomScript.StyleControl($('#spInjTypeCode'), $('#cDEG_InjTypeCode1'), 'disabled');
+   CustomScript.StyleControl($('#lossLocation'), $('#lossLocation1'), 'disabled');
+}
+
+function ValidateClaimant(button,claimStatus)
+{
+     if (button.name == 'save')
+     {
+        if(claimStatus == 'TRIAGE'){
+              $('span[name="claimGroupradio"]').removeClass('required');
+              $('span[name="claimGroupradio"]').addClass('notRequired');
+        }
+        else {
+              $('span[name="claimGroupradio"]').removeClass('notRequired');
+              $('span[name="claimGroupradio"]').addClass('required');
+        }
+     }
+     else {
+              $('span[name="claimGroupradio"]').removeClass('notRequired');
+              $('span[name="claimGroupradio"]').addClass('required');
+     }
+
+     var clmid = '70433';
+	if (claimStatus == 'Closed' || claimStatus == 'CCH' || claimStatus == 'CWP')
+	{
+		var errormess = '';
+
+		if (($('input[name=LOB_IDList]').val().indexOf('ELL') &gt; -1) || ($('input[name=LOB_IDList]').val().indexOf('ML') &gt; -1)){
+			if ($('#wrongfullAct1').val() == 'WTBD'){
+					errormess += 'Wrongful Act can not be TBD to close. ';
+			}
+		}
+		if ($('input[name=LOB_IDList]').val().indexOf('GL') &gt; -1){
+			if ($('#lossLocation1').val() == 'LTBD'){
+					errormess += 'Loss Location can not be TBD to close. ';
+			}
+			if ($('#additionalFactor1').val() == 'ATBD'){
+					errormess += 'Additional Factors can not be TBD to close. ';
+			}
+			if ($('#cDEG_InjTypeCode1').val() == 'ITBD'){
+					errormess += 'Injury Driving the Claim can not be TBD to close. ';
+			}
+		}
+		if (($('input[name=LOB_IDList]').val().indexOf('ELL') &gt; -1) || ($('input[name=LOB_IDList]').val().indexOf('GL') &gt; -1) || ($('input[name=LOB_IDList]').val().indexOf('ML') &gt; -1)){
+			if ($('#firstCause').val() == 'CTBD'){
+					errormess += 'Cause of Loss can not be TBD to close. ';
+			}
+		}
+
+		Communication.CustomRequest('claims_modify2.max?AJAX_ACTION=checkCLrole&amp;CLMID=' + clmid, function (AjaxResp)
+		{
+			if (AjaxResp &gt; 0){
+			  errormess += 'Claimant Role for claimant is required and can not be TBD from Claimant page. ';
+			}
+
+			if (errormess != ''){
+				jAlert(errormess, "Invalid Entry");
+				return;
+			}
+
+			if ( ($('input[type=radio][name=reportedToReinsurer][value=1]').is(':checked')) &amp;&amp; ($.inArray(claimStatus, ['Closed','CCH','CWP']) == -1)
+				&amp;&amp; ((claimStatus != 'TRIAGE') || ($(button).attr('name') == 'triage')  ) )
+			{
+				var adjuster = $('input[name=cCD_ClaimAdjuster]:checked').val();
+				Communication.CustomRequest('claims_modify2.max?AJAX_ACTION=ReportReinsur&amp;TCLMID=' + clmid + '&amp;adjuster=' + adjuster + '');
+			}
+
+			Communication.SerialRequest($("#rightColumn"), false, button);
+		});
+	}
+	else
+	{
+		if ( ($('input[type=radio][name=reportedToReinsurer][value=1]').is(':checked')) &amp;&amp; ((claimStatus != 'TRIAGE') || ($(button).attr('name') == 'triage')  ) )
+		{
+			var adjuster = $('input[name=cCD_ClaimAdjuster]:checked').val();
+			Communication.CustomRequest('claims_modify2.max?AJAX_ACTION=ReportReinsur&amp;TCLMID=' + clmid + '&amp;adjuster=' + adjuster + '');
+		}
+
+		Communication.SerialRequest($("#rightColumn"), false, button);
+	}
+
+
+}
+
+// this function is called when user click save, save or exit or triage complete.
+function savePolicyInformation(button, state)
+{
+   
+    var claimStatus = $('#claimStatus').val();
+    var closereason = $('#closeReason').val();
+    var claimAdjuster = $('input[name=cCD_ClaimAdjuster]:checked');
+    var policyIds = $('input[name=PolicyIDList]').val();
+    var egPDCIds = $('input[name=PDC_IDList]').val();
+    var errorMessage = '';
+    var cCD_FileType= $('input[name=cCD_FileType]:checked').val(); //'CLAIM';
+    var cCD_DateOfLoss='04/04/2016';
+    var PerOccDate='06/01/2016';
+    var cCD_LossReportDate='03/24/2016';
+    var firstCause='AIRCRAFT';
+    var clmid = '70433';
+    var reinsureFlag = $('#hRepToReinsuer').val() != $('input[type=radio][name=reportedToReinsurer]:checked').val() ? true : false;
+    var reportedToReinsurer = $('input[type=radio][name=reportedToReinsurer]:checked').val();
+
+    //Check if Analyst group is selected then analyst should be selected
+    if($('[name=claimGroup]').is(':checked') &amp;&amp; claimAdjuster.length == 0) {
+         jAlert('Please select claim analyst!');
+         return;
+    }
+
+    if(claimAdjuster.length == 0)
+    {
+          claimAdjuster = 0;
+    }
+
+    //Save selected Report to Reinsurance
+    Communication.CustomRequest('claims_modify2.max?AJAX_ACTION=SaveSelectedRTR&amp;SelectedRTR=' + reportedToReinsurer, function (AjaxResp) { });
+
+    //If Triage = 11 or file type is no coverage then policy selection is optional
+    if(claimStatus == 'TRIAGE' || cCD_FileType == 'No')
+    {
+
+       //if(claimAdjuster.length != 0)
+       //{
+           Communication.CustomRequest('claims_modify2.max?AJAX_ACTION=SavePolicyIds&amp;POLICYIDS=' + policyIds + '&amp;egPDCIds=' + egPDCIds + '');
+
+           //Check if report to reinsurer has changed
+           if(reinsureFlag === true &amp;&amp; $('#hRepToReinsuer').val() === '1') {
+                var SyncRespComp = $.ajax({
+                  type: "GET",
+                  url: 'claims_modify2.max?AJAX_ACTION=ReinsureExist&amp;TCLMID=' + clmid + '&amp;t=' + Date.now(),
+                  async: false
+                }).responseText;
+
+                //Parse the response into XML
+                if (window.DOMParser)
+                {
+                   parser=new DOMParser();
+                   xmlDocComp=parser.parseFromString(SyncRespComp, "text/xml");
+                }
+                else
+                {  // Internet Explorer
+                  xmlDocComp=new ActiveXObject("Microsoft.XMLDOM");
+                  xmlDocComp.async=false;
+                  xmlDocComp.loadXML(SyncRespComp);
+                }
+
+                //Get JSON from the response
+                var respComp = JSON.parse(xmlDocComp.getElementsByTagName("html")[0].childNodes[0].nodeValue);
+
+                if(respComp.ReinsurerStatus == '1') {
+                    jConfirm('Report to reinsurer form has not been approved, are you sure you want to close this task? No email will be sent to the reinsurer.', 'Warning: Report to Reinsurer', function(r) {
+                          if(r){
+                               Communication.CustomRequest('claims_modify2.max?AJAX_ACTION=CloseReinsurer&amp;TCLMID=' + clmid, function (AjaxResp) { });
+                                        // File Review 30 day for Work flow
+                               if ($(button).attr('name') == 'triage')  {
+                                    CustomScript.review30(claimStatus,clmid);
+                               }
+                               // this script stores all the data into database
+                               CustomScript.ValidateClaimant(button,claimStatus);
+
+                          }
+                    });
+                }
+                else {
+                       // File Review 30 day for Work flow
+                   if ($(button).attr('name') == 'triage') {
+                        CustomScript.review30(claimStatus,clmid);
+                   }
+                   // this script stores all the data into database
+                   CustomScript.ValidateClaimant(button,claimStatus);
+
+               }
+           }
+           else {
+               // File Review 30 day for Work flow
+               if ($(button).attr('name') == 'triage') {
+                    CustomScript.review30(claimStatus,clmid);
+               }
+               // this script stores all the data into database
+               CustomScript.ValidateClaimant(button,claimStatus);
+
+           }
+       //}
+       //else
+       //{
+       //    jAlert(errorMessage, "Invalid Entry");
+       //}
+    }
+    //If Claim is open = 1 or reopen = 5 then policy selection is required
+    else if(claimStatus == 'Open' || claimStatus == 'ReOpen' || claimStatus == 'Closed' || claimStatus == 'CCH' || claimStatus == 'CWP')
+    {
+
+       errorMessage = claimAdjuster.length === 0 ? 'Please select a Claim Analyst. ' : '';
+
+       errorMessage +=  policyIds === '' ? 'Please select a policy.' : '';
+       if(claimAdjuster.length !== 0 &amp;&amp; policyIds !=='')
+       {
+           //var statusCCH = $('#claimStatus option:selected').val();
+
+           //if (statusCCH == 'CCH'){
+           //     Communication.CustomRequest('claims_modify2.max?AJAX_ACTION=workflowCCH&amp;CLMID=' + clmid);
+           //}
+           //else {
+           //     Communication.CustomRequest('claims_modify2.max?AJAX_ACTION=dismissworkflowCCH&amp;CLMID=' + clmid);
+           //}
+
+           Communication.CustomRequest('claims_modify2.max?AJAX_ACTION=SavePolicyIds&amp;POLICYIDS=' + policyIds + '&amp;egPDCIds=' + egPDCIds +'&amp;closereason='+closereason+ '');
+
+           //Check if report to reinsurer has changed and it is selected
+           if(reinsureFlag === true &amp;&amp; $('#hRepToReinsuer').val() === '1') {
+                var SyncRespComp = $.ajax({
+                  type: "GET",
+                  url: 'claims_modify2.max?AJAX_ACTION=ReinsureExist&amp;TCLMID=' + clmid + '&amp;t=' + Date.now(),
+                  async: false
+                }).responseText;
+
+                //Parse the response into XML
+                if (window.DOMParser)
+                {
+                   parser=new DOMParser();
+                   xmlDocComp=parser.parseFromString(SyncRespComp, "text/xml");
+                }
+                else
+                {  // Internet Explorer
+                  xmlDocComp=new ActiveXObject("Microsoft.XMLDOM");
+                  xmlDocComp.async=false;
+                  xmlDocComp.loadXML(SyncRespComp);
+                }
+
+                //Get JSON from the response
+                var respComp = JSON.parse(xmlDocComp.getElementsByTagName("html")[0].childNodes[0].nodeValue);
+
+                if(respComp.ReinsurerStatus == '1') {
+                    jConfirm('Report to reinsurer form has not been approved, are you sure you want to close this task? No email will be sent to the reinsurer.', 'Warning: Report to Reinsurer', function(r) {
+                          if(r){
+                               Communication.CustomRequest('claims_modify2.max?AJAX_ACTION=CloseReinsurer&amp;TCLMID=' + clmid, function (AjaxResp) { });
+                               // File Review 30 day for Work flow
+                               CustomScript.review30(claimStatus,clmid);
+                               // this script stores all the data into database
+                               CustomScript.ValidateClaimant(button,claimStatus);
+
+                          }
+                    });
+                }
+                else {
+                   // File Review 30 day for Work flow
+                   CustomScript.review30(claimStatus,clmid);
+                   // this script stores all the data into database
+                   CustomScript.ValidateClaimant(button,claimStatus);
+               }
+           }
+           else {
+
+               // File Review 30 day for Work flow
+               CustomScript.review30(claimStatus,clmid);
+               // this script stores all the data into database
+               CustomScript.ValidateClaimant(button,claimStatus);
+
+           }
+       }
+       else
+       {
+           jAlert(errorMessage, "Invalid Entry");
+       }
+    }
+    if (state == 'exit'){
+       Communication.LinkRequest('account_information.max?Account_id=001U0000009BDp9IAG&amp;AccountType=Institution');
+       //$('#lblSaveConfirmation').show();
+    }
+}
+
+function review30(claimStatus, clmid){
+    if(Validator.Validate($("#rightColumn")) == false)
+    {
+      return;
+    }
+
+    // This is for work flow. When status is triage complete or reopen, and analyst is from CMC then it will create this WF
+    if ((claimStatus == 'TRIAGE' || claimStatus == 'ReOpen')){
+        if (claimStatus == 'ReOpen') {
+             Communication.CustomRequest('claims_modify2.max?AJAX_ACTION=updatereopen&amp;CLMID=' + clmid);
+        }
+        if ($('#analystgroup').val() == 'bCCG_CMC_BOX'){
+        var adjuster = $('input[name=cCD_ClaimAdjuster]:checked').val()
+             Communication.CustomRequest('claims_modify2.max?AJAX_ACTION=filerev30&amp;CLMID=' + clmid +'&amp;adjuster='+adjuster);
+        }
+    }
+}
+
+//This function is triggered upon selecting a policy and iterates through all the selected
+//policies to enable the required fields based on the line of business. It also checks whether there is any
+//endorsements or not in order to set the value of the hybrid claim radio button group
+function pollistclick(covtrigger, pdid, pdcid, productValue, endoValue, sChecked, rFlag)
+{
+    var claimStatus = 'Open'; //'1';
+    var lobValues = '';
+    var endorsementsValues = '';
+    var productValues = '';
+    var pdids = '';
+    var pdcids = '';
+    var lobArray = '';
+    var endorsementesArray = '';
+    var uniqueLobArray = '';
+
+    //Get updated list of selected policy information
+    var policyInfo = CustomScript.UpdateSelectedPolicyInfomation(covtrigger, pdid, pdcid, productValue, endoValue, sChecked);
+
+    lobValues = policyInfo.lobValues;
+    endorsementsValues = policyInfo.endorsementsValues;
+    productValues = policyInfo.productValues;
+    pdids = policyInfo.pdids;
+    pdcids = policyInfo.pdcid;
+
+   var cbcount2 = $(PolList).find(':checkbox:checked').length;
+
+   if(cbcount2 == 0) {
+
+        CustomScript.policyDropDownLists();
+
+    }
+
+    //Update claim coding section based on selected policies
+    CustomScript.UpdateClaimCodingInfomation(lobValues, endorsementsValues, rFlag, productValues, true);
+
+    if(claimStatus == 'TRIAGE'){
+        CustomScript.ClaimCodingNotRequired();
+    }
+}
+
+function ClaimCodingNotRequired(){
+         CustomScript.StyleControl($('#ftdiv1'), $('#firstCause'), 'optional');
+         CustomScript.StyleControl($('#wrongfulact'), $('#wrongfullAct1'), 'optional');
+         //CustomScript.StyleControl($('#lossDescription'), $('#cCD_LossDesc1'), 'optional');
+         $('#lossDescription2').css('color', 'black'); 
+         CustomScript.StyleControl($('#fcdiv2'), $('#secondCause'), 'optional');
+         CustomScript.StyleControl($('#fcdiv3'), $('#thirdCause'), 'optional');
+         CustomScript.StyleControl($('#wrongfulact2'), $('#secondWrongfullAct1'), 'optional');
+         //CustomScript.StyleControl($('#litStatus1Label'), $('#litStatus1'), 'optional');
+         //CustomScript.StyleControl($('#ReserveStatus1Label'), $('#ReserveStatus1'), 'optional');
+         CustomScript.StyleControl($('#addFactors'), $('#additionalFactor1'), 'optional');
+         CustomScript.StyleControl($('#spInjTypeCode'), $('#cDEG_InjTypeCode1'), 'optional');
+         CustomScript.StyleControl($('#lossLocation'), $('#lossLocation1'), 'optional');
+}
+
+
+function unique(list) {
+    var result = [];
+    $.each(list, function(i, e) {
+        if ($.inArray(e, result) == -1) result.push(e);
+    });
+
+    return result;
+}
+
+//Update selected policy information
+function UpdateSelectedPolicyInfomation(covtrigger, pdid, pdcid, productValue, endoValue, sChecked){
+    
+    var lobValues = '';
+    var endorsementsValues = '';
+    var productValues = '';
+    var pdids = '';
+    var pdcids = '';
+
+    var lobValue = $(sChecked).val();
+
+    if ($(sChecked).is(':checked')) {
+        //Adding selected policy to the list
+        pdids = $('input[name=PolicyIDList]').val();
+        //&amp;&amp; pdids.split(",").indexOf(pdid) ==-1 remove because unable to save more than one product that belongs to the same policy (PD_ID)
+        if(pdids!=undefined)
+        {
+            pdids = pdids ? (pdids + ',' + pdid) : pdid;
+        }
+
+        $('input[name=PolicyIDList]').val(pdids);
+        pdids = pdids.split(',');
+
+        covtriggers = $('input[name=CovTriggerList]').val();
+        //&amp;&amp; covtriggers.split(",").indexOf(covtrigger) ==-1
+        if(covtriggers!=undefined )
+        {
+           covtriggers = covtriggers ? (covtriggers + ',' + covtrigger) : covtrigger;
+        }
+        $('input[name=CovTriggerList]').val(covtriggers);
+        covtriggers = covtriggers.split(',');
+
+        pdcids = $('input[name=PDC_IDList]').val();
+        //&amp;&amp; pdcids.split(",").indexOf(pdcid) ==-1
+        if(pdcids!=undefined)
+        {
+           pdcids = pdcids ? (pdcids + ',' + pdcid) : pdcid;
+        }
+        $('input[name=PDC_IDList]').val(pdcids);
+        pdcids = pdcids.split(',');
+
+        lobValues = $('input[name=LOB_IDList]').val();
+        //&amp;&amp; lobValues.split(",").indexOf(lobValue) ==-1
+        if(lobValues!=undefined )
+        {
+           lobValues = lobValues ? (lobValues + ',' + lobValue) : lobValue;
+        }
+        $('input[name=LOB_IDList]').val(lobValues);
+        lobValues = lobValues.split(',');
+
+        productValues = $('input[name=ProductList]').val();
+        //&amp;&amp; productValues.split(",").indexOf(productValue) ==-1
+        if(productValues!=undefined)
+        {
+          productValues = productValues ? (productValues + ',' + productValue) : productValue;
+        }
+        $('input[name=ProductList]').val(productValues);
+        productValues = productValues.split(',');
+
+        endorsementsValues = $('input[name=ProductList]').val();
+        //&amp;&amp; endorsementsValues.split(",").indexOf(endoValue) ==-1
+        if(endorsementsValues!=undefined)
+        {
+           endorsementsValues = endorsementsValues ? (endorsementsValues + ',' + endoValue) : endoValue;
+        }
+        $('input[name=EndorsementsList]').val(endorsementsValues);
+        endorsementsValues = endorsementsValues.split(',');
+    }
+    else {
+        //Removing selected policy from the list
+        if ($('input[name=PolicyIDList]').val().length !== 0){
+           pdids = $('input[name=PolicyIDList]').val().split(',');
+
+           var index = pdids.indexOf(pdid);
+           if (index !== -1) {
+               pdids.splice(index, 1);
+               $('input[name=PolicyIDList]').val(pdids.join(','));
+           }
+        }
+
+         if ($('input[name=CovTriggerList]').val().length !== 0){
+           covtriggers = $('input[name=CovTriggerList]').val().split(',');
+
+           var index = covtriggers.indexOf(covtrigger);
+           if (index !== -1) {
+               covtriggers.splice(index, 1);
+               $('input[name=CovTriggerList]').val(covtriggers.join(','));
+           }
+        }
+
+        if($('input[name=PDC_IDList]').val().length !==0){
+            pdcids = $('input[name=PDC_IDList]').val().split(',');
+
+            var index = pdcids.indexOf(pdcid);
+            if (index !== -1) {
+                pdcids.splice(index, 1);
+                $('input[name=PDC_IDList]').val(pdcids.join(','));
+            }
+        }
+
+        if($('input[name=LOB_IDList]').val().length !==0){
+            lobValues = $('input[name=LOB_IDList]').val().split(',');
+
+            var index = lobValues.indexOf(lobValue);
+            if (index !== -1) {
+                lobValues.splice(index, 1);
+                $('input[name=LOB_IDList]').val(lobValues.join(','));
+            }
+        }
+
+        if($('input[name=ProductList]').val().length !==0){
+            productValues = $('input[name=ProductList]').val().split(',');
+
+            var index = productValues.indexOf(productValue);
+            if (index !== -1) {
+                productValues.splice(index, 1);
+                $('input[name=ProductList]').val(productValues.join(','));
+            }
+        }
+
+        if($('input[name=EndorsementsList]').val().length !== 0){
+            endorsementsValues = $('input[name=EndorsementsList]').val().split(',');
+
+            var index = endorsementsValues.indexOf(endoValue);
+            if (index !== -1) {
+                endorsementsValues.splice(index, 1);
+                $('input[name=EndorsementsList]').val(endorsementsValues.join(','));
+            }
+        }
+    }
+
+    //ZE-- Hack for RPS until this gets refactored. This is an urgent production issue that needs to be fixed ASAP.
+    if ( lobValues.includes("RPS") )
+    {
+       lobValues.length = 0;  //This works better than lobValues = [] in case there is any references to the orginal array in memory.
+
+       if ( productValues.includes("SBC") || productValues.includes("SBO") || productValues.includes("SCF") || productValues.includes("SOF") )  //business rule treating SBC as the ML line
+            lobValues.push("ML");
+
+       if ( productValues.includes("SAL") || productValues.includes("SGL") || productValues.includes("SAF") )   //business rule treating SAL and SGL as the GL line
+            lobValues.push("GL");
+    }
+
+    //This is for LOB RPH
+    if ( lobValues.includes("RPH") )
+    {
+       lobValues.length = 0;
+
+       //Business rule for HCL is the same as ELL
+       if ( productValues.includes("HCM") )
+            lobValues.push("ML");
+
+       //Business rule for HOC is the same as GL
+       if ( productValues.includes("HOC") )
+            lobValues.push("GL");
+    }
+
+    return {
+        lobValues: lobValues,
+        endorsementsValues: endorsementsValues,
+        productValues: productValues,
+        pdids: pdids,
+        pdcids: pdcids
+    };
+}
+
+function UpdateClaimCodingInfomation(lobValues, endorsementsValues, rFlag,productValues,first_run){
+     // field need to be enabled on any status
+      var claimStatus = 'Open';
+      var uniqueLobArray = '';
+      var uniqueProducts = '';
+      var ftdiv1Styles = '';
+      var wrongfulactStyles = '';
+      var wrongfulact2Styles = '';
+      var lossDescriptionStyles = '';
+      var fcdiv2Styles = '';
+      var fcdiv3Styles = '';
+      var litStatus1LabelStyles = '';
+      var lossLocationStyles = '';
+      var ReserveStatus1LabelStyles = '';
+      var spInjTypeCodeStyles = '';
+      var addFactorsStyles = '';
+      var lobSelectionRules = '';
+      var hybridFlag = '0';
+      var hybridLOBs = ['GL','ML'];
+
+    //if ($('input[name=LOB_IDList]').val().indexOf('RPS') &gt; -1){
+
+     //   CustomScript.ClaimCodingNotRequired();
+        //CustomScript.StyleControl($('#litStatus1Label'), $('#litStatus1'), 'optional');  //Commented out by ZE. RPS needs these to show at all times.   UEAW-5427
+        //CustomScript.StyleControl($('#ReserveStatus1Label'), $('#ReserveStatus1'), 'optional');  //Commented out by ZE. RPS needs these to show at all times.     UEAW-5427
+   // }
+   //else {
+      //if CM coverages is selected make claim made date required. covtriggers
+      if($('input[name=CovTriggerList]').val().indexOf('CM') &gt; -1 ) {
+          $('#spLossReportDate').removeClass('notRequired');
+          $('#spLossReportDate').addClass('required');
+          $('#PerOccDateLabel').css('color', '#800000');
+      }
+      else {
+          $('#spLossReportDate').removeClass('required');
+          $('#spLossReportDate').addClass('notRequired');
+          $('#PerOccDateLabel').css('color', '#000000');
+      }
+
+      if (lobValues.length !== 0) {
+          lobSelectionRules = CustomScript.GetClaimCodingRules();
+          uniqueLobArray = CustomScript.unique(lobValues);
+          uniqueProducts = CustomScript.unique(productValues);
+
+
+          $.each( lobValues, function( index, value ){
+                 ftdiv1Styles = ftdiv1Styles ? (ftdiv1Styles + ',' + CustomScript.getObjects(lobSelectionRules[value], 'id', 'ftdiv1')[0].style) : CustomScript.getObjects(lobSelectionRules[value], 'id', 'ftdiv1')[0].style;
+                 wrongfulactStyles = wrongfulactStyles ? (wrongfulactStyles + ',' + CustomScript.getObjects(lobSelectionRules[value], 'id', 'wrongfulact')[0].style) : CustomScript.getObjects(lobSelectionRules[value], 'id', 'wrongfulact')[0].style;
+                 lossDescriptionStyles = lossDescriptionStyles ? (lossDescriptionStyles + ',' + CustomScript.getObjects(lobSelectionRules[value], 'id', 'lossDescription')[0].style) : CustomScript.getObjects(lobSelectionRules[value], 'id', 'lossDescription')[0].style;
+                 fcdiv2Styles = fcdiv2Styles ? (fcdiv2Styles + ',' + CustomScript.getObjects(lobSelectionRules[value], 'id', 'fcdiv2')[0].style) : CustomScript.getObjects(lobSelectionRules[value], 'id', 'fcdiv2')[0].style;
+                 fcdiv3Styles = fcdiv3Styles ? (fcdiv3Styles + ',' + CustomScript.getObjects(lobSelectionRules[value], 'id', 'fcdiv3')[0].style) : CustomScript.getObjects(lobSelectionRules[value], 'id', 'fcdiv3')[0].style;
+                 wrongfulact2Styles = wrongfulact2Styles ? (wrongfulact2Styles + ',' + CustomScript.getObjects(lobSelectionRules[value], 'id', 'wrongfulact2')[0].style) : CustomScript.getObjects(lobSelectionRules[value], 'id', 'wrongfulact2')[0].style;
+                 litStatus1LabelStyles = litStatus1LabelStyles ? (litStatus1LabelStyles + ',' + CustomScript.getObjects(lobSelectionRules[value], 'id', 'litStatus1Label')[0].style) : CustomScript.getObjects(lobSelectionRules[value], 'id', 'litStatus1Label')[0].style;
+                 ReserveStatus1LabelStyles = ReserveStatus1LabelStyles ? (ReserveStatus1LabelStyles + ',' + CustomScript.getObjects(lobSelectionRules[value], 'id', 'ReserveStatus1Label')[0].style) : CustomScript.getObjects(lobSelectionRules[value], 'id', 'ReserveStatus1Label')[0].style;
+                 addFactorsStyles = addFactorsStyles ? (addFactorsStyles + ',' + CustomScript.getObjects(lobSelectionRules[value], 'id', 'addFactors')[0].style) : CustomScript.getObjects(lobSelectionRules[value], 'id', 'addFactors')[0].style;
+                 spInjTypeCodeStyles = spInjTypeCodeStyles ? (spInjTypeCodeStyles + ',' + CustomScript.getObjects(lobSelectionRules[value], 'id', 'spInjTypeCode')[0].style) : CustomScript.getObjects(lobSelectionRules[value], 'id', 'spInjTypeCode')[0].style;
+                 lossLocationStyles = lossLocationStyles ? (lossLocationStyles + ',' + CustomScript.getObjects(lobSelectionRules[value], 'id', 'lossLocation')[0].style) : CustomScript.getObjects(lobSelectionRules[value], 'id', 'lossLocation')[0].style;
+          });
+
+          //ftdiv1
+          ftdiv1Styles = CustomScript.unique(ftdiv1Styles.split(','));
+
+          if(jQuery.inArray('required', ftdiv1Styles)!= -1) {
+              CustomScript.StyleControl($('#ftdiv1'), $('#firstCause'), 'required');
+          } else if(jQuery.inArray('optional', ftdiv1Styles)!= -1) {
+              CustomScript.StyleControl($('#ftdiv1'), $('#firstCause'), 'optional');
+          } else {
+              CustomScript.StyleControl($('#ftdiv1'), $('#firstCause'), 'disabled');
+          }
+
+          //wrongfulact
+          wrongfulactStyles = CustomScript.unique(wrongfulactStyles.split(','));
+
+          if(jQuery.inArray('required', wrongfulactStyles)!= -1) {
+              CustomScript.StyleControl($('#wrongfulact'), $('#wrongfullAct1'), 'required');
+          } else if(jQuery.inArray('optional', wrongfulactStyles)!= -1) {
+              CustomScript.StyleControl($('#wrongfulact'), $('#wrongfullAct1'), 'optional');
+          } else {
+              CustomScript.StyleControl($('#wrongfulact'), $('#wrongfullAct1'), 'disabled');
+          }
+
+          //fcdiv2
+          fcdiv2Styles = CustomScript.unique(fcdiv2Styles.split(','));
+
+          if(jQuery.inArray('required', fcdiv2Styles)!= -1) {
+              CustomScript.StyleControl($('#fcdiv2'), $('#secondCause'), 'required');
+          } else if(jQuery.inArray('optional', fcdiv2Styles) != -1) {
+              CustomScript.StyleControl($('#fcdiv2'), $('#secondCause'), 'optional');
+          } else {
+              CustomScript.StyleControl($('#fcdiv2'), $('#secondCause'), 'disabled');
+          }
+
+          //fcdiv3
+          fcdiv3Styles = CustomScript.unique(fcdiv3Styles.split(','));
+
+          if(jQuery.inArray('required', fcdiv3Styles)!= -1) {
+              CustomScript.StyleControl($('#fcdiv3'), $('#thirdCause'), 'required');
+          } else if(jQuery.inArray('optional', fcdiv3Styles) != -1) {
+              CustomScript.StyleControl($('#fcdiv3'), $('#thirdCause'), 'optional');
+          } else {
+              CustomScript.StyleControl($('#fcdiv3'), $('#thirdCause'), 'disabled');
+          }
+
+          //wrongfulact2
+          wrongfulact2Styles = CustomScript.unique(wrongfulact2Styles.split(','));
+
+          if(jQuery.inArray('required', wrongfulact2Styles)!= -1) {
+              CustomScript.StyleControl($('#wrongfulact2'), $('#secondWrongfullAct1'), 'required');
+          } else if(jQuery.inArray('optional', wrongfulact2Styles) != -1) {
+              CustomScript.StyleControl($('#wrongfulact2'), $('#secondWrongfullAct1'), 'optional');
+          } else {
+              CustomScript.StyleControl($('#wrongfulact2'), $('#secondWrongfullAct1'), 'disabled');
+          }
+
+          //litStatus1Label
+          litStatus1LabelStyles = CustomScript.unique(litStatus1LabelStyles.split(','));
+
+          if(jQuery.inArray('required', litStatus1LabelStyles)!= -1) {
+              CustomScript.StyleControl($('#litStatus1Label'), $('#litStatus1'), 'required');
+          }
+
+          //ReserveStatus1Label
+          ReserveStatus1LabelStyles = CustomScript.unique(ReserveStatus1LabelStyles.split(','));
+
+          if(jQuery.inArray('required', ReserveStatus1LabelStyles)!= -1) {
+              CustomScript.StyleControl($('#ReserveStatus1Label'), $('#ReserveStatus1'), 'required');
+          }
+
+          //addFactors
+          addFactorsStyles = CustomScript.unique(addFactorsStyles.split(','));
+
+          if(jQuery.inArray('required', addFactorsStyles)=== 0) {
+              CustomScript.StyleControl($('#addFactors'), $('#additionalFactor1'), 'required');
+          } else if(jQuery.inArray('optional', addFactorsStyles) != -1) {
+              CustomScript.StyleControl($('#addFactors'), $('#additionalFactor1'), 'optional');
+          } else {
+              CustomScript.StyleControl($('#addFactors'), $('#additionalFactor1'), 'disabled');
+          }
+
+          //spInjTypeCode
+          spInjTypeCodeStyles = CustomScript.unique(spInjTypeCodeStyles.split(','));
+
+          if(jQuery.inArray('required', spInjTypeCodeStyles)!= -1) {
+              CustomScript.StyleControl($('#spInjTypeCode'), $('#cDEG_InjTypeCode1'), 'required');
+          } else if(jQuery.inArray('optional', spInjTypeCodeStyles) != -1) {
+              CustomScript.StyleControl($('#spInjTypeCode'), $('#cDEG_InjTypeCode1'), 'optional');
+          } else {
+              CustomScript.StyleControl($('#spInjTypeCode'), $('#cDEG_InjTypeCode1'), 'disabled');
+          }
+
+          //lossLocation
+          lossLocationStyles = CustomScript.unique(lossLocationStyles.split(','));
+
+          if(jQuery.inArray('required', lossLocationStyles)!= -1) {
+              CustomScript.StyleControl($('#lossLocation'), $('#lossLocation1'), 'required');
+          } else if(jQuery.inArray('optional', lossLocationStyles) != -1) {
+              CustomScript.StyleControl($('#lossLocation'), $('#lossLocation1'), 'optional');
+          } else {
+              CustomScript.StyleControl($('#lossLocation'), $('#lossLocation1'), 'disabled');
+          }
+
+          //debugger;
+          //if (first_run) {
+          if(CustomScript.ContainsAll(hybridLOBs, uniqueLobArray)  &amp;&amp; (hybridFlag == '1') )
+          {
+                 $('input[name=hybrid][value=No]').removeAttr('checked');
+                 $('input[name=hybrid][value=Yes]').attr('checked', 'checked');
+                 //$('#hybrid').val('Yes');
+                 //$('#hybrid').text('Yes');
+          }
+          else
+          {
+                 $('input[name=hybrid][value=Yes]').removeAttr('checked');
+                 $('input[name=hybrid][value=No]').attr('checked', 'checked');
+                 //$('#hybrid').val('No');
+                 //$('#hybrid').text('No');
+          }
+          //}
+
+          if(rFlag){
+              CustomScript.repToReinsurerSetter();
+          }
+
+       
+          // save value before dropdown changes
+          var TempFirstCause = $('#firstCause').val();
+
+          Communication.CustomRequest('claims_modify2.max?AJAX_ACTION=CauseOfLoss&amp;LineOfBusiness='+lobValues, function (AjaxResp) {
+                 $("#firstCause").html(AjaxResp);
+                 $('#firstCause').val(TempFirstCause);
+          });
+      }
+    //}
+}
+
+
+
+function ContainsAll(subsetitem, setitem){
+  for(var i = 0 , len = subsetitem.length; i &lt; len; i++){
+     if($.inArray(subsetitem[i], setitem) == -1) return false;
+  }
+  return true;
+}
+
+function StyleControl(lControl, control, sType){
+   switch(sType) {
+      case 'required':
+          lControl.removeClass('notRequired');
+          lControl.addClass('required');
+          control.removeAttr('disabled');
+          control.removeClass('notRequired');
+          break;
+      case 'disabled':
+          lControl.removeClass('notRequired');
+          lControl.removeClass('required');
+          lControl.removeClass('Default');
+          lControl.removeClass('DefaultBold');
+          control.removeClass('required');
+          control.removeClass('notRequired');
+          control.attr('disabled', 'disabled');
+          break;
+
+      case 'optional':
+          lControl.removeClass('required');
+          lControl.addClass('notRequired');
+          control.removeAttr('disabled');
+          control.removeClass('required');
+          break;
+   }
+}
+
+//This defaults the value of report to reinsurer button to yes if the product is GLX and the user selection is in the reinsurerArray
+function repToReinsurerSetter()
+{
+       var dateOfLoss = new Date('04/04/2016');
+       var markDate = new Date('1/1/2015');
+       var productValues = '';
+       var minorCount =  '0';
+
+       //if($("#PolList").dataTable().fnSettings().aoData.length != 0) {
+          $("input:checked", $("#PolList").dataTable().fnGetNodes()).each(function () {
+                productValues += $(this).attr('productv') + ',';
+          });
+
+          productValues = productValues.slice(0,-1);
+          var injuryArrayPrior = ['FATAL', 'AMP', 'PARA'];
+          var injuryArrayAfter = ['AMP', 'PARA'];
+          var COLArray = ['ASSAUL2','ASSAUL1'];
+
+          var injurySelection = $('#cDEG_InjTypeCode1').val();
+          var COLSelection = $('#firstCause').val();
+
+          //if reinsurance is already yes then exit
+          if($('#hSelectedReinsuer').val() == '1' )
+              return;
+
+          //When the Loss Date is prior to 1/1/2015 AND the Injury Driving the Claim is is selected as either; fatality, Amputation, Paralysis.
+          //OR the Loss Date is prior to 1/1/2015 AND the Cause of Loss is selected as either Sexual Assault- Perp over 18 or Sexual Assault- Per &lt;18.
+          //OR the Loss Date is after to 1/1/2015 AND Injury Driving the Claim is selected as either Paralysis, Amputation.
+          //OR the Loss Date is after to 1/1/2015 AND the Cause of Loss is selected as either Sexual Assault- Perp over 18 or Sexual Assault- Per &lt;18
+          //AND the Claimant Role is selected as either Minor or Student &lt;18.
+          if(((productValues.search('GLX') != '-1') || (productValues.search('GLU') != '-1'))  &amp;&amp;
+            ((dateOfLoss &lt; markDate &amp;&amp; jQuery.inArray(injurySelection, injuryArrayPrior) != '-1') ||
+             (dateOfLoss &lt; markDate &amp;&amp; jQuery.inArray(COLSelection, COLArray)!= '-1') ||
+             (dateOfLoss &gt; markDate &amp;&amp; jQuery.inArray(injurySelection, injuryArrayAfter) != '-1') ||
+             (dateOfLoss &gt; markDate &amp;&amp; jQuery.inArray(COLSelection, COLArray)!= '-1' &amp;&amp; minorCount &gt; 0)))
+          {
+             //productValues.search("General Liability Excess");
+             $('[name=reportedToReinsurer][value=1]').attr('checked','checked');
+          }
+          else {
+             $('[name=reportedToReinsurer][value=0]').attr('checked','checked');
+          }
+       //}
+}
+
+function polSelNote(claimID) {
+
+    //var note = $('#PolSelNote').val();
+    //Communication.CustomRequest('claims_modify2.max?AJAX_ACTION=polSelNote&amp;Note=' + note + '&amp;ClaimID=' + claimID + '', function (AjaxResp) {});
+    //alert(''+note+' '+claimID+'');
+}
+
+function multiPolicy(rFlag) {
+        $('#ftdiv1').text('Cause of Loss');
+	$('#f2Cause').hide();
+	$('#ftdiv2').hide();
+	$('#f3Cause').hide();
+	$('#ftdiv3').hide();
+	$(cci_div1).height(100);
+
+        $("input:checked", $("#PolList").dataTable().fnGetNodes()).each(function () {
+              CustomScript.pollistclick($(this).attr('CovTrigger'), $(this).attr('policyv'),$(this).attr('egv'), $(this).attr('productv'), $(this).attr('endorsmentv'), $(this), rFlag);
+        });
+}
+
+function checkCauseOfLoss(obj) {
+
+    if ($(obj).val() == '-1')
+    {
+        return;
+    }
+    else
+    {
+        name = $(obj).attr('name');
+        if (name == 'firstCause') {
+            value = "$(obj).val()";
+            if (value == $('#secondCause').val()) {
+                alert('Cause of Loss cannot be the same as Second Cause of Loss.');
+                $(obj).val(oldVal);
+            } else if (value == $('#thirdCause').val()) {
+                $(obj).val(oldVal);
+                alert('Cause of Loss cannot be the same as Third Cause of Loss.');
+                $(obj).val(oldVal);
+            }
+        } else if (name == 'secondCause') {
+            value = "$(obj).val()";
+            if (value == $('#firstCause').val()) {
+                $(obj).val(oldVal);
+                alert('Second Cause of Loss cannot be the same as Cause of Loss.');
+                $(obj).val(oldVal);
+            } else if (value == $('#thirdCause').val()) {
+                alert('Second Cause of Loss cannot be the same as Third Cause of Loss.');
+                $(obj).val(oldVal);
+            }
+        } else if (name == 'thirdCause') {
+            value = "$(obj).val()";
+            if (value == $('#firstCause').val()) {
+                alert('Third Cause of Loss of Loss cannot be the same as Cause of Loss.');
+                $(obj).val(oldVal);
+            } else if (value == $('#secondCause').val()) {
+                alert('Third Cause of Loss cannot be the same as Second Cause of Loss.');
+                $(obj).val(oldVal);
+            }
+        }
+    }
+}
+//This method takes the current control to the previous page
+function exitClick(exitType)
+{
+    var params;
+    params = 'Current_USRID=16769&amp;CLMID=70433';
+
+    //alert(params);
+    Communication.CustomRequest("claims_modify2.max?" + params + "&amp;AJAX_ACTION=" + exitType, function(ajaxresp) {
+    Communication.LinkRequest('account_information.max?Account_id=001U0000009BDp9IAG&amp;AccountType=Institution');
+    });
+}
+
+//This function gets the values of loss date, claim made date, and claim report date and makes an ajax call to filter values based on the institution policies
+function policySelectionRefresh(rFlag)
+{
+        Global.ShowProgress();
+        var NewPerOccurenceDate = $('#cCD_LossReportDate').val();
+        var NewclaimMadeDate = $('#PerOccDate').val();
+        var NewdateOfLoss = $('#cCD_DateOfLoss').val();
+        var IsShowAllPolicy = $('#ShowAllPolicy').is(':checked') ? 1 : 0;
+        var params = '';
+        var inceptionValues = '';
+        var expirationValues = '';
+
+        $('input[name=PDC_IDList]').val("");
+        $('input[name=PolicyIDList]').val("");
+        $('input[name=ProductList]').val("");
+        $('input[name=LOB_IDList]').val("");
+        $('input[name=EndorsementsList]').val("");
+        $('input[name=CovTriggerList]').val("");
+
+
+        $("#PolList input:checked").each(function ()
+        {
+           inceptionValues += $(this).parents('tr').find('#InceptionCol').attr('value') + ',';
+           expirationValues += $(this).parents('tr').find('#ExpirationCol').attr('value') + ',';
+        });
+
+        inceptionValues = inceptionValues.slice(0,-1);
+        expirationValues = expirationValues.slice(0,-1);
+
+        if (inceptionValues !== ''){
+		var inceptionDate = inceptionValues.split(',');
+		for (var i = 0; i &lt; inceptionDate.length; i++) {
+			inceptionDate[i] = new Date(inceptionDate[i]);
+		}
+        }
+
+        if (expirationValues !== ''){
+		var expirationDate = expirationValues.split(',');
+        for (var i = 0; i &lt; expirationDate.length; i++) {
+			expirationDate[i] = new Date(expirationDate[i]);
+                }
+        }
+        var clmDate='';
+        var PerOccDate ='';
+        var clmLossDate ='';
+        if (NewclaimMadeDate.length == 8 &amp;&amp; NewclaimMadeDate.indexOf('/') === -1)
+        {
+             var year = NewclaimMadeDate.substring(4,8);
+             var month = NewclaimMadeDate.substring(0,2);
+             var day = NewclaimMadeDate.substring(2,4);
+             NewclaimMadeDate = month+'/'+day+'/'+year;
+             clmDate = new Date(year, month-1, day);
+        }
+        else
+        {
+              clmDate =new Date(NewclaimMadeDate);
+        }
+
+        if (NewPerOccurenceDate.length == 8 &amp;&amp; NewPerOccurenceDate.indexOf('/') === -1)
+        {
+             var year = NewPerOccurenceDate.substring(4,8);
+             var month = NewPerOccurenceDate.substring(0,2);
+             var day = NewPerOccurenceDate.substring(2,4);
+             NewPerOccurenceDate = month+'/'+day+'/'+year;
+              PerOccDate = new Date(year, month-1, day);
+        }
+        else
+        {
+              PerOccDate =new Date(NewPerOccurenceDate);
+        }
+
+        if (NewdateOfLoss.length == 8 &amp;&amp; NewdateOfLoss.indexOf('/') === -1)
+        {
+             var year = NewdateOfLoss.substring(4,8);
+             var month = NewdateOfLoss.substring(0,2);
+             var day = NewdateOfLoss.substring(2,4);
+             NewdateOfLoss = month+'/'+day+'/'+year;
+              clmLossDate = new Date(year, month-1, day);
+        }
+        else
+        {
+              clmLossDate = new Date(NewdateOfLoss);
+        }
+
+        var cbcount = $(PolList).find(':checkbox:checked').length;
+        var flag = true;
+
+        if(cbcount != 0)
+        {
+           /* for (var k = 0; k &lt; expirationDate.length; k++)
+            {
+                if(((clmDate &gt;= inceptionDate[k] &amp;&amp; clmDate &lt;= expirationDate[k]) || NewclaimMadeDate === '') &amp;&amp;
+                  //((PerOccDate &gt;= inceptionDate[k] &amp;&amp; PerOccDate &lt;= expirationDate[k]) || NewPerOccurenceDate === '') &amp;&amp;
+                  ((clmLossDate &gt;= inceptionDate[k] &amp;&amp; clmLossDate &lt;= expirationDate[k])) || NewdateOfLoss === '')
+               {
+                   flag = true;
+               }
+               else
+               {
+                   flag = false;
+                   //flag = true;
+               }
+            } */
+
+            if(flag)
+            {
+                params = '&amp;NewclaimMadeDate=' + NewclaimMadeDate + '&amp;cmd_change=1&amp;NewdateOfLoss=' + NewdateOfLoss + '&amp;IsShowAllPolicy=' + IsShowAllPolicy;
+                Communication.CustomRequest("claims_modify2.max?Action=BUILDPOLDATATABLE" + params, function(ajaxresp) {
+                 Global.ShowProgress();
+                    var resp = JSON.parse(ajaxresp);
+                     /* replace the entire dataTable Construct with the response table HTML */
+                    //$("#PolList").dataTable().fnDestroy();
+                    //$("#PolList").replaceWith(resp.PolicyListTable);
+
+                    $("#PolList_wrapper").empty();
+                    $("#PolList_wrapper").append(resp.PolicyListTable);
+
+                    $("#PolList").dataTable({
+                         "fnCreatedRow": function( nRow, aData, iDataIndex ) {
+                              // Bold the grade for all 'A' grade browsers
+                              if ( aData[2] == "Cancelled (CN)" )
+                              {
+                                 $('td', nRow).css('background-color', '#E7D8E3');
+                                // $('td', nRow).css('color', 'black');
+                                // $('td a', nRow).css('color', 'black');
+                              }
+                         },
+                         "aaSorting": [[1, "desc"]],
+                         "sPaginationType": "full_numbers",
+                         "bInfo": false,
+                         "bAutoWidth": false,
+                         "sDefaultContent": " "
+                     }).show();
+                     Global.HideProgress();
+                     CustomScript.multiPolicy(rFlag);
+                });
+            }
+            else
+            {
+               jAlert("Invalid dates", "Invalid Entry");
+               $('#spinnerOverlay').hide();
+            }
+        }
+        else
+        {
+            params = '&amp;NewclaimMadeDate=' + NewclaimMadeDate + '&amp;cmd_change=1&amp;NewdateOfLoss=' + NewdateOfLoss + '&amp;IsShowAllPolicy=' + IsShowAllPolicy;
+                Communication.CustomRequest("claims_modify2.max?Action=BUILDPOLDATATABLE" + params, function(ajaxresp) {
+                 Global.ShowProgress();
+                    var resp = JSON.parse(ajaxresp);
+                     /* replace the entire dataTable Construct with the response table HTML */
+                    //$("#PolList").dataTable().fnDestroy();
+                    //$("#PolList").replaceWith(resp.PolicyListTable);
+
+                    $("#PolList_wrapper").empty();
+                    $("#PolList_wrapper").append(resp.PolicyListTable);
+
+                    $("#PolList").dataTable({
+                         "fnCreatedRow": function( nRow, aData, iDataIndex ) {
+                              // Bold the grade for all 'A' grade browsers
+                              if ( aData[2] == "Cancelled (CN)" )
+                              {
+                                 $('td', nRow).css('background-color', '#E7D8E3');
+                                 //$('td', nRow).css('color', 'black');
+                                // $('td a', nRow).css('color', 'black');
+                              }
+                         },
+                         "aaSorting": [[1, "desc"]],
+                         "sPaginationType": "full_numbers",
+                         "bInfo": false,
+                         "bAutoWidth": false,
+                         "sDefaultContent": " "
+                     }).show();
+                     Global.HideProgress();
+                     CustomScript.multiPolicy(rFlag);
+                });
+        }
+
+}
+
+//Teddy - Move all FNOL and Claim attachments to General Folder
+function moveToGen(){
+    var fcthese = '';
+
+    $('#AttList input:checkbox').each(
+        function(){
+                fcthese += $(this).attr('id') + ',';
+        });
+
+    $('#ImagesList tr td a').each(
+        function(){
+            if($(this).attr('id') == 'claimatt')
+               { fcthese += $(this).attr('value') + ','; }
+        });
+
+    fcthese = fcthese.slice(0,-1);
+
+    Communication.ModalWindow('fnol_move_to_general.max?Page=CLAIM&amp;Account_id=001U0000009BDp9IAG&amp;AccountType=Institution&amp;MemberID=688&amp;FNOL_ID=70433&amp;these='+fcthese+'');
+
+//    Communication.CustomRequest("claims_modify2.max?AJAX_ACTION=delete", function(ajaxresp) {
+//         Communication.LinkRequest('account_information.max?Account_id=001U0000009BDp9IAG&amp;AccountType=Institution');
+//       });
+}
+
+function delclm(){
+
+    Communication.CustomRequest("claims_modify2.max?AJAX_ACTION=delete", function(ajaxresp) {
+         Communication.LinkRequest('account_information.max?Account_id=001U0000009BDp9IAG&amp;AccountType=Institution');
+       });
+}
+
+//Teddy - This function is used in moveToGen function
+function setMoved(ajaxresp,fcthese){
+    if(ajaxresp == 1) {
+     Communication.ModalWindow('fnol_move_to_general.max?cAlias=&amp;these='+fcthese+'');
+    }
+}
+
+function attachlistclick(){
+       var cbcount3 = $(AttList).find(':checkbox:checked').length;
+
+     if (cbcount3 === 0 ){
+         $('#emailFNOLAttToStaff').attr('disabled', true);
+         $('#emailFNOLAttToOutside').attr('disabled', true);
+     }
+     else {
+         $('#emailFNOLAttToStaff').attr('disabled', false);
+         $('#emailFNOLAttToOutside').attr('disabled', false);
+     }
+}
+
+function send_attachments()
+{
+
+    var attachementIds = '';
+    $("#AttList input:checked").each(function ()
+    {
+         attachementIds += $(this).attr('id') + ',';
+         $(this).attr('checked', false);
+    });
+
+    attachementIds = attachementIds.slice(0,-1);
+
+    var emailAddresses = $('#dialog #AttachEmailAddress').val();
+    emailAddresses = emailAddresses.slice(0,-1);
+
+    if (emailAddresses === '') {
+        jAlert('Please enter Email address to send.');
+        return;
+    }
+
+    Communication.CustomRequest('claims_modify2.max?AJAX_ACTION=EmailAttachments&amp;emailAddresses=' + emailAddresses + '&amp;attachementIds=' + attachementIds, function(AjaxResp){
+                var resp = JSON.parse(AjaxResp);
+                $('#dialog #attachment_response').html(resp.response);
+    });
+    $('#dialog #sendEmailButton').remove();
+    $('#emailFNOLAttToStaff').attr('disabled', true);
+    $('#emailFNOLAttToOutside').attr('disabled', true);
+    //$('#AttList').attr('checked', false);
+}
+
+function EmailAttachments(action)
+{
+
+    $('#rightColumn').append('&lt;div style="width:500px; height:200px; margin-top: 0px; text-align: left; background-position: 0% 100%;' +
+        ' background-repeat: no-repeat; font-family: Verdana, Arial, Helvetica, sans-serif, "Trebuchet MS"; font-size: 10pt;' +
+        ' display: inline" class="component StaticContainer borderless" ref="StaticContainer" id="dialog"&gt;&lt;/div&gt;');
+    $('#dialog').html($('#dialogContent').html());
+
+         $("#dialog #addEmailButton").click(function () {
+                CustomScript.addEmail();
+            }
+
+        );
+
+        $("#dialog #removeEmailButton").click(function () {
+                CustomScript.removeEmail();
+            }
+
+        );
+
+        $("#dialog #sendEmailButton").click(function () {
+                CustomScript.send_attachments();
+            }
+        );
+
+    if (action == '1') {
+        Communication.StartSessionTimer('43200', '120');
+        var limit = 100;
+        $("#dialog #Email").autocomplete("claims_modify2.max", {
+            selectFirst: false,
+            max: limit,
+            extraParams: {
+                AJAX_ACTION: "GetMemberName",
+                PreProcess: "false",
+                search: function (event, ui) {},
+                limit: limit
+            }
+        });
+    } else {
+        //$('#dialog #addEmailButton').remove();
+        //$('#dialog #removeEmailButton').remove();
+        //$('#dialog #Email').remove();
+        //$("#dialog #AttachEmailAddress").removeAttr('readonly');
+    }
+    $('#dialog').dialog({
+        autoOpen: true,
+        modal: true,
+        width: 500,
+        height: 310,
+        title: "E-mail Attachments",
+        beforeclose: function (event, ui) {
+            $('#dialogContent').hide();
+            $('#dialog').remove();
+            $('#dialog #Email').remove();
+            $('#dialog #AttachEmailAddress').remove();
+        },
+        buttons: {
+        'Cancel': function () {
+                $(this).dialog('destroy').remove();
+            },
+        }
+    });
+}
+
+function addEmail()
+{
+    var emailadd = $('#dialog #Email').val().match(/([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9._-]+)/gi);
+
+    if (emailadd == null)
+    {
+        alert('Please use a valid email address.');
+    } else
+    {
+        $('#dialog #AttachEmailAddress').val($.trim($('#dialog #AttachEmailAddress').val() + ' ' + emailadd + ';'));
+        $('#dialog #Email').val('');
+    }
+}
+
+function removeEmail()
+{
+    var Original_Email_List = $('#dialog #AttachEmailAddress').val();
+
+    if (Original_Email_List.match(/\S+/g).length == 1)
+    {
+        var Email_To_Remove = Original_Email_List.match(/[^ ]*$/);
+    } else
+    {
+        var Email_To_Remove = ' ' + Original_Email_List.match(/[^ ]*$/);
+    }
+
+    var Email_Update = Original_Email_List.replace(Email_To_Remove, '');
+
+    $('#dialog #AttachEmailAddress').val($.trim(Email_Update));
+
+}
+
+function shownotes(){
+ //Communication.SerialRequest($(&amp;quot;#rightColumn&amp;quot;),false,this)
+ //CustomScript.shownotes()
+
+    $('#INPUT_NOTE').show();
+    $('#addNotes').hide();
+    $('#notediv').height(230);
+    $('#Typelabel').css('color', '#CC0000');
+    $('#Subjectlabel').css('color', '#CC0000');
+    $('#Notelabel').css('color', '#CC0000');
+}
+
+function CancelNote(){
+    CustomScript.clearnote();
+    $('#INPUT_NOTE').hide();
+    $('#addNotes').show();
+    $('#notediv').height(50);
+}
+
+function SaveNote(keepInputOpenned){
+  if ($('#notesSubject').val() == ''){
+       jAlert('Please enter a subject for the note before saving.');
+       return;
+    }
+    if ($('#notesDescription').val()  == ''){
+       jAlert('Please enter a note value before saving.');
+        return;
+    }
+    if($('#NoteType').val() == '-1'){
+       jAlert('Please select NoteType before saving.');
+        return;
+    }
+
+       var url = 'claims_modify2.max?AJAX_ACTION=SaveNotes' +
+       '&amp;Subject=' + encodeURIComponent($('#notesSubject').val()) +
+       '&amp;Description=' + encodeURIComponent($('#notesDescription').val()) +
+       '&amp;NoteId=' + $('#noteID').val() +
+       '&amp;Username=' + $('#userName').val() +
+       '&amp;NoteDate=' + $('#noteDate').val() +
+       '&amp;NoteType=' + $('#NoteType').val() +
+       '&amp;Category=' + $('#notesCategory').val();
+
+       Communication.CustomRequest(url,
+           function (AjaxResp) {
+               CustomScript.reloadTableWalkers('resulttable');
+           }
+       );
+
+       CustomScript.clearnote();
+       if (!keepInputOpenned) {
+           CustomScript.CancelNote();
+       }
+
+}
+
+function UnlockFNOLDocuments(){
+    var response = confirm("Are you sure you want to unlock all of the FNOL documents for this claim?");
+
+    if(response == true)
+    {
+      Communication.CustomRequest('/doc_lock_status.max?AJAX_ACTION=UnLockClaimDocuments&amp;ClaimId=70433', function (r) {
+         alert("All FNOL documents for this claim are unlocked successfully.");
+         CustomScript.RefreshFNOLAttachments();
+       });
+   }
+}
+function UnlockTriageDocuments()
+{
+    var response = confirm("Are you sure you want to unlock all of your the documents for this triage?");
+
+    if(response == true)
+    {
+      Communication.CustomRequest('/doc_lock_status.max?AJAX_ACTION=UnLockTriageDocuments&amp;ClaimId=70433', function (r) {
+         alert("All claim documents for this triage are unlocked successfully.");
+         CustomScript.RefreshClaimsDocuments();
+       });
+   }
+}
+function RefreshFNOLAttachments(){
+   TableWalkerAjax($('#AttList'));
+}
+
+function RefreshClaimsDocuments(){
+
+  TableWalkerAjax($('#ImagesList'));
+}
+
+function clearnote() {
+    $('#notesDescription').val('');
+    $('#notesSubject').val('');
+    $('#NoteType').val('');
+    $('#noteID').val('');
+}
+
+function EditNote(c) {
+    CustomScript.shownotes();
+    Communication.CustomRequest('claims_modify2.max?preprocess=true&amp;AJAX_ACTION=getnote&amp;noteid2=' + c,
+        function(AjaxResp) {
+        var JSONResult = jsonParse(AjaxResp);
+        $('#notesDescription').val(JSONResult.notecomment);
+        $('#notesSubject').val(JSONResult.notesubject);
+        $('#noteID').val(JSONResult.noteID);
+        $('#NoteType').html(JSONResult.ACTTypes);
+        $('#NoteType').val(JSONResult.notetype);
+    });
+}
+
+function GetClaimCodingRules(){
+   var lobSelectionRules = {
+      "ML": [{ "id": "ftdiv1", "style": "required" },
+             { "id": "wrongfulact", "style": "required" },
+             { "id": "lossDescription", "style": "required" },
+             { "id": "fcdiv2", "style": "optional" },
+             { "id": "fcdiv3", "style": "optional" },
+             { "id": "wrongfulact2", "style": "optional" },
+             { "id": "litStatus1Label", "style": "required" },
+             { "id": "ReserveStatus1Label", "style": "required" },
+             { "id": "addFactors", "style": "disabled" },
+             { "id": "spInjTypeCode", "style": "disabled" },
+             { "id": "lossLocation", "style": "disabled" }],
+      "GL": [{ "id": "ftdiv1", "style": "required" },
+             { "id": "addFactors", "style": "required" },
+             { "id": "spInjTypeCode", "style": "required" },
+             { "id": "lossDescription", "style": "required" },
+             { "id": "lossLocation", "style": "required" },
+             { "id": "litStatus1Label", "style": "required" },
+             { "id": "ReserveStatus1Label", "style": "required" },
+             { "id": "fcdiv2", "style": "disabled" },
+             { "id": "fcdiv3", "style": "disabled" },
+             { "id": "wrongfulact2", "style": "disabled" },
+             { "id": "wrongfulact", "style": "disabled" }],
+      "PL": [{ "id": "ftdiv1", "style": "required" },
+             { "id": "lossDescription", "style": "required" },
+             { "id": "litStatus1Label", "style": "required" },
+             { "id": "ReserveStatus1Label", "style": "required" },
+             { "id": "addFactors", "style": "disabled" },
+             { "id": "spInjTypeCode", "style": "disabled" },
+             { "id": "lossLocation", "style": "disabled" },
+             { "id": "fcdiv2", "style": "disabled" },
+             { "id": "fcdiv3", "style": "disabled" },
+             { "id": "wrongfulact2", "style": "disabled" },
+             { "id": "wrongfulact", "style": "disabled" }],
+      "RPS": [{ "id": "ftdiv1", "style": "required" },
+             { "id": "addFactors", "style": "required" },
+             { "id": "spInjTypeCode", "style": "required" },
+             { "id": "lossDescription", "style": "required" },
+             { "id": "lossLocation", "style": "required" },
+             { "id": "litStatus1Label", "style": "required" },
+             { "id": "ReserveStatus1Label", "style": "required" },
+             { "id": "fcdiv2", "style": "disabled" },
+             { "id": "fcdiv3", "style": "disabled" },
+             { "id": "wrongfulact2", "style": "disabled" },
+             { "id": "wrongfulact", "style": "disabled" }],
+      "RPH": [{ "id": "ftdiv1", "style": "required" },
+             { "id": "wrongfulact", "style": "required" },
+             { "id": "lossDescription", "style": "required" },
+             { "id": "fcdiv2", "style": "optional" },
+             { "id": "fcdiv3", "style": "optional" },
+             { "id": "wrongfulact2", "style": "optional" },
+             { "id": "litStatus1Label", "style": "required" },
+             { "id": "ReserveStatus1Label", "style": "required" },
+             { "id": "addFactors", "style": "disabled" },
+             { "id": "spInjTypeCode", "style": "disabled" },
+             { "id": "lossLocation", "style": "disabled" }]
+    };
+
+    return lobSelectionRules;
+}
+
+function ToggleSection(el) {
+    $(el).children('.stat').toggle();
+    $(el).parent().children('div').toggle();
+    $('#AGY_LIT_ENTRY').toggle();
+}
+
+function getObjects(obj, key, val) {
+    var objects = [];
+    for (var i in obj) {
+        if (!obj.hasOwnProperty(i)) continue;
+        if (typeof obj[i] == 'object') {
+            objects = objects.concat(CustomScript.getObjects(obj[i], key, val));
+        } else
+        //if key matches and value matches or if key matches and value is not passed
+        //(eliminating the case where key matches but passed value does not)
+        if (i == key &amp;&amp; obj[i] == val || i == key &amp;&amp; val == '') { //
+            objects.push(obj);
+        } else if (obj[i] == val &amp;&amp; key == ''){
+            //only add if the object is not already in the array
+            if (objects.lastIndexOf(obj) == -1){
+                objects.push(obj);
+            }
+        }
+    }
+    return objects;
+}
+
+function MarkAsSelected(control, Cov_Trigger, PolicyID, egPDC_ID, Product, Endorsements) {
+  try {
+          var policyId=$(control).attr('policyv');
+
+          Global.ShowProgress();
+          if(policyId!='' &amp;&amp; control.checked==false)
+          {
+               var SyncRespComp = $.ajax({
+                  type: "GET",
+                  url: 'claims_modify2.max?AJAX_ACTION=UncheckPolicy&amp;CCD_ID=70433&amp;PD_ID='+ policyId + '&amp;t=' + Date.now(),
+                  async: false
+                }).responseText;
+
+                //Parse the response into XML
+                if (window.DOMParser)
+                {
+                   parser=new DOMParser();
+                   xmlDocComp=parser.parseFromString(SyncRespComp, "text/xml");
+                }
+                else
+                {
+                   // Internet Explorer
+                   xmlDocComp=new ActiveXObject("Microsoft.XMLDOM");
+                   xmlDocComp.async=false;
+                   xmlDocComp.loadXML(SyncRespComp);
+                }
+
+                //Get JSON from the response
+                var respComp = JSON.parse(xmlDocComp.getElementsByTagName("html")[0].childNodes[0].nodeValue);
+
+                if(respComp.CoverageCount &gt; 0)
+                {
+                    jAlert('This claim is associated with a coverage already. Please de-select coverage(s) before making changes to policy.');
+                    $(control).attr('checked',true);
+                }
+          }
+
+          $(this).is(':checked') ? $(control).parent().parent().find('td.PolInclude').text('Selected') : $(control).parent().parent().find('td.PolInclude').text('');
+          CustomScript.pollistclick(Cov_Trigger, PolicyID, egPDC_ID, Product, Endorsements, control);
+          Global.HideProgress();
+     }
+  catch(err)
+  {
+     Global.HideProgress();
+  }
+}
+
+
+</pre>
+    </div>
+    <div class="component StaticContainer borderless" style="height: 75px; position: relative;" ref="StaticContainer">
+        <h3 class="handle" style="visibility: hidden;"></h3>
+        
+        <div class="component EditorSubmitButton" style="left: 785px; top: -5px; width: 60px; height: 30px;" ref="EditorSubmitButton" cli-cond="" definition="if(confirm(&quot;All unsaved changes will be lost. Are you sure you want to exit?&quot;)){Communication.SerialRequest($(&quot;#rightColumn&quot;),false,this);Communication.LinkRequest('account_information.max?Account_id=001U0000009BDp9IAG&amp;AccountType=Institution');} else {return;}" function="CLICK" mp-help="">
+            <input name="cancel" tabindex="0" title="Please click here to cancel this action and return to the main menu." id="cancel" style="width: 50px; height: 20px;" value="Cancel" defaultbutton="false" class="" type="button">
+        </div>
+        <div class="component EditorSubmitButton" style="left: 630px; top: -5px; width: 53px; height: 30px;" ref="EditorSubmitButton" cli-cond="" definition="if(confirm(&quot;Are you sure you want to save?&quot;)){CustomScript.savePolicyInformation(this, 'save');} else {return;}" function="CLICK" mp-help="">
+            <input name="save" tabindex="0" title="Please click here to save this claim." id="save" style="width: 43px; height: 20px;" value="Save" valuelessattrs="" defaultbutton="false" causevalidation="true" class="" type="button">
+        </div>
+        <div class="component EditorSubmitButton" style="left: 690px; top: -5px; width: 100px; height: 30px;" ref="EditorSubmitButton" cli-cond="" definition="if(confirm(&quot;Are you sure you want to save?&quot;)){CustomScript.savePolicyInformation(this, 'exit');} else {return;}" function="CLICK" mp-help="">
+            <input name="saveandexit" tabindex="0" title="Please click here to save and exit this claim." id="saveandexit" style="width: 90px; height: 20px;" value="Save and Exit" valuelessattrs="" defaultbutton="false" causevalidation="true" class="" type="button">
+        </div>
+        
+    </div>
+    <div style="clear: both;"></div>
+</div>
+<div id="FooterSeparator"></div>
+]]></html>
+</stingray>

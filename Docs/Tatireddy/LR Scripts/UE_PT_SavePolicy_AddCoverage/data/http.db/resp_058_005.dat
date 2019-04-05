@@ -1,0 +1,331 @@
+
+ZP4Tools = new function() {
+  
+  var InstallZP4 = function (options)
+  {
+  var AddressCtrlId = null;
+  var CityCtrlId = null;
+  var StateCtrlId = null; 
+  var ZipCtrlId = null; 
+  var Zip4CtrlId = null;
+  var CountyCtrlId = null;
+  var CountyCallback = null;
+  // last JSON response!
+  var lastResp = null;
+  // usr selection
+  var UserAddr = null;
+  var UserCity = null;
+  var UserState = null;
+  var UserZip = null;
+  var UserCounty = null;
+  var NeedReCollect = false;
+  var Zip5Only = false;
+  var ShowIfNotFound = false;
+
+  var IconId = null;
+  var IconImg = null;
+  
+  // should focus return to the ZIP?
+  var returnFocusToZip = true;
+
+  var canValidateZp4 = function (Addr, City, State, Zip)
+  {
+    // must always have an address?
+    if ((!Addr)||(Addr=='')) return false;
+    // can validate if have anything of these
+    return ((City!='')||(State!='')||(Zip!=''));
+  }
+
+  var SetControlText = function (name, text, isstate)
+  {
+    if (!name) return;
+    var ctrl=$('#'+name);
+    if ((!ctrl)||(ctrl.length==0)) return;
+    if (ctrl[0].tagName=='SELECT') {
+      var lowtext=text.toLowerCase();
+      var options=ctrl[0].options;
+      for (var i=0; i<options.length; i++)  {
+        if ((options[i].text.toLowerCase()==lowtext)||(options[i].value.toLowerCase()==lowtext)) {
+          ctrl.val(options[i].value);
+          return;
+        } 
+        if (isstate===true)  {
+          if (options[i].text.toLowerCase().indexOf(lowtext)==0) {
+            ctrl.val(options[i].value);
+            return;
+          }
+        }
+      }
+  
+    } 
+    else ctrl.val(text);
+  }
+
+
+  var GetControlText = function (id) 
+  {
+    if (!id) return '';
+    var ctrl=$('#'+id);
+    if ((!ctrl)||(ctrl.length==0)) return '';
+    if (ctrl[0].tagName=='SELECT') {
+      var Sel = ctrl[0].selectedIndex;
+      if (Sel>=0)
+        return ctrl[0].options[Sel].text
+        else return '';
+    } else
+      return ctrl.val();  
+  }
+
+  var GetZIPText = function ()
+  {
+    if (typeof Zip4CtrlId=='string') // has control assigned for ZIP4
+      return GetControlText(ZipCtrlId)+'-'+GetControlText(Zip4CtrlId);
+    else 
+      return GetControlText(ZipCtrlId);
+  
+  }
+
+  var StoreUserSel = function()
+  {
+    try {
+      UserAddr   = GetControlText(AddressCtrlId);
+      UserCity   = GetControlText(CityCtrlId);
+      UserState  = GetControlText(StateCtrlId);
+      UserZip    = GetZIPText();
+      UserCounty = GetControlText(CountyCtrlId);
+
+
+    }catch(err) { alert(err) } 
+  }
+  var ZipValue = function (zip)
+  {
+    try {
+      if (Zip5Only) return zip.substr(0, 5)
+      else return zip;
+    } catch(err) {
+      return '';
+    }
+  }
+  var Zip4Value = function(zip)
+  {
+    try {
+      if (Zip5Only) return zip.substr(6, 4)
+      else return '';
+    } catch(err) {
+      return ''; 
+    }
+  }
+  
+  var SelectAddress = function(index, unfocuszip) {
+    var cnt = null;
+    if (index>=0) {
+      SetControlText(AddressCtrlId, lastResp.Addr[index].A);
+      SetControlText(CityCtrlId, lastResp.Addr[index].C);
+      SetControlText(StateCtrlId, lastResp.Addr[index].S, true);
+      SetControlText(ZipCtrlId, ZipValue(lastResp.Addr[index].Z));
+      SetControlText(Zip4CtrlId, Zip4Value(lastResp.Addr[index].Z));
+      cnt=lastResp.Addr[index].CN;
+      ShowHideIcon(false);
+    } else {
+      SetControlText(AddressCtrlId, UserAddr);
+      SetControlText(CityCtrlId, UserCity);
+      SetControlText(StateCtrlId, UserState, true);
+      SetControlText(ZipCtrlId, ZipValue(UserZip));
+      SetControlText(Zip4CtrlId, Zip4Value(UserZip));
+      cnt=UserCounty;
+    }
+    if (!unfocuszip) { returnFocusToZip=true; }
+    else returnFocusToZip=false;
+    
+    if (CountyCallback) {
+      var url=CountyCallback();
+      Communication.CustomRequest(url, 
+        function(opts) {
+           $('#'+CountyCtrlId).html(opts);
+           SetControlText(CountyCtrlId, cnt);
+           $('#'+CountyCtrlId).change();
+         }
+       );
+    } else {
+      SetControlText(CountyCtrlId, cnt);
+    }
+  }
+ 
+  var ForceValidation = function()
+  {
+     StoreUserSel();
+     SelectAddress(0);
+     NeedReCollect=false;
+  }
+
+  var suggestCell = function (txt, idx) { return '<td style ="text-align:left"><a style ="text-align:left" class="suggest" idx="'+idx+'">'+txt+'</a></td>' }
+  var UpdateTable = function()
+  {     
+     var h='';
+     for (var i=0; i<lastResp.SugCnt; i++) {
+       h+='<tr>'
+             +suggestCell(lastResp.Addr[i].A, i)
+             +suggestCell(lastResp.Addr[i].C, i)
+             +suggestCell(lastResp.Addr[i].S, i)
+             +suggestCell(lastResp.Addr[i].Z, i)
+             +suggestCell(lastResp.Addr[i].CN, i)
+           +'</tr>';
+     }
+     if ((UserAddr)&&(UserAddr!='')) 
+       h+='<tr><td colspan=5>You entered:</td></tr>'
+         +'<tr>'
+         +suggestCell(UserAddr, -1)
+         +suggestCell(UserCity, -1)  
+         +suggestCell(UserState , -1)
+         +suggestCell(UserZip , -1)  
+         +suggestCell(UserCounty, -1)+'</tr>';
+     return '<table class="zp4_suggest_table" style="width:100%">'+
+            '<thead><tr><td>Address</td><td>City</td><td>State</td><td>ZIP+4</td><td>County</td></tr></thread>'
+            +h
+           +'</table>';
+  }
+
+  var ShowHideIcon = function (doshow, found)
+  {
+    if (doshow) {
+      var ref='ZP4';
+      if (found===false) ref='Unk.Addr';
+      $('#'+IconId).hide();
+      if ((IconImg)&&(IconImg!='')) {
+        ref='<img class="zp4_suggest_icon" src="'+IconImg+'">'
+      } 
+
+      $('#'+IconId).html('<a class="zp4_suggest_ref">'+ref+'</a>');     
+      $('#'+IconId).show('slow'); // html('ZP4')
+    } else { 
+      $('#'+IconId).hide('slow');
+    }
+  } 
+  
+  var ShowDialog = function ()
+  {
+    var html = '';
+    html += '<p>Please select one of the following addresses</p>';
+    html += '<div class="suggestions"></div>';
+    html += UpdateTable();
+
+    var $dialog = $('<div/>').addClass('address-suggestion-dialog').html(html);
+    
+    $dialog.dialog({
+      title: 'Address Suggestions',
+      autoOpen: true,
+      width: 420,
+      resizable: false,
+      modal: true
+    });
+    $('.suggest').click( function(){ 
+       SelectAddress($(this).attr('idx')); 
+       $dialog.dialog('destroy');  
+       if (returnFocusToZip) { $('#'+ZipCtrlId).focus() }
+    } );
+  }
+
+  var IconClick = function()
+  {
+     if (NeedReCollect) StoreUserSel();
+     ShowDialog();
+  }
+  
+  var SelectZP4 = function ()
+  {
+    var Address_IN='';
+    var City_IN='';
+    var State_IN= '';
+    var Zip_IN='';
+    try {                               
+      Address_IN=GetControlText(AddressCtrlId);
+      City_IN=GetControlText(CityCtrlId);
+      State_IN=GetControlText(StateCtrlId);
+      Zip_IN=GetControlText(ZipCtrlId);
+    } catch(err) {
+      alert(err);
+    }
+
+    //todo: check if state!='' then request counties!  
+    if (!canValidateZp4(Address_IN, City_IN, State_IN, Zip_IN )) { return; }
+  
+    var reqs = 'ZP4Sugestion.max'
+           +'?AJAX_ACTION=GetZP4Ex'
+           +'&Address_IN=' + Address_IN 
+           +'&City_IN=' + City_IN 
+           +'&State_IN=' + State_IN
+           +'&ZIP_IN=' + Zip_IN;
+
+   Communication.CustomRequest(reqs, 
+     function(AjaxResp)
+     {
+       lastResp=JSON.parse(AjaxResp);
+       if (lastResp.Valid==1) {
+         ForceValidation();
+         ShowHideIcon(true);
+       } else if (lastResp.SugCnt>0) {
+         ShowHideIcon(true);
+         NeedReCollect=true;
+       } else
+         if (ShowIfNotFound) ShowHideIcon(true, false);
+         else ShowHideIcon(false);
+      }
+    );
+  }
+
+    if (!options) return false;  
+    AddressCtrlId = options.addr;
+    CityCtrlId = options.city;
+    StateCtrlId = options.state;
+    ZipCtrlId = options.zip;
+    Zip4CtrlId = options.zip4;
+    CountyCtrlId = options.county;
+    CountyCallback = options.countyfunc;
+    if (typeof options.zip5only=='boolean') {
+      Zip5Only=options.zip5only;    
+    }
+    if ($('#'+ZipCtrlId).attr('maxlength')==5) {
+      /* enforce if maxlength == 5 */
+      Zip5Only=true;
+    }
+    if (typeof Zip4CtrlId=='string') Zip5Only=true;
+    if (typeof options.shownotfound=='boolean') 
+      ShowIfNotFound=options.shownotfound;
+
+   
+
+    if (!options.icondiv) { 
+      IconId = 'zp4icon';
+      if ($('#zp4icon').length==0) {
+        $('#'+ZipCtrlId).after('<div id=zp4icon></div>');
+      }
+    } else { 
+      IconId = options.icondiv;
+      $('#'+IconId).hide();
+    }
+    IconImg = options.iconimg;
+    $('#'+IconId).click( IconClick );
+    $('#'+IconId).css('cursor','pointer');
+    var ctrlsel = '#'+AddressCtrlId
+             +', #'+CityCtrlId
+             +', #'+StateCtrlId
+             +', #'+ZipCtrlId;
+    $(ctrlsel).each( function(){ this.setAttribute('focusval', $(this).val()); } );
+    $(ctrlsel).focus( function(){ this.setAttribute('focusval', $(this).val()); } )
+    $(ctrlsel).blur(
+      function(){
+        if (this.getAttribute('focusval')==$(this).val()) return;
+        try {
+          // we're passing ZipCtrlID twice... it's a quick fix
+          SelectZP4();
+        } catch(err) {
+          alert('SelectZP4 failed! '+err);
+        }
+      }
+    )
+    return true;
+  }    
+
+  return { InstallZP4: InstallZP4 }
+}
+

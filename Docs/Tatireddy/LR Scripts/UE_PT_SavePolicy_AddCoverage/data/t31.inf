@@ -1,0 +1,17 @@
+[t31]
+FileName1=t31.htm
+URL1=http://ueatworkuat.maxprocessing.com/claims_modify2.max?AJAX_ACTION=SaveSelectedRTR&SelectedRTR=0&t=1466686785199
+Total=4
+RequestHeaderFile=t31_RequestHeader.txt
+RequestBodyFile=t31_RequestBody.txt
+ResponseHeaderFile=t31_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_31.xml
+FileName2=t31_ui-bg_glass_55_fbf9ee_1x400.png
+URL2=http://ueatworkuat.maxprocessing.com/images/ui-bg_glass_55_fbf9ee_1x400.png
+FileName3=t31_ui-bg_glass_75_e6e6e6_1x400.png
+URL3=http://ueatworkuat.maxprocessing.com/images/ui-bg_glass_75_e6e6e6_1x400.png
+FileName4=t31_ui-bg_glass_75_dadada_1x400.png
+URL4=http://ueatworkuat.maxprocessing.com/images/ui-bg_glass_75_dadada_1x400.png
+[ProtocolInfo]
+ProtocolId=QTWeb

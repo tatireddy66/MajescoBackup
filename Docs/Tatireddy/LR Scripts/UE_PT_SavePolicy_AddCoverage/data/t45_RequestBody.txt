@@ -1,0 +1,8 @@
+"id=AD09471A1B1F4A118D56834EED7E7D8950B3CF&sccstmp=0&SubmitAct=CLAIMINFO_COVERAGES&PDC_IDList=2"
+"10838&PolicyIDList=139431&ProductList=LPL&LOB_IDList=PL&EndorsementsList=LPL%2C&CovTriggerList"
+"=CM&Email=&AttachEmailAddress=&cCD_FileType=CLAIM&claimStatus=Open&hSelectedReinsuer=0&closeRe"
+"ason=-1&clReportedBy=MEM&PerOccDate=06%2F01%2F2016&cCD_DateOfLoss=04%2F04%2F2016&cCD_LossRepor"
+"tDate=03%2F24%2F2016&hybrid=No&PolList_length=10&LPD201500068800=PL&PolSelNote=&firstCause=AIR"
+"CRAFT&ReserveStatus1=5&litStatus1=324&reportedToReinsurer=0&WatchListItem=0&cCD_LossDesc1=PT+L"
+"oSS+Description&LossState=GA&claimGroup=CCG_CA&cCD_ClaimAdjuster=881&NoteType=-1&userName=Subr"
+"at+Dash&notesSubject=&notesCategory=Claim%2FFNOL&notesDescription=&noteID=&al_EditFlag="

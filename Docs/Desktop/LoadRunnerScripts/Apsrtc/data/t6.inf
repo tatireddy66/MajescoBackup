@@ -1,0 +1,11 @@
+[t6]
+FileName1=t6.htm
+URL1=http://www.apsrtconline.in/oprs-web/ajax/forward/layout/view.do?ajaxAction=fw&endPlaceId=14911&startPlaceId=22131&isLinkTicket=0&linkPlaceId=0&linkStartPlaceId=1386430615487&linkEndPlaceId=14911&searchType=0&concessionId=1347688949874&serviceCategoryId=1498918074521&serviceId=18991&txtJourneyDate=18/11/2017&txtReturnJourneyDate=&srvcTypeCatgId=&layoutId=&returnLayoutId=&returnDynFareDetails=&forwardDynFareDetails=&X=1510893087563
+Total=1
+RequestHeaderFile=t6_RequestHeader.txt
+RequestBodyFile=t6_RequestBody.txt
+ResponseHeaderFile=t6_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_6.xml
+[ProtocolInfo]
+ProtocolId=QTWeb

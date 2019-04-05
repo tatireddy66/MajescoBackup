@@ -1,0 +1,17 @@
+[t2]
+FileName1=t2.htm
+URL1=http://www.apsrtconline.in/oprs-web/avail/services.do
+Total=4
+RequestHeaderFile=t2_RequestHeader.txt
+RequestBodyFile=t2_RequestBody.txt
+ResponseHeaderFile=t2_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_2.xml
+FileName2=t2_collect.gif
+URL2=https://www.google-analytics.com/collect?v=1&_v=j66&a=761204075&t=pageview&_s=1&dl=http%3A%2F%2Fwww.apsrtconline.in%2Foprs-web%2Favail%2Fservices.do&ul=en-in&de=utf-8&dt=APSRTC%20Official%20Website%20for%20Online%20Bus%20Ticket%20Booking%20-%20APSRTConline.in&sd=24-bit&sr=1366x768&vp=1349x674&je=1&fl=14.0%20r0&_u=AACAAEQ~&jid=&gjid=&cid=712127139.1510893013&tid=UA-21115933-10&_gid=1356801977.1510893013&z=1959183136
+FileName3=t2_arrow-right-n.png
+URL3=http://www.apsrtconline.in/oprs-web/_assets/images/new/arrow-right-n.png
+FileName4=t2_arrow-left-n.png
+URL4=http://www.apsrtconline.in/oprs-web/_assets/images/new/arrow-left-n.png
+[ProtocolInfo]
+ProtocolId=QTWeb

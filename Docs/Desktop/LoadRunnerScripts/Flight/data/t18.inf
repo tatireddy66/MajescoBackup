@@ -1,0 +1,13 @@
+[t18]
+FileName1=t18_gen_204.htm
+URL1=https://www.google.com/gen_204?atyp=i&zx=1544013455014&ogsr=1&ei=jMYHXKvOOsmm_QaAx4TABw&ct=6&cad=i&id=19008564&loc=web&prid=1&ogd=co.in&ogprm=up&ic=4
+Total=2
+ContentType=text/html
+SnapshotXmlFile=snapshot_18.xml
+RequestHeaderFile=t18_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t18_ResponseHeader.txt
+FileName2=t18_rs=ACT90oHX53mT5OapvCjuqfp9QloW4E88tg.html
+URL2=https://www.google.com/xjs/_/js/k=xjs.s.en.i0NvOc_vdcg.O/m=sx,Fkg7bd,HcFEGb,IvlUe,MC8mtf,OF7gzc,RMhBfe,T4BAC,TJw5qb,TbaHGc,Y33vzc,cdos,hsm,iDPoPb,jsa,mvYTse,r,tg8oTe,uz938c,vWNDde,ws9Tlc,xpltpb,yQ43ff,d,csi/am=DIBF2P8B8v8LQAEIXAU2WCCDEsOe/rt=j/d=1/dg=2/rs=ACT90oHX53mT5OapvCjuqfp9QloW4E88tg
+[ProtocolInfo]
+ProtocolId=QTWeb

@@ -1,0 +1,13 @@
+[t9]
+FileName1=t9.htm
+URL1=http://ueatworkuat.maxprocessing.com/IconTray.max?action=workflow&t=1466686619838
+Total=2
+RequestHeaderFile=t9_RequestHeader.txt
+RequestBodyFile=t9_RequestBody.txt
+ResponseHeaderFile=t9_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_9.xml
+FileName2=t9_32px-Crystal_Clear_app_access_red.png
+URL2=http://ueatworkuat.maxprocessing.com/images/32px-Crystal_Clear_app_access_red.png
+[ProtocolInfo]
+ProtocolId=QTWeb

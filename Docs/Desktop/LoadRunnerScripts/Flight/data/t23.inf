@@ -1,0 +1,15 @@
+[t23]
+FileName1=t23_ui.htm
+URL1=https://adservice.google.com/adsid/google/ui
+Total=3
+ContentType=text/html
+SnapshotXmlFile=snapshot_23.xml
+RequestHeaderFile=t23_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t23_ResponseHeader.txt
+FileName2=t23_m=Uuupec.html
+URL2=https://www.google.com/xjs/_/js/k=xjs.s.en.tPCw7UpEX34.O/am=DIBF2P8B8v8LQAEIXAU2WCCDEsOe/rt=j/d=1/exm=sx,Fkg7bd,HcFEGb,IvlUe,MC8mtf,OF7gzc,RMhBfe,T4BAC,TJw5qb,TbaHGc,Y33vzc,cdos,hsm,iDPoPb,jsa,mvYTse,r,tg8oTe,uz938c,vWNDde,ws9Tlc,xpltpb,yQ43ff,d,csi,sb_wiz,aa,abd,aspn,async,bgd,dvl,foot,ipv6,lu,m,mu,sf,sonic,spch,tl,vs,attl,adinfo,dpc,apmf,kae,exdc,xz7cCd,ZyRBae,qik19b,aam1T,zUPIy,sdJMUb,xDsbae,NMjSod,UW7JT,fEVMic,WgDvvc,TxZWcc,NBZ7u,BlFnV,r36a9c,xj7LNb/ed=1/dg=2/rs=ACT90oGNct8mdx_1dUEHPJNcNnhtok7GAA/m=Uuupec?xjs=s2
+FileName3=t23_px.gif
+URL3=https://www.google.com/images/phd/px.gif
+[ProtocolInfo]
+ProtocolId=QTWeb

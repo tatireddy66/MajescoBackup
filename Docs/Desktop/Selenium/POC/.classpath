@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/apache-mime4j-0.6.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/bsh-1.3.0.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/cglib-nodep-2.1_3.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/commons-beanutils-1.8.0.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/commons-codec-1.9.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/commons-digester-2.1.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/commons-exec-1.1.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/commons-io-2.4.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/commons-jxpath-1.3.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/commons-lang-2.6.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/commons-lang3-3.3.2.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/commons-logging-1.1.3.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/cssparser-0.9.14.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/engine-ie.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/flash-selenium.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/flex-ui-selenium-0.1.1.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/gson-2.3.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/guava-18.0.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/hamcrest-core-1.3.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/hamcrest-library-1.3.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/htmlunit-2.15.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/htmlunit-core-js-2.15.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/httpclient-4.3.4.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/httpcore-4.3.2.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/httpmime-4.3.4.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/ini4j-0.5.2.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/java-rt-jar-stubs-1.5.0.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/jcommander-1.29.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/jetty-websocket-8.1.8.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/jna-3.4.0.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/jna-platform-3.4.0.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/json-20080701.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/junit-dep-4.11.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/jxbrowser-2.8.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/nekohtml-1.9.21.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/netty-3.5.7.Final.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/ojdbc14.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/operadriver-1.5.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/phantomjsdriver-1.1.0.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/poi-3.5-FINAL.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/poi-3.5-FINAL-sources.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/protobuf-java-2.4.1.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/sac-1.3.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/selenium-java-2.44.0.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/selenium-java-2.44.0-srcs.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/selenium-safari-driver-2.44.0.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/serializer-2.7.1.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/sikuli-script.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/slf4j-api.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/slf4j-simple-1.6.2.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/sqljdbc4.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/testng-6.8.5.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/watij.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/webbit-0.4.8-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/webspec.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/winpack-3.7.1.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/xalan-2.7.1.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/xercesImpl-2.11.0.jar"/>
+	<classpathentry kind="lib" path="D:/Selenium/POC/lib/xml-apis-1.4.01.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/NeoLoad 5.2/lib/commons-io-2.4.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/NeoLoad 5.2/lib/commons-lang3-3.2.1.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/NeoLoad 5.2/lib/gson-2.2.2.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/NeoLoad 5.2/lib/guava-18.0.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/NeoLoad 5.2/lib/javax.ws.rs-api-2.0.1.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/NeoLoad 5.2/lib/olingo-odata2-api-2.0.5.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/NeoLoad 5.2/lib/olingo-odata2-core-2.0.5.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/NeoLoad 5.2/api/Data Exchange API Client/Java/neotys-rest-api-dataexchange-client-1.0.3.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/NeoLoad 5.2/api/Data Exchange API Client/Java/neotys-rest-api-dataexchange-client-olingo-1.0.3.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/NeoLoad 5.2/api/Common/Java/neotys-rest-api-client-olingo-1.0.2.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/NeoLoad 5.2/api/Common/Java/neotys-rest-api-common-1.0.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/tatire661841.MAJESCO/Downloads/neotys-selenium-proxy-1.2.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,154 @@
+﻿
+
+$(document).ready(function () {
+    // Fix for chrome
+    var is_chrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;    
+    if (is_chrome && typeof (_spBodyOnLoadWrapper) != 'undefined') {        
+        _spBodyOnLoadWrapper();
+    }
+
+    var json = jQuery.parseJSON($(".navigationjson").val());
+    $(".ClientNavigationCatalogTemplate").html(
+		$("#clientNavigationCatalogTemplate").render(json)
+	);
+
+    $('.corpratenavigation-right-selector').each(function (i, obj) {
+        IsCorpSelected($(this).attr("childcontainerhref"), $(this));
+    });
+    $(".navigation-corporatesite-listitem").click(function () {
+        var url = $(this).attr('link');
+        if (url.substr(0, 4) == "http") {
+            window.open(url); //open external urls in a new window
+        } else {
+            window.location = url;
+        }
+    });
+    //grab all the anchor tag with rel set to shareit
+    $('a[rel=shareit], #shareit-box').mouseenter(function () {
+        //get the height, top and calculate the left value for the sharebox  
+        var height = $(this).height();
+        var top = $(this).position().top;
+        top = top + 10; //Lindy changes to move down, to be below the ShareThis wording
+
+        //get the left and find the center value         
+        var left = $(this).position().left + ($(this).width() / 2) - ($('#shareit-box').width() / 2);
+        left = left - 17; //Lindy changes to move to the left, so the image will not go outside the border.
+
+        //grab the href value and explode the bar symbol to grab the url and title         
+        //the content should be in this format url|title         
+        var value = $(this).attr('href').split('|');
+
+        //assign the value to variables and encode it to url friendly         
+        //var field = value[0];
+        var field = window.location.href;
+
+        var url = window.location.href;
+        var encodedurl = encodeURIComponent(url);
+
+        var title = document.title;
+        var encodedtitle = encodeURIComponent(title);
+
+
+        //assign the height for the header, so that the link is cover         
+        $('#shareit-header').height(height);
+
+        //display the box         
+        $('#shareit-box').show();
+
+        //set the position, the box should appear under the link and centered         
+        $('#shareit-box').css({ 'top': top, 'left': left });
+
+        //assign the url to the textfield         
+        $('#shareit-field').val(field);
+
+        //make the bookmark media open in new tab/window         
+        $('a.shareit-sm').attr('target', '_blank');
+
+        //Setup the bookmark media url and title        
+        $('a[rel=shareit-mail]').attr('href', 'mailto:?subject=' + encodedtitle + '&body=' + window.location);
+        $('a[rel=shareit-twitter]').attr('href', 'http://twitter.com/intent/tweet?url=' + encodedurl + '&text=' + encodedtitle);
+        $('a[rel=shareit-facebook]').attr('href', 'http://www.facebook.com/sharer.php?u=' + encodedurl + '&t=' + encodedtitle);
+
+    });
+
+    //onmouse out hide the shareit box     
+    $('#shareit-box').mouseleave(function () {
+        $('#shareit-field').val('');
+        $(this).hide();
+    });
+
+    //hightlight the textfield on click event     
+    $('#shareit-field').click(function () {
+        $(this).select();
+    });
+
+
+    ExternalLinks();
+});
+
+
+function ExternalLinks() {
+    $('a').each(
+        function () {
+            re = /.*\.(pdf|doc|xls|ppt|vsd|pub|mpp|jpg|tif|bmp|gif|swf)/i;
+            if (this.href.match(re)) {
+                $(this).attr('target', '_blank');
+            }
+        });
+
+    $('a[href^="http"]').each(
+	    function () {
+	        if (this.href.indexOf(location.hostname) == -1) {
+	            $(this).attr('target', '_blank');
+	        }
+	    });
+}
+function GetTarget(href) {
+    if (href.substr(0, 1) == "/") {
+        return "";
+    } else if (href.indexOf(location.hostname) == -1) {
+        return "target=_blank";
+    } else {
+        return "";
+    }
+}
+
+function IsCorpSelected(urlAttr, element) {
+    var siteName = $(".navigationsitename").val();
+    if (siteName.length == 0)//Root Site Collection
+    {
+        if (urlAttr == "/") {
+            element.addClass("navigation-corporateright-selecteditem");
+        }
+    }
+    else {
+        if (urlAttr.indexOf("/" + siteName) === 0) {
+            element.addClass("navigation-corporateright-selecteditem");
+        }
+    }
+
+}
+function RemoveSpaces(nameWithSpaces) {
+    var regex = new RegExp(" ", "g");
+    return nameWithSpaces.replace(regex, "");
+}
+function createCookie(name, value, days) {
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        var expires = "; expires=" + date.toGMTString();
+    }
+    else var expires = "";
+    document.cookie = name + "=" + value + expires + "; path=/";
+}
+
+function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+}

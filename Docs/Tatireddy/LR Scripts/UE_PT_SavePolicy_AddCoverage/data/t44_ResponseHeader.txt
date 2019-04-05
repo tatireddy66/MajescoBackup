@@ -1,0 +1,12 @@
+HTTP/1.1 200 OK
+Server: Maximum Processing Stingray
+Date: Thu, 23 Jun 2016 09:00:48
+X-Powered-By: Stingray
+Content-Type: text/xml
+Expires: Fri, 24 Jun 2016 09:00:48 GMT
+Server-Version: 6.7.1.103
+Copyright: &copy; 2016 Maximum Processing Inc. All Rights Reserved.
+Content-Length: 260
+Age: 14403
+Via: 1.1 ind-mhp2lfp001
+

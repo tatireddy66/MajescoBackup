@@ -1,0 +1,19 @@
+HTTP/1.1 200 OK
+Content-Type: text/html; charset=UTF-8
+Date: Wed, 05 Dec 2018 12:40:05 GMT
+Expires: -1
+Cache-Control: private, max-age=0
+P3P: CP="This is not a P3P policy! See g.co/p3phelp for more info."
+Content-Encoding: gzip
+Server: gws
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: 1P_JAR=2018-12-05-12; expires=Fri, 04-Jan-2019 12:40:05 GMT; path=/; domain=.google.com
+Set-Cookie: CGIC=IgMqLyo; expires=Thu, 06-Jun-2019 03:34:41 GMT; path=/complete/search; domain=.google.com; HttpOnly
+Set-Cookie: CGIC=IgMqLyo; expires=Thu, 06-Jun-2019 03:34:41 GMT; path=/search; domain=.google.com; HttpOnly
+Set-Cookie: NID=148=BCEmxtN1J89wtVxgOlONmuvOmnmUGkWwp-i3xJ02c5IANVre4ZidzgrlUlkMCkfNYX2pHvwOxZqad5gmJP9OHVoBNTIkQTZ_6QKmbixHKHP5py3KZaUagSvMKWqwvlr5gHHG7sHvhZZ7IZV_1fWj1Ly3G8PXzjcBShDDcQrAHjE; expires=Thu, 06-Jun-2019 12:40:05 GMT; path=/; domain=.google.com; HttpOnly
+Alt-Svc: quic=":443"; ma=2592000; v="44,43,39,35"
+Age: 1
+Connection: close
+Via: HTTPS/1.1 localhost.localdomain
+

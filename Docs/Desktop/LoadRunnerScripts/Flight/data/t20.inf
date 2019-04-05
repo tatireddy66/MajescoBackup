@@ -1,0 +1,15 @@
+[t20]
+FileName1=t20.htm
+URL1=https://www.google.com/gen_204?atyp=csi&ei=jMYHXJWIOaq7ggf-84HYDQ&s=web&t=all&imn=2&adh=tv.431,t.431&ima=1&ime=1&imeb=0&imeo=0&wh=667&scp=0&fld=1669&mem=ujhs.16,tjhs.26,jhsl.1620&sys=hc.4&rt=aft.1691,dcl.972,iml.1693,ol.3878,prt.573,xjs.3922,xjsee.3922,xjses.3822,xjsls.582,sct.142,wsrt.1182,cst.0,dnst.0,rdxt.150,rqst.1972,rspt.1207,rqstt.153,unt.150,cstt.150,dit.2155&zx=1544013457680
+Total=3
+RequestHeaderFile=t20_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t20_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_20.xml
+FileName2=t20_m=sb_wiz,aa,abd,aspn,async,bgd,dvl,foot,ipv6,lu,m,mu,sf,sonic,spch,tl,vs,attl,adinfo,dpc,apmf,kae,exdc,xz7cCd,ZyRBae,qik19b,aam1T,zUPIy,sdJMUb,xDsbae,NMjSod,UW7JT,fEVMic,WgDvvc,TxZWcc,NBZ7u,BlFnV.html
+URL2=https://www.google.com/xjs/_/js/k=xjs.s.en.tPCw7UpEX34.O/am=DIBF2P8B8v8LQAEIXAU2WCCDEsOe/rt=j/d=1/exm=sx,Fkg7bd,HcFEGb,IvlUe,MC8mtf,OF7gzc,RMhBfe,T4BAC,TJw5qb,TbaHGc,Y33vzc,cdos,hsm,iDPoPb,jsa,mvYTse,r,tg8oTe,uz938c,vWNDde,ws9Tlc,xpltpb,yQ43ff,d,csi/ed=1/dg=2/rs=ACT90oGNct8mdx_1dUEHPJNcNnhtok7GAA/m=sb_wiz,aa,abd,aspn,async,bgd,dvl,foot,ipv6,lu,m,mu,sf,sonic,spch,tl,vs,attl,adinfo,dpc,apmf,kae,exdc,xz7cCd,ZyRBae,qik19b,aam1T,zUPIy,sdJMUb,xDsbae,NMjSod,UW7JT,fEVMic,WgDvvc,TxZWcc,NBZ7u,BlFnV?xjs=s1
+FileName3=t20_favicon.ico
+URL3=https://www.google.com/favicon.ico
+[ProtocolInfo]
+ProtocolId=QTWeb

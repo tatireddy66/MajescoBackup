@@ -1,0 +1,13 @@
+HTTP/1.1 204 No Content
+Content-Type: text/html; charset=UTF-8
+Strict-Transport-Security: max-age=31536000
+Date: Wed, 05 Dec 2018 12:37:05 GMT
+Server: gws
+Content-Length: 0
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+Alt-Svc: quic=":443"; ma=2592000; v="44,43,39,35"
+Age: 1
+Connection: close
+Via: HTTPS/1.1 localhost.localdomain
+

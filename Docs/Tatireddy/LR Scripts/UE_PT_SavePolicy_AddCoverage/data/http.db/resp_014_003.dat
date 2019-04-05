@@ -1,0 +1,33 @@
+.brokerview{
+  font-family: Arial;
+  font-size: 13px;
+  color: black;
+}
+.brokerview h3, .brokerview .StaticContainer h3, .brokerview .DynamicContainer h3, .brokerview .ValidationContainer h3, .brokerview .ScriptingContainer h3 
+{
+  background-color: #073766;
+  background-image: none;
+  font-family: Arial;
+  font-size: 15px;
+  color: #FFFFFF;
+  height: 16px;
+  padding-left: 5px;
+}
+
+.brokerview table {
+  border: 1px solid #EGECF0;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+.brokerview table th {
+  background-color: #62819E;
+  color: #FFFFFF;
+  text-align: left;
+}
+.brokerview .actionbar {
+  margin-bottom: 5px;
+}
+.brokerview .actionbar a {
+  margin-right: 10px;
+}

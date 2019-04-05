@@ -1,0 +1,83 @@
+[API Trapper      (2a74:2a78)] Recording in 64-bit mode: C:\PROGRA~1\INTERN~1\iexplore.exe
+[API Trapper      (2b84:2b88)] Recording in 32-bit mode: C:\Program Files (x86)\Internet Explorer\IEXPLORE.EXE
+[Network Analyzer (2b84:1d90)] ------------------------------------------------------------------------------------------
+[Network Analyzer (2b84:1d90)] Load Network Traffic Analyzers:
+[Network Analyzer (2b84:1d90)]     Analyzer Module: WPLUS (value=)
+[Network Analyzer (2b84:1d90)]     Analyzer Module: WebBase (value=GetHttpProtocolAnalyzer:api_http_filter.dll)
+[Network Analyzer (2b84:1d90)]     + Network Analyzer: api_http_filter.dll @ GetHttpProtocolAnalyzer Loaded!
+[Network Analyzer (2b84:1d90)]     + Interception Auditors: WinInetWplusInterceptionAudit:api_http_filter.dll
+[Network Analyzer (2b84:1d90)]     Analyzer Module: QTWeb (value=GetWebSocketProtocolAnalyzer:WebSocketAnalyzer.dll)
+[Network Analyzer (2b84:1d90)]     + Network Analyzer: WebSocketAnalyzer.dll @ GetWebSocketProtocolAnalyzer Loaded!
+[Network Analyzer (2b84:1d90)]     Analyzer Module: WS_SOAP (value=)
+[Network Analyzer (2b84:1d90)]     Analyzer Module: local_server (value=)
+[Network Analyzer (2b84:1d90)] ------------------------------------------------------------------------------------------
+[Network Analyzer (2b84:2120)] Address lookup for IND-ARLIDW70093 = 172.17.41.109
+[Network Analyzer (2b84:1d90)] Address lookup for IND-ARLIDW70093 = 172.17.41.109
+[Network Analyzer (2b84:1d90)] Request Connection: Remote Server @ 192.168.250.41:8080   (Service=)  (Sid=  1)  PROXIED!
+[Web Request      (2b84:2120)] "GET http://www.webservicex.com/CurrencyConvertor.asmx?wsdl"   
+[Network Analyzer (2b84:2120)]   (Sid:  1) Client -> Server @ : 321 bytes (Service=HTTP)
+[Network Analyzer (2b84:2120)]   (Sid:  1) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (2b84:2120)]   (Sid:  1) Server -> Client : 1403 bytes  (Service=HTTP)
+[Network Analyzer (2b84:2120)]   (Sid:  1) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (2b84:2120)]   (Sid:  1) Server -> Client : 4113 bytes  (Service=HTTP)
+[Network Analyzer (2b84:2120)]   (Sid:  1) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (2b84:2120)]   (Sid:  1) Connection Terminated (by Client)
+[Network Analyzer (2b84:26c4)] Address lookup for IND-ARLIDW70093 = 172.17.41.109
+[Network Analyzer (2b84:26c4)] Request Connection: Remote Server @ 192.168.250.41:8080   (Service=)  (Sid=  2)  PROXIED!
+[Web Request      (2b84:2120)] "GET http://www.webservicex.com/favicon.ico"   
+[Network Analyzer (2b84:2120)]   (Sid:  2) Client -> Server @ : 247 bytes (Service=HTTP)
+[Network Analyzer (2a74:2b00)] ------------------------------------------------------------------------------------------
+[Network Analyzer (2a74:2b00)] Load Network Traffic Analyzers:
+[Network Analyzer (2a74:2b00)]     Analyzer Module: WPLUS (value=)
+[Network Analyzer (2a74:2b00)]     Analyzer Module: WebBase (value=GetHttpProtocolAnalyzer:api_http_filter_x64.dll)
+[Network Analyzer (2a74:2b00)]     + Network Analyzer: api_http_filter_x64.dll @ GetHttpProtocolAnalyzer Loaded!
+[Network Analyzer (2a74:2b00)]     + Interception Auditors: WinInetWplusInterceptionAudit:api_http_filter_x64.dll
+[Network Analyzer (2a74:2b00)]     Analyzer Module: QTWeb (value=GetWebSocketProtocolAnalyzer:WebSocketAnalyzer_x64.dll)
+[Network Analyzer (2a74:2b00)]     + Network Analyzer: WebSocketAnalyzer_x64.dll @ GetWebSocketProtocolAnalyzer Loaded!
+[Network Analyzer (2a74:2b00)]     Analyzer Module: WS_SOAP (value=)
+[Network Analyzer (2a74:2b00)]     Analyzer Module: local_server (value=)
+[Network Analyzer (2a74:2b00)] ------------------------------------------------------------------------------------------
+[Network Analyzer (2a74:1b60)] Address lookup for IND-ARLIDW70093 = 172.17.41.109
+[Network Analyzer (2b84:2120)]   (Sid:  2) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (2b84:2120)]   (Sid:  2) Server -> Client : 58 bytes  (Service=HTTP)
+[Network Analyzer (2b84:2120)]   (Sid:  2) Connection Terminated (by Client)
+[Network Analyzer (2a74:2b30)] Address lookup for IND-ARLIDW70093 = 172.17.41.109
+[Network Analyzer (2a74:2b00)] Address lookup for IND-ARLIDW70093 = 172.17.41.109
+[Network Analyzer (2a74:2b30)] Request Connection: Remote Server @ 192.168.250.41:8080   (Service=)  (Sid=  1)  PROXIED!
+[Web Request      (2a74:1b60)] "CONNECT www.bing.com:443"   
+[Network Analyzer (2a74:1b60)]   (Sid:  1) Client -> Server @ : 223 bytes (Service=HTTP)
+[Network Analyzer (2a74:2b00)] Request Connection: Remote Server @ 192.168.250.41:8080   (Service=)  (Sid=  2)  PROXIED!
+[Web Request      (2a74:1b60)] "CONNECT www.bing.com:443"   
+[Network Analyzer (2a74:1b60)]   (Sid:  2) Client -> Server @ : 223 bytes (Service=HTTP)
+[Network Analyzer (2a74:1b60)]   (Sid:  1) Server -> Client : 138 bytes 
+[Network Analyzer (2a74:1b60)]   (Sid:  2) Server -> Client : 138 bytes 
+[Network Analyzer (2a74:2050)]   (Sid:  1) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES256-SHA)
+[Network Analyzer (2a74:2050)]   (Sid:  1) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES256-SHA384)
+[Network Analyzer (2a74:17f4)]   (Sid:  2) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES256-SHA)
+[Network Analyzer (2a74:17f4)]   (Sid:  2) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES256-SHA384)
+[Web Request      (2a74:1b60)] "GET /favicon.ico"   
+[Network Analyzer (2a74:1b60)]   (Sid:  1) Client -> Server @ : 455 bytes (SSL)(Service=HTTP)
+[Web Request      (2a74:1b60)] "GET /favicon.ico"   
+[Network Analyzer (2a74:1b60)]   (Sid:  2) Client -> Server @ : 455 bytes (SSL)(Service=HTTP)
+[Network Analyzer (2a74:1b60)]   (Sid:  2) Server -> Client : 261 bytes (SSL) (Service=HTTP)
+[Network Analyzer (2a74:1b60)]   (Sid:  2) Server -> Client : 300 bytes (SSL) (Service=HTTP)
+[Network Analyzer (2a74:1b60)]   (Sid:  1) Server -> Client : 261 bytes (SSL) (Service=HTTP)
+[Network Analyzer (2a74:1b60)]   (Sid:  1) Server -> Client : 300 bytes (SSL) (Service=HTTP)
+[Network Analyzer (2a74:2b24)] Address lookup for IND-ARLIDW70093 = 172.17.41.109
+[Network Analyzer (2a74:2b08)] Address lookup for IND-ARLIDW70093 = 172.17.41.109
+[Network Analyzer (2a74:2b00)] Address lookup for IND-ARLIDW70093 = 172.17.41.109
+[Network Analyzer (2a74:2b24)] Request Connection: Remote Server @ 117.18.232.200:443   (Service=)  (Sid=  3)  PROXIED!
+[Network Analyzer (2a74:2b08)] Request Connection: Remote Server @ 117.18.232.200:443   (Service=)  (Sid=  4)  PROXIED!
+[Network Analyzer (2a74:2b00)] Request Connection: Remote Server @ 117.18.232.200:443   (Service=)  (Sid=  5)  PROXIED!
+[Network Analyzer (2a74: 980)] Address lookup for IND-ARLIDW70093 = 172.17.41.109
+[Network Analyzer (2a74:16bc)] Address lookup for IND-ARLIDW70093 = 172.17.41.109
+[Network Analyzer (2a74: 980)] Request Connection: Remote Server @ 117.18.232.200:443   (Service=)  (Sid=  6)  PROXIED!
+[Network Analyzer (2a74:16bc)] Request Connection: Remote Server @ 117.18.232.200:443   (Service=)  (Sid=  7)  PROXIED!
+[Network Analyzer (2a74:2b20)] Address lookup for IND-ARLIDW70093 = 172.17.41.109
+[Network Analyzer (2a74:2b20)] Request Connection: Remote Server @ 65.55.252.93:443   (Service=)  (Sid=  8)  PROXIED!
+[Network Analyzer (2b84:1d90)] Address lookup for IND-ARLIDW70093 = 172.17.41.109
+[Network Analyzer (2b84:1d90)] Request Connection: Remote Server @ 117.18.232.200:443   (Service=)  (Sid=  3)  PROXIED!
+[Network Analyzer (2a74: 980)] Address lookup for IND-ARLIDW70093 = 172.17.41.109
+[Network Analyzer (2a74:16bc)] Address lookup for IND-ARLIDW70093 = 172.17.41.109
+[Network Analyzer (2a74: 980)] Request Connection: Remote Server @ 204.79.197.200:443   (Service=)  (Sid=  9)  PROXIED!
+[Network Analyzer (2a74:16bc)] Request Connection: Remote Server @ 204.79.197.200:443   (Service=)  (Sid= 10)  PROXIED!

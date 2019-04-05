@@ -1,0 +1,3724 @@
+﻿/*************************************************************************/
+/*Great American Insurance Group Style Sheet - Last Updated   11/15/2011 */
+/*************************************************************************/
+a {
+                color:#3964b2;
+}
+
+a:link {
+                color:#3964b2;
+}
+a:visited{
+                color:#6A94BF;
+}
+.ms-WPBody a:link{
+                color:#3964b2;
+}
+.ms-WPBody a:visited{
+                color:#6A94BF;
+}
+.ms-WPBody{
+
+                font-family:Arial, Helvetica, sans-serif;
+                font-size:12px;
+                color:#465264;
+}
+p img{
+border:0;
+}
+a img{
+border:0;
+}
+
+
+/*.ms-rteImage{
+                margin:0 !Important;
+}
+
+.ms-cui-tt-span{
+                font-size:11px;  
+                font-weight:bold;
+}
+.ms-cui-tt{
+                font-size:11px;  
+                font-weight:bold;
+}
+.ms-cui-cg-t-i {
+                font-size:11px;
+}
+.ms-ToolPaneOuter{
+                z-index:100000;
+}
+/*=================================*/
+/* Nivo Slider Demo
+/* November 2010
+/* By: Gilbert Pellegrom
+/* http://dev7studios.com
+/*=================================*/
+/*====================*/
+/*=== Reset Styles ===*/
+/*====================*/
+
+.theme-default #slider {
+    margin:100px auto 0 auto;
+    margin-top:0px;
+    
+    width:620px; /* Make sure your images are the same size */
+    height:270px !Important; /* Make sure your images are the same size */
+    overflow:hidden;
+}
+.theme-pascal.slider-wrapper,
+.theme-orman.slider-wrapper {
+    margin-top:0px;
+}
+
+/*====================*/
+/*=== Other Styles ===*/
+/*====================*/
+.clear {
+                clear:both;
+}
+/*
+* jQuery Nivo Slider v2.6
+* http://nivo.dev7studios.com
+*
+* Copyright 2011, Gilbert Pellegrom
+* Free to use and abuse under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 
+ * March 2010
+*/
+
+
+/* The Nivo Slider styles */
+.nivoSlider {
+                position:relative;
+}
+.nivoSlider img {
+                position:absolute;
+                top:0px;
+                left:0px;
+}
+/* If an image is wrapped in a link */
+.nivoSlider a.nivo-imageLink {
+                position:absolute;
+                top:0px;
+                left:0px;
+                width:100%;
+                height:100%;
+                border:0;
+                padding:0;
+                margin:0;
+                z-index:6;
+                display:none;
+}
+/* The slices and boxes in the Slider   non ie6 compatible*/
+.nivo-slice {
+                display:block;
+                position:absolute;
+                z-index:5;
+                height:100%;
+                /*display:none; removed by lindy*/
+}
+.nivo-box {
+                display:block;
+                position:absolute;
+                z-index:5;
+}
+/* Caption styles */
+.nivo-caption {
+                position:absolute;
+                left:0px;
+                bottom:0px;
+                background:#000;
+                color:#fff;
+                opacity:0.8; /* Overridden by captionOpacity setting */
+                width:100%;
+                z-index:8;
+}
+.nivo-caption p {
+                padding:5px;
+                margin:0;
+}
+.nivo-caption a {
+                display:inline !important;
+}
+.nivo-html-caption {
+    display:none;
+}
+/* Direction nav styles (e.g. Next & Prev) */
+.nivo-directionNav a {
+                position:absolute;
+                top:45%;
+                z-index:9;
+                cursor:pointer;
+                display:none;
+}
+.nivo-prevNav {
+                left:0px;
+                display:none;
+}
+.nivo-nextNav {
+                right:0px;
+                display:none;
+}
+/* Control nav styles (e.g. 1,2,3...) */
+.nivo-controlNav a {
+                position:relative;
+                z-index:9000;
+                cursor:pointer;
+                display:none; /*removed by lindy*/
+}
+.nivo-controlNav a.active {
+                font-weight:bold;
+                display:none; /*removed by lindy*/
+}
+/*
+Skin Name: Nivo Slider Default Theme
+Skin URI: http://nivo.dev7studios.com
+Skin Type: flexible
+Description: The default skin for the Nivo Slider.
+Version: 1.0
+Author: Gilbert Pellegrom
+Author URI: http://dev7studios.com
+*/
+
+.theme-default .nivoSlider {
+                position:relative;
+                background:#fff url(/Style%20Library/GAIG_CorporateMaster/images/loading.gif) no-repeat 50% 50%;
+  /*  -webkit-box-shadow: 0px 1px 5px 0px #4a4a4a;
+    -moz-box-shadow: 0px 1px 5px 0px #4a4a4a;
+    box-shadow: 0px 1px 5px 0px #4a4a4a;*/
+}
+.theme-default .nivoSlider img {
+                position:absolute;
+                top:0px;
+                left:0px;
+                display:none;
+}
+.theme-default .nivoSlider a {
+                border:0;
+                display:block;
+}
+
+.theme-default .nivo-controlNav {
+                position:absolute;
+                left:50%;
+                bottom:-42px;
+    margin-left:-40px; /* Tweak this to center bullets */
+}
+.theme-default .nivo-controlNav a {
+                display:block;
+                width:22px;
+                height:22px;
+                background:url(/Style%20Library/GAIG_CorporateMaster/images/bullets.png) no-repeat;
+                text-indent:-9999px;
+                border:0;
+                margin-right:3px;
+                float:left;
+                display:none; /*removed by lindy*/
+}
+.theme-default .nivo-controlNav a.active {
+                background-position:0 -22px;
+}
+
+.theme-default .nivo-directionNav a {
+                display:block;
+                width:30px;
+                height:30px;
+                background:url(/Style%20Library/GAIG_CorporateMaster/images/arrows.png) no-repeat;
+                text-indent:-9999px;
+                border:0;
+                display:none; /*removed by lindy*/
+}
+.theme-default a.nivo-nextNav {
+                background-position:-30px 0;
+                right:15px;
+                display:none; /*removed by lindy*/
+}
+.theme-default a.nivo-prevNav {
+                left:15px;
+                display:none; /*removed by lindy*/
+}
+
+.theme-default .nivo-caption {
+    font-family: Helvetica, Arial, sans-serif;
+}
+.theme-default .nivo-caption a {
+    color:#fff;
+    border-bottom:1px dotted #fff;
+}
+.theme-default .nivo-caption a:hover {
+    color:#fff;
+}
+/*END OF SLIDER*/
+
+
+html {
+                                min-height: 100%;
+                                width: 100%;
+                                height: 100%;
+}
+body{ 
+                                text-align: center; /*IE6 fix to allow allow centerWebDesign to work properly*/
+                                                                                                margin:0; 
+                                                                                                background-color:transparent;
+                                background-image:url('/Style%20Library/GAIG_CorporateMaster/images/brushedMetalBg.gif');
+                                background-repeat:repeat;
+                                top:0;
+                                height:auto !important; /* real browsers */
+                                height:100%; /* IE6: treated as min-height*/
+                                min-height:100%; /* real browsers */
+                                height:100%;
+                                width:100%;
+                                font-family:Arial, Helvetica, sans-serif;
+                                color:#465264;
+                                font-size:12px;
+}
+.footerHR {
+                text-align:left; border:0;border-bottom :1px #cccccc solid; width:90%;left:0; position:relative; margin-left:0;
+}
+/*HIDE RIBBON PLACEHOLDER BAR*/
+body #s4-ribbonrow {
+    min-height: 0 !important;
+    height: auto !important;
+    padding-bottom:0;
+    border:0;
+}
+#s4-statusbarcontainer{
+                float:left;
+                clear:both;
+                width:100%;
+                height:100%;
+}
+.ms-cui-tabBody{
+                border:0;             
+}
+#siteWrapper{
+                                text-align:left;
+                                width:980px !important;
+                                margin:0px auto;
+                                background-color:#ffffff;
+}
+#siteShadows{
+                                text-align:center;
+                                overflow:hidden;
+                                height:100%;
+                                min-height:100%;
+                                background-position:50%;
+                                background-image:url('/Style%20Library/GAIG_CorporateMaster/images/shadow_left_and_right_1004x1.gif');
+                                background-repeat:repeat-y;                    
+}
+/*p {
+                font-size:14px;
+                color:#465264;
+}
+div{
+                font-size:14px;
+                color:#465264;
+}*/
+
+#breadcrumbContainer{
+                padding-left:25px;
+                padding-top:2px;
+                padding-bottom:25px;
+                color:#666666;
+                width:955px;
+                font-size:10px;
+                font-weight:bold;
+                clear:both;
+                height:25px;
+                float:left;
+                background-color:#fff;  
+}
+#breadcrumbContainer a{
+                color:#3964b2;
+                font-weight:normal;
+}
+
+/*****************************************************************/
+
+/* Banner Area*/
+
+#brandingStripe{
+                                background-color:#cc0000;
+                                width:100%;                       
+                                height:35px;
+                                text-align:right;
+                                float:left;
+}
+/*Corporate Masthead*/
+#bannerMasthead{
+                width:980px;
+                height:108px;
+                float:left;
+                clear:both;
+}
+#bannerLogo{
+                float:left;
+                width:650px;
+                height:78px;
+                background-image:url('/Style%20Library/GAIG_CorporateMaster/images/logo_545x78.jpg');
+                background-repeat:no-repeat;
+                margin:15px 0px 15px 23px;
+                }
+#logoLink{  
+                display:block;  
+                height:78px;  
+                text-indent:-9999px;  
+                width:170px;
+                position:relative;
+}
+/*Division Masthead*/
+#bannerMastheadDivision{
+                width:980px;
+                height:48px;
+                float:left;
+}
+#bannerLogoDivision{
+                float:left;
+                width:650px;
+                height:10px;
+                background-image:none;
+                background-repeat:no-repeat;
+                margin:15px 0px 15px 23px;}
+
+
+
+/*SEARCH */
+#globalSearch{
+                width:240px;
+                height:25px;
+                font-size:12px;
+                color:#666666;
+                font-style:normal;           
+                float:right;
+                padding-top:13px;
+}
+
+td.ms-sbgo{ 
+                background-color:transparent; 
+                padding-left:3px; 
+                padding-right:3px; 
+                padding-bottom:0px; 
+                padding-top:0px; 
+                border:solid 0px #949494; 
+                } 
+td.ms-sbgo a{ 
+                padding: 0px 0px 0px 0px !important; 
+                margin: 0px 0px 0px 0px !important; 
+} 
+td.ms-sbgo a{ 
+                background-image: url('/Style%20Library/GAIG_CorporateMaster/images/goBtn.jpg'); 
+                background-repeat: no-repeat; 
+                background-position: top left; 
+                display:block;
+    height: 30px; 
+    width: 30px; 
+} 
+td.ms-sbgo a img{ 
+    visibility: hidden; 
+    height: 30px; 
+    width: 30px; 
+}
+.s4-search table{
+width: 212px; 
+margin-right: 21px; 
+} 
+
+.s4-search SELECT.ms-sbscopes{border:1 none !important; background:none !important;  color:#666; font-size:12px; font-style:normal;}
+
+.s4-search input.ms-sbplain{border:1 none !important; background:none !important;  color:#666; font-size:12px; font-style:normal;}
+/*.s4-search input.ms-sbplain{padding-top:3px; width:140px !important;}
+.s4-search SELECT.ms-sbscopes{position:relative; height:16px; margin-top:2px; border-left:1px dotted #666 !important; }
+.customSearchBox{margin-top:5px!important; background:url(../images/search_left.png) no-repeat;  height:16px; padding:2px 2px 4px 9px;}
+.s4-search .ms-sbgo{padding-top:5px;}
+.s4-search .ms-sbgo a{margin-top:5px; background:url(../images/search_btn.png) no-repeat; width:27px; height:22px; display:block; }
+.s4-search .srch-gosearchimg, .s4-search .ms-sbgo span{display:none; }
+.adminBar .ms-sbrow a, .ms-sbcell{margin:0; padding:0;}*/
+/*END SEARCH */
+
+
+
+.helpMenuWrapper{
+                color:#ffffff;
+                padding-right:23px;
+                padding-top:10px;
+                font-size:13px;
+}
+a.helpMenu:link{
+                color:#ffffff;
+}
+a.helpMenu:visited{
+                color:#ffffff;
+                text-decoration:none;
+}
+a.helpMenu:hover{
+                color:#ffffff;
+                text-decoration:underline;
+}
+a.helpMenu:active{
+                color:#ffffff;
+                text-decoration:none;
+}
+
+/* *************************************************************** */
+/* *************************************************************** */
+
+#footerShadow{
+                                background-image:url('/Style%20Library/GAIG_CorporateMaster/images/roundedFooter_1004x20.gif');
+                                background-repeat:no-repeat;
+                                height:20px;
+                                clear:both;
+                                overflow:hidden;
+                                margin-left:-9px;
+                                width:1004px;
+                                position:relative;
+                                }
+#footerShadowIE6{
+                                /*background-image:url('/Style%20Library/GAIG_CorporateMaster/images/roundedFooter_1004x20.gif');
+                                background-repeat:no-repeat;*/
+                                height:3px;
+                                clear:both;
+                                overflow:hidden;
+                                width:980px;
+                                float:left;
+                                background-color:#eaeaea;
+                                }
+#corporateFooter{
+                background-color:#eaeaea;
+                padding:20px;
+                padding-bottom:100;
+                height:100%;
+                min-height:100%;
+                /*height:225px;*/
+                clear:both;
+                float:left;
+                width:940px;
+                display:inline-block;
+                position:relative;
+}
+#corporateFooter a:hover{
+                text-decoration:underline;
+}
+#corporateFooter a{
+                color:#3964b2;
+}
+
+#corporateFooter a:visited{
+                color:#3964b2;
+}
+
+.afgLogos{  /*column 1*/
+                width:120px; 
+                height:210px; 
+                float:left; 
+                padding-right:20px;
+}
+.imageBorder {
+                border-width: 0px;
+}
+#afgDescription{ /*column 2*/
+                                float:left;
+                                padding-bottom:50px;
+                                color:#333333;
+                                width:205px; 
+                                font-size:10px;
+                                font-family:Arial, Helvetica, sans-serif;
+                                height:210px;
+                                text-align:left;
+}
+/* *************************************************************** */
+  
+#ctl00_FooterControl_Label1{
+                font-weight:bold;
+                color:#333;
+                font-size:10px;
+                padding-bottom:3px;
+                display:block;
+}
+#ctl00_FooterControl2_Label1{
+                font-weight:bold;
+                color:#333;
+                font-size:10px;
+                padding-bottom:3px;
+                left:0;
+                display:block;
+}
+#ctl00_FooterControl3_Label1{
+                font-weight:bold;
+                color:#333;
+                font-size:10px;
+                padding-bottom:3px;
+                float:left;
+                width:90%;
+                display:block;
+}
+#ctl00_FooterControl4_Label1{
+                font-weight:bold;
+                color:#333;
+                font-size:10px;
+                padding-bottom:3px;
+}
+
+/*P&C*/
+  .footer-Specialty{ /*column 3*/
+    padding-bottom: 0px;  
+    /*width: 320px;*/ 
+    width: 355px;
+    padding-right: 0px; 
+    display: inline-table; 
+    font-size: 10px; 
+    padding-top: 0px;
+    line-height:16px;
+    float:left;
+    height:210px;
+}
+  .footer-Specialty li{
+  padding-right:20px;
+}
+
+/*P&C*/
+.footer-Subsidiaries{ /*column 4b*/
+    padding-bottom: 0px; 
+    /*width: 275px;*/ 
+    width: 240px; 
+    padding-right: 0px; 
+    display: inline-table; 
+    font-size: 10px;
+    padding-top: 10px;
+    height:50px;
+    line-height:16px;
+    float:right;
+    position:relative;
+    top:0;
+
+
+}
+.footer-Subsidiaries li{
+  padding-right:5px;
+  line-height:16px;
+}
+.footer-Subsidiaries span{
+  width:150px;
+  display:block;
+  font-weight:bold;
+  color:#333;
+}
+
+
+/*A&S*/
+.footer-Operations{ /*column 4a*/
+    padding-bottom: 0px; 
+    width: 240px; 
+    /*width: 230px;*/
+    padding-right: 0px; 
+    display: inline-table; 
+    font-size: 10px;
+    padding-top: 0px;
+    height:50px;
+    line-height:16px;
+    /*float:left;*/
+    float:right;
+    position:relative;
+    top:0;
+}
+/*A&S*/
+.footer-Affiliates{ /*column 4a*/
+    padding-bottom: 0px; 
+    width: 275px;
+    padding-right: 0px; 
+    display: inline-table; 
+    font-size: 10px;
+    padding-top: 2px;
+    height:50px;
+    line-height:16px;
+    float:right;
+    position:relative;
+    top:0;
+}
+.footer-Affiliates li{
+padding-right:35px;
+}
+
+
+.footerURLGroupClass{
+    padding-bottom: 0px; 
+    list-style-type: none; 
+    margin: 0px; 
+    padding-left: 0px; 
+    padding-right: 0px; /*space between wrapped list items*/
+    float: left; 
+    display:block;
+    padding-top: 0px;
+    position:relative;
+    top:0;
+    font-size:10px;
+    /*clear:both;*/
+}
+
+
+
+/* *************************************************************** */
+
+
+#facebookPost{ /*column 4c*/
+                                float:right;
+                                padding-top:10px;
+                                font-size:10px;
+                                font-family:Arial, Helvetica, sans-serif;
+                                width:275px;
+                                height:45px;
+                                text-align:left;
+                                display:block;
+                                clear:right;
+                                position:relative;
+                                text-align:left;
+                                border-top: 1px solid #ccc;
+                                margin-top:15px;
+                                }
+                                
+
+#afgincLink{
+                                clear:left;
+                                height: 46px;
+                                text-align:center;
+                                font-weight:bold;
+                                width: 120px;
+                                font-family:Arial, Helvetica, sans-serif;
+                                font-size:10px;
+                                padding-top:15px;
+}
+#copyrightWrapper{
+                                padding-top:10px;
+                                padding-bottom:15px;
+                                background-color:#e6e6e6;
+                                background-image:url('/Style%20Library/GAIG_CorporateMaster/images/brushedMetalBg.gif');
+                                background-repeat:repeat;
+                                float:left;
+                                color:#333333;
+                                font-family:Arial, Helvetica, sans-serif;
+                                clear:both;
+                                width:1010px;
+                               margin-left:-15px;
+                                position:relative;
+}
+#copyright{
+                                width:480px;
+                                text-align:left;
+                                float:left;
+                                font-size:10px;
+                                margin-left:19px;
+}
+#footerLinks{
+                                width:496px;
+                                text-align:right;
+                                float:right;
+                                font-size:10px;
+                                padding-right:15px;
+}
+#footerLinks a:link{
+                color:#3964b2;
+}
+#footerLinks a:visited{
+                color:#3964b2;
+}
+
+#ConnectWithUsContainer img
+{
+    border:0;
+    padding:0 5px 0 0;
+}
+
+/* *************************************************************** */
+/* END FOOTER */
+/* *************************************************************** */
+
+
+/*****************************************************************/
+
+/*Bug - Title content placeholder cannot be relocated to visibility false panel or an error presents itself on the broswer when saving changes.*/
+.hiddenpanel
+{
+                visibility:hidden;
+}
+
+/*****************************************************************/
+/* Custom Navigation for Public website*/
+
+/* CAREERS | CONTACT US*/
+
+.customNavRight{
+                left:800px;
+                top:0px;
+                width:155px;
+                height:26px;
+                position:relative;
+                padding-right:23px;
+                padding-top:10px;
+                text-align:right;
+                z-index:50;
+}
+.navigation-corporateright-selecteditem{
+                font-size:12px;
+                font-family:Arial, Helvetica, sans-serif;
+                color:#000000;
+                border-bottom:8px #f2f2f2 solid;
+                font-weight:bold;
+}
+.customNavRight a{
+                font-size:12px;
+                font-family:Arial, Helvetica, sans-serif;
+                color:#666666;
+}
+.customNavRight a:visited{
+                font-size:12px;
+                font-family:Arial, Helvetica, sans-serif;
+                color:#666666;
+}
+.customNavRight a:hover{
+                font-size:12px;
+                font-family:Arial, Helvetica, sans-serif;
+                color:#000000;
+                border-bottom:8px #f2f2f2 solid;
+}
+
+/* corporate */
+.navigation-corporatesite-container{      
+                height:110px; /* 110px h  PLUS THIS css SIZES image and description on Corporate Nav*/
+                clear:both;          
+                width:100%;
+                background-color:#F2F2F2;
+                background-image:url('/Style%20Library/GAIG_CorporateMaster/images/CorporateNav_LeftCorner_10x93.gif');
+                background-position:left bottom;
+                background-repeat:no-repeat;
+                z-index:51;
+}
+.navigation-corporatesite-listitem{
+                cursor:pointer;
+}
+.navigation-corporatesite-rightboarder{ 
+                background-image:url('/Style%20Library/GAIG_CorporateMaster/images/CorporateNav_RightCorner_10x93.gif');
+                background-repeat:no-repeat;
+                background-color:#f2f2f2;
+                float:right;
+                margin-top:17px;
+                height:93px;
+                width:10px;
+
+}
+
+.displaynone{    
+                display:none;
+}
+.hiddenpanel
+{
+display:none;
+}
+
+.navigation-corporate-mastercontainer
+{
+    background-color:#ffffff;
+    clear:both;  
+ }
+
+
+.ClientNavigationCatalogTemplate{
+                margin-left:10px;
+                margin-right:10px;
+                width:960px;
+                z-index:20;          
+                top:0;
+                position:relative;
+                margin-top:-30px;
+                height:137px;
+
+}
+
+.navigation-corporate-mastercontainer-corp{
+                height:143px;
+}
+
+/*corporate tabbed nav*/
+.navigation-corporate-container {
+                float:none; 
+                width: 100%; line-height: normal;
+}
+.navigation-corporate-container ul {
+        padding: 0px 10px 0px 0px;  
+                                margin: 0px;  list-style-type: none;
+}
+.navigation-corporate-container li {
+        background: url('/Style%20Library/GAIG_CorporateMaster/images/left.gif') no-repeat left top;
+                                padding: 0 2px 0px 9px; /*gap between corporate tabs*/ 
+                                float: left; 
+                                list-style-type: none;
+                                font-family:"proxima-nova-condensed-1","proxima-nova-condensed-2", "Arial Narrow" !Important;
+                                font-size:16px;
+
+}
+.navigation-corporate-container a {
+        float: left;
+                                display: block; 
+                                padding: 4px 15px 3px 6px;
+                                list-style-type: none;
+                                font-weight: bold; 
+                                background: url('/Style%20Library/GAIG_CorporateMaster/images/right.gif') no-repeat right top; 
+                                COLOR: #333;  text-decoration: none;
+                                font-family:"proxima-nova-condensed-1","proxima-nova-condensed-2", "Arial Narrow" !Important;
+                                font-size:16px;
+
+}
+.navigation-corporate-container a {
+        float: none;
+        font-weight:normal;
+                font-family:"proxima-nova-condensed-1","proxima-nova-condensed-2", "Arial Narrow" !Important;
+                                font-size:16px;
+
+}
+.navigation-corporate-container a:hover {
+        COLOR: #000000;
+}
+.navigation-corporate-container .navigation-corporate-selecteditem {
+        background-image:url('/Style%20Library/GAIG_CorporateMaster/images/left_on.gif'); background-repeat:no-repeat;
+        margin: -3px 0 -5px 0;
+                                padding: 0 0px -5px 0;
+                                font-weight:bold; 
+                                float:left;
+                                z-index:-50;
+                                border-bottom:#f2f2f2 1px solid;
+                                position:relative; /*required to correct IE6 bug*/
+                                                font-family:"proxima-nova-condensed-1","proxima-nova-condensed-2", "Arial Narrow" !Important;
+                font-size:16px;
+                color:#666666;
+
+
+}
+.navigation-corporate-selecteditem a {
+                                float: left;
+                                display: block;
+        background-image: url('/Style%20Library/GAIG_CorporateMaster/images/right_on.gif');
+                                padding: 2px 15px 3px 6px; 
+                                color: #333333; text-decoration: none; font-weight:bold;border-bottom:5px #f2f2f2 solid;
+                                font-family:"proxima-nova-condensed-1","proxima-nova-condensed-2", "Arial Narrow" !Important;
+                                font-size:16px;
+
+
+
+                                
+}
+.navigation-corporate-container a:visited {
+                                color: #333333;
+                                font-family:"proxima-nova-condensed-1","proxima-nova-condensed-2", "Arial Narrow" !Important;
+                                font-size:16px;
+}
+.navigation-corporate-container a:hover {
+        COLOR: #000000;
+}
+
+
+.navigation-corporate-container
+{
+                font-family:"proxima-nova-condensed-1","proxima-nova-condensed-2", "Arial Narrow" !Important;
+                font-size:16px;
+                color:#666666;
+                font-weight:normal;
+                z-index:5;
+                }
+
+
+/*Division level top nav*/
+
+.navigation-corporatesitecollection-container
+{
+    background-color:#fff;
+    width:100%;
+    height:28px;
+    padding-top:8px;
+    float:left;
+    clear:both;
+}
+.navigation-corporatesitecollection-container ul{
+                margin:0;
+                padding:0;
+                padding-left:5px;
+                padding-top:3px;
+}
+.navigation-corporatesitecollection-container li
+{
+    list-style-type:none;
+                display:block;     
+                margin: 0;
+                float: left;            
+                margin-left: 0px;
+                text-indent:0;
+                border-right:#cccccc solid 1px;
+                padding-left:10px;
+                padding-right:10px;
+                height:25px;
+                                
+
+
+}
+/*LVHA  - DIVISION TOP NAV*/
+.navigation-corporatesitecollection-container li a
+{
+                font-size:14px;
+                font-family:"proxima-nova-condensed-1","proxima-nova-condensed-2", "Arial Narrow" !Important;
+                color:#666;
+                display:block;
+
+}
+
+.navigation-corporatesitecollection-selectedtab a
+{
+    border-bottom:3px #333333 solid;
+                font-size:14px;
+                font-family:"proxima-nova-condensed-1","proxima-nova-condensed-2", "Arial Narrow"  !Important;
+                color:#666;
+                font-weight:bold;
+
+}
+.navigation-corporatesitecollection-selectedtab
+{
+    color:#666;
+    font-weight:bold;
+    font-size:14px;
+    font-family:"proxima-nova-condensed-1","proxima-nova-condensed-2", "Arial Narrow" !Important;
+}
+
+.navigation-corporatesitecollection-container a:visited
+{
+                color:#666;
+                font-family:"proxima-nova-condensed-1","proxima-nova-condensed-2", "Arial Narrow"  !Important;
+}
+
+.navigation-corporatesitecollection-container a:hover
+{
+                color:#666;
+                font-family:"proxima-nova-condensed-1","proxima-nova-condensed-2", "Arial Narrow"  !Important;
+                border-bottom:3px #333333 solid;
+
+}
+
+
+
+
+/*****************************************************************************************/
+/*BEGIN PAGE LAYOUTS  - 8 PAGE LAYOUTS FOR THE PUBLIC WEBSITE (4 CORPORATE - 4 DIVISIONAL)  */
+/*****************************************************************************************/
+
+/*****************************************************************************************/
+/*    1-4 COLUMN LAYOUTS WITH WEBZONES   */
+
+/* PAGE LAYOUT - Corp 1-4 Column - Web zones (gaig_corp_1-4cols_web_zones.aspx) AND  */
+/* PAGE LAYOUT - Div 1-4 Column - Web zones (gaig_div_1-4cols_web_zones.aspx)       */
+/*TABLE WRAPPER - DIVION LEVEL ONLY - NO left nav*/
+#WebZoneTable_NoLeftNav_Division{
+                height:100%;
+                min-height:100%;
+                width:940px;
+                height:100%;
+                z-index:1;
+                float:left;
+                position:relative;
+                padding:0px 20px 0px 10px;
+                background-color:#ffffff;
+                display:block;
+                position:relative;
+                zoom:1;
+}
+
+/*TABLE WRAPPER - DIVION LEVEL ONLY with left nav*/
+#WebZoneTable_LeftNav{
+                height:100%;
+                min-height:100%;
+                width:730px;
+                height:100%;
+                z-index:1;
+                float:left;
+                position:relative;
+                padding:0px 20px 0px 10px;
+                background-color:#ffffff;
+                display:block;
+                position:relative;
+                zoom:1;
+}
+
+/**********************************************************************************/
+/*TABLE WRAPPER - CORPORATE LEVEL ONLY*/
+#WebZoneTable_NoLeftNav{
+                height:100%;
+                min-height:100%;
+                width:940px;
+                height:100%;
+                z-index:1;
+                float:left;
+                min-height:100%;
+                position:relative;
+                padding:0px 20px 0px 20px;
+                background-color:#ffffff;
+                display:block;
+                position:relative;
+                zoom:1;
+
+}
+
+table#PageContentTable{
+                padding-left:0px;
+                width:100%;
+                background-color:#ffffff;
+                height:100%;
+                min-height:100%;
+}
+/* COLUMN 1 */
+td#PageContentTable{
+                padding:0 0px 0px 0px;
+                width:inherit;
+                min-height:100%;
+                position:relative;
+                background-color:#ffffff;
+                }
+/* COLUMN 2 */
+.rightColumnPadding{
+                padding:0px 0px 0px 20px;
+                background-color:#ffffff;
+                width:300px;
+}
+
+/*****************************************************************************************/
+/*CORPORATE ONLY */
+/*****************************************************************************************/
+
+
+/*    3 COLUMN CORPORATE - ** NO ** LEFT NAV    */
+/* PAGE LAYOUT - Corp 3 Column - Standard (gaig_corp_3cols.aspx)  */
+
+#pageLayoutContainer-Corp {
+                width:980px;
+                height:100%;
+                padding:0;
+                float:left;
+                clear:left;
+                min-height:100%;
+                /*position:relative;*/
+                background-color:white;
+                padding:0px 0px 0px 0px;
+}
+#colDiv1-Corp {
+                FLOAT:left;
+                width:200px;
+                height:100%;
+                overflow:hidden;
+                margin:0px 20px 0px 20px;
+}
+#colDiv2-Corp {
+                FLOAT:left;
+                width:400px;
+                height:100%;
+                overflow:hidden;
+                margin:0px 20px 0px 0px;
+                }
+#colDiv3-Corp {
+                FLOAT:left;
+                width:300px;
+                height:100%;
+                overflow:hidden;
+                margin:0px 20px 0px 0px;
+}
+
+/*    2 COLUMN CORPORATE LAYOUTS WITH ** NO ** LEFT NAV    */
+/* PAGE LAYOUT - Corp 2 Column - Standard (gaig_corp_2cols.aspx)  */
+/* PAGE LAYOUT - Corp 2 Column - No Crumbs (gaig_corp_2cols_no_nav_no_crumbs.aspx)  */
+
+#pageLayout2-Corp{
+                width:980px;
+                float:left;
+                height:100%;
+                min-height:100%;
+                position:relative;
+                background-color:#ffffff;
+                display:block;
+                position:relative;
+                zoom:1;
+}
+#colDivA-Corp {
+                FLOAT:left;
+                width:620px;
+                height:100%;
+                overflow:hidden;
+                padding:0px 20px 0px 20px;
+}
+#colDivB-Corp {
+                FLOAT:left;
+                width:300px;
+                height:100%;
+                z-index:2;
+                overflow:hidden;
+                padding:0px 20px 0px 0px;
+}
+
+
+
+/*****************************************************************************************/
+/*DIVISION ONLY PAGE LAYOUTS */
+/*****************************************************************************************/
+
+
+/*    3 COLUMN DIVISIONAL HOMEPAGE LAYOUTS WITH ** NO ** LEFT NAV    */
+/* PAGE LAYOUT - Div 3 Column - No Left Nav (Division Home Page) (gaig_div_3cols_no_nav.aspx) 
+Cross Browser Compliant - including ie6 */
+
+
+#pageLayoutContainer {
+                width:980px;
+                height:100%;
+                float:left;
+                zoom:1;
+                min-height:100%;
+                padding:0px 0px 0px 0px;
+                margin:0;
+                background-color:#ffffff;
+                display:block;
+                position:relative;
+                zoom:1;
+
+}
+#colDiv1 {
+                FLOAT:left;
+                width:200px;
+                height:100%;
+                min-height:100%;
+                overflow:hidden;
+                background-color:#ffffff;
+                padding:0px 20px 0px 10px;
+                margin:0;
+                display:block;
+                position:relative;
+                zoom:1;
+
+}
+#colDiv2 {
+                FLOAT:left;
+                width:410px;
+                height:100%;
+                min-height:100%;
+                overflow:hidden;
+                padding:0px 20px 0px 0px;
+                background-color:#ffffff;
+                margin:0;
+                display:block;
+                position:relative;
+                zoom:1;
+                }
+                
+#colDiv3 {
+                FLOAT:left;
+                width:300px;
+                height:100%;
+                min-height:100%;
+                overflow:hidden;
+                padding:0px 20px 0px 0px;
+                background-color:#ffffff;
+                margin:0;
+                display:block;
+                position:relative;
+                zoom:1;
+}
+
+/*    2 COLUMN DIVISIONAL HOMEPAGE LAYOUTS WITH ** NO ** LEFT NAV  **NEW**  */
+/* PAGE LAYOUT - Div 2 Column - No Left Nav (Contact Map) (gaig_div_2cols_no_nav.aspx) 
+Cross Browser Compliant - including ie6 */
+
+
+#pageLayoutContainer_NoNav {
+                width:980px;
+                height:100%;
+                float:left;
+                zoom:1;
+                min-height:100%;
+                padding:0px 0px 0px 0px;
+                margin:0;
+                background-color:#ffffff;
+                display:block;
+                position:relative;
+                zoom:1;
+
+}
+#colDiv1_noNav {
+                FLOAT:left;
+                width:620px;
+                height:100%;
+                min-height:100%;
+                overflow:hidden;
+                background-color:#ffffff;
+                padding:0px 20px 0px 10px;
+                margin:0;
+                display:block;
+                position:relative;
+                zoom:1;
+
+}
+#colDiv2_noNav {
+                FLOAT:left;
+                width:190px;
+                height:100%;
+                min-height:100%;
+                overflow:hidden;
+                padding:0px 20px 0px 20px;
+                background-color:#ffffff;
+                margin:0;
+                display:block;
+                position:relative;
+                zoom:1;
+                }
+                
+
+
+/*    3 COLUMN LAYOUTS WITH LEFT NAV    */
+/* PAGE LAYOUT - Div 3 Column - Standard (gaig_div_3cols_nav.aspx)  */
+
+#pageLayout3 {
+                width:740px;
+                height:100%;
+                z-index:1;
+                float:left;
+                min-height:100%;
+                position:relative;
+                background-color:#ffffff;
+                display:block;
+                position:relative;
+                zoom:1;
+                padding:0px 0px 0px 0px; /*column padding (top/bottom)*/
+}
+
+#colDiv1PL3 {
+                FLOAT:left;
+                width:220px;
+                height:100%;
+                min-height:100%;
+                overflow:hidden;
+                background-color:#ffffff;
+                padding:0px 20px 0px 10px; /*column padding (left/right)*/
+}
+#colDiv2PL3 {
+                FLOAT:left;
+                width:230px;
+                height:100%;
+                min-height:100%;
+                overflow:hidden;
+                background-color:#ffffff;
+                padding:0px 20px 0px 0px; /*column padding (left/right)*/
+}
+
+#colDiv3PL3 {
+                FLOAT:left;
+                width:220px;
+                min-height:100%;
+                height:100%;
+                background-color:#ffffff;
+                overflow:hidden;
+                padding:0px 20px 0px 0px; /*column padding (left/right)*/
+}
+
+/*    2 COLUMN DIVISIONAL LAYOUTS WITH LEFT NAV    */
+/* PAGE LAYOUT - Div 2 Column - Standard - Web zones (gaig_div_2cols.aspx)  */
+
+
+#pageLayoutStd2 {
+                height:100%;
+                width:760px;
+                min-height:100%;
+                position:relative;
+                background-color:#ffffff;
+                display:block;
+                position:relative;
+                zoom:1;
+                float:left;
+                margin:0;
+                padding:0;
+}
+#colDivAstd {
+                FLOAT:left;
+                width:410px;
+                height:100%;
+                min-height:100%;
+                overflow:hidden;
+                background-color:#ffffff;
+                padding:0px 20px 0px 10px;  /*10px to right HANDLED BY LEFT NAV - adding additional 10 to make it 20*/
+                margin:0;
+                margin-right:0px;             
+                }
+#colDivBstd {
+                FLOAT:left;
+                width:300px;
+                height:100%;
+                background-color:#ffffff;
+                min-height:100%;
+                overflow:hidden;
+                padding:0px 20px 0px 0px;
+                margin:0;
+                margin-right:0px;
+}
+/*****************************************************************************************/
+/*END PAGE LAYOUTS                                                                       */
+/*****************************************************************************************/
+
+
+/*****************************************************************************************/
+/*UTILITIES                Print | Share WebZone                                         */
+/*****************************************************************************************/
+.utilities{
+                color:#999999;
+                font-size:10px;
+                text-align:right;
+                clear:both;
+                padding:0;
+                margin:0;
+                height:100%;
+                min-height:100%;
+                min-width:400px;
+                width:940px;
+                float:left;
+                display:block;     
+                position:relative;
+                background-color:#ffffff; 
+                height:50px; 
+                padding-right:20px;
+                padding-left:20px;
+                padding-top:5px;
+                word-spacing:1em;
+}
+
+/*****************************************************************************************/
+/*LEFT NAV                                                                     */
+/*****************************************************************************************/
+/*area defined on master page*/
+#s4-leftpanel.s4-notdlg {
+                width:220px;
+                height:100%;
+                min-height:100%;
+                padding-right:0px;
+}
+/* body area normally has a white background */
+.s4-notdlg.s4-ca#s4-leftpanel {
+                /*background:transparent none repeat scroll 0 0;*/
+                margin-left:220px;
+                background-color:#ffffff;
+                height:100%;
+                min-height:100%;
+}
+
+/*  ******************************************************************************     */
+/*  LEFT NAVIGATION                                                                    */
+/*  ******************************************************************************     */
+/*  CONTAINER  */
+.leftnavigation-template {            
+                width:210px;
+                min-height:100%;
+                height:100%;
+                float:left;             
+                padding:0;
+                height:inherit;
+                position:relative;
+                padding-left:10px;
+                padding-bottom:25px;
+
+}
+.leftnavigation-countrynavigationitems-continer{
+                background-color:#ffffff;
+                min-height:100%;
+                height:100%;
+                padding-bottom:20px;
+                padding-top:10px;
+                min-height:150px;
+                background-image:url('/Style%20Library/GAIG_CorporateMaster/images/gradient.gif');
+                background-repeat:repeat-x;
+
+}
+.leftnavigation-countrynavigationitems-continer li{
+                list-style:none;
+}
+/***********************************************************************************/
+/*  US | CANADA TOGGLE LINKS  */
+
+.leftnavigation-countryheader-continer{
+                color:#666666;
+                background-color:#cccccc;
+                padding-top:8px;
+                padding-bottom:5px;
+                padding-right:3px;
+                padding-left:15px;
+                height:20px;
+                font-family:"proxima-nova-condensed-1","proxima-nova-condensed-2", "Arial Narrow"  !Important;
+}
+.leftnavigation-countryheader-item li {
+                font-size:13px;
+                width:100%;
+                color:#666666;
+}
+.leftnavigation-countryheader-item ul {
+                padding-top:10px;
+}
+.leftnavigation-countryheader-item a {
+                font-family:"proxima-nova-condensed-1","proxima-nova-condensed-2", "Arial Narrow"  !Important;
+                color:#666666;
+                padding-right:3px;
+                display:inline-block;
+}
+.leftnavigation-countryheader-item a:visited {
+                
+                color:#666666;
+}
+.leftnavigation-countryheader-item a:hover {
+                
+                color:#000000;
+}
+.leftnavigation-countryheader-item-selected {
+                font-weight:bold;
+}
+/***********************************************************************************/
+/*   LEFT NAVIGATION HEADERS    */
+
+.leftnavigation-categoryheader a{
+                font-size:11px;
+                padding-left:15px;
+                padding-top:2px;
+                padding-bottom:0px;
+               font-weight:bold;
+                font-family:Arial, Helvetica, sans-serif;
+                font-weight:bold;
+                color:#3964b2;
+}
+.leftnavigation-categoryheader a:visited{
+                color:#3964b2;
+}
+
+/***********************************************************************************/
+/*   LEFT NAVIGATION LINKS         */
+
+.leftnavigation-navigationitems-container ul{
+                padding-top:0; 
+                margin-top:8px;
+}
+.leftnavigation-navigationitems-container li a{
+                list-style:none;
+                color:#666666;
+                font-size:11px;
+                text-indent:0;
+                display:block;
+                width:inherit;
+                padding-bottom:8px;
+                margin-left:-5px;
+                font-family:Arial, Helvetica, sans-serif;
+}
+.leftnavigation-navigationitems-container a:visited{
+                color:#666666;
+                font-size:11px;
+
+}
+.leftnavigation-navigationitems-container a:hover{
+                color:#000000;
+}
+
+.leftnavigation-categoryheader-selected{
+                color:#6A94BF !Important;
+}
+.leftnavigation-pageitem-selected{
+                color:#000000 !Important;
+}
+
+/*****************************************************************************************/
+/*  END LEFT NAV                                                                         */
+/*****************************************************************************************/
+
+
+/*News Popup*/
+.ms-dlgTitle{
+                background-color:#007a85;
+}
+.ms-dlgBorder{
+                border:0;
+                border:2px solid #007a85;
+}
+
+/*.ui-tabs-nav{
+                color:#007a85;
+                color:#cc0000;
+                font-size:12px;
+                font-weight:bold;
+                font-family:"proxima-nova-condensed-1","proxima-nova-condensed-2", "Arial Narrow"  !Important;
+}*/
+
+.ms-rtestate-field{
+                padding:0;
+                margin:0;
+}
+
+/****************************/
+/* BEGIN Text Styles for  "Mark Up Styles" DROPDOWN -- located in all publishing HTML fields */
+
+/*  DELETE TEXT STYLES FROM THIS STYLE SHEET AFTER THE NEW STYLE SHEET IS MOVED TO CERTIFICATION */
+
+
+/****************************/
+/*HEADINGS*/
+/*HEADING 1  Page Title*/
+.ms-rteElement-H1{
+                                color:#007a85;
+                                margin-top:0;
+                                font-family:Arial, Helvetica, sans-serif;
+                                font-size:22px;
+                                list-style:none;
+                                list-style-image:none;    
+                                word-wrap: normal;
+}
+.ms-WPBody H1{
+                font-weight:normal;
+}
+
+/*HEADING 2 Section Content Heading*/
+.ms-rteElement-H2{
+                                color:#003366;
+                                font-family:"proxima-nova-condensed-1","proxima-nova-condensed-2", "Arial Narrow"  !Important;
+                                font-size:16px;
+                                font-weight:bold;
+                                border-bottom:1px #000000 solid;
+                                width:100%;
+                                text-align:left;
+}
+/*HEADING 3 Subheading*/
+.ms-rteElement-H3{
+                                color:#007a85;
+                                font-family:"proxima-nova-condensed-1","proxima-nova-condensed-2", "Arial Narrow"  !Important;
+                                font-size:12px;
+                                font-weight:bold;
+                                margin-top:0;
+                                padding-top:0;
+}
+/*HEADING 4 - Paragraph Subheading*/
+.ms-rteElement-H4{
+                                color:#465264;
+                                font-style:normal;
+                                font-weight:bold;
+                                font-size:12px;
+                                font-family:Arial, Helvetica, sans-serif;
+                                margin-bottom:8px;
+
+}
+h5.ms-rteelement-H5 {
+  -ms-name: "Heading 5";
+}
+
+h5.ms-rteelement-H5{
+                                color:#007a85;
+                                font-family:"proxima-nova-condensed-1","proxima-nova-condensed-2", "Arial Narrow"  !Important;
+                                font-size:14px;
+                                font-weight:bold;
+                                margin-top:0;
+                                padding-top:4px;
+                                padding-bottom:8px;
+                                margin-bottom:0;
+}
+h6.ms-rteelement-H6 {
+  -ms-name: "Callout Title Teal Proxima";
+}
+
+h6.ms-rteelement-H6{
+                                color:#007a85;
+                                font-family:"proxima-nova-condensed-1","proxima-nova-condensed-2", "Arial Narrow"  !Important;
+                                font-size:12px;
+                                font-weight:bold;
+                                font-style:normal;
+                                margin-top:0;
+                                padding-top:0;
+
+}
+
+/*Colored Headings*/
+
+
+/*COLORED HEADING 1 - Introduction Text*/
+.ms-rteElement-H1B{
+                                color:#007A85;
+                                margin-top:0;
+                                font-family:Arial, Helvetica, sans-serif;
+                                font-size:14px;
+}
+/*COLORED HEADING 2 Side Bold Link*/
+.ms-rteElement-H2B{
+                color:#003366;
+                font-family:Arial, Helvetica, sans-serif;
+                font-size:11px;
+                font-weight:bold;
+
+}
+/*COLORED HEADING 3 Side text link*/
+.ms-rteElement-H3B{
+                color:#003366;
+                font-family:Arial, Helvetica, sans-serif;
+                font-size:12px;
+
+
+}
+/*COLORED HEADING 4 - Homepage Paragraph Text*/
+.ms-rteElement-H4B{
+                color:#465264;
+                font-style:normal;
+                font-size:14px;
+                font-family:Arial, Helvetica, sans-serif;
+}
+
+/*COLORED HEADING 5 - Search Results
+H5B.ms-rteelement-H5B {
+  -ms-name: "SubHeading";
+}
+H5B.ms-rteelement-H5B{
+                                color:#007a85;
+                                font-family:"proxima-nova-condensed-1","proxima-nova-condensed-2", "Arial Narrow"  !Important;
+                                font-size:14px;
+                                font-weight:bold;
+                                margin-top:0;
+                                padding-top:0;
+}
+h6B.ms-rteelement-H6B {
+  -ms-name: "SubHeading Teal 14 Bold";
+}
+
+h6B.ms-rteelement-H6B{
+                                color:#007a85 !Important;
+                                font-family:"proxima-nova-condensed-1","proxima-nova-condensed-2", "Arial Narrow"  !Important;
+                                font-size:14px !Important;
+                                font-weight:bold !Important;
+                                margin-top:0 !Important;
+                                padding-top:0 !Important;
+}*/
+
+
+/*PARAGRAPH*/
+.ms-rteElement-P{
+                font-size:12px;
+                padding:0px;
+                margin:0px;
+                color:#465264;
+                font-family:Arial, Helvetica, sans-serif;
+                padding-bottom:8px;
+
+}
+/*.ms-rteElement-P a:link{
+                text-decoration:underline;
+                }*/
+                
+/*CALLOUT BOXES*/
+.ms-rteElement-Callout1{
+                color:#007a85;
+                background-color:#fff;
+                border:none;
+                /*border-top:#007a85 solid 10px;*/
+                float:none;
+                width:180px;
+                min-height:150px;
+                font-family:Arial, Helvetica, sans-serif;
+                font-size:15px;
+                background-image:url('/Style%20Library/GAIG_CorporateMaster/images/gradient.gif');
+                background-repeat:repeat-x;
+                margin-right:20px;
+                margin-top:-2px; /*ensures*/
+                
+
+}
+/*Right Column Boxes (Agent Portal / Related Products)*/
+.ms-rteElement-Callout2{
+                color:#007a85;
+                background-color:#fff;
+                border:#999999 1px solid;
+                border-bottom:none;
+                font-family:Arial, Helvetica, sans-serif;
+                background-image:url('/Style%20Library/GAIG_CorporateMaster/images/gradient.gif');
+                background-repeat:repeat-x;
+                width:278px;
+                position:relative;
+                display:block;
+                float:left;
+                zoom:1;
+                margin-top:2px;
+}
+/*Video*/
+.ms-rteElement-Callout3{
+                color:#007a85;
+                background-color:#fff;
+                border:#999999 1px solid;
+                border-bottom:none;
+                font-family:Arial, Helvetica, sans-serif;
+                background-image:url('/Style%20Library/GAIG_CorporateMaster/images/gradient.gif');
+                background-repeat:repeat-x;
+                width:278px;
+                position:relative;
+                display:block;
+                float:left;
+                zoom:1;
+                margin-top:2px;
+}
+.ms-rteElement-Callout4{
+                background-color:#fff;
+                border:none;
+               color:#007a85;
+                border-top:#007a85 solid 7px;
+                float:none;
+                width:inherit;
+                min-height:150px;
+                font-family:Arial, Helvetica, sans-serif;
+                font-size:15px;
+                background-image:url('/Style%20Library/GAIG_CorporateMaster/images/gradient.gif');
+                background-repeat:repeat-x;
+}
+
+
+/****************************/
+/* END HTML Mark Up Styles*/
+/****************************/
+
+
+
+/*****************************************************************************************/
+/*  PRODUCTS AND COVERAGE WEBPART  (PRODUCTS LANDING PAGE)                               */
+/*****************************************************************************************/
+/*Botos Changes, Lindy Please Change */
+/*-------------------------------------------------------------------------------------- */
+
+.corporatecontacts-clienttemplate-container
+{
+                min-height:100%;
+                font-family:Arial, Helvetica, sans-serif;
+                font-size:12px;
+                
+                padding:15px;
+                padding-right:0;    
+                padding-top:0;                
+                /*background-image:url('/Style%20Library/GAIG_CorporateMaster/images/gradient.gif');
+                background-color:#fff;
+                border:1px #cccccc solid;
+                border-bottom:0;
+                min-width:300px;   
+                background-repeat:repeat-x;*/
+
+			    height:100%;
+			    min-height:100%;
+			    float:left;
+			    width:auto;
+			    clear:left;
+}
+/*results description*/
+.corporatecontacts-description-clienttemplate-container{
+    color:#007a85;
+    font-family: Arial, Helvetica, sans-serif;
+    height:35px;
+    /*float:left;
+    clear:left;
+     float:right;
+     
+    width:600px;*/
+    padding-top:5px;
+    font-size:12px;
+	padding-left:20px;
+    font-weight:bold; 
+    width:auto;               
+}
+.corporatecontacts-background{
+	float:right;
+    width:325px;
+    background-image:url('/Style%20Library/GAIG_CorporateMaster/images/gradient.gif');
+    background-color:#fff;
+    border:1px #cccccc solid;
+    border-bottom:0;
+    min-width:300px;   
+    background-repeat:repeat-x;
+}
+.corporatecontacts-contact-container-div
+{
+    border:0px !Important;
+    padding-bottom:0 !Important;
+    background-color:gray;
+
+}
+.corporatecontacts-groupby-titles
+{
+    color: #465264;
+
+    /*margin-top:5px;*/
+}
+
+.corporatecontacts-contact-container-p
+{
+    font-weight: normal;
+    font-size:12px;
+    font-family:Arial;
+    color: #465264;
+    padding:0!Important;
+}
+.ui-accordion-content{padding-top:0 !important;}
+/*accordion results*/
+
+.corporatecontacts-results-clienttemplate-container{
+    height:100%;
+    min-height:100%;
+    /*float:left;
+    float:right;
+    clear:left;*/
+    width:auto;
+    font-weight:bold;
+    padding-left:20px;
+
+	
+
+}
+/*.corporatecontacts-productscoverages-section 
+{
+    float:left;
+    width:33%;
+}*/
+.corporatecontacts-titles
+{
+    padding-top:5px; 
+    cursor:pointer;   
+    color:#336699;
+}
+/*
+.corporatecontacts-titles:hover
+{
+	font-weight:bold;
+	color:#666666;
+}
+*/
+.corporatecontacts-divisionurl{
+	padding-bottom:10px;
+}
+.corporatecontacts-productscoverages-section:hover{
+	font-weight:bold;
+	color:#666666;
+}
+.corporatecontacts-productsandcoverages-industry-titles
+{
+    color:#007a85;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:12px;
+    font-weight:bold;
+    text-align:left;
+    padding-right:15px;
+    margin-bottom:15px;
+                
+    /*width:33%;*/
+}
+.choose-product{
+    color:#007a85;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:12px;
+    font-weight:bold;
+    text-align:left;
+    float:left;
+    padding-bottom:10px;
+    width:200px;
+}
+/* --------------------*/
+.corporatecontacts-titles-selected{
+                font-weight:bold;
+                color:#666666;
+}
+
+/* LOSS PREVENTION WEB PART */
+.lossprevention-clienttemplate-container{
+	width:260px;
+	float:left;
+
+}
+
+.lossprevention-titles{
+                padding-bottom:4px;
+}
+.lossprevention-titles-selected{
+                font-weight:bold;
+                color:#666666 !Important;
+}
+.clientlosspreventiontemplate{
+
+				width:340px;
+				float:right;
+				/*
+                float:left;
+                width:600px;
+                clear:left;
+                margin-top:15px;
+                padding-top:5px;
+                */
+                
+                
+                height:100%;
+                min-height:100%;
+                
+                border-top:0px solid #cccccc;
+                display:none;
+}
+.productsandcoverages-options
+{
+    width: 200px;
+    float:left;
+}
+.productsandcoverages-clienttemplate-container
+{
+    /*height:100%;
+    min-height:150px;*/
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:12px;     
+    
+    /*background-color:#fff;             
+    background-image:url('/Style%20Library/GAIG_CorporateMaster/images/gradient.gif');
+    background-repeat:repeat-x;
+    width:600px;            
+    border:1px #cccccc solid;
+    border-bottom:0;*/
+}
+.productsandcoverages-description-results{
+    width:400px;
+}
+.productsandcoverages-description {
+    float:right;
+    width:400px;
+}
+/*results*/
+.webpart-lossprevention-container{
+                padding-left:20px;
+}
+.lossprevention-image{
+                padding-right:5px;
+}
+
+.lossprevention-titles{
+    padding-bottom:3px;
+}
+
+
+.productsandcoverages-industry-titles 
+   {
+    color:#007a85;
+                font-family:Arial, Helvetica, sans-serif;
+                font-size:12px;
+                font-weight:bold;
+                text-align:left;
+                padding-right:15px;
+                margin-bottom:15px;
+                /*width:33%;*/
+   }
+/*-------------------------------------------------------------------------------------- */
+
+
+.productsandcoverages-table{
+                height:100%;
+                min-height:100%;
+                font-family:Arial, Helvetica, sans-serif;
+                font-size:12px;
+                background-color:#fff;
+                padding:15px;
+                padding-right:0;                
+                background-image:url('/Style%20Library/GAIG_CorporateMaster/images/gradient.gif');
+                background-repeat:repeat-x;
+                min-width:600px;            
+                border:1px #cccccc solid;
+                border-bottom:0;
+
+}
+.productsandcoverages-table th{
+                color:#007a85;
+                font-family:Arial, Helvetica, sans-serif;
+                font-size:12px;
+                font-weight:bold;
+                text-align:left;
+                padding-right:15px;
+                margin-bottom:15px;
+                /*width:33%;*/
+}
+.productsandcoverages-table td{
+                vertical-align:top;
+                padding-right:15px;
+}
+.productsandcoverages-table tr{
+                vertical-align:top;
+                line-height:25px;
+}
+
+.productsandcoverages-titles{
+                cursor:pointer;
+                padding-top:3px;
+                padding-bottom:3px;   
+                color:#336699;
+}
+.productsandcoverages-titles:hover{
+                color:#666666;
+                font-weight:bold;
+}
+.productsandcoverages-titles-selected{
+                color:#666666!Important;
+                font-weight:bold;
+}
+
+/*results*/
+.productsandcoverages-descriptiontitle-results{
+                color:#007a85;
+                font-size:14px;
+                font-family:"proxima-nova-condensed-1","proxima-nova-condensed-2", "Arial Narrow"  !Important;
+                font-weight:bold;
+                /*float:left;*/
+                /*min-width:600px;*/
+                padding-left:10px;
+                padding-bottom:4px;
+                /*display:block;*/
+}
+.productsandcoverages-description-clienttemplate-container{
+                /*padding-top:10px;*/
+                color:#666666;
+                font-family:Arial, Helvetica, sans-serif;
+                font-size:15px;
+                /*font-weight:bold;*/    
+                float:right;
+                /*clear:left;*/    
+                width:400px;    
+}
+.productsandcoverages-results-clienttemplate-container a{
+                                /*float:left;*/
+                                /*clear:left;*/
+                                /*display:block;*/
+                                /*min-width:600px;*/
+                                text-align:left;
+                                padding-left:10px;
+                                padding-bottom:5px;
+                                font-size:12px;
+                                font-weight:bold;
+                                color:#2d4e8b;
+                                }
+.productsandcoverages-results-clienttemplate-container a:visited{
+                                color:#2d4e8b;
+                                }
+                                
+.productsandcoverages-results{
+                /*min-width:600px;*/
+                /*width:600px;*/
+                /*float:left;
+                display:block;
+                clear:left;*/
+                height:100%;
+                min-height:100%;
+}
+
+
+.productsandcoverages-results-clienttemplate-container{
+                                /*float:left;*/
+                                }
+
+
+/*Product & Coverage COVERAGE Description (not division description) APPEARS ONCE PER RESULTS*/
+.productsandcoverages-descriptionhtml-results{
+                /*float:left;*/
+                display:block;
+                /*min-width:600px;*/
+                padding-left:10px;
+                padding-bottom:10px;
+                /*clear:left;*/
+                font-size:12px;
+                /*font-style:italic;*/
+                background-color:#ffffff;
+
+}
+/*Division DIVISION Description (not coverage description) APPEARS FOR EACH DIVISION LISTED */
+.productsandcoverages-shortdescription-results{
+                /*float:left;*/
+                /*clear:left;*/
+                display:block;
+                /*min-width:600px;
+                width:600px;*/
+                padding-left:10px;
+                padding-bottom:5px;
+                font-family:Arial, Helvetica, sans-serif;
+                font-size:12px;
+                color:#666666;
+
+}
+/*****************************************************************************************/
+/*  FIND A PRODUCT WEBPART                            */
+/*****************************************************************************************/
+
+.ClientFindAProductSearchTemplate{
+                float:left;
+                width:100%;
+}
+.findaproduct-input-title{
+                color:#007a85;
+                font-family:Arial, Helvetica, sans-serif;
+                font-size:14px;
+                font-weight:bold;
+                float:left;
+}
+.findaproduct-input-field{
+                height:22px;
+                width:190px;
+                float:left;
+                clear:both;
+                padding-top:15px; /*space between Find a Product Title and Input box*/
+                padding-bottom:20px;
+}
+.findaproduct-searchbtn{
+                float:right;
+                width:30px;
+                height:30px;
+}
+.findaproductsearchinput{
+                height:22px;
+}
+#findaproductsearchinputid{
+                height:22px;
+}
+.findaproduct-input-example{
+                font-style:italic;                
+                float:left;
+               clear:both;
+                padding-top:10px;
+                padding-bottom:25px;
+}
+/*results*/
+.ClientFindAProductTemplate{ /*results container*/
+                float:left;
+                clear:both;
+                width:670px;
+}
+.findaproduct-producttitle, .findaproduct-producttitle a, .findaproduct-producttitle a:visited { /*Division*/
+                font-family:Arial, Helvetica, sans-serif;
+                font-size:12px;
+                /*color:#cc0000 !Important;*/
+                color:#3964b2 !Important;
+                font-weight:bold;
+}
+.findaproduct-results-p{ /*Product Name*/
+                font-size:12px;
+                padding:0px;
+                margin:0px;
+                color:#465264;
+                font-family:Arial, Helvetica, sans-serif;
+                padding-bottom:8px;
+
+}
+.findaproduct-productdescription{
+                font-size:12px;
+                padding:0px;
+                margin:0px;
+                color:#465264;
+                font-family:Arial, Helvetica, sans-serif;
+                padding-bottom:8px;
+}
+.findaproduct-productstate{
+                font-size:12px;
+                padding:0px;
+                margin:0px;
+                color:#465264;
+                font-family:Arial, Helvetica, sans-serif;
+                padding-bottom:8px;
+}
+.findaproduct-producturl a{
+                color:#3964b2;
+}
+.findaproduct-producturl a:visited{
+                color:#3964b2;
+}
+.findaproduct-productdivision {
+    color: #3964b2;
+}
+.findaproductresults{
+    display:none;
+    float: left; 
+    clear: both; 
+    width: 200px; 
+    height: 50px;
+    padding-left:20px;
+}
+
+.findaproductresultscount {
+    font-style:italic;
+}
+
+.findaproduct-search-container{
+	padding-left:20px;
+}
+
+/*****************************************************************************************/
+/*  PRODUCTS BY ORGANIZATION WEBPART                            */
+/*****************************************************************************************/
+.IndustryServedContainer{
+        height:100%;
+        min-height:100%;
+        float:left;
+        /*border:1px #cccccc solid;
+        border-bottom:0;
+        background-color:#efefef;*/
+}
+.IndustryServedContainer-Instructions{
+        color:#003366;
+        font-family:"proxima-nova-condensed-1","proxima-nova-condensed-2", "Arial Narrow"  !Important;
+        font-size:16px;
+        font-weight:bold;
+        padding-left:1px;
+}
+.IndustryServedContainer .IndustryServedContainer-Instructions{
+                                display:none;
+}
+
+.Webpart-IndustryServed-Title{
+                
+}
+.Webpart-IndustryServed-container{
+                
+        /*background-color:#fff;
+        padding:15px;
+        padding-top:10px;   
+        background-image:url('/Style%20Library/GAIG_CorporateMaster/images/gradient.gif');
+        background-repeat:repeat-x;
+        width:620px;
+        vertical-align:top;
+        padding-left:0px;*/
+}
+.Webpart-IndustryServed-table{
+        /*background-color:transparent;
+        padding:10px;
+        padding-top:0px;   
+        padding-left:0px;
+        width:620px;
+        vertical-align:top;*/
+ }
+ .Webpart-IndustryServed-Description
+ {
+ 	width:200px;
+ 	padding-bottom:5px;
+ 	
+ }
+.Webpart-IndustryServed-column{
+       width:206px;
+}
+.Webpart-IndustryServed-Title{
+        color: #336699;
+        cursor: pointer;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        Padding-top:3px;
+        text-align:left;
+        padding-bottom:4px;
+        width:200px;
+       /*padding-right: 15px;
+        padding-left:10px;*/
+}
+.Webpart-IndustryServed-TitleSelected, .Webpart-IndustryServed-Title:hover
+{
+                font-weight:bold;
+                color:#666666;
+}
+.OrganizationProductsContainer{ /*Results Container*/
+                /*padding-top:25px;*/
+                padding-bottom:0px;
+                height:100%;
+                min-height:100%;
+                float:right;
+                width:400px;
+                
+}
+.OrganizationProductsContainer-Instructions{
+                                color:#007a85;
+                                font-family:"proxima-nova-condensed-1","proxima-nova-condensed-2", "Arial Narrow"  !Important;
+                                font-size:15px;
+                                font-weight:bold;
+                                padding-left:10px;
+                                padding-bottom:10px;
+                                float:left;
+                                min-width:600px;
+}
+.Webpart-OrganizationProducts-container a{
+                                float:left;
+                                text-align:left;
+                                min-width:600px;
+                                width:600px;
+                                padding-left:10px;
+                                padding-bottom:5px;
+                                clear:left;
+                                display:block;
+                                color:#3964B2;
+                                font-size:13px !important;
+}
+.ClientOrganizationProductsTemplate a:link{
+                font-size:14px;
+                padding-top:5px;
+                font-weight:bold;
+                font-family:Arial, Helvetica, sans-serif;
+                color:#3964B2;
+}
+.ClientOrganizationProductsTemplate a:visited{
+                font-size:14px;
+                padding-top:5px;
+                font-weight:bold;
+                color:#3964B2;
+                font-family:Arial, Helvetica, sans-serif;
+}
+
+.Webpart-IndustryServed-fullDescription{
+                float:left;
+                min-width:600px;
+                clear:left;
+                display:block;
+                padding-left:10px;
+                padding-bottom:10px;
+}
+.ClientOrganizationProductsTemplate{
+                color:#666666;
+                font-size:12px;
+                font-family:Arial, Helvetica, sans-serif;
+                float:left; 
+}
+
+.Webpart-OrganizationProducts-container{
+                padding-top:0px;
+                min-width:400px;
+}
+/*****************************************************************************************/
+/*  SPECIALIZED PROGRAMS BY LINE OF COVERAGE WEBPART                            */
+/*****************************************************************************************/
+.coverageTableHeaderName{
+                text-align:left;
+                color:#007a85;
+                font-family:"proxima-nova-condensed-1","proxima-nova-condensed-2", "Arial Narrow"  !Important;
+                font-size:14px;
+                font-weight:bold;
+                border:0;
+                padding-bottom:12px;
+
+}
+
+.CoverageDivSpace{
+                vertical-align:top;
+                padding-top:20px;
+                width:22%;
+                padding-left:0;
+                border-right:1px #cccccc solid;
+}
+.programsDivSpace{
+                vertical-align:top;
+                padding-top:20px;
+                width:78%;
+}
+.myProgramsTable{
+                width:100%;
+                padding:0;
+                margin:0;
+}
+.myProgramsTable td{
+                padding-top:8px;
+                padding-bottom:8px;
+                padding-left:8px;
+                border:#1px #efefef solid;
+                width:65%;
+}
+tr.AltRow{
+                background-color:#daebec;
+
+}
+.programTableHeaderName{
+                width:75%;
+                text-align:left;
+                color:#007a85;
+                font-family:"proxima-nova-condensed-1","proxima-nova-condensed-2", "Arial Narrow"  !Important;
+                font-size:14px;
+                font-weight:bold;
+                padding-bottom:12px;
+
+}
+.programTableHeaderIndustry{
+                width:25%;
+                text-align:left;
+                color:#007a85;
+                font-family:"proxima-nova-condensed-1","proxima-nova-condensed-2", "Arial Narrow"  !Important;
+                font-size:14px;
+                font-weight:bold;
+                padding-bottom:12px;
+
+}
+.programsTableRowTDName{
+}
+.programsName a{
+                color:#003366;   
+                text-decoration:underline;
+}
+.programsName a:visited{
+                color:#3964b2;  
+}
+.specializedprograms-lineofcoverage-selected{
+                font-weight:bold;
+}
+.specializedprograms-lineofcoverage-choice{
+                cursor:pointer;  
+                padding-top:4px;             
+                /*color:#666666;*/
+                padding-bottom:3px;
+                                                    color:#0072bc !important;
+}
+
+/* EASY TABS EASYTABS BEGIN*/
+
+#EasyTabs .ms-tabinactive{cursor:pointer;           }
+#EasyTabs .ms-tabselected{cursor:pointer;         }
+#EasyTabs .ms-topNavHover{ text-decoration:underline;}
+#SeparatorTD {}
+#EasyTabs{
+                                background-color:#fff;
+                                text-align:left;
+                                font-size:13px;
+                                font-family:"proxima-nova-condensed-1","proxima-nova-condensed-2", "Arial Narrow"  !Important;
+                                color:#666666;   
+                                padding-bottom:20px;
+                                                                
+}
+
+.ms-pagetitleareaframe{ /*line under menu*/
+                                background-image:none;
+                                background-color:#ffffff;             
+}
+
+.pipe{
+                                font-size:18px;
+                                padding-left:8px;
+                                padding-right:8px;
+
+}
+
+
+
+.ms-tabselected
+{
+                                border-color:#fff;
+                                border-width:1px;
+                                border-style:solid;
+                                font-weight:bold;
+                                position:relative;
+                                top:0px;
+                                color:#666666;
+                                /*background-image:url("/_layouts/images/selectednav.gif");
+                                background-repeat:repeat-x;*/
+                                background-image:none;
+                                background-repeat:repeat-x;
+                                background-color:#fff;
+                                font-size:12px;
+                               font-family:"proxima-nova-condensed-1","proxima-nova-condensed-2", "Arial Narrow" !Important;
+
+}
+.ms-tabinactive a{
+                                position:relative;
+                                top:0px;
+                                color:#666666;
+                                background-image:none;
+                                background-repeat:repeat-x;
+                                background-color:#fff;
+                                font-size:12px;
+                                font-family:"proxima-nova-condensed-1","proxima-nova-condensed-2", "Arial Narrow" !Important;
+                                color:#666666;   
+}
+.ms-tabinactive a:link
+{
+                                color:#666666;
+                                text-decoration:underline;
+                                text-align:right;
+                                background-color:#fff;
+                                font-size:12px;
+                                font-family:"proxima-nova-condensed-1","proxima-nova-condensed-2", "Arial Narrow"  !Important;
+                                line-height:25px;
+                                vertical-align:middle;
+}
+
+.ms-tabinactive a:visited{
+                                color:#666666;
+                                text-decoration:none;
+                                background-color:#fff;
+                                font-size:12px;
+                                font-family:"proxima-nova-condensed-1","proxima-nova-condensed-2", "Arial Narrow"  !Important;
+                                color:#666666;   
+}
+#EasyTabs.ms-tabinactive a:hover{
+                                color:#666666;
+                                text-decoration:underline;
+                                font-size:12px;
+                                font-family:"proxima-nova-condensed-1","proxima-nova-condensed-2", "Arial Narrow"  !Important;
+                                font-weight:bold !Important;
+                                color:#cc0000 !Important;
+}
+
+/*INNER PAGE TABS END*/
+
+/*****************************************************************************************/
+/*  UTILITIES WEBPART (SHARE IT ROLLOVER)                                                */
+/*****************************************************************************************/
+#shareit-box{
+    position:absolute;     
+    display:none;
+    z-index:10000;
+    width:78px;
+}      
+#shareit-header{
+    width:78px;     
+}         
+#shareit-body{
+    width:78px; height:48px;         
+    background:url(/Style%20Library/GAIG_CorporateMaster/images/shareit.png);  
+    z-index:11000;
+    background-repeat:no-repeat;
+   
+}           
+#shareit-blank{
+    height:20px;         
+}           
+#shareit-url{
+    height:50px;             
+    text-align:center;         
+}               
+#shareit-url input.field{
+    width:100px; height:26px;                
+    background: transparent url(/Style%20Library/GAIG_CorporateMaster/images/field.gif) no-repeat;                 
+    border:none; outline:none;                 
+    padding:7px 5px 0 5px;                
+    margin:3px auto;
+    font-size:11px;             
+}           
+#shareit-icon{
+    height:20px;         
+}                       
+#shareit-icon ul{
+    list-style:none;                
+    width:130px;                 
+    margin:0; 
+    padding:0 0 0 8px;             
+}               
+#shareit-icon ul  li{
+    float:left;
+    padding:0 2px;
+}
+#shareit-icon ul  li img{
+    border:none;
+} 
+.media-icons-1{
+    padding-right:10px;
+}
+.media-icons-2{
+    /*padding-left:10px; */
+}
+
+/*****************************************************************************************/       
+
+    
+.navigation-corporatesite-container li{ /*Area list item container*/
+
+                list-style-type:none;
+                text-decoration:none;
+                display:inline-block;        
+                padding: 0 ;
+                border-right:thick, black,solid;
+                float: left;            
+                border-right:1px #cccccc solid;
+                margin:0;
+                margin-top:15px;
+
+}
+.navigation-corporatesite-imagedescriptioncontainer{
+float:left;
+}
+
+.navigation-corporatesite-container ul
+{
+    padding-left:5px;
+}
+
+
+.navigation-corporatesite-itemimage{    /*Area behind list item image*/
+                width:50px;
+                height:40px;
+                float:left;
+                text-align:left;
+                padding-left:0px;
+                padding-right:6px;
+}
+.navigation-corporatesite-itemdescription{ /*Area behind list item description*/
+
+                font-size:12px;
+                /*font-family:Arial, Helvetica, sans-serif;*/
+                font-family:"proxima-nova-condensed-1","proxima-nova-condensed-2", "Arial Narrow"  !Important; 
+                color:#666666;
+                display:inline-block;
+                text-align:left;
+                
+                /*
+                float:left;
+                width:109px;
+                */
+                height:50px;
+                padding-left:5px;     
+                padding-top:5px;  
+                font-weight:bold;      
+}
+
+/*Corporate Sub Navigation Title Links*/
+/*LVHA*/
+.navigation-corporatesite-itemtitle a{
+                font-size:15px;
+                font-family:Arial, Helvetica, sans-serif;
+                clear:both;
+                color:#3964B2;
+               /* margin-left:5px; */
+}
+.navigation-corporatesite-itemtitle a:hover{
+                
+                font-size:15px;
+                font-family:Arial, Helvetica, sans-serif;
+                color:#000000;
+}
+.navigation-corporatesite-itemtitle-selected a{
+                font-size:15px;
+                font-family:Arial, Helvetica, sans-serif;
+                color:#666666;
+
+}
+.navigation-corporatesite-itemcontainer-selected{
+                color:#666666;
+                font-size:15px;
+                font-family:Arial, Helvetica, sans-serif;
+                
+}
+.navigation-corporatesite-itemcontainer
+{
+                /*text-align:center;*/
+                padding-top:3px;
+                margin-left:0px;
+                width:174px;
+                margin-left:3px;
+                margin-right:3px;
+                height:75px;
+                
+}
+
+/*----------------------------------*/
+/*JQUERYCSS*/
+/* Layout helpers
+----------------------------------*/
+
+.ui-helper-hidden { display: none; }
+.ui-helper-hidden-accessible { position: absolute !important; clip: rect(1px 1px 1px 1px); clip: rect(1px,1px,1px,1px); }
+.ui-helper-reset { margin: 0; padding: 0; border: 0; outline: 0; line-height: 1.3; text-decoration: none; font-size: 100%; list-style: none; }
+.ui-helper-clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.ui-helper-clearfix { display: inline-block; }
+/* required comment for clearfix to work in Opera \*/
+* html .ui-helper-clearfix { height:1%; }
+.ui-helper-clearfix { display:block; }
+/* end clearfix */
+.ui-helper-zfix { width: 100%; height: 100%; top: 0; left: 0; position: absolute; opacity: 0; filter:Alpha(Opacity=0); }
+
+/* Interaction Cues
+----------------------------------*/
+.ui-state-disabled { cursor: default !important; }
+
+/* states and images */
+.ui-icon { display: block; text-indent: -99999px; overflow: hidden; background-repeat: no-repeat; }
+
+/* Overlays */
+.ui-widget-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+/* Component containers*/
+----------------------------------
+.ui-widget { font-family: Verdana,Arial,sans-serif; font-size: 1.1em; }
+.ui-widget .ui-widget { font-size: 1em; }
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button { font-family: Verdana,Arial,sans-serif; font-size: 1em; }
+.ui-widget-content { border: 1px solid #aaaaaa; background: #ffffff url(/Style%20Library/GAIG_CorporateMaster/smoothness/images/ui-bg_flat_75_ffffff_40x100.png) 50% 50% repeat-x; background:none; }
+.ui-widget-content a {  }
+.ui-widget-header { border: 1px solid #aaaaaa; background: #cccccc url(/Style%20Library/GAIG_CorporateMaster/smoothness/images/ui-bg_highlight-soft_75_cccccc_1x100.png) 50% 50% repeat-x; background:none;
+                font-weight: bold; }
+.ui-widget-header a {  }
+
+/* Interaction states
+----------------------------------*/
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default { 
+                border: 1px solid #d3d3d3; 
+                background: #e6e6e6 url(/Style%20Library/GAIG_CorporateMaster/smoothness/images/ui-bg_glass_75_e6e6e6_1x400.png) 50% 50% repeat-x; font-weight: normal; color: #007A85; 
+                font-family:"proxima-nova-condensed-1","proxima-nova-condensed-2", "Arial Narrow"  !Important; 
+                font-size:12px;
+                }
+.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited { 
+                color: #007A85; text-decoration: none; 
+                font-family:"proxima-nova-condensed-1","proxima-nova-condensed-2", "Arial Narrow"  !Important;
+                font-size:12px;
+                }
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus { 
+                border: 1px solid #999999; background: #dadada url(/Style%20Library/GAIG_CorporateMaster/smoothness/images/ui-bg_glass_75_dadada_1x400.png) 50% 50% repeat-x; font-weight: normal; color: #007A85;
+                font-family:"proxima-nova-condensed-1","proxima-nova-condensed-2", "Arial Narrow"  !Important; 
+                font-size:12px;
+                }
+.ui-state-hover a, .ui-state-hover a:hover { 
+                color: #007A85; text-decoration: none; 
+                }
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active { 
+                border: 1px solid #aaaaaa; 
+                background: #ffffff url("/Style%20Library/GAIG_CorporateMaster/smoothness/images/ui-bg_glass_65_ffffff_1x400.png") 50% 50% repeat-x; 
+                font-weight: bold; color: #007A85; font-family:"proxima-nova-condensed-1","proxima-nova-condensed-2", "Arial Narrow" !Important;
+                font-size:12px;  
+                }
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited { 
+                color: #007A85; text-decoration: none; font-family:"proxima-nova-condensed-1","proxima-nova-condensed-2", "Arial Narrow" !Important;
+                font-size:12px;
+                }
+.ui-widget :active { 
+                outline: none; 
+                }
+
+/* Interaction Cues
+----------------------------------*/
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight  {border: 1px solid #fcefa1; background: #fbf9ee url(images/ui-bg_glass_55_fbf9ee_1x400.png) 50% 50% repeat-x; color: #363636; }
+.ui-state-highlight a, .ui-widget-content .ui-state-highlight a,.ui-widget-header .ui-state-highlight a { color: #363636; }
+.ui-state-error, .ui-widget-content .ui-state-error, .ui-widget-header .ui-state-error {border: 1px solid #cd0a0a; background: #fef1ec url(images/ui-bg_glass_95_fef1ec_1x400.png) 50% 50% repeat-x; color: #cd0a0a; }
+.ui-state-error a, .ui-widget-content .ui-state-error a, .ui-widget-header .ui-state-error a { color: #cd0a0a; }
+.ui-state-error-text, .ui-widget-content .ui-state-error-text, .ui-widget-header .ui-state-error-text { color: #cd0a0a; }
+.ui-priority-primary, .ui-widget-content .ui-priority-primary, .ui-widget-header .ui-priority-primary { font-weight: bold; }
+.ui-priority-secondary, .ui-widget-content .ui-priority-secondary,  .ui-widget-header .ui-priority-secondary { opacity: .7; filter:Alpha(Opacity=70); font-weight: normal; }
+.ui-state-disabled, .ui-widget-content .ui-state-disabled, .ui-widget-header .ui-state-disabled { opacity: .35; filter:Alpha(Opacity=35); background-image: none; }
+
+/* states and images */
+.ui-icon { width: 16px; height: 16px; background-image: url(/Style%20Library/GAIG_CorporateMaster/smoothness/images/ui-icons_222222_256x240.png); }
+.ui-widget-content .ui-icon {background-image: url(/Style%20Library/GAIG_CorporateMaster/smoothness/images/ui-icons_222222_256x240.png); }
+.ui-widget-header .ui-icon {background-image: url(/Style%20Library/GAIG_CorporateMaster/smoothness/images/ui-icons_222222_256x240.png); }
+.ui-state-default .ui-icon { background-image: url(/Style%20Library/GAIG_CorporateMaster/smoothness/images/ui-icons_888888_256x240.png); }
+.ui-state-hover .ui-icon, .ui-state-focus .ui-icon {background-image: url(/Style%20Library/GAIG_CorporateMaster/smoothness/images/ui-icons_454545_256x240.png); }
+.ui-state-active .ui-icon {background-image: url(/Style%20Library/GAIG_CorporateMaster/smoothness/images/ui-icons_454545_256x240.png); }
+.ui-state-highlight .ui-icon {background-image: url(/Style%20Library/GAIG_CorporateMaster/smoothness/images/ui-icons_2e83ff_256x240.png); }
+.ui-state-error .ui-icon, .ui-state-error-text .ui-icon {background-image: url(/Style%20Library/GAIG_CorporateMaster/smoothness/images/ui-icons_cd0a0a_256x240.png); }
+
+
+/* Corner radius */
+.ui-corner-tl { -moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; border-top-left-radius: 4px; }
+.ui-corner-tr { -moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px; border-top-right-radius: 4px; }
+.ui-corner-bl { -moz-border-radius-bottomleft: 4px; -webkit-border-bottom-left-radius: 4px; border-bottom-left-radius: 4px; }
+.ui-corner-br { -moz-border-radius-bottomright: 4px; -webkit-border-bottom-right-radius: 4px; border-bottom-right-radius: 4px; }
+.ui-corner-top { -moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; border-top-left-radius: 4px; -moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px; border-top-right-radius: 4px; }
+.ui-corner-bottom { -moz-border-radius-bottomleft: 4px; -webkit-border-bottom-left-radius: 4px; border-bottom-left-radius: 4px; -moz-border-radius-bottomright: 4px; -webkit-border-bottom-right-radius: 4px; border-bottom-right-radius: 4px; }
+.ui-corner-right {  -moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px; border-top-right-radius: 4px; -moz-border-radius-bottomright: 4px; -webkit-border-bottom-right-radius: 4px; border-bottom-right-radius: 4px; }
+.ui-corner-left { -moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; border-top-left-radius: 4px; -moz-border-radius-bottomleft: 4px; -webkit-border-bottom-left-radius: 4px; border-bottom-left-radius: 4px; }
+.ui-corner-all { -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; }
+
+/* Overlays */
+.ui-widget-overlay { background: #aaaaaa url(images/ui-bg_flat_0_aaaaaa_40x100.png) 50% 50% repeat-x; opacity: .30;filter:Alpha(Opacity=30); }
+.ui-widget-shadow { margin: -8px 0 0 -8px; padding: 8px; background: #aaaaaa url(images/ui-bg_flat_0_aaaaaa_40x100.png) 50% 50% repeat-x; opacity: .30;filter:Alpha(Opacity=30); -moz-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 8px; }/*
+* jQuery UI Tabs 1.8.12
+*/
+.ui-tabs { position: relative; padding: 0; zoom: 1; } /* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
+.ui-tabs .ui-tabs-nav { margin: 0; padding: .2em .2em 0;  }
+.ui-tabs .ui-tabs-nav li { list-style: none; float: left; position: relative; top: 1px; margin: 0 .2em 1px 0; border-bottom: 0 !important; padding: 0; white-space: nowrap; }
+.ui-tabs .ui-tabs-nav li a { float: left; padding: .5em 1em; text-decoration: none; }
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected { margin-bottom: 0; padding-bottom: 1px;   }
+/*ACTIVE NEWS TAB*/
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-state-processing a { cursor: text;  }
+.ui-tabs .ui-tabs-nav li a, .ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a { cursor: pointer; } /* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
+.ui-tabs .ui-tabs-panel { display: block; border-width: 0; padding: 1em 1.4em; background: none;  }
+.ui-tabs .ui-tabs-hide { display: none !important; }
+
+/*CORPORATE NEWS WEBPART*/
+
+#enterprisenews-tabs UL{
+                background-image:none;
+                background-color:#fff;
+                border:none;
+                color:#007a85;
+                margin-left:0;
+                padding-left:0;
+}
+#enterprisenews-tabs{
+                border:none;
+}
+#enterprisenews-tabs LI{
+                background-image:none;
+                background-color:#efefef;
+                color:#007a85;
+}
+#enterprisenews-tabs-1 LI a, #enterprisenews-tabs-2 LI a{
+                color:#007a85;
+}
+#enterprisenews-tabs-1, #enterprisenews-tabs-2{
+                font-weight:bold;
+                padding-bottom:5px;
+                background-color:#fff;
+                border:1px solid #999;
+                border-bottom:0;
+                color:#007a85;
+}
+#enterprisenews-tabs-1 div{
+                padding-bottom:5px;
+}
+div #enterprisenews-tabs-1, div #enterprisenews-tabs-2{
+                background-color:#fff;
+                min-height:150px;
+                background-image:url('/Style%20Library/GAIG_CorporateMaster/images/gradient.gif');
+                background-repeat:repeat-x;
+}
+.footernews-title{
+	color:#666666;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:11px;
+    color:#465264;
+    font-weight:normal;
+	padding-bottom:3px;
+	padding-top:10px;
+}
+.enterprisenews-item-publishdate{
+                color:#666666;
+                font-family:Arial, Helvetica, sans-serif;
+                font-size:11px;
+                color:#465264;
+                font-weight:normal;
+}
+.enterprisenews-item-title a, .footer-url{
+                font-family:Arial, Helvetica, sans-serif;
+                font-size:11px;
+                font-weight:normal;
+                color:#666666;
+}
+.footer-url{
+	padding-left:8px;
+    font-size:11px;
+}
+	
+.enterprisenews-item-title a:visited, .footer-url :visited{
+                font-family:Arial, Helvetica, sans-serif;
+                font-size:11px;
+                font-weight:normal;
+                color:#6A94BF;
+}
+
+.news-morenewscontainer{
+                font-size:11px;
+}
+.news-morenewscontainer a:link{
+                color:#3964b2;
+}
+.news-morenewscontainer a:visited{
+                color:#3964b2;
+}
+.news-rsscontainer{
+                float:right;
+                width:20px;
+                height:20px;       
+}
+.news-linkscontainer {
+                width:250px;
+                height:25px;
+
+}
+
+/*DIVISION NEWS WEBPART*/
+#divisionnews-tabs{
+                border:none;
+}
+.divisionnews-template{
+                padding-bottom:5px;
+}
+#divisionnews-tabs-1{
+                color:#007ab5;
+                font-family:Arial, Helvetica, sans-serif;
+                font-size:11px;
+                font-weight:bold;
+                padding-bottom:5px;
+                background-color:#fff;
+                border:1px solid #999;
+                border-bottom:0;
+                min-height:150px;
+                background-image:url('/Style%20Library/GAIG_CorporateMaster/images/gradient.gif');
+                background-repeat:repeat-x;
+}
+
+#divisionnews-tabs-1 div{
+                padding-bottom:5px;
+}
+#divisionnews-tabs-2{
+                font-family:Arial, Helvetica, sans-serif;
+                font-size:11px;
+                font-weight:bold;
+                padding-bottom:5px;
+                background-color:#fff;
+                border:1px solid #999;
+                border-bottom:0;
+                min-height:150px;
+                background-image:url('/Style%20Library/GAIG_CorporateMaster/images/gradient.gif');
+                background-repeat:repeat-x;
+
+}
+#divisionnews-tabs UL{
+                background-image:none;
+                background-color:#fff;
+                border:none;
+                margin-left:0;
+                padding-left:0;
+}
+#divisionnews-tabs LI{
+                background-image:none;
+                background-color:#efefef;
+                color:#666666;
+}
+.divisionnews-item-publishdate{
+                color:#003366;
+                font-weight:normal;
+}
+.divisionnews-item-title a{
+                font-family:Arial, Helvetica, sans-serif;
+                font-size:11px;
+                font-weight:normal;
+                color:#666666;
+}
+.divisionnews-item-title a:visited{
+                font-family:Arial, Helvetica, sans-serif;
+                font-size:11px;
+                font-weight:normal;
+                color:#6A94BF;
+}
+
+.DivisionNewsletterDescription
+{
+    font-weight:normal;
+}
+
+/*MEDIA & NEWS WEBPART*/
+.medianews-itemid a{
+                font-weight:bold;            
+}
+.medianews-tabscontainer{
+                background-color:#fff;
+                border:0;
+                text-align:left;
+                padding-bottom:20px;
+                display:none;
+}
+}
+.medianews-tabscontainer li{
+                padding-left:0;
+                margin-left:0;
+}
+.medianews-list li{
+                background-color:#fff;
+                border:0;
+                text-align:left;
+}
+.medianews-list ul{
+                background-color:#fff;
+                border:0;
+}
+.medianews-container-current{
+                padding-left:0;
+                margin:0;
+}
+.medianews-newsitem-container li{
+                padding-bottom:20px;
+}
+.medianews-tabscontainer li{
+                background-color:#fff;
+                border:0;
+}
+.medianews-tabs-separator{
+                font-size:18px;
+                padding-left:0px;
+                padding-right:0px;
+                background-color:#ffffff;
+                color:#666666;
+}
+#medianews-tabs UL{
+                background-color:#fff;
+                border:none;
+                padding-left:0;
+                margin-left:0;
+}
+#medianews-tabs li{
+               background-color:#fff;
+                border:none;
+}
+
+.medianews-tabsitemcontainer{
+                margin-left:-10px; /*brings all news items to the left*/
+                padding-left:0;
+}
+.medianews-list ul{
+                margin-left:-10px;
+                padding-left:0;
+}
+.medianews-publishdate{
+                color:#666666;
+                font-family:Arial, Helvetica, sans-serif;
+                font-size:11px;
+                color:#465264;
+                font-weight:normal;
+}
+
+/*override division and enterprise news tabs*/
+
+/* NEWS & MEDIA Interaction states - ENSURE ANY MODIFICATIONS DON'T AFFECT CORPORATE AND DIVISION NEWS TABS/TEXT
+----------------------------------*/
+#medianews-tabs.ui-state-default,#medianews-tabs .ui-widget-content .ui-state-default, #medianews-tabs.ui-widget-header .ui-state-default { 
+                border: 1px solid #d3d3d3; background-color: #ffffff;
+                }
+#medianews-tabs.ui-state-default a, #medianews-tabs .ui-state-default a:link, #medianews-tabs .ui-state-default a:visited { 
+                color: #666666; text-decoration: none;  font-family:"proxima-nova-condensed-1","proxima-nova-condensed-2", "Arial Narrow"  !Important;
+                font-size:12px; font-weight: normal; background: #ffffff; 
+                }
+                
+/*HOVER - TAB*/             
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus,  .ui-widget-header .ui-state-focus { 
+                border: 1px solid #999999; background: #ffffff; 
+                }
+/*HOVER - TEXT*/           
+#medianews-tabs.ui-state-hover a, #medianews-tabs .ui-state-hover a:hover { 
+                text-decoration: none; background-color:#ffffff; font-weight:normal; color: #666666; font-size:12px;
+                font-family:"proxima-nova-condensed-1","proxima-nova-condensed-2", "Arial Narrow"  !Important;
+                }
+                                
+#medianews-tabs .ui-state-active,#medianews-tabs .ui-widget-content .ui-state-active, #medianews-tabs .ui-widget-header .ui-state-active { 
+                border:none; background: #ffffff; 
+                }
+#medianews-tabs.ui-state-active a,#medianews-tabs .ui-state-active a:link, #medianews-tabs .ui-state-active a:visited { 
+                color: #666666; text-decoration: none; font-family:"proxima-nova-condensed-1","proxima-nova-condensed-2", "Arial Narrow" !Important;
+                font-size:12px; font-weight:bold; 
+                }
+/*END MEDIA NEWS WEBPART*/
+
+/* RSS Feed */
+
+.rss-box {
+                margin: .2em;
+               background-color: transparent;
+                border: 0px solid #cc3300;
+                
+}
+.rss-items {
+                margin-top:1px;
+                padding:0;
+                margin-left:1px;  
+                color:#465264;
+                font-size:12px;
+                font-family:Arial, Helvetica, sans-serif;
+}
+p.rss-title {/*padding:0.5em;*/}
+.rss-title { /*EXTERNAL LINKS*/
+                text-decoration: none;
+                font-family: Verdana;
+                font-size: 12px;
+                background-color:#006699;
+                margin: 0px;
+                padding:0em;
+                text-align: left;
+}
+
+.rss-item  {
+  font-family: Arial;
+  font-size: 11px;
+  list-style:none;
+  padding-bottom:1em;
+}
+
+.rss-item a:link {
+                color:#3964b2;
+                font-size: 11px;
+                font-weight:bold;
+                font-family:Arial;
+                }
+.rss-item a:visited {
+                color:#6A94BF;
+}
+.rss-item a:hover {
+                color:#6A94BF;
+                text-decoration : underline;
+}
+
+
+.rss-date {
+                font-size: 10px;
+                font-family:Arial, Helvetica, sans-serif;
+                font-weight : normal;
+                color: #465264;
+                }
+/*  INTERNAL RSS  News & Media CQWP Results - Press Releases*/  
+.link-item a:link{
+                color:#3964b2;
+                font-size: 11px;
+                font-weight:bold;
+                font-family:Arial;
+                }
+.link-item a:visited{ 
+                color:#6A94BF;
+                }
+.link-item a:hover{ 
+                text-decoration:underline;
+                }
+
+
+.description{      
+                font-size: 11px;
+                font-family:Arial, Helvetica, sans-serif;
+                color:#465264;
+}
+.ms-WPTitle{
+                                color:#007a85 !Important;
+                                font-family:"proxima-nova-condensed-1","proxima-nova-condensed-2", "Arial Narrow"  !Important;
+                                font-size:12px;
+                                font-weight:bold;
+                                margin-top:0;
+                                padding-top:0;
+}
+/* end RSS Feed */
+
+/* Forms Webpart 
+.FormsOverviewTable{
+                font-family:Arial, Helvetica, sans-serif !important;
+}*/
+.forms-page-container{
+    width:620px;
+    height:100%;
+    min-height:100%;
+    background-color:#ffffff;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:12px;
+    float:left;
+    z-index:-25;
+}
+.forms-filters-container{
+    height:100%;
+    min-height:100%;
+    /*background-color:#ffffff;*/
+    background-image:url('/Style%20Library/GAIG_CorporateMaster/images/gradient.gif');
+    background-repeat:repeat-x;
+    float:left;
+    width:620px;
+}
+
+/*BEGIN 2 classes go together - these classes start out on the page and then dissapear until you get results*/
+                .forms-results-template{ 
+                                /*float:left;
+                                clear:both;*/
+                                width:620px;
+                                height:100%;
+                                border-top:1px solid #cccccc;
+                                display:none;
+                }
+/*this class on top */
+                .forms-container-div-results{
+                                /*  line-height:14px;
+                                float:left;*/
+                                width:580px;
+                                clear:both;
+                                padding-left:20px;
+                                padding-top:20px;
+                                height:100%;
+                                min-height:100%;            
+                }
+/*END 2 classes go together*/
+
+.forms-span-results-formtitle{
+                padding-left:5px;             
+}
+img.forms-container-div-results{
+                padding-top:2px;
+}
+.forms-category-selected { 
+                font-weight:bold;
+}
+.forms-results-classification,
+.forms-results-types,
+.forms-results-locations{
+                padding-top:10px;
+                margin-bottom: 10px;
+                /*height:20px;*/
+                width:300px;
+                float:left;
+                color:#465264;
+                font-size:12px;
+                padding-left:20px;
+               /* height:45px;*/
+                font-family:Arial, Helvetica, sans-serif;
+
+
+}
+/*
+.forms-results-types checkbox{
+       margin-bottom: 20px; 
+}*/
+.forms-radio-classification{
+               /* padding-left:20px;
+                padding-right:5px;*/
+}
+/*
+.forms-div-type-applications{
+                padding-top:10px;
+                padding-left:20px;
+               /* height:20px;
+                width:300px;
+                color:#465264;
+                font-size:12px;
+                float:left;
+                height:45px;
+                font-family:Arial, Helvetica, sans-serif;
+
+}
+.forms-div-type-policy{
+                padding-top:10px;
+                padding-left:20px;
+              /* height:20px;
+                width:300px;
+                float:left;
+                color:#465264;
+                font-size:12px;
+                float:left;
+                font-family:Arial, Helvetica, sans-serif;
+}
+
+.forms-div-type-locations{
+                padding-top:10px;
+                padding-left:20px;
+                width:300px;      
+                color:#465264;
+                font-size:12px;
+                float:left;
+                font-family:Arial, Helvetica, sans-serif;
+}
+
+.forms-category-template{ 
+                float:right;
+}*/
+.forms-container-div-category{
+                padding-top:10px;
+                width:298px;
+                min-height:100%;
+                height:100%;
+                top:0 !Important;
+                /*float:right;*/
+                display:inline-block;
+                position:inherit;
+                vertical-align:text-top;   
+                z-index:1000;  
+                font-family:Arial, Helvetica, sans-serif;
+}
+/*
+.forms-questionnaries-addpadding{
+                padding-top:10px;
+                width:300px;
+                min-height:100%;
+                height:100%;
+                top:0 !Important;
+                float:right;
+                position:relative;
+                vertical-align:text-top;   
+                z-index:1000;   
+}*/
+.forms-selects{
+                color:#007a85;
+    font-size:14px;
+    font-family:Arial, Helvetica, sans-serif;
+                
+}
+
+.forms-div-category{
+                line-height: 20px;
+                color:#666666;
+                font-size:12px; 
+                cursor:pointer;
+                font-family:Arial, Helvetica, sans-serif;
+}
+.forms-noresultsmessage-container{
+               /* width:620px;
+                float:left;
+                clear:left;
+                padding-left:20px;*/
+                float:left;
+
+}
+
+/* NEW FORMS TABLE 
+td.FormsOverviewTable{
+                vertical-align:top;
+}
+.forms-page-container{
+                width:620px;
+    background-image:url('/Style%20Library/GAIG_CorporateMaster/images/gradient.gif');
+    background-repeat:repeat-x;
+    } */
+
+
+
+/**************************************************************************************************************/
+/*SEARCH RESULTS*/
+/**************************************************************************************************************/
+/*REFINEMENT NAV*/
+
+.ms-searchref-main{
+                border-right:0;
+                background-color:#ffffff;
+                border-bottom:0;
+}
+li.ms-searchref-filtermsg{
+                border-right:1px #cccccc solid;
+}
+.ms-searchref-categoryname{
+                                color:#007a85;
+                                font-family:"proxima-nova-condensed-1","proxima-nova-condensed-2", "Arial Narrow"  !Important;
+                                font-size:14px;
+                                font-weight:bold;
+                                border:0;
+                                padding-bottom:12px;
+}
+li.ms-searchref-unselected{
+                background-color:#fff;
+                border-right:1px #cccccc solid;
+                font-size:12px;
+                font-family:Arial, Helvetica, sans-serif    
+}
+li.ms-searchref-selected{
+                border:0;
+                font-weight:bold;
+                border-left:0;
+                border-top:0;
+                border-bottom:0;
+                border-right:1px #cccccc solid;
+                font-size:11px;
+                font-family:Arial, Helvetica, sans-serif;
+}
+.ms-searchref-filters{
+                border-right:0;
+}
+.ms-searchref-filter{
+                border:0;
+}
+.srch-results{
+                font-family:Arial, Helvetica, sans-serif;
+}
+/*QUERIED RESULTS*/
+.srch-Page{
+                padding-bottom:15px;
+                font-family:Arial, Helvetica, sans-serif;
+                padding-left:15px;
+                padding-top:0;
+                text-align:right;
+}
+.srch-Description2{
+                padding-bottom:15px;
+                padding-left:0px;
+                padding-right:0px;
+                font-family:Arial, Helvetica, sans-serif;
+                color:#465264;
+
+                padding-top:0px;             
+}
+.srch-Title1 a:link{
+                font-family:Arial, Helvetica, sans-serif;
+                font-size:13px;
+
+}
+
+.srch-Title2 a:link{
+                font-family:Arial, Helvetica, sans-serif;
+                font-size:10px;
+                font-weight:bold;
+
+}
+.srch-Title2{
+                font-family:Arial, Helvetica, sans-serif;
+                font-size:10px !Important;
+                font-weight:bold;
+
+}
+
+.srch-Title3 a:link{
+                font-family:Arial, Helvetica, sans-serif;
+                font-size:13px !Important;
+                font-weight:bold;
+
+}
+.srch-Title3 a:link{
+                font-family:Arial, Helvetica, sans-serif;
+                font-size:13px !Important;
+                color:#cc0000;
+
+}
+
+.srch-WPBody{
+                font-family:Arial, Helvetica, sans-serif;
+                color:#465264;
+                font-size:12px;
+}
+.srch-URL2{
+                color:#007a85 !Important;           
+
+}
+/* END SEARCH RESULTS MODIFICATIONS */
+
+/*ACCORDION*/
+
+/*CONTACTS ACCORDION WEB PART */
+.contacts1pager-instructions{
+                color:#007a85;
+                font-family:"proxima-nova-condensed-1","proxima-nova-condensed-2", "Arial Narrow"  !Important;
+                font-size:12px;
+                font-weight:bold !Important;
+                margin-bottom:8px;
+                background-color:transparent;
+                /*display:block;*/
+                zoom:1;
+                margin-top:2px;
+                min-height:150px;
+                z-index:50000;
+                padding-left:5px;
+                padding-top:5px;
+                font-size:12px;
+
+}
+.contacts1pager-page-container{
+                float:left;
+                position:relative;
+                width:298px;
+                min-height:100%;
+                background-color:#ffffff;
+                border:#999999 1px solid;
+                border-bottom:none;
+                background-image:url('/Style%20Library/GAIG_CorporateMaster/images/gradient.gif');
+                background-repeat:repeat-x;
+}
+h3.contacts1pager-page-container{
+                color:#465264 !Important;
+                font-family:"proxima-nova-condensed-1","proxima-nova-condensed-2", "Arial Narrow"  !Important;
+                font-size:12px;
+                font-weight:bold !Important;
+
+}
+
+.contacts1pager-contact-container-p{
+                color:#465264;
+                font-size:12px;
+                font-family:Arial, Helvetica, sans-serif;
+}
+
+/* Interaction states
+----------------------------------*/
+/*override division and enterprise news * news & media tabs*/
+
+/* contacts Interaction states - ENSURE ANY MODIFICATIONS DON'T AFFECT CORPORATE AND DIVISION NEWS TABS/TEXT
+----------------------------------*/
+.contacts1pager-page-container-tabs.ui-state-default,.contacts1pager-page-container .ui-widget-content .ui-state-default, .contacts1pager-page-container.ui-widget-header .ui-state-default { 
+                                }
+.contacts1pager-page-container.ui-state-default a, .contacts1pager-page-container .ui-state-default a:link, .contacts1pager-page-container .ui-state-default a:visited { 
+                color: #465264; text-decoration: none;  font-family:"proxima-nova-condensed-1","proxima-nova-condensed-2", "Arial Narrow"  !Important;
+                font-size:12px; font-weight: bold; background: transparent; 
+                }
+                
+/*HOVER - TAB*/             
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus,  .ui-widget-header .ui-state-focus { 
+                }
+/*HOVER - TEXT*/           
+.contacts1pager-page-container.ui-state-hover a, .contacts1pager-page-container .ui-state-hover a:hover { 
+                text-decoration: none; background-color:transparent; font-weight:bold; color: #465264; font-size:12px;
+                font-family:"proxima-nova-condensed-1","proxima-nova-condensed-2", "Arial Narrow"  !Important;
+                }
+                                
+.contacts1pager-page-container .ui-state-active,.contacts1pager-page-container .ui-widget-content .ui-state-active, .contacts1pager-page-container .ui-widget-header .ui-state-active { 
+                border:none; background: transparent; 
+                }
+.contacts1pager-page-container.ui-state-active a,.contacts1pager-page-container .ui-state-active a:link, .contacts1pager-page-container .ui-state-active a:visited { 
+                color: #465264; text-decoration: none; font-family:"proxima-nova-condensed-1","proxima-nova-condensed-2", "Arial Narrow" !Important;
+                font-size:12px; font-weight:bold; 
+                }
+/*END ACCORDION CONTACTS WEBPART*/
+/* ************************************************************** */
+
+
+/*CONTACTS WEB PART map */
+.contactsdivision-instructions{
+                color:#007a85;
+                font-family:"proxima-nova-condensed-1","proxima-nova-condensed-2", "Arial Narrow"  !Important;
+                font-size:12px;
+                font-weight:bold !Important;
+                margin-bottom:8px;
+                background-color:transparent;
+                /*display:block;*/
+                zoom:1;
+                margin-top:2px;
+                min-height:150px;
+                z-index:50000;
+                padding-left:5px;
+                padding-top:5px;
+                font-size:12px;
+}
+.contactsdivision-page-container{
+                height:100%;
+                min-height:100%;
+                width:940px;
+                float:left;
+                background-color:transparent;
+                padding:0;
+                margin:0;
+}
+.contactsdivision-page-insidecontainer-left{
+                float:left;
+                position:relative;
+                width:640px;
+                height:100%;
+                min-height:100%;
+                background-color:transparent;
+                text-align:left;
+}
+.map{
+                border:0;
+}
+.contactsdivision-page-insidecontainer-right{
+                float:left;
+                position:relative;
+                width:298px;
+                min-height:100%;
+                background-color:#ffffff;
+                border:#999999 1px solid;
+                border-bottom:none;
+                background-image:url('/Style%20Library/GAIG_CorporateMaster/images/gradient.gif');
+                background-repeat:repeat-x;
+
+}
+
+.contactsdivision-page-insidecontainer-right .ui-state-default a:link{
+                border:0px #eeeeee solid;
+                background-image:none;
+                background-color:transparent;
+                color:#465264;
+                font-size:12px;
+                font-weight:bold !Important;
+                font-family:Arial, Helvetica, sans-serif;
+
+
+}
+.contactsdivision-page-insidecontainer-right .ui-state-active a:link{
+                border:0px #eeeeee solid;
+                background-image:none;
+                background-color:transparent;
+                color:#465264;
+                font-size:12px;
+                font-weight:bold !Important;
+                font-family:Arial, Helvetica, sans-serif;
+
+}
+.contactsdivision-page-insidecontainer-right .ui-state-focus a:link{
+                border:0px #eeeeee solid;
+                background-image:none;
+                color:#465264;
+                font-size:12px;
+                font-weight:bold !Important;
+                font-family:Arial, Helvetica, sans-serif;
+
+
+}
+.contactsdivision-contact-container-p{
+                color:#465264;
+                font-size:12px;
+                font-family:Arial, Helvetica, sans-serif;
+
+}
+.contacts1pager-contacts-container-div{
+                position:relative;
+                clear:both;
+                float:left;
+                width:270px;
+                height:100%;
+                min-height:100%;
+                top:0;
+
+}
+.contactsdivision-template{
+}
+.contactsdivision-contacts-container-div{
+                position:relative;
+                clear:both;
+                float:left;
+                width:270px;
+                height:100%;
+                min-height:100%;
+                top:0;
+}
+
+.ui-accordion-header{
+                background:none !Important;
+                border:0px #eeeeee solid;
+                color:#465264 !Important;
+                font-style:normal;
+                font-weight:bold !Important;
+                font-size:14px;
+                font-family:Arial, Helvetica, sans-serif;
+                margin-bottom:3px;
+}
+
+.contacts1pager-contact-container-div{
+                border:none;
+                background-color:transparent;
+}
+.contacts1pager-contact-container-p{
+                font-size:12px;
+                color:#465264;
+}
+.contactsdivision-contact-container-div{
+                border:0;
+                font-size:12px;
+                color:#465264;
+                background-color:transparent;
+
+}
+.forms-div-type-applications{
+                display:none;
+}
+.forms-div-type-policy{
+                display:none;
+}
+.forms-div-type-locations{
+                display:none;
+}
+.forms-category-template{
+                display:none;
+}
+/* corporate */
+.navigation-corporatesite-container{      
+                height:110px; /* 110px h  PLUS THIS css SIZES image and description on Corporate Nav*/
+                clear:both;          
+                width:100%;
+                background-color:#F2F2F2;
+                background-image:url('/Style%20Library/GAIG_CorporateMaster/images/CorporateNav_LeftCorner_10x93.gif');
+                background-position:left bottom;
+                background-repeat:no-repeat;
+                z-index:0;
+}
+.navigation-corporatesite-listitem{
+                cursor:pointer;
+}
+.navigation-corporatesite-rightboarder{ 
+                background-image:url('/Style%20Library/GAIG_CorporateMaster/images/CorporateNav_RightCorner_10x93.gif');
+                background-repeat:no-repeat;
+                background-color:#f2f2f2;
+                float:right;
+                margin-top:17px;
+                height:93px;
+                width:10px;
+                z-index:0;
+
+
+}
+/*.navigation-corporatesite-emptyhtmlcontainer{
+                                                                z-index:52;
+                                        height:110px; /* 110px h  PLUS THIS css SIZES image and description on Corporate Nav*/        
+  /*              width:100%;
+                float:left;
+                position:relative;
+
+}*/
+
+/*Print logo is for printing only - hide on the screen*/
+.printLogo
+{
+    display:none;
+}
+

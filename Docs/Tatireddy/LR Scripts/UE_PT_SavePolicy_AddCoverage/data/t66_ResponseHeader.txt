@@ -1,0 +1,21 @@
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: Mon, 01 Jan 1990 00:00:00 GMT
+Date: Thu, 23 Jun 2016 13:02:20 GMT
+X-Cup-Server-Proof: 3045022024525c1542e3483c1c0420e01e814f4f73a92c2c3e089320eb6bcdf2109c861f0221008b702e53a2dc0e80656f8f1f22aea96c446ea2794c997843aae6aa8d61f27071:ce2dcf56f178cd5541242603e15e5cf1e4503451ba1e3c3401050d78e585e20e
+ETag: W/"3045022024525c1542e3483c1c0420e01e814f4f73a92c2c3e089320eb6bcdf2109c861f0221008b702e53a2dc0e80656f8f1f22aea96c446ea2794c997843aae6aa8d61f27071:ce2dcf56f178cd5541242603e15e5cf1e4503451ba1e3c3401050d78e585e20e"
+Content-Type: text/xml; charset=UTF-8
+X-Daynum: 3461
+X-Daystart: 21740
+Content-Encoding: gzip
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+Server: GSE
+Alternate-Protocol: 443:quic
+Alt-Svc: quic=":443"; ma=2592000; v="34,33,32,31,30,29,28,27,26,25"
+Content-Length: 339
+Age: 1
+Via: HTTPS/1.1 ind-mhp2lfp001
+

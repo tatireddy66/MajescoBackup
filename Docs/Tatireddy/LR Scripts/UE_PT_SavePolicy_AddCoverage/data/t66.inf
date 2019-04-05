@@ -1,0 +1,11 @@
+[t66]
+FileName1=t66.xml
+URL1=https://clients2.google.com/service/update2?cup2key=6:4216953270&cup2hreq=ce2dcf56f178cd5541242603e15e5cf1e4503451ba1e3c3401050d78e585e20e
+Total=1
+RequestHeaderFile=t66_RequestHeader.txt
+RequestBodyFile=t66_RequestBody.txt
+ResponseHeaderFile=t66_ResponseHeader.txt
+ContentType=text/xml
+SnapshotXmlFile=snapshot_66.xml
+[ProtocolInfo]
+ProtocolId=QTWeb

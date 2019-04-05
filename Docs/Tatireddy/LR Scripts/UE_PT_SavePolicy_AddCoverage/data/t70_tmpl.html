@@ -1,0 +1,45 @@
+function TmplNoHideDiv(rValue, box){
+
+	if(rValue==1){
+	 $('#'+box).show();
+	}else{
+	 $('#'+box).hide();
+	}
+} 
+
+function TmplYesHideDiv(rValue, box){
+
+	if(rValue==0){
+	 $('#'+box).show();
+	}else{
+	 $('#'+box).hide();
+	}
+} 
+
+function TmplRecordsDriverHide(rValue, box){
+
+	if(rValue==1){
+		$('#'+box+'_Row1').show();
+		$('#'+box+'_Row2').show();
+	}else{
+		$('#'+box+'_Row1').hide();
+		$('#'+box+'_Row2').hide();
+	}
+} 
+
+function TmplDriversTrainingHide(rValue, box){
+
+	if(rValue==1){
+		$('#'+box+'_Row1').show();
+	}else{
+		$('#'+box+'_Row1').hide();
+	}
+} 
+
+function TmplBoxes(className)
+{
+	if($('.'+className+':checked').length>0)
+	  $('.'+className+'').each(function(){Global.GetControl($(this).attr('id')).SetRequired('false')})
+  else
+	  $('.'+className+'').each(function(){Global.GetControl($(this).attr('id')).SetRequired('true')})
+}

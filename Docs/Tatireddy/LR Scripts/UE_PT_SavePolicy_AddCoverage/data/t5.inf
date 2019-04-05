@@ -1,0 +1,15 @@
+[t5]
+FileName1=t5.htm
+URL1=http://ueatworkuat.maxprocessing.com/login.max?t=1466686616251
+Total=3
+RequestHeaderFile=t5_RequestHeader.txt
+RequestBodyFile=t5_RequestBody.txt
+ResponseHeaderFile=t5_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_5.xml
+FileName2=t5_h-bg_30x30.png
+URL2=http://ueatworkuat.maxprocessing.com/images/h-bg_30x30.png
+FileName3=t5_loadinganimation.gif
+URL3=http://ueatworkuat.maxprocessing.com/images/loadinganimation.gif
+[ProtocolInfo]
+ProtocolId=QTWeb

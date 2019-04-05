@@ -1,0 +1,18 @@
+Virtual User Script started at : 07-07-2016 15:49:08
+Starting action vuser_init.
+Web Turbo Replay of LoadRunner 12.53.0 for Windows 7; build 1203 (Jul 07 2016 19:13:20)  	[MsgId: MMSG-26983]
+Run mode: HTML  	[MsgId: MMSG-26993]
+Replay user agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36  	[MsgId: MMSG-26988]
+Run-Time Settings file: "D:\Tatireddy\LR Scripts\UE_PT_SavePolicy_AddCoverage\\default.cfg"  	[MsgId: MMSG-27141]
+Warning -27070: Replay statistic collection is not supported by the WinInet Replay and is ignored  	[MsgId: MWAR-27070]
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Maximum number of concurrent connections per server: 6  	[MsgId: MMSG-26989]
+Starting action Action.
+Error: C interpreter run time error:  Error -- Unresolved symbol : Action.
+Action was aborted.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.

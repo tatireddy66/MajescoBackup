@@ -1,0 +1,10 @@
+GET /generate_204 HTTP/1.1
+Host: clients1.google.com
+Connection: keep-alive
+Accept: image/webp,image/*,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36
+Referer: https://www.google.com/
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: en-US,en;q=0.8
+Cookie: OGP=-19009353:; OGPC=19009353-1:19008563-4:; NID=148=k5tr1a1dHKZbGCWZJI7HXkWhPYNpkFdaOP6gxOfHMBHG2BQblZD3z7oe7oE5veobysAee84pyh9B5G-CPnYvHshn1gnkBEhWRPP0Q_dU0eieeGWLv2TyBLY2Z_4Sp3j6GIWM36WIO4ZBGfMUpnEbTLfDpW9lcS5xjkrJPHYjPLg; 1P_JAR=2018-12-05-12
+

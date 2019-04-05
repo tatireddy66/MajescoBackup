@@ -1,0 +1,498 @@
+[API Trapper      (5814:60ec)] Recording in 32-bit mode: C:\Program Files (x86)\Internet Explorer\iexplore.exe
+[API Trapper      (4f00:68d4)] Recording in 64-bit mode: C:\Program Files\Internet Explorer\IEXPLORE.EXE
+[API Trapper      (6910:2a30)] Recording in 32-bit mode: C:\Program Files (x86)\Internet Explorer\IEXPLORE.EXE
+[Network Analyzer (6910:5898)] ------------------------------------------------------------------------------------------
+[Network Analyzer (6910:5898)] Load Network Traffic Analyzers:
+[Network Analyzer (6910:5898)]     Analyzer Module: WPLUS (value=)
+[Network Analyzer (6910:5898)]     Analyzer Module: WebBase (value=GetHttpProtocolAnalyzer:api_http_filter.dll)
+[Network Analyzer (6910:5898)]     + Network Analyzer: api_http_filter.dll @ GetHttpProtocolAnalyzer Loaded!
+[Network Analyzer (6910:5898)]     + Interception Auditors: WinInetWplusInterceptionAudit:api_http_filter.dll
+[Network Analyzer (6910:5898)]     Analyzer Module: QTWeb (value=GetWebSocketProtocolAnalyzer:WebSocketAnalyzer.dll)
+[Network Analyzer (6910:5898)]     + Network Analyzer: WebSocketAnalyzer.dll @ GetWebSocketProtocolAnalyzer Loaded!
+[Network Analyzer (6910:5898)]     Analyzer Module: local_server (value=)
+[Network Analyzer (6910:5898)] ------------------------------------------------------------------------------------------
+[Network Analyzer (6910:68ec)] Address lookup for IND-ARLIDW70093 = 172.17.41.109
+[Network Analyzer (6910:5898)] Address lookup for IND-ARLIDW70093 = 172.17.41.109
+[Network Analyzer (6910:5898)] Request Connection: Remote Server @ 192.168.250.42:8080   (Service=)  (Sid=  1)  PROXIED!
+[Web Request      (6910:68ec)] "GET http://www.apsrtconline.in/oprs-web/"   
+[Network Analyzer (6910:68ec)]   (Sid:  1) Client -> Server @ : 303 bytes (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  1) Server -> Client : 587 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  1) Server -> Client : 8322 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  1) Server -> Client : 2774 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  1) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  1) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  1) Server -> Client : 2774 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  1) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  1) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  1) Server -> Client : 2774 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  1) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  1) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  1) Server -> Client : 21 bytes  (Service=HTTP)
+[Network Analyzer (6910:5898)] Address lookup for IND-ARLIDW70093 = 172.17.41.109
+[Network Analyzer (6910:5898)] Request Connection: Remote Server @ 192.168.250.42:8080   (Service=)  (Sid=  2)  PROXIED!
+[Network Analyzer (6910:5844)] Address lookup for IND-ARLIDW70093 = 172.17.41.109
+[Network Analyzer (6910:688c)] Address lookup for IND-ARLIDW70093 = 172.17.41.109
+[Web Request      (6910:68ec)] "GET http://www.apsrtconline.in/oprs-web/_assets/skin/skin_3_3.css"   
+[Network Analyzer (6910:68ec)]   (Sid:  2) Client -> Server @ : 459 bytes (Service=HTTP)
+[Network Analyzer (6910:49f4)] Address lookup for IND-ARLIDW70093 = 172.17.41.109
+[Network Analyzer (6910:5844)] Request Connection: Remote Server @ 192.168.250.42:8080   (Service=)  (Sid=  3)  PROXIED!
+[Web Request      (6910:68ec)] "GET http://www.apsrtconline.in/oprs-web/_assets/skin/jquery-ui.css"   
+[Network Analyzer (6910:6ac4)] Address lookup for IND-ARLIDW70093 = 172.17.41.109
+[Network Analyzer (6910:68ec)]   (Sid:  3) Client -> Server @ : 460 bytes (Service=HTTP)
+[Network Analyzer (6910:688c)] Request Connection: Remote Server @ 192.168.250.42:8080   (Service=)  (Sid=  4)  PROXIED!
+[Web Request      (6910:68ec)] "GET http://www.apsrtconline.in/oprs-web/_assets/scripts/jquery-1.8.3.min.js"   
+[Network Analyzer (6910:62b8)] Address lookup for IND-ARLIDW70093 = 172.17.41.109
+[Network Analyzer (6910:68ec)]   (Sid:  4) Client -> Server @ : 489 bytes (Service=HTTP)
+[Network Analyzer (6910:65e8)] Address lookup for IND-ARLIDW70093 = 172.17.41.109
+[Network Analyzer (6910:49f4)] Request Connection: Remote Server @ 192.168.250.42:8080   (Service=)  (Sid=  5)  PROXIED!
+[Web Request      (6910:68ec)] "GET http://www.apsrtconline.in/oprs-web/_assets/scripts/ajax-script3_7.js"   
+[Network Analyzer (6910:68ec)]   (Sid:  5) Client -> Server @ : 487 bytes (Service=HTTP)
+[Network Analyzer (6910:6ac4)] Request Connection: Remote Server @ 192.168.250.42:8080   (Service=)  (Sid=  6)  PROXIED!
+[Web Request      (6910:68ec)] "GET http://www.apsrtconline.in/oprs-web/_assets/scripts/jquery.cycle2.min.js"   
+[Network Analyzer (6910:68ec)]   (Sid:  6) Client -> Server @ : 490 bytes (Service=HTTP)
+[Network Analyzer (6910:62b8)] Request Connection: Remote Server @ 192.168.250.42:8080   (Service=)  (Sid=  7)  PROXIED!
+[Network Analyzer (6910:662c)] Address lookup for IND-ARLIDW70093 = 172.17.41.109
+[Network Analyzer (6910:5898)] Address lookup for IND-ARLIDW70093 = 172.17.41.109
+[Network Analyzer (6910:650c)] Address lookup for IND-ARLIDW70093 = 172.17.41.109
+[Web Request      (6910:68ec)] "GET http://www.apsrtconline.in/oprs-web/_assets/scripts/script3_7.js"   
+[Network Analyzer (6910:68ec)]   (Sid:  7) Client -> Server @ : 482 bytes (Service=HTTP)
+[Network Analyzer (6910:65e8)] Request Connection: Remote Server @ 192.168.250.42:8080   (Service=)  (Sid=  8)  PROXIED!
+[Network Analyzer (6910:681c)] Address lookup for IND-ARLIDW70093 = 172.17.41.109
+[Web Request      (6910:68ec)] "GET http://static.abhibus.com/ap_tg/ap/oprs-web/_assets/images/new/banner0.png"   
+[Network Analyzer (6910:68ec)]   (Sid:  1) Client -> Server @ : 400 bytes (Service=HTTP)
+[Web Request      (6910:68ec)] "GET http://www.apsrtconline.in/oprs-web/_assets/scripts/allscripts.js"   
+[Network Analyzer (6910:68ec)]   (Sid:  8) Client -> Server @ : 483 bytes (Service=HTTP)
+[Network Analyzer (6910:5898)] Request Connection: Remote Server @ 192.168.250.42:8080   (Service=)  (Sid=  9)  PROXIED!
+[Web Request      (6910:68ec)] "GET http://static.abhibus.com/ap_tg/ap/oprs-web/_assets/images/new/banner3.png"   
+[Network Analyzer (6910:68ec)]   (Sid:  9) Client -> Server @ : 400 bytes (Service=HTTP)
+[Network Analyzer (6910:650c)] Request Connection: Remote Server @ 192.168.250.42:8080   (Service=)  (Sid= 10)  PROXIED!
+[Web Request      (6910:68ec)] "GET http://static.abhibus.com/ap_tg/ap/oprs-web/_assets/images/new/banner-bot-1.png"   
+[Network Analyzer (6910:68ec)]   (Sid: 10) Client -> Server @ : 405 bytes (Service=HTTP)
+[Network Analyzer (6910:662c)] Request Connection: Remote Server @ 192.168.250.42:8080   (Service=)  (Sid= 11)  PROXIED!
+[Web Request      (6910:68ec)] "GET http://static.abhibus.com/ap_tg/ap/oprs-web/_assets/images/new/banner4.png"   
+[Network Analyzer (6910:68ec)]   (Sid: 11) Client -> Server @ : 400 bytes (Service=HTTP)
+[Network Analyzer (6910:681c)] Request Connection: Remote Server @ 192.168.250.42:8080   (Service=)  (Sid= 12)  PROXIED!
+[Web Request      (6910:68ec)] "GET http://static.abhibus.com/ap_tg/ap/oprs-web/_assets/images/new/banner-bot-2.png"   
+[Network Analyzer (6910:68ec)]   (Sid: 12) Client -> Server @ : 405 bytes (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  4) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  4) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  3) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  3) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  2) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  2) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  4) Server -> Client : 7498 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  3) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  3) Server -> Client : 1416 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  4) Server -> Client : 2774 bytes  (Service=HTTP)
+[Web Request      (6910:68ec)] "GET http://static.abhibus.com/ap_tg/ap/oprs-web/_assets/images/new/banner-bot-3.png"   
+[Network Analyzer (6910:68ec)]   (Sid:  3) Client -> Server @ : 405 bytes (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  6) Server -> Client : 2774 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  5) Server -> Client : 2774 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  8) Server -> Client : 2774 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  2) Server -> Client : 5548 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  4) Server -> Client : 2774 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  7) Server -> Client : 2774 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  2) Server -> Client : 4161 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  6) Server -> Client : 4161 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  6) Server -> Client : 1755 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  5) Server -> Client : 5548 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  5) Server -> Client : 2073 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  8) Server -> Client : 5548 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  7) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  8) Server -> Client : 2774 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  7) Server -> Client : 5548 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  7) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  2) Server -> Client : 2774 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  8) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  7) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  7) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  4) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  4) Server -> Client : 4161 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  4) Server -> Client : 2774 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  8) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  7) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  2) Server -> Client : 645 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  4) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  4) Server -> Client : 2774 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  4) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  8) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  8) Server -> Client : 2774 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  7) Server -> Client : 2774 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  8) Server -> Client : 4161 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  8) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  7) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  6) Connection Terminated (by Client)
+[Network Analyzer (6910:68ec)]   (Sid:  7) Server -> Client : 491 bytes  (Service=HTTP)
+[Network Analyzer (6910:650c)] Address lookup for IND-ARLIDW70093 = 172.17.41.109
+[Network Analyzer (6910:68ec)]   (Sid:  8) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:650c)] Request Connection: Remote Server @ 192.168.250.42:8080   (Service=)  (Sid= 13)  PROXIED!
+[Network Analyzer (6910:68ec)]   (Sid:  4) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  4) Server -> Client : 3528 bytes  (Service=HTTP)
+[Web Request      (6910:68ec)] "CONNECT www.google-analytics.com:443"   
+[Network Analyzer (6910:68ec)]   (Sid: 13) Client -> Server @ : 242 bytes (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  4) Connection Terminated (by Server)
+[Network Analyzer (6910:68ec)]   (Sid:  8) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  8) Server -> Client : 2774 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  8) Server -> Client : 2774 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 13) Server -> Client : 138 bytes 
+[Network Analyzer (6910:68ec)]   (Sid:  8) Server -> Client : 2774 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  8) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  8) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  8) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  8) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  8) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  8) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  8) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  8) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  8) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  8) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  8) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  8) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  8) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  8) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  8) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  8) Server -> Client : 2774 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  8) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  8) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  8) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  8) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  8) Server -> Client : 2774 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  8) Server -> Client : 4161 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  8) Server -> Client : 2774 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  8) Server -> Client : 2774 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  8) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  8) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  8) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  8) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  8) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  8) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  8) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  8) Server -> Client : 4161 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  8) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  8) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  8) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (4f00:5448)] ------------------------------------------------------------------------------------------
+[Network Analyzer (4f00:5448)] Load Network Traffic Analyzers:
+[Network Analyzer (4f00:5448)]     Analyzer Module: WPLUS (value=)
+[Network Analyzer (4f00:5448)]     Analyzer Module: WebBase (value=GetHttpProtocolAnalyzer:api_http_filter_x64.dll)
+[Network Analyzer (4f00:5448)]     + Network Analyzer: api_http_filter_x64.dll @ GetHttpProtocolAnalyzer Loaded!
+[Network Analyzer (4f00:5448)]     + Interception Auditors: WinInetWplusInterceptionAudit:api_http_filter_x64.dll
+[Network Analyzer (4f00:5448)]     Analyzer Module: QTWeb (value=GetWebSocketProtocolAnalyzer:WebSocketAnalyzer_x64.dll)
+[Network Analyzer (6910:68ec)]   (Sid:  8) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  8) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  8) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  8) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (4f00:5448)]     + Network Analyzer: WebSocketAnalyzer_x64.dll @ GetWebSocketProtocolAnalyzer Loaded!
+[Network Analyzer (6910:68ec)]   (Sid:  8) Server -> Client : 2459 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  8) Connection Terminated (by Server)
+[Network Analyzer (4f00:5448)]     Analyzer Module: local_server (value=)
+[Network Analyzer (4f00:5448)] ------------------------------------------------------------------------------------------
+[Network Analyzer (4f00:69f8)] Address lookup for IND-ARLIDW70093 = 172.17.41.109
+[Network Analyzer (4f00:6248)] Address lookup for IND-ARLIDW70093 = 172.17.41.109
+[Network Analyzer (4f00:5448)] Address lookup for IND-ARLIDW70093 = 172.17.41.109
+[Network Analyzer (4f00:6248)] Request Connection: Remote Server @ 192.168.250.41:8080   (Service=)  (Sid=  1)  PROXIED!
+[Web Request      (4f00:69f8)] "CONNECT www.bing.com:443"   
+[Network Analyzer (4f00:69f8)]   (Sid:  1) Client -> Server @ : 223 bytes (Service=HTTP)
+[Network Analyzer (4f00:5448)] Request Connection: Remote Server @ 192.168.250.41:8080   (Service=)  (Sid=  2)  PROXIED!
+[Web Request      (4f00:69f8)] "CONNECT www.bing.com:443"   
+[Network Analyzer (4f00:69f8)]   (Sid:  2) Client -> Server @ : 223 bytes (Service=HTTP)
+[Network Analyzer (4f00:69f8)]   (Sid:  1) Server -> Client : 138 bytes 
+[Network Analyzer (4f00:69f8)]   (Sid:  2) Server -> Client : 138 bytes 
+[Network Analyzer (6910:68ec)]   (Sid:  9) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  9) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 11) Server -> Client : 2774 bytes  (Service=HTTP)
+[Web Request      (6910:68ec)] "GET http://www.apsrtconline.in/oprs-web/_assets/images/new/map-icon.png"   
+[Network Analyzer (6910:68ec)]   (Sid:  2) Client -> Server @ : 502 bytes (Service=HTTP)
+[Web Request      (6910:68ec)] "GET http://www.apsrtconline.in/oprs-web/_assets/images/new/logo.png"   
+[Network Analyzer (6910:68ec)]   (Sid:  5) Client -> Server @ : 498 bytes (Service=HTTP)
+[Web Request      (6910:68ec)] "GET http://www.apsrtconline.in/oprs-web/_assets/images/new/bg-home.jpg"   
+[Network Analyzer (6910:68ec)]   (Sid:  7) Client -> Server @ : 501 bytes (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  9) Server -> Client : 11017 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 11) Server -> Client : 11017 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 10) Server -> Client : 2774 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 12) Server -> Client : 2774 bytes  (Service=HTTP)
+[Network Analyzer (6910:650c)] Address lookup for IND-ARLIDW70093 = 172.17.41.109
+[Network Analyzer (6910:68ec)]   (Sid:  1) Server -> Client : 8699 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 11) Server -> Client : 2774 bytes  (Service=HTTP)
+[Network Analyzer (6910:6ac4)] Address lookup for IND-ARLIDW70093 = 172.17.41.109
+[Network Analyzer (6910:68ec)]   (Sid: 10) Server -> Client : 5548 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 10) Server -> Client : 1921 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 12) Server -> Client : 6935 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  1) Server -> Client : 2774 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 12) Server -> Client : 2774 bytes  (Service=HTTP)
+[Network Analyzer (6910:650c)] Request Connection: Remote Server @ 192.168.250.42:8080   (Service=)  (Sid= 14)  PROXIED!
+[Network Analyzer (6910:68ec)]   (Sid:  9) Server -> Client : 2774 bytes  (Service=HTTP)
+[Web Request      (6910:68ec)] "GET http://www.apsrtconline.in/oprs-web/_assets/images/new/phoneicon.png"   
+[Network Analyzer (6910:68ec)]   (Sid: 10) Client -> Server @ : 503 bytes (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  3) Server -> Client : 8674 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 12) Server -> Client : 2774 bytes  (Service=HTTP)
+[Network Analyzer (6910:6ac4)] Request Connection: Remote Server @ 192.168.250.42:8080   (Service=)  (Sid= 15)  PROXIED!
+[Network Analyzer (6910:68ec)]   (Sid:  3) Server -> Client : 4161 bytes  (Service=HTTP)
+[Web Request      (6910:68ec)] "GET http://www.apsrtconline.in/oprs-web/_assets/images/new/arrow-down-yellow.png"   
+[Network Analyzer (6910:68ec)]   (Sid: 14) Client -> Server @ : 511 bytes (Service=HTTP)
+[Web Request      (6910:68ec)] "GET http://www.apsrtconline.in/oprs-web/_assets/images/new/twoway.png"   
+[Network Analyzer (6910:68ec)]   (Sid: 15) Client -> Server @ : 500 bytes (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  2) Server -> Client : 291 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  7) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  2) Server -> Client : 588 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  7) Server -> Client : 5548 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  1) Server -> Client : 5548 bytes  (Service=HTTP)
+[Web Request      (6910:68ec)] "GET http://www.apsrtconline.in/oprs-web/_assets/images/new/cal-icon.png"   
+[Network Analyzer (6910:68ec)]   (Sid:  2) Client -> Server @ : 502 bytes (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  9) Server -> Client : 8322 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  1) Server -> Client : 5548 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  7) Server -> Client : 5548 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  9) Server -> Client : 5548 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 11) Server -> Client : 13870 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 12) Server -> Client : 5548 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  3) Server -> Client : 6032 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 12) Server -> Client : 5548 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  5) Server -> Client : 8614 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 10) Server -> Client : 1349 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 14) Server -> Client : 509 bytes  (Service=HTTP)
+[Web Request      (6910:68ec)] "GET http://www.apsrtconline.in/oprs-web/_assets/images/new/icon-bus.png"   
+[Network Analyzer (6910:68ec)]   (Sid:  3) Client -> Server @ : 502 bytes (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  5) Server -> Client : 282 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  7) Server -> Client : 2774 bytes  (Service=HTTP)
+[Web Request      (6910:68ec)] "GET http://www.apsrtconline.in/oprs-web/_assets/images/home/others/facebook.png"   
+[Network Analyzer (6910:68ec)]   (Sid: 14) Client -> Server @ : 510 bytes (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 15) Server -> Client : 565 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  1) Server -> Client : 2774 bytes  (Service=HTTP)
+[Web Request      (6910:68ec)] "GET http://www.apsrtconline.in/oprs-web/_assets/images/home/others/poweredby.png"   
+[Network Analyzer (6910:68ec)]   (Sid:  5) Client -> Server @ : 511 bytes (Service=HTTP)
+[Web Request      (6910:68ec)] "GET http://www.apsrtconline.in/oprs-web/_assets/images/home/others/twitter.png"   
+[Network Analyzer (6910:68ec)]   (Sid: 10) Client -> Server @ : 509 bytes (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  7) Server -> Client : 8322 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  1) Server -> Client : 5548 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  1) Server -> Client : 2774 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  9) Server -> Client : 5548 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 12) Server -> Client : 2774 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 11) Server -> Client : 5548 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  7) Server -> Client : 2774 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  1) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  1) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 12) Server -> Client : 3537 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  9) Server -> Client : 8322 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 11) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:4e98)]   (Sid: 13) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES256-SHA)
+[Network Analyzer (6910:68ec)]   (Sid: 11) Server -> Client : 5548 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 11) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  2) Server -> Client : 291 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  2) Server -> Client : 804 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 14) Server -> Client : 291 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 14) Server -> Client : 214 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  5) Server -> Client : 292 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  5) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  5) Server -> Client : 769 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  7) Server -> Client : 5548 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  1) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  1) Server -> Client : 4161 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  3) Server -> Client : 504 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  7) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  7) Server -> Client : 4161 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  1) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  1) Server -> Client : 4161 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  9) Server -> Client : 2774 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 11) Server -> Client : 2774 bytes  (Service=HTTP)
+[Network Analyzer (6910:4e98)]   (Sid: 13) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES256-SHA384)
+[Network Analyzer (6910:68ec)]   (Sid:  9) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  9) Server -> Client : 2774 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  9) Server -> Client : 2774 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  9) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 11) Server -> Client : 4161 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  9) Server -> Client : 2774 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 11) Server -> Client : 4161 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 11) Server -> Client : 2774 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  9) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  9) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 11) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 11) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  7) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  7) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  1) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  1) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  7) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  7) Server -> Client : 3837 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  1) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  1) Server -> Client : 4161 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  7) Connection Terminated (by Client)
+[Network Analyzer (6910:68ec)]   (Sid:  1) Server -> Client : 2774 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  1) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  1) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  9) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  9) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  9) Server -> Client : 4161 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  9) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 11) Server -> Client : 6935 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 11) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  9) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  9) Server -> Client : 4161 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 11) Server -> Client : 2774 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 11) Server -> Client : 2774 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  1) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  1) Server -> Client : 4161 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  1) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  1) Server -> Client : 2774 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  1) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  1) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  1) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  9) Server -> Client : 5548 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 11) Server -> Client : 2626 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 10) Server -> Client : 1004 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  1) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  1) Server -> Client : 5548 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  1) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  9) Server -> Client : 843 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  1) Server -> Client : 924 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 11) Connection Terminated (by Client)
+[Network Analyzer (6910:68ec)]   (Sid:  1) Connection Terminated (by Client)
+[Network Analyzer (6910:68ec)]   (Sid:  9) Connection Terminated (by Client)
+[Web Request      (6910:68ec)] "GET /analytics.js"   
+[Network Analyzer (6910:68ec)]   (Sid: 13) Client -> Server @ : 322 bytes (SSL)(Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 13) Server -> Client : 625 bytes (SSL) (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 13) Server -> Client : 14597 bytes (SSL) (Service=HTTP)
+[Network Analyzer (4f00:6a5c)]   (Sid:  2) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES256-SHA)
+[Network Analyzer (4f00:6a5c)]   (Sid:  2) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES256-SHA384)
+[Network Analyzer (4f00:65d4)]   (Sid:  1) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES256-SHA)
+[Web Request      (6910:68ec)] "GET /r/collect?v=1&_v=j66&a=247365465&t=pageview&_s=1&dl=http%3A%2F%2Fwww.apsrtconline.in%2Foprs-web%2F&ul=en-in&de=utf-8&dt=APSRTC%20Official%20Website%20for%20Online%20Bus%20Ticket%20Booking%20-%20APSRTConline.in&sd=24-bit&sr=1366x768&vp=1349x674&je=1&fl=14.0%20r0&_u=IEBAAEQ~&jid=1548000669&gjid=985706986&cid=712127139.1510893013&tid=UA-21115933-10&_gid=1356801977.1510893013&_r=1&z=1487475116"   
+[Network Analyzer (6910:68ec)]   (Sid: 13) Client -> Server @ : 719 bytes (SSL)(Service=HTTP)
+[Network Analyzer (4f00:65d4)]   (Sid:  1) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:ECDHE-RSA-AES256-SHA384)
+[Web Request      (6910:68ec)] "GET http://www.apsrtconline.in/oprs-web/_assets/images/favicon.ico"   
+[Network Analyzer (6910:68ec)]   (Sid: 10) Client -> Server @ : 453 bytes (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 13) Server -> Client : 535 bytes (SSL) (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 13) Server -> Client : 35 bytes (SSL) (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 10) Server -> Client : 295 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 10) Server -> Client : 1406 bytes  (Service=HTTP)
+[Web Request      (4f00:69f8)] "GET /favicon.ico"   
+[Network Analyzer (4f00:69f8)]   (Sid:  1) Client -> Server @ : 455 bytes (SSL)(Service=HTTP)
+[Web Request      (4f00:69f8)] "GET /favicon.ico"   
+[Network Analyzer (4f00:69f8)]   (Sid:  2) Client -> Server @ : 455 bytes (SSL)(Service=HTTP)
+[Network Analyzer (4f00:69f8)]   (Sid:  2) Server -> Client : 261 bytes (SSL) (Service=HTTP)
+[Network Analyzer (4f00:69f8)]   (Sid:  2) Server -> Client : 300 bytes (SSL) (Service=HTTP)
+[Network Analyzer (4f00:69f8)]   (Sid:  1) Server -> Client : 261 bytes (SSL) (Service=HTTP)
+[Network Analyzer (4f00:69f8)]   (Sid:  1) Server -> Client : 300 bytes (SSL) (Service=HTTP)
+[User action                 ] StartTransactionEvent Search [Web Request      (6910:68ec)] "GET http://www.apsrtconline.in/oprs-web/_assets/images/home/LArrow.png"   
+[Network Analyzer (6910:68ec)]   (Sid: 10) Client -> Server @ : 575 bytes (Service=HTTP)
+[Web Request      (6910:68ec)] "GET http://www.apsrtconline.in/oprs-web/_assets/images/home/arrow.png"   
+[Network Analyzer (6910:68ec)]   (Sid:  3) Client -> Server @ : 574 bytes (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 10) Server -> Client : 291 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 10) Server -> Client : 672 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  3) Server -> Client : 875 bytes  (Service=HTTP)
+[Network Analyzer (4f00:3730)] Address lookup for IND-ARLIDW70093 = 172.17.41.109
+[Network Analyzer (4f00:6894)] Address lookup for IND-ARLIDW70093 = 172.17.41.109
+[Network Analyzer (4f00:5448)] Address lookup for IND-ARLIDW70093 = 172.17.41.109
+[Network Analyzer (4f00:5e9c)] Address lookup for IND-ARLIDW70093 = 172.17.41.109
+[Network Analyzer (4f00:3730)] Request Connection: Remote Server @ 117.18.232.200:443   (Service=)  (Sid=  3)  PROXIED!
+[Network Analyzer (4f00:6894)] Request Connection: Remote Server @ 117.18.232.200:443   (Service=)  (Sid=  4)  PROXIED!
+[Network Analyzer (4f00:5448)] Request Connection: Remote Server @ 117.18.232.200:443   (Service=)  (Sid=  5)  PROXIED!
+[Network Analyzer (4f00:5e9c)] Request Connection: Remote Server @ 117.18.232.200:443   (Service=)  (Sid=  6)  PROXIED!
+[Network Analyzer (4f00:69b0)] Address lookup for IND-ARLIDW70093 = 172.17.41.109
+[Network Analyzer (4f00:69b0)] Request Connection: Remote Server @ 117.18.232.200:443   (Service=)  (Sid=  7)  PROXIED!
+[Network Analyzer (4f00:4834)] Address lookup for IND-ARLIDW70093 = 172.17.41.109
+[Network Analyzer (4f00:4834)] Request Connection: Remote Server @ 65.55.252.93:443   (Service=)  (Sid=  8)  PROXIED!
+[Network Analyzer (6910:5898)] Address lookup for IND-ARLIDW70093 = 172.17.41.109
+[Network Analyzer (6910:5898)] Request Connection: Remote Server @ 117.18.232.200:443   (Service=)  (Sid= 16)  PROXIED!
+[Web Request      (6910:68ec)] "POST http://www.apsrtconline.in/oprs-web/avail/services.do"   
+[Network Analyzer (6910:68ec)]   (Sid:  3) Client -> Server @ : 905 bytes (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  3) Server -> Client : 457 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  3) Server -> Client : 8322 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  3) Server -> Client : 4161 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  3) Server -> Client : 2774 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  3) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  3) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  3) Server -> Client : 2774 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  3) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  3) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  3) Server -> Client : 446 bytes  (Service=HTTP)
+[Web Request      (6910:68ec)] "GET /collect?v=1&_v=j66&a=761204075&t=pageview&_s=1&dl=http%3A%2F%2Fwww.apsrtconline.in%2Foprs-web%2Favail%2Fservices.do&ul=en-in&de=utf-8&dt=APSRTC%20Official%20Website%20for%20Online%20Bus%20Ticket%20Booking%20-%20APSRTConline.in&sd=24-bit&sr=1366x768&vp=1349x674&je=1&fl=14.0%20r0&_u=AACAAEQ~&jid=&gjid=&cid=712127139.1510893013&tid=UA-21115933-10&_gid=1356801977.1510893013&z=1959183136"   
+[Network Analyzer (6910:68ec)]   (Sid: 13) Client -> Server @ : 729 bytes (SSL)(Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  3) Client -> Server @ : 819 bytes (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 10) Client -> Server @ : 834 bytes (Service=HTTP)
+[Web Request      (6910:68ec)] "GET http://www.apsrtconline.in/oprs-web/_assets/images/new/arrow-left-n.png"   
+[Network Analyzer (6910:68ec)]   (Sid:  5) Client -> Server @ : 597 bytes (Service=HTTP)
+[Web Request      (6910:68ec)] "GET http://www.apsrtconline.in/oprs-web/_assets/images/new/arrow-right-n.png"   
+[Network Analyzer (6910:68ec)]   (Sid: 14) Client -> Server @ : 598 bytes (Service=HTTP)
+[Web Request      (6910:68ec)] "GET http://www.apsrtconline.in/oprs-web/_assets/images/progressbar/Loader.gif"   
+[Network Analyzer (6910:68ec)]   (Sid:  2) Client -> Server @ : 599 bytes (Service=HTTP)
+[Web Request      (6910:68ec)] "POST http://www.apsrtconline.in/oprs-web/booking/ticket/linking.do?txtJourneyDate=18/11/2017&txtReturnJourneyDate=For%20Roundtrip&endPlaceId=14911&startPlaceId=1386430615487&X=1510893045750"   
+[Network Analyzer (6910:68ec)]   (Sid:  3) Client -> Server @ : 59 bytes (Service=HTTP)
+[Web Request      (6910:68ec)] "POST http://www.apsrtconline.in/oprs-web/forward/booking/avail/services.do?txtJourneyDate=18/11/2017&startPlaceId=1386430615487&endPlaceId=14911&txtLinkJourneyDate=&ajaxAction=fw&qryType=0&X=1510893045771"   
+[Network Analyzer (6910:68ec)]   (Sid: 10) Client -> Server @ : 59 bytes (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 13) Server -> Client : 539 bytes (SSL) (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 13) Server -> Client : 35 bytes (SSL) (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 14) Server -> Client : 516 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  5) Server -> Client : 291 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  5) Server -> Client : 218 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  3) Server -> Client : 587 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  2) Server -> Client : 293 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  2) Server -> Client : 8322 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  2) Server -> Client : 2774 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  2) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  2) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  2) Server -> Client : 8322 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  2) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  2) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  2) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  2) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  2) Server -> Client : 6935 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  2) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  2) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  2) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  2) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  2) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  2) Server -> Client : 2774 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  2) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  2) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 10) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  2) Server -> Client : 5548 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 10) Server -> Client : 8322 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  2) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  2) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 10) Server -> Client : 4161 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  2) Server -> Client : 2225 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 10) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 10) Server -> Client : 664 bytes  (Service=HTTP)
+[Web Request      (6910:68ec)] "GET http://static.abhibus.com/ap_tg/ap/oprs-web/_assets/images/new/icon-vehicleTrack.png"   
+[Network Analyzer (6910:68ec)]   (Sid: 10) Client -> Server @ : 427 bytes (Service=HTTP)
+[Web Request      (6910:68ec)] "GET http://www.apsrtconline.in/oprs-web/_assets/images/new/amenities-icons.png"   
+[Network Analyzer (6910:68ec)]   (Sid:  2) Client -> Server @ : 600 bytes (Service=HTTP)
+[Web Request      (6910:68ec)] "GET http://www.apsrtconline.in/oprs-web/_assets/images/new/arrow-down.png"   
+[Network Analyzer (6910:68ec)]   (Sid:  3) Client -> Server @ : 595 bytes (Service=HTTP)
+[Web Request      (6910:68ec)] "GET http://www.apsrtconline.in/oprs-web/_assets/images/new/icon-rupee.png"   
+[Network Analyzer (6910:68ec)]   (Sid:  5) Client -> Server @ : 595 bytes (Service=HTTP)
+[Web Request      (6910:68ec)] "GET http://www.apsrtconline.in/oprs-web/_assets/images/new/items-icon.png"   
+[Network Analyzer (6910:68ec)]   (Sid: 14) Client -> Server @ : 595 bytes (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  2) Server -> Client : 292 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  2) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  2) Server -> Client : 885 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  5) Server -> Client : 291 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  5) Server -> Client : 350 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid:  3) Server -> Client : 533 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 14) Server -> Client : 448 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 10) Server -> Client : 1084 bytes  (Service=HTTP)
+[User action                 ] EndTransactionEvent Search [Network Analyzer (6910:68ec)]   (Sid: 10) Client -> Server @ : 877 bytes (Service=HTTP)
+[Web Request      (6910:68ec)] "POST http://www.apsrtconline.in/oprs-web/ajax/forward/layout/boardPoints.do?ajaxAction=fw&txtJourneyDate=18/11/2017&serviceId=18991&startPlaceId=1386430615487&routeCode=1498819286672&endPlaceId=14911&serviceCategoryId=1498918074521&X=1510893064682"   
+[Network Analyzer (6910:68ec)]   (Sid: 10) Client -> Server @ : 59 bytes (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 10) Server -> Client : 455 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 10) Server -> Client : 608 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 10) Client -> Server @ : 1060 bytes (Service=HTTP)
+[Web Request      (6910:68ec)] "POST http://www.apsrtconline.in/oprs-web/ajax/forward/layout/view.do?ajaxAction=fw&endPlaceId=14911&startPlaceId=22131&isLinkTicket=0&linkPlaceId=0&linkStartPlaceId=1386430615487&linkEndPlaceId=14911&searchType=0&concessionId=1347688949874&serviceCategoryId=1498918074521&serviceId=18991&txtJourneyDate=18/11/2017&txtReturnJourneyDate=&srvcTypeCatgId=&layoutId=&returnLayoutId=&returnDynFareDetails=&forwardDynFareDetails=&X=1510893087563"   
+[Network Analyzer (6910:68ec)]   (Sid: 10) Client -> Server @ : 59 bytes (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 10) Server -> Client : 1387 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 10) Server -> Client : 125 bytes  (Service=HTTP)
+[Network Analyzer (6910:68ec)]   (Sid: 12) Connection Terminated (by Client)
+[Network Analyzer (6910:68ec)]   (Sid: 15) Connection Terminated (by Client)
+[Net An. Error    (4f00:69bc)] SSL_connect(ssl_id = 108426864 = 0000000006767670) Failed, ctx = 000000000659BCC0, err = "SSLv2/v3 read server hello A", err code = 5
+[Net An. Error    (4f00:5f00)] SSL_connect(ssl_id = 108545072 = 0000000006784430) Failed, ctx = 000000000659BCC0, err = "SSLv2/v3 read server hello A", err code = 5
+[Net An. Error    (6910:6444)] SSL_connect(ssl_id = 118571040 = 00000000) Failed, ctx = 07114020, err = "8œþPè%ˆØ(»þH…#", err code = 1358876496
+[Net An. Error    (4f00:69bc)]   (Sid:  3) SSL handshake with remote server Failed!
+[Net An. Error    (4f00:5f00)]   (Sid:  4) SSL handshake with remote server Failed!
+[Net An. Error    (4f00:47f8)] SSL_connect(ssl_id = 108607568 = 0000000006793850) Failed, ctx = 000000000659BCC0, err = "SSLv2/v3 read server hello A", err code = 5
+[Net An. Error    (4f00:59ac)] SSL_connect(ssl_id = 108661328 = 00000000067A0A50) Failed, ctx = 000000000659BCC0, err = "SSLv2/v3 read server hello A", err code = 5
+[Net An. Error    (4f00:6834)] SSL_connect(ssl_id = 108726336 = 00000000067B0840) Failed, ctx = 000000000659BCC0, err = "SSLv2/v3 read server hello A", err code = 5
+[Net An. Error    (6910:6444)]   (Sid: 16) SSL handshake with remote server Failed!
+[Net An. Error    (4f00:59ac)]   (Sid:  6) SSL handshake with remote server Failed!
+[Net An. Error    (4f00:47f8)]   (Sid:  5) SSL handshake with remote server Failed!
+[Net An. Error    (4f00:6834)]   (Sid:  7) SSL handshake with remote server Failed!
+[Network Analyzer (4f00:69f8)]   (Sid:  8) Connection Terminated (by Client)
+[User action                 ] Pausing...  

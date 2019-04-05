@@ -1,0 +1,13 @@
+[t58]
+FileName1=t58.htm
+URL1=http://ueatworkuat.maxprocessing.com/claiminfo_coverages.max?AJAX_ACTION=GetCovTable&CLID=120715&t=1466686903162
+Total=2
+RequestHeaderFile=t58_RequestHeader.txt
+RequestBodyFile=t58_RequestBody.txt
+ResponseHeaderFile=t58_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_58.xml
+FileName2=t58_button_check.png
+URL2=http://ueatworkuat.maxprocessing.com/images/button_check.png
+[ProtocolInfo]
+ProtocolId=QTWeb

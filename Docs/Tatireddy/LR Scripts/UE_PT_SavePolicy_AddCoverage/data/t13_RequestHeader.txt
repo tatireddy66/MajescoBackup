@@ -1,0 +1,14 @@
+POST http://ueatworkuat.maxprocessing.com/claims_search_result.max?preprocess=true&AJAX_ACTION=tbw&TBW_TBLID=SearchResults&RULE=claims_search_result&CURRENT=1&NEXT=11&CURRENT=1&NEXT=11&t=1466686639053 HTTP/1.1
+Host: ueatworkuat.maxprocessing.com
+Proxy-Connection: keep-alive
+Content-Length: 51
+Proxy-Authorization: Negotiate TlRMTVNTUAADAAAAGAAYAJoAAAAqASoBsgAAAAwADABYAAAAGAAYAGQAAAAeAB4AfAAAABAAEADcAQAAFYKI4gYBsR0AAAAPzXJIJubctkpq1EgcRR9jVE0AQQBTAFQARQBLAHQAYQB0AGkAcgBlADYANgAxADgANAAxAEkATgBEAC0AQQBSAEwASQBEAFcANwAwADAAOQAzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH4Uh35YYvabXdBS6AARc90BAQAAAAAAAIWHg8ZOzdEBCUirrx0CQ94AAAAAAgAOAE0AQQBKAEUAUwBDAE8AAQAcAEkATgBEAC0ATQBIAFAAMgBMAEYAUAAwADAAMQAEABYAbQBhAGoAZQBzAGMAbwAuAGMAbwBtAAMANABpAG4AZAAtAG0AaABwADIAbABmAHAAMAAwADEALgBtAGEAagBlAHMAYwBvAC4AYwBvAG0ACAAwADAAAAAAAAAAAAAAAAAwAABkOupbq3N/luQDA+cLHBzby61qoG7/5AIs1JE66LRKDAoAEAAAAAAAAAAAAAAAAAAAAAAACQAmAEgAVABUAFAALwAxADkAMgAuADEANgA4AC4AMgA1ADAALgAxADEAAAAAAAAAAACMEG+U+gQgftnLLNu0KxaI
+Accept: application/xml, text/xml, */*; q=0.01
+Origin: http://ueatworkuat.maxprocessing.com
+X-Requested-With: XMLHttpRequest
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36
+Content-Type: application/x-www-form-urlencoded
+Referer: http://ueatworkuat.maxprocessing.com/login.max?preprocess=true
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US,en;q=0.8
+

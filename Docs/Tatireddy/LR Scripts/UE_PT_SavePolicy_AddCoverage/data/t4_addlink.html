@@ -1,0 +1,113 @@
+function addLinkWindow(url,cb){
+       
+ var dialogBoxDiv = "<div id='dialog_AddLink' title='Policy/Quote/Claim Search'></div>";
+
+	if( $( "#dialog_AddLink" ).length == 0 ) {
+		$( "#rightColumn" ).append( dialogBoxDiv );
+	}
+
+
+  $( function() {
+		$( "#dialog_AddLink" ).dialog({
+			autoOpen: false,
+			width: 500,
+			modal: true,
+			resizable: false,
+			resize: "auto"
+		});
+	});
+
+		desc = "Please enter a reference number, name or address:";
+	
+       var html ='<div id=__comment>'+desc+'</div>\n'
+         + "<table style='width:100%;text-align:center;'> \n"
+	 + "<tr class=coderow> \n"
+	 + "<td colspan=2><input name='Code' style='width:90%' type='text' id='Code'/></td> \n"
+ 	 + "</tr> \n"
+	 + "<tr class=linkprogressbar style='display:none; text-align:center;'> \n"
+	 + "<td colspan=2><img style='align:center' src='../../images/progressbar.gif'></td> \n"
+	 + "</tr> \n"
+	 + "</table> \n"
+	 + "<div style='margin-top:20px; margin-bottom:20px'>"
+	 + "<input style='WIDTH: 90px; HEIGHT: 22px' id=__CloseLinkWindow title='Click here to cancel search.' value='Cancel' type='button' name=__CloseLinkWindow>\n"
+	 + "<input style='WIDTH: 80px; HEIGHT: 22px' id=__AddLink title='Click here to add link.' value='Add' type='button' name=__AddLink>\n"
+	 + "</div>";
+		
+		
+	 var dialogBox = $( "#dialog_AddLink" );
+	dialogBox.html( html );
+
+	
+         $('#Code',dialogBox).autocomplete('queues.max',
+          {selectFirst: false,
+          extraParams: {SUBPROC: 'GETCODELIST', Preprocess: 'false'}
+          }
+         );  
+		 
+        $( '#dialog_AddLink').find('#__AddLink').click( function() {
+           txt=dialogBox.find('#Code').serialize();
+           Communication.CustomRequest(url+'&'+txt, 
+              function(response) {
+	  	if (cb) {                       
+		  var r = cb(response);
+	  	  if (r!='') response=r;
+		}
+             })
+  	   closeLinkWindow();
+        });
+            
+        $('#dialog_AddLink').find('#__CloseLinkWindow').click( function() {
+	         closeLinkWindow();
+           $('#link_addition').remove();
+        });
+		
+		$('#dialog_AddLink').unbind('keydown');
+        $('#dialog_AddLink').keydown(function(event){
+	      var keycode = (event.keyCode ? event.keyCode : event.which);
+	      if(keycode == '13'){ 
+		$( '#dialog_AddLink').find('#__AddLink').click();
+	}
+ 
+});
+
+ 	dialogBox.dialog( "open" );
+	 $('#Code',dialogBox).focus();
+}
+
+function closeLinkWindow() {
+	var dialogBox = $( "#dialog_AddLink" );
+	dialogBox.dialog( "close" );
+}
+
+function addLink(form, url, cb) {
+     return;
+	var ifrm;	
+	
+	if( $( "#link_addition" ).length == 0 ) {	
+		var iframeAttr = "name=\"link_addition\""
+		+ " id=\"link_addition\""
+		+ " style=\"width: 0px; height: 0px; border: 0px; \"";
+		ifrm = $( "<iframe " + iframeAttr + " /> ").appendTo("body"); 
+		ifrm = document.createElement("iframe"); 
+	}
+	var ifrmness = $( "#link_addition" );
+
+	ifrmness.load( function() {
+		ifrmness.unbind("load");
+		var response = ifrmness.contents().find( 'body' ).html(); 
+
+		$('#LinkSearchForm .linkprogressbar').hide();		
+		
+                try {
+	  		if (cb) {
+				var r = cb(response);
+				if (r!='') response=r;
+			}
+			$('#LinkSearchForm #__comment').html(response);
+			$('#LinkSearchForm #__CloseLinkWindow').val('OK');		
+			$('#LinkSearchForm #__CloseLinkWindow').show();		
+		} catch(er) { alert(er)}
+               
+
+	});	
+}

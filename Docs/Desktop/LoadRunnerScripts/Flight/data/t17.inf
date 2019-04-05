@@ -1,0 +1,11 @@
+[t17]
+FileName1=t17_ADQeRehblkgiW1DtNBK8eIniEUhD6JWpJ8VpKmlXtrFrkzTQ_4_Azm0COui2qr417LBNumzkHRth3inwzt1Nz5Yc66sUmabka_kbSgmDtcSo76D0P2_t144.htm
+URL1=https://id.google.com/verify/ADQeRehblkgiW1DtNBK8eIniEUhD6JWpJ8VpKmlXtrFrkzTQ_4_Azm0COui2qr417LBNumzkHRth3inwzt1Nz5Yc66sUmabka_kbSgmDtcSo76D0P2_t144
+Total=1
+ContentType=text/html
+SnapshotXmlFile=snapshot_17.xml
+RequestHeaderFile=t17_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t17_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

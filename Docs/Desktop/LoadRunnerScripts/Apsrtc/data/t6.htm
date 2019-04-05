@@ -1,0 +1,113 @@
+
+
+
+<table width="100%" border="0" cellspacing="2" cellpadding="0" class="layoutCs">
+<tr>
+	<td valign="top" width="60%">
+		
+	<div class="errormsg">
+		Service is not available for selected boarding and dropping points. Please select different pickup or drop points.
+	</div>
+
+	</td>
+	
+	<td align="right" width="40%" valign="top">
+	
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td align="left" class="">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td colspan="6" height="20" class="paxHeaderCS">
+					Passenger Details
+				</td>
+			</tr>
+			
+			
+			<tr>
+				<td colspan="6">
+					<table width="100%" border="0" cellspacing="1" cellpadding="1" class="">
+					<tr>
+						<td class="leftInfoFormLabel" width="30%">
+							Primary Passenger Name
+						</td>
+						<td>
+							<input type="text" name="bookedByName" maxlength="150" size="30" value="" onblur="copyPrimaryPaxName();" id="bookedByName" class="requiredfield">
+						</td>
+					</tr>
+					<tr>
+						<td class="leftInfoFormLabel">
+							Mobile No.
+						</td>
+						<td>
+							<input type="text" name="mobileNo" maxlength="10" size="30" value="" onblur="isNumber(this);" id="mobileNo" class="requiredfield">
+						</td>
+					</tr>
+					<tr>
+						<td class="leftInfoFormLabel">
+							Email Id
+						</td>
+						<td>
+							<input type="text" name="email" maxlength="150" size="30" value="" onblur="validateEmail(this);" id="email" class="requiredfield">
+						</td>
+					</tr>
+					
+					
+					</table>
+				</td>
+			</tr>
+			
+			
+			<tr>
+				<td colspan="6">
+				<table class="paxInnerTbl" id="PaxTblForward">
+					<tr class="paxHeadRowCS">
+						
+						<td align="center" class="leftInfoFormLabel">
+							Gender
+						</td>
+						<td align="center" class="leftInfoFormLabel">
+							Name
+						</td>
+						<td align="center" class="leftInfoFormLabel">
+							Age
+						</td>
+						<td align="center" class="leftInfoFormLabel">
+							Seat No.
+						</td>
+					</tr>
+					
+					
+					
+			</table>
+			</td>
+			</tr>
+			<tr>
+				<td colspan="6" align="center" class="formlabel">
+					<span id ="femaleSeatSpanIdForward"></span>
+				</td>
+			</tr>
+		</table>
+	
+			<div id="BookNowBtnDivID" align="center">
+				<input name="BookNowBtn" type="button" id="BookNowBtn"
+					onclick="bookingFormSubmitAction('/oprs-web/booking/paxInfo.do', this.form);"
+					value="Continue"
+					class="continueBtn"
+					title="Continue" />
+			</div>
+			
+		</td>
+	</tr>
+
+</table>
+
+	</td>
+</tr>
+</table>
+
+
+<input type="hidden" name="forwardAdultFare" value="" id="ForwardAdultFare"><input type="hidden" name="forwardChildFare" value="" id="ForwardChildFare"><input type="hidden" name="fwTollsPrice" value="" id="ForwardTollsPrice"><input type="hidden" name="srtFee" value="" id="ForwardSrtFee"><input type="hidden" name="bankTxnAmount" value="" id="ForwardBnkTxnAmt"><input type="hidden" name="adultLevyFare" value="" id="ForwardAdultLevyFare"><input type="hidden" name="childLevyFare" value="" id="ForwardChildLevyFare"><input type="hidden" name="arrivalDateStr" value="" id="arrivalDateStr">
+<div id="BookingConcessionDivID">
+	<input type="hidden" name="maxPassengerAllowed" value="0" id="maxPassengerAllowed"><input type="hidden" name="concNoPassengers" value="" id="concNoPassengers"><input type="hidden" name="concApplyToChild" value="" id="concApplyToChild"><input type="hidden" name="concessionPercent" value="" id="concessionPercent"><input type="hidden" name="concPriceForward" value="" id="concPriceForward"><input type="hidden" name="srvcConcPax" value="0" id="srvcConcPax">
+</div>

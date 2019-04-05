@@ -1,0 +1,564 @@
+//TABLEWALKER v2.5.1 
+function initTableWalker ( rule, table, page, perpage, params, init_cbk ) { 
+	var tbwOptions = new Array();
+	tbwOptions['rule'] = rule, tbwOptions['params'] = params;
+	tbwOptions['init_cbk'] = init_cbk;
+
+	if( typeof table == "string" ) {
+	    var firstchar = table.charAt(0);
+		if( firstchar !== "#" ) table = "#" + table;    
+		var tableObj = $( table ).not( '#ReqListDiv .ReqList' );
+		if( tableObj.length > 0 ) tableObj = $( table + ":eq(0)" ).not( '#ReqListDiv .ReqList' );
+	} else { var tableObj = table; }
+	
+	if ( page == "" || page == false ) {
+	   tbwOptions['paging'] = false;
+	   TableWalker( tbwOptions, tableObj ); 
+	} else {
+	    tbwOptions['paging'] = true;
+	    /* Check if perpage is developer or user defined */
+		if( perpage == "" || perpage == undefined ) {
+			var link = "tablewalker.max?preprocess=true&ACTION=perpage" ;
+			Communication.CustomRequest( link, 
+				function( AjaxResp )  {
+					tbwOptions['perpage'] = AjaxResp; 
+					TableWalker( tbwOptions, tableObj ); 
+				}
+			);
+		} else {
+			tbwOptions['perpage'] = perpage;
+			TableWalker( tbwOptions, tableObj ); 
+		}
+	}	
+}
+
+function TableWalkerProgressBar( tableObj, action ) {
+	var tableId = tableObj.attr("id");
+	var container = $( "#tbw_container_" + tableId );
+	var wrapper = $( "#tbw_wrapper_" + tableId );
+	$(  "#" + tableId + '_progressbar' ).css({
+		"width": wrapper.width() + "px",
+		"height": tableObj.height() + "px",
+		"line-height": tableObj.height() + "px"
+	});
+	if( action == "show" ) {
+		$( '#' + tableId + '_progressbar' ).show();		
+		wrapper.css( 'overflow', 'hidden' );
+	} else {
+		$( '#' + tableId + '_progressbar' ).hide();
+		wrapper.css( 'overflow', 'auto' );
+	}
+}
+
+function TableWalkerAjax( obj, link_add, cbk ) { 
+    var tableId = obj.attr("id");
+	if( obj.length == 0 ) obj = $( '#' + tableId + ":eq(0)" ).not( '#ReqListDiv .ReqList' );
+	var params = "";
+	if ( obj.data( "params" ) != "" && obj.data( "params" ) != undefined )  params = "&" + obj.data( "params" );
+	var link = obj.data( "rule" ) + ".max?preprocess=true&AJAX_ACTION=tbw&TBW_TBLID=" + obj.data( "tableId" ) + "&RULE=" + obj.data( "rule" ) + params;
+	var results = "";
+   
+	var tbwcheck = TableWalkerCheck( obj );
+	link = link + "&" + tbwcheck;
+	if( link_add != "" && link_add != undefined ) link = link + "&" + link_add;
+		
+	if( obj.data( "rule" ) != undefined && obj.data( "rule" ) != "" && obj.data( "tableId" ) != undefined && obj.data( "tableId" ) != "" ) {
+		TableWalkerProgressBar( obj, "show" );
+		Communication.CustomRequest( link, 
+			function( AjaxResp ) {
+				var aResp = jsonParse( AjaxResp );
+				if( aResp.ttl_results == 0 || aResp.ttl_results == "" )
+					aResp.ttl_results = 0;
+				obj.data( 'totalrows', aResp.ttl_results );
+				TableWalkerUpdate( obj.data( "rule" ), obj, aResp.tbl_rows, aResp.ttl_results );
+				if( obj.data("init_cbk") != "" != '' && obj.data("init_cbk") != 'undefined' ) obj.data("init_cbk");
+				if( typeof cbk == 'function') cbk();
+			}
+		);
+	}
+}
+
+function TableWalkerHeaderCheck( tableObj ) { 
+	var thcell = "th"
+	if( $( " thead tr", tableObj ).children( "th" ).length == 0 ) thcell = "td";
+	return thcell;
+}
+
+function TableWalker ( options, tableObj ) { 
+	var tableId = tableObj.attr("id"), html, filtering = false;
+	
+	// 1)See if header cells from data table are th or td
+	var thcell = TableWalkerHeaderCheck( tableObj );
+	
+	// 2) Build columns for table
+	var columns = new Array(), thtd = '';
+	$( " thead tr", tableObj ).children( thcell ).each( function(index) { 
+		if( $( this ).attr( 'filter' ) != undefined ) {
+			$( this ).data( 'filter', $( this ).attr( 'filter' ) );
+			filtering = true;	
+		}
+		columns[index] = $( this );
+	}); // 2) End
+	
+	// 3) Add onclick function to headers
+	var coleq2 = new Array();
+	$( " thead tr", tableObj ).children( thcell ).each( function(index) {
+		var tblHeader = $( this );
+		var headerText = $( this ).text();
+		//var s_hcol = "<div class='tbw_showhide_col'></div>";
+		var s_hcol = '';
+		var i = 0;
+		if( tblHeader.attr("column")  && tblHeader.attr("column") != "__RowNum" ) {
+			headerText = "<h6 class='tbw_h6column'>" + headerText + "</h6>";
+			$( this ).addClass( "tbw_sort" );		
+			$( this ).html( headerText );
+		} else {
+			var coleq = $( " thead tr", tableObj ).children( thcell ).index( tblHeader );
+			tblHeader.attr( "column", "col_" + coleq );
+			headerText = "<h6>" + headerText + "</h6>";
+			$( this ).html( headerText );
+			coleq2[i] = coleq;
+			i++;
+		}
+		$( this ).append( s_hcol );
+	}); // 3) end
+	
+	/*** STORE TBW TABLE PARAMS ***/
+	tableObj.data( 'tableId', tableId );
+	tableObj.data( 'params', options['params'] );
+	tableObj.data( 'rule', options['rule'] );
+	tableObj.data( 'perpage', options['perpage'] );
+	tableObj.data( 'paging', options['paging'] );
+	tableObj.data( 'currentpage', 1 );
+	tableObj.data( 'init_cbk', options['init_cbk'] );
+	/*** END TBW TABLE PARAMS ***/
+	
+	/*** BUILD TBW FRAMEWORK ***/
+	var dialogBox = "<div id='dialog_" + tableId + "' title='Filter'></div>";
+
+	tableObj.before ( 
+		"<div class='TableWalkerContainer' id='tbw_container_"+ tableId +"' >"
+		+ "<div class='TableWalkerWrapper' id='tbw_wrapper_"+ tableId +"' ></div></div>"
+	);
+	
+	var containerObj = $( "#tbw_container_"+ tableId ), wrapperObj = $( "#tbw_wrapper_"+ tableId );
+	wrapperObj.data( 'tbl_id', tableId );
+
+	tableObj.after ( "<div class='TableWalkerDiv' id='tbw_div_"+ tableId +"' ></div>" );
+	var divObj = $( "#tbw_div_"+ tableId );
+	var colBox = "<div id='colBox_" + tableId + "' class='tbw_colBox'></div>";
+	tableObj.appendTo( divObj );
+	if( divObj.appendTo( wrapperObj ) )  {
+		containerObj.append( 
+			"<div id='dialog_" + tableId + "' title='Filter'></div>"
+			+ "<div id='footer_" + tableId + "' class='tbw_footer'></div>"
+			+ "<div id='errordialog_" + tableId + "' class='tbw_errorBox' title='Table Data Error'></div>"
+		); 
+		divObj.append( colBox ); 
+	}
+	
+	var colObj = $( "#colBox_" + tableId );
+	var cText = new Array(), cCol = new Array();
+	for( i=0; i < columns.length; i++ ) {
+	    cText[i] = columns[i].text();
+		cCol[i] = columns[i].attr( "column" );
+		if( columns[i].css( "display" ) != "none" ) {
+			if( cText[i] == "" ) cText[i] = "Column " + ( i + 1 );
+			if( cCol[i] == undefined || cCol[i] == "" ) cCol[i] = "col_" + i; 
+			colObj.append( "<div class='tbw_shCol' col='" + cCol[i] + "'><input type='checkbox' class='tbw_shCol_checkbox' checked='true'>" + cText[i] + "</div>" );
+		}
+	}
+	
+	TableWalkerEvents( tableObj, colObj, "columns" );
+	TableWalkerEvents( tableObj, coleq2, "columnsloop" );
+	colObj.hide();
+	
+	var footerObj = $( "#footer_" + tableId );
+	if( filtering == true ) {	
+		footerObj.html( 
+			"<div id='filterBox_" + tableId + "' class='tbw_filterBox'>"
+			+ "<input type='button' class='tbw_filter_btn' title='Please click here to filter results.'></div>" 
+		); 
+		var filterObj = $( "#filterBox_" + tableId );
+		filterObj.data( "tableId", tableId );
+		TableWalkerEvents( tableObj, filterObj, "filter" );
+	}
+	
+	var progressbar = '<div id="' + tableId + '_progressbar" class="tbw_progressbar"><img src="../../images/loadinganimation.gif"></div>';
+	wrapperObj.append( progressbar );
+	TableWalkerProgressBar( tableObj, "hide" );
+	if ( options["paging"] === true ) {
+		if( $( "#tbw_pager_" + tableId ).length == 0  ) {
+			footerObj.append( "<div class='tbw_pager' id='tbw_pager_" + tableId + "'> \n"
+			+ "<div class='tbw_btn_prev\' id='prev_"  + tableId + "'></div> \n"
+			+ "<div class='tbw_btn_num\' id='num_" + tableId + "'></div> \n" 
+			+ "<div class='tbw_btn_next\' id='next_" + tableId + "'></div> \n"
+			+ "<div class='tbw_total_results'></div> \n</div>  \n" );
+		}
+		TableWalkerPage (  tableObj, 1, true );
+	} else {
+	    var results = TableWalkerAjax( tableObj, "" );
+	    tableObj.data( 'nextpage', results );
+		if( $( "#tbw_pager_" + tableId ).length == 0  ) {
+			footerObj.append(
+				"<div class='tbw_pager' id='tbw_pager_" + tableId + "'> \n"
+				+ "<div class='tbw_total_results'></div>  \n</div> \n" 
+			);
+		}
+	
+	/*** END TBW FRAMEWORK ***/
+		TableWalkerAjax( tableObj, '' );
+	}
+	
+} //End of function TableWalker
+
+function TableWalkerCheck( tableObj ) { 
+    var tableId = tableObj.attr("id"), sort = "", sortBy = "", topage = "",
+	filter = "", params = "", thcell = TableWalkerHeaderCheck( tableObj );
+	
+	$(  "thead tr " + thcell, tableObj  ).each( function(index) { 
+		if( $(this).hasClass("asc") ) {
+			sortBy = "asc";
+			sort = $(this).attr( "column");
+		} else if ( $(this).hasClass("desc") ) {
+			sortBy = "desc";
+			sort = $(this).attr( "column");
+		}
+		if( $(this).data("f_value") ) {
+			var col = $(this).attr("column").replace(".","[o_O]"); 
+			var filter_value = $(this).data("f_value");
+			filter_value = filter_value.replace( /\'/g, "''" );
+			filter_value = encodeURIComponent( filter_value );
+			filter = filter + "filter_" + col + "=" + $(this).data("filter") + "|" + filter_value + "&";
+		}
+	});
+
+	if( filter != "" )  {
+		params = filter.substring( 0,  filter.length-1);
+		$( "#filterBox_" + tableId ).find( ".tbw_filter_btn" ).addClass( "tbw_filtered" );
+	} else { $( "#filterBox_" + tableId ).find( ".tbw_filter_btn" ).removeClass( "tbw_filtered" ); }
+	
+	if( tableObj.data( 'paging' ) == true ) {
+		if( tableObj.data( 'currentpage' ) != "" ) {
+			if( tableObj.data( 'lastaction' ) === 'sort' || tableObj.data( 'lastaction' ) === 'filter' ) { 
+				var next = ( 1 + parseInt(tableObj.data( 'perpage' )) );
+				topage = "CURRENT=1&NEXT=" + next;
+				tableObj.data( 'currentpage', 1 );
+				tableObj.data( 'nextpage',  next );
+			} else { topage = "CURRENT=" + tableObj.data( 'currentpage' ) + "&NEXT=" + tableObj.data( 'nextpage' ); }
+		}
+	} 
+	
+	if( params != "" ) { params = params + "&" + topage;
+	} else { params = topage; }
+	
+	if ( sort != undefined && sort != "" )  {
+		if( params != "" ) { params = params + "&" + "SORT=" + sort + "&SORTBY=" + sortBy;
+		} else { params = "SORT=" + sort + "&SORTBY=" + sortBy; }
+	}
+	return params;
+}
+
+function TableWalkerEvents( tableObj, obj, event ) {
+	var tableId = tableObj.attr("id");
+	var thcell = TableWalkerHeaderCheck( tableObj );
+	
+	if( event == "filter" ) {
+		if( $('[aria-labelledby="ui-dialog-title-dialog_' + tableId + '"]' ).length > 0 ) {
+			$( "#dialog_" + tableId + ":not('#middle')" ).remove();
+			$('[aria-labelledby="ui-dialog-title-dialog_' + tableId + '"]' ).remove();
+		}
+		$( "#dialog_" + tableId ).dialog({
+			autoOpen: false,
+			width: 325,
+			modal: true,
+			resizable: false,
+			draggable: true,
+			dialogClass: 'tbw_dialog',
+			position: 'center'
+		}); 
+		
+		if( $('[aria-labelledby="ui-dialog-title-errordialog_' + tableId + '"]' ).length > 0 ) {
+			$( "#errordialog_" + tableId + ":not('#middle')" ).remove();
+			$('[aria-labelledby="ui-dialog-title-errordialog_' + tableId + '"]' ).remove();
+		}
+		$( "#errordialog_" + tableId ).dialog({
+			autoOpen: false,
+			width: 325,
+			modal: true,
+			resizable: false,
+			draggable: true,
+			dialogClass: 'tbw_dialog',
+			position: 'center'
+		}); 
+	}
+	
+	if( event == 'columns' ) {
+		var colObj = obj;
+		$( "h6.tbw_h6column", tableObj ).unbind( "click" );
+		$( "h6.tbw_h6column", tableObj ).click( function() {
+			var h6 = $( this );
+			var thisColumn = h6.parent().attr( "column" );
+			TableWalkerSort( tableObj, thisColumn );
+		});
+		
+		$( ".tbw_showhide_col" ).hide();
+		var showhideCol = function( action, tableObj, thcell ) {
+			switch( action ) {
+				case "enable" :
+					$( " thead tr", tableObj ).children( thcell ).hover( function() {
+						$( ".tbw_showhide_col", $(this) ).show();
+					}, function() {
+						$( ".tbw_showhide_col", $(this) ).hide();
+					});
+					break;
+				case "disable" :
+					$( " thead tr", tableObj ).children( thcell ).unbind( "hover" );
+					break;
+			}
+		};
+		
+		showhideCol( "enable", tableObj, thcell );
+		$( "div.tbw_showhide_col", tableObj ).unbind( "click" );
+		$( "div.tbw_showhide_col", tableObj ).click( function() {
+			var thisColumn = $( this ).parent().attr( "column" );
+			TableWalkerColumns( tableObj, thisColumn );
+		});
+		colObj.hover( function() {
+				colObj.show();
+				var objCol = colObj.attr( "column" );
+				$( "[column='" + objCol + "']", tableObj ).find( ".tbw_showhide_col" ).show();
+				showhideCol( "disable", tableObj, thcell );
+			}, function() {
+				colObj.hide();
+				var objCol = colObj.attr( "column" );
+				$( "[column='" + objCol + "']", tableObj ).find( ".tbw_showhide_col" ).hide();
+				showhideCol( "enable", tableObj, thcell );
+		});
+		$( ".tbw_shCol", colObj ).unbind( "click" );
+		$( ".tbw_shCol", colObj ).click( function() {
+			TableWalkerColumnToggle( $(this), tableObj, true );
+		});
+	}
+	
+	if( event == 'columnsloop' ) {
+		var coleq2 = obj;
+		for( i=0; i < coleq2.length; i++ )  { 	
+			$( "thead tr " + thcell + ":eq("+coleq2[i]+")", tableObj ).attr( "column", "col_" + coleq2[i] );
+		}
+	}
+}
+
+function TableWalkerSort( tableObj, sort )  {
+    var tableId = tableObj.attr("id");
+	var toSort = $( "[column="+sort+"]", tableObj );
+	var thcell = TableWalkerHeaderCheck( tableObj );
+	tableObj.data( 'lastaction', 'sort' );
+	
+	$(  "thead tr " + thcell, tableObj  ).each( function(index) {
+		var thisSort = $(this).attr( "column" );
+		if( $(this).attr( "column" ) != toSort.attr( "column") ) { 
+			$( "h6", this ).removeClass( "tbw_sort_arrow tbw_desc" );
+			$( "h6", this ).removeClass( "tbw_sort_arrow tbw_asc" );
+			$( this ).removeClass( "asc" );
+			$( this ).removeClass( "desc" );
+		}
+	});
+	
+	if( toSort.hasClass( "asc" ) ) {
+		toSort.removeClass( "asc" ).addClass( "desc" );
+		$( "h6", toSort ).removeClass( "tbw_sort_arrow tbw_asc" );	
+		$( "h6", toSort ).addClass( "tbw_sort_arrow tbw_desc" );
+	} else {
+		toSort.removeClass( "desc" ).addClass( "asc" );
+		$( "h6", toSort ).removeClass( "tbw_sort_arrow tbw_desc" );
+		$( "h6", toSort ).addClass( "tbw_sort_arrow tbw_asc" );
+	}
+	
+	var add_params = TableWalkerCheck( tableObj );
+	TableWalkerAjax( tableObj, add_params );
+}
+
+function TableWalkerPaging ( total, perpage, page, pageto ) {
+	var num = 0, numArray = new Array();	
+	for( n=0; n < total; n++ ) {
+		var numList;
+		if( n % perpage == 0 ) {
+			num++
+			if( n == 0 ) { numList = 1;
+			} else { numList = num; }
+			n += 1;	
+			if( n == page )  numArray[2] = numList;
+			numArray[1] = n;
+			if( pageto == numList )  numArray[3] = n;
+		}
+	}
+	numArray[0] = num;
+	return numArray;
+}
+
+function TableWalkerPage ( tableObj, page, initLoad, pageTo )  { 
+    var tableId = tableObj.attr("id"), totalrows = tableObj.data( 'totalrows' ),
+	perpage = tableObj.data( 'perpage' ), rule = tableObj.data( 'rule' );
+	var next = parseInt(page) + parseInt(perpage);
+	
+	tableObj.data( 'lastaction', 'page' );
+	tableObj.data( 'currentpage', page );
+	tableObj.data( 'nextpage', next );
+	
+	if ( initLoad === false ) {	
+		if( pageTo != '' && pageTo != undefined ) { 
+			var num = TableWalkerPaging( totalrows, perpage, page, pageTo );
+			var next2 = parseInt(num[3]) + parseInt(perpage); 
+			var page2 = num[3];
+			if( isNaN(next2) === false ) { 
+				tableObj.data( 'currentpage', page2 ); 
+				tableObj.data( 'nextpage', next2 );
+			}
+		} 
+		var add_params = TableWalkerCheck( tableObj );
+		TableWalkerAjax( tableObj, add_params );
+	} else {
+		var link = "CURRENT=1&NEXT=" + next;
+		TableWalkerAjax( tableObj, link );
+	}
+}
+
+function TableWalkerColumns( tableObj, column ) { 
+    var tableId = tableObj.attr("id"), cell = $( "[column='"+column+"']", tableObj );
+	var colObj = $( "#colBox_" + tableId ), cellPos = cell.position();
+	var arrPos = $( "div.tbw_showhide_col", cell ).position(), tbPos = $( "tbody", tableObj ).position();
+	colObj.css( {
+		"top" : tbPos.top,
+		"left" : cellPos.left + cell.width()
+	});
+	colObj.show();
+}
+
+function TableWalkerColumnToggle( obj, tableObj, clicked, tableupdate ) { 
+	var col = obj.attr( "col" );
+	var colObj = $( "[column='" + col + "']", tableObj );
+	var colEq = colObj.parent( "tr" ).children().index( colObj ); 
+	var thcell = TableWalkerHeaderCheck( tableObj );
+
+	if( colEq != "-1" ) { colEq = parseInt( colEq ) + 1; 
+	} else { colEq = 1; }
+	
+	if( clicked == true ) {
+		var sCol = obj.hasClass( "tbw_sCol" );
+		var hCol = obj.hasClass( "tbw_hCol" );
+	} else {
+		var sCol = obj.hasClass( "tbw_hCol" );
+		var hCol = obj.hasClass( "tbw_sCol" );
+	}
+
+	if( sCol ) { 
+		if( clicked == true ) 	obj.removeClass( "tbw_sCol" ).addClass( "tbw_hCol" );
+		obj.children( ".tbw_shCol_checkbox" ).removeAttr( "checked" );
+		colObj.hide();
+		//wrapper.css( 'overflow-y', 'auto' );
+		tableObj.find( "tbody td:nth-child("+colEq+")" ).hide();
+	} else if( hCol ) {
+		if( clicked == true ) 	obj.removeClass( "tbw_hCol" ).addClass( "tbw_sCol" );
+		obj.children( ".tbw_shCol_checkbox" ).attr( "checked", "true" );
+		colObj.show();
+		//wrapper.css( 'overflow-y', 'visible' );
+		tableObj.find( "tbody td:nth-child("+colEq+")" ).show();
+	} else { 
+		if( clicked == true ) {
+			obj.addClass( "tbw_hCol" );
+			obj.children( ".tbw_shCol_checkbox" ).removeAttr( "checked" );
+			colObj.hide();
+			//wrapper.css( 'overflow-y', 'auto' );
+			tableObj.find( "tbody td:nth-child("+colEq+")" ).hide();
+		}
+	}
+}
+
+function TableWalkerUpdate ( rule, tableObj, update, total ) {
+    var tableId = tableObj.attr("id");
+	var thcell = TableWalkerHeaderCheck( tableObj );
+	var perpage = tableObj.data( "perpage" );
+	var page = tableObj.data( 'currentpage' );
+	var prev = parseInt(page) - parseInt(perpage);
+	var next = parseInt(page) + parseInt(perpage);    
+
+	var btn_next = "<button title='Please click here to go to the next page of results.' id=\"btn_next" + tableId + "\" class=\"tbw_btn btn_next\">&rsaquo;</button>";
+	var btn_prev = "<button title='Please click here to go to the previous page of results.' id=\"btn_prev" + tableId + "\" class=\"tbw_btn btn_prev\">&lsaquo;</button>";
+	var btn_last = "<button title='Please click here to go to the last page of results.' id=\"btn_last" + tableId + "\" class=\"tbw_btn btn_last\">&#187;</button>";
+	var btn_first = "<button title='Please click here to go to the first page of results.' id=\"btn_first" + tableId + "\" class=\"tbw_btn btn_first\">&#171;</button>";   
+
+    //Variables 
+    //page: current page starting index number
+    //prev: previous page staring index number
+    //next: next page staring index number 
+    //Issue: when we delete the last item from a tablewalker, it doesn't display the correct page number 
+    //and remains in the current page rather than going to the previous page.
+    //Fix: Since this happen when the current page index is greater than the total rows
+    //check if the total rows is less than the current page starting index number and page is not loading for the first time
+	if ((tableObj.data('totalrows') < tableObj.data('currentpage')) && (tableObj.data('totalrows') > 0)) {
+	    page -= perpage;
+	    prev -= perpage;
+	    next -= perpage;
+	    var currentPageNo = TableWalkerPaging(total, perpage, page);
+	    TableWalkerPage(tableObj, page, false, currentPageNo);
+	}            
+
+	var num = TableWalkerPaging(total, perpage, page);
+	var first = 1;
+	var last = num[1];    
+
+	$( "#btn_next" + tableId ).die( "click" );
+	$( "#btn_prev" + tableId ).die( "click" );
+	$( "#btn_last" + tableId ).die( "click" );
+	$( "#btn_first" + tableId ).die( "click" );
+	
+	$( "#btn_next" + tableId ).live( "click", function() { TableWalkerPage( tableObj, next, false ); });
+	$( "#btn_prev" + tableId ).live( "click", function() { TableWalkerPage( tableObj, prev, false ); });
+	$( "#btn_last" + tableId ).live( "click", function() { TableWalkerPage( tableObj, last, false ); });
+	$( "#btn_first" + tableId ).live( "click", function() { TableWalkerPage( tableObj, first, false ); });
+	
+	var inputBox = "Page <input type='text' id='tbw_" + tableId + "_page' class='tbw_pageBox' value='" + num[2] + "' /> of " + num[0];
+	
+	if( next > total ) {
+		$( "#btn_next" + tableId ).remove();
+		$( "#next_" + tableId ).html( '&nbsp;' );
+		$( "#next_" + tableId ).css( "border-width", "0px" );
+	} else {
+		$( "#next_" + tableId ).html( btn_next + btn_last );
+		$( "#next_" + tableId ).css( "border-width", "" );
+	}
+	
+	if( prev >= 0 ) { 
+		$( "#prev_" + tableId ).html( btn_first + btn_prev );
+		$( "#prev_" + tableId ).css( "border-width", "" );;
+	} else {
+		$( "#btn_prev" + tableId ).remove();
+		$( "#prev_" + tableId ).html( '&nbsp;' );
+		$( "#prev_" + tableId ).css( "border-width", "0px" );
+	}
+	
+	$( "tbody", tableObj ).html( update ); 
+	TableWalkerProgressBar( tableObj, "hide" );
+	
+	$( '#colBox_' + tableId ).find( '.tbw_shCol' ).each( function() {
+		TableWalkerColumnToggle( $(this), tableObj );
+	});
+	
+	$( "tbody > tr:even", tableObj ).addClass( "tbw_even" );
+	if ( num[0] > 1 ) {  $( "#num_" + tableId ).html( inputBox );
+	} else {  $( "#num_" + tableId ).html( '' ); }
+	$( "#tbw_pager_" + tableId + " .tbw_total_results" ).html(  "" + total + " Results Found." );
+	
+	var inputObj = $( "#tbw_" + tableId + "_page" );
+	
+	$( function() {
+		inputObj.unbind( "keydown" );
+		inputObj.keydown( function(event) { 
+		    if ( event.which == 13 ) { 
+				TableWalkerPage (  tableObj, page, false, inputObj.val()  );
+				return false;
+		    }	
+		}); 
+	});
+}

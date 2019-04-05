@@ -1,0 +1,105 @@
+function moneyField(id, top, left, cents, symbol, separator, point) {
+	var moneyid = id + '-money';
+	var pleft;
+	var ptop;
+	var ctrl = $('#' + id);
+	var idwidth = ctrl.width() - 5;
+	//var ctrlPosition = ctrl.offset();
+	var ctrlLeft = 5
+	var ctrlTop = 5
+	if (typeof left == "undefined") {
+        pleft = 0
+	} else {
+	    pleft = parseInt(left, 10);
+	}
+    if (typeof top == "undefined") {
+        ptop = 0
+	} else {
+	    ptop = parseInt(top, 10);
+	}
+    var moneyspan = '<span id="' + moneyid + '" class="moneyField moneyOver" style="position: absolute; top: ' + ctrlTop + 'px; left: ' + ctrlLeft + 'px; width:' + idwidth + 'px;"></span>';
+
+    
+
+	
+		$(ctrl).parent().append(moneyspan);
+	
+	ctrl.css({color: "#fff"});
+	var mny = $('#' + moneyid);
+	ctrl.prev().css({"z-index": "2", "background-color": "transparent"});
+    monetize(id, cents, symbol, separator, point);
+	
+    ctrl.unbind("change");
+    ctrl.bind("change", function() {
+        monetize(id, cents, symbol, separator, point);
+    });
+    ctrl.unbind("keyup");
+    ctrl.bind("keyup", function() {
+        monetize(id, cents, symbol, separator, point);
+    });
+    ctrl.bind("keydown", function() {
+        monetize(id, cents, symbol, separator, point);
+    });
+    ctrl.bind("focus", function() {
+	  if (ctrl.is(':disabled'))  return;
+	  ctrl.css({color: "#000"});
+      mny.css({top: ptop+"px", left: pleft+"px", width:"auto"}).removeClass('moneyOver').addClass('moneyFly');
+      ctrl.prev().removeClass('ctrlOver').addClass('ctrlNorm');
+	  monetize(id, cents, symbol, separator, point);
+    });
+    mny.bind("click", function() {
+	  if (!ctrl.is(':disabled'))  
+	    ctrl.focus();
+    });
+
+    ctrl.bind("blur", function() {
+      ctrl.css({color: "#FFF", "z-index": "0"});
+	  mny.css({top: ctrlTop + "px", left: ctrlLeft + "px", width: idwidth+"px"}).removeClass('moneyFly').addClass('moneyOver');
+	  ctrl.prev().removeClass('ctrlNorm').addClass('ctrlOver');
+    });
+}
+
+function monetize(id, cents, symbol, separator, point){
+    var money;
+	var number = $('#' + id).val();
+	var pattern = /\./;
+	if (number != '') {
+
+		if( typeof id === 'undefined' ) return;
+		var v
+		if( typeof id == 'idect' ){
+		v = id.id;
+		cents = id.cents;
+		symbol = id.symbol;
+		separator = id.separator;
+		point = id.point;
+		} else {
+			v = $('#' + id).val();
+		}
+		
+		cents = (typeof cents === 'undefined') ? false : cents;
+		symbol = (typeof symbol === 'undefined') ? '$' : symbol;
+		separator = (typeof separator === 'undefined') ? ',' : separator;
+		point = (typeof point === 'undefined') ? '.' : point;
+		
+		if(cents === false)  {
+     	  var prs = String(Math.floor(v));
+     	  //console.log(typeof prs);
+		  money = symbol + prs.replace(/(\d)(?=(\d{3})+\b)/g,'$1' + separator);
+
+		} else{
+       	    var prs = String(v);
+			money = symbol + String(v).replace(/(\d)(?=(\d{3})+\b)/g,'$1' + separator);
+			if (pattern.test(money) === true){
+				money = money.split('.');			
+				money[1] = money[1].replace(/\D/, '');
+				money = money[0] + point + money[1].substr(0,2);
+			}
+		}
+    
+		$('#' + id +'-money').html('');
+		$('#' + id +'-money').html(money);
+	} else {
+		$('#' + id +'-money').html('$');
+	}
+}

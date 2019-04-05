@@ -1,0 +1,181 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html StingrayTarget="" id="html">
+ <head StingrayTarget="" id="head">
+ <meta http-equiv="X-UA-Compatible" content="IE=8; IE=11">
+ <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+ <link rel="stylesheet" href="../../style/global.css" type="text/css" />
+<link rel="stylesheet" href="../../style/custom.css" type="text/css" />
+<link rel="stylesheet" href="../../style/moneyfield.css" type="text/css" /> 
+ 
+
+<script src="../../script/require.js" data-main="script/main"></script>
+<script type="text/javascript" src='../../JavaScriptSpellCheck/include.js' ></script>
+
+<script type="text/javascript" src="../../script/zp4ex.js"></script>
+<script type="text/javascript" src="../../script/navbar.js"></script>
+<script type="text/javascript" src="../../script/fileupload.js"></script>
+<script type="text/javascript" src="../../script/moneyfield.js"></script>
+
+
+<link rel="stylesheet" href="../../style/tablewalker.css" type="text/css" />
+<script type="text/javascript" src="../../script/tablewalker.js"></script>
+<script type="text/javascript" src="../../script/tablefilters.js"></script>
+ 
+<script type="text/javascript" src="../../script/customtemplate.js"></script>
+<link rel="stylesheet" href="../../style/wfdialog.css" type="text/css" /> 
+<script type="text/javascript" src="../../script/workflow.js"></script>
+<script type="text/javascript" src="../../script/pol.js"></script>
+<script type="text/javascript" src="../../script/addlink.js"></script>
+<script type="text/javascript" src="../../script/jquery.dialog.extra.js"></script>
+
+
+<script type="text/javascript" src="../../script/custom.js"></script>
+<script type="text/javascript" src="../../script/tmpl.js"></script>
+
+<script type="text/javascript" src="../../script/uetaxonomy.js"></script>
+<link rel="stylesheet" href="../../style/uetaxonomy.css" type="text/css" /> 
+
+<script type="text/javascript" src="../../JavaScriptSpellCheck/include.js"></script>
+<script type="text/javascript">$Spelling.ServerModel="php"</script>
+
+<script src="../../ace/ace.js" type="text/javascript" charset="utf-8"></script>
+
+<script type="text/javascript">
+  /* backspace fix */
+  $(document).keydown( function(event) {
+     if (event.keyCode==8) {
+       var $trg=$(event.target);
+       /* ie triggers browser's back button if text field is readonly! 
+          other browsers just ignore they key (as expected)  */
+       if ($trg.is('.livespell_textarea')) {
+          // do nothing, it's correct    
+       } else if ( (!$trg.is(':password,:text,textarea,'))||($trg.is('[readonly]')) ){
+         //console.log (event.target);
+         //alert( $(event.target).attr('class'));
+         event.preventDefault();
+       };     
+     }
+  });
+</script>
+
+<link rel="stylesheet" href="../../style/bokerview.css" type="text/css" /> 
+<link rel="stylesheet" href="../../style/DataTable/DataTable.css" type="text/css" />
+<link rel="stylesheet" href="../../jqwidgets/styles/jqx.base.css" type="text/css" />
+
+<script type="text/javascript" src="../../script/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../../jqwidgets/jqxcore.js"></script>
+<script type="text/javascript" src="../../jqwidgets/jqxdata.js"></script>
+<script type="text/javascript" src="../../jqwidgets/jqxbuttons.js"></script>
+<script type="text/javascript" src="../../jqwidgets/jqxscrollbar.js"></script>
+<script type="text/javascript" src="../../jqwidgets/jqxmenu.js"></script>
+<script type="text/javascript" src="../../jqwidgets/jqxcheckbox.js"></script>
+<script type="text/javascript" src="../../jqwidgets/jqxlistbox.js"></script>
+<script type="text/javascript" src="../../jqwidgets/jqxdropdownlist.js"></script>
+<script type="text/javascript" src="../../jqwidgets/jqxgrid.js"></script>
+<script type="text/javascript" src="../../jqwidgets/jqxgrid.sort.js"></script>
+<script type="text/javascript" src="../../jqwidgets/jqxgrid.pager.js"></script>
+<script type="text/javascript" src="../../jqwidgets/jqxgrid.selection.js"></script>
+<script type="text/javascript" src="../../jqwidgets/jqxgrid.edit.js"></script>
+
+<script>
+// Restore original jQuery/$, move new to jQ!
+window.jQ = jQuery.noConflict(true);
+</script>
+<script type="text/javascript" src="../../script/DataTable/jquery.dataTables.js"></script>
+<script type="text/javascript" src="../../script/DataTable/TableTools.min.js"></script>
+
+ <title>United Educators </title>
+ </head>
+ <body StingrayTarget="" id="body" onLoad="$('#UserName').focus();" >
+
+
+
+
+ <div id="shell" StingrayTarget="">
+  <div border="2" StingrayTarget="" id="top"> 
+   <img src="../../images/title_img/logo.png" alt="United Educators " />
+  </div>
+
+  <!-- menu example: http://www.tanfa.co.uk/css/examples/menu/hs7.asp -->
+  <div StingrayTarget="" id="menu" class="HideInEditor ShowOutEditor">
+ <UL>
+  <LI><A onclick="Communication.LinkRequest('Login.max?Preprocess=true&t=06232016085620');" href="../../Login.max?Preprocess=true&t=06232016085620">Home</A> </LI>
+ </UL>
+ <UL>
+  <LI><A href="#">System</A> 
+   <UL>
+    <LI><A onclick="if(IsValidBrowser()==true){Communication.LinkRequest('Lost_Pass_1.max?Preprocess=true&t=06232016085620');} else {alert('Please use Safari, Google Chrome, or MS Internet Explorer version 7.0 or higher.');}"  href="#">Forgot Password</A></li>
+    <LI style="display:none;"><A onclick="if(IsValidBrowser()==true){Communication.LinkRequest('Login.max?t=06232016085620&UserName=CC_USER&password=CC_USER&CUSTSERV_LOGIN=1');} else {alert('Please use Safari, Google Chrome, or MS Internet Explorer version 7.0 or higher.');}" href="#">Insured Customer Care</A></LI>
+   </UL>
+  </LI>
+ </UL>
+ <DIV style="CLEAR: both"></DIV>
+ </div>
+
+ <div id="IconTray" class="HideInEditor ShowOutEditor">
+   <img id="BarcodeIcon" src="../../images/32x32_barcode.png" title="Scan Barcode" style="display:none;"/>
+   <img id="TooltipIcon" status="" src="../../images/32px-Crystal_Clear_action_info_gray.png" title="Tooltips On / Off" />
+   <img id="WorkflowIcon" src="../../images/32px-Crystal_Clear_app_access_gray.png" title="View Workflow Items" />
+ </div>
+
+ <div id="headshaddow"></div>
+
+ <div StingrayTarget="" id="middle">
+
+  <div VRMName="login" id=rightColumn class="component EditableContent" StingrayTarget="" ref="EditableContent" unselectable="on">   
+   <table>
+	  <tr>
+		 <td style="background-color:#e0e0e0; border:1px solid #aaa; padding:10px;" valign="top">  	
+  		 <h3>User Login</h3>
+       <table class="Login">
+        <tr>
+         <td><input class="loginname suggest" style="width:102px;" type="text" name="UserName" id="UserName" value="" tabIndex="1" onkeydown="if(event.keyCode == 13){if(IsValidBrowser()==true){javascript:Communication.SerialRequest( $('#rightColumn'), false, this );} else {alert('Please use Safari, Google Chrome, or MS Internet Explorer version 7.0 or higher.');}}" /></td>
+        </tr>
+        <tr>
+         <td>
+
+         <input class="suggest" style="width:120px;" type="password" name="password" value="" tabIndex="2" onkeydown="if(event.keyCode == 13){if(IsValidBrowser()==true){javascript:Communication.SerialRequest( $('#rightColumn'), false, this );} else {alert('Please use Safari, Google Chrome, or MS Internet Explorer version 7.0 or higher.');}}" />
+
+         <!-- For any information we need to pass to applist or other pages that need URL variables -->
+         <input type="hidden" name="redirect" value="" />
+         <input type="hidden" name="SubmissionID" value="" />
+         <input type="hidden" name="PolicyNumber" value="" />
+         <input type="hidden" name="EntryMode" value="" />
+         </td>
+        </tr>
+        <tr>
+         <td style="text-align:right;"><input type="button" value="Login" name="submit" tabIndex="3" onclick="if(IsValidBrowser()==true){javascript:Communication.SerialRequest( $('#rightColumn'), false,this );} else {alert('Please use Safari, Google Chrome, or MS Internet Explorer version 7.0 or higher.');}" /> </td>
+        </tr>
+        <tr><td>&nbsp;</td></tr>
+        <tr><td style="text-align:center;"><A style="font-size:10px;"  onclick="if(IsValidBrowser()==true){Communication.LinkRequest('Lost_Pass_1.max?Preprocess=true&t=06232016085620');} else {alert('Please use Safari, Google Chrome, or MS Internet Explorer version 7.0 or higher.');}" href="#">Forgot Password</A></td></tr>
+        <tr><td>&nbsp;</td></tr>
+        <tr style="display:none;"><td style="text-align:center;"><A style="font-size:10px;" onclick="if(IsValidBrowser()==true){Communication.LinkRequest('Login.max?t=06232016085620&UserName=CC_USER&password=CC_USER&CUSTSERV_LOGIN=1');} else {alert('Please use Safari, Google Chrome, or MS Internet Explorer version 7.0 or higher.');}" href="#">Insured Customer Care</A></td></tr>
+       </table>
+ 		  </td>
+		  <td style="padding-left:100px;"><label class="Default">Welcome to UE@Work</label>
+			
+			
+			</td>
+		 </tr>
+		</table>
+  </div> 
+
+     
+ </div>
+ 	
+ <div StingrayTarget="" id="bottom" class="HideInEditor ShowOutEditor">
+  &copy; 2016 Maximum Processing Inc. All Rights Reserved. [6.7.1.103, 2.7.1.0]
+  <div id="vrmName"></div>
+ </div>
+ 
+ <div id="AdminTabs"></div>
+ 
+</div>
+
+<div id="ModalWindow" class="flora" style="display:none;">  </div>
+
+
+ </body>
+</html>
+

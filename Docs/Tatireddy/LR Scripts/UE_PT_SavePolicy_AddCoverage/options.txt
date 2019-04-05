@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-ID:\Tatireddy\LR Scripts\UE_PT_SavePolicy_AddCoverage
+-IC:\Program Files (x86)\HP\LoadRunner\include
+-ed:\tatireddy\lr scripts\ue_pt_savepolicy_addcoverage\\logfile.log
+d:\tatireddy\lr scripts\ue_pt_savepolicy_addcoverage\\combined_UE_PT_SavePolicy_AddCoverage.c
+d:\tatireddy\lr scripts\ue_pt_savepolicy_addcoverage\\pre_cci.c

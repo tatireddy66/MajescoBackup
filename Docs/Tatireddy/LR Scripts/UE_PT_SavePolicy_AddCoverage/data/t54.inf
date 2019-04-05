@@ -1,0 +1,11 @@
+[t54]
+FileName1=t54.htm
+URL1=http://ueatworkuat.maxprocessing.com/claiminfo_coverages.max?AJAX_ACTION=checkWFcondition&CovID=95547&ischecked=1&t=1466686901509
+Total=1
+RequestHeaderFile=t54_RequestHeader.txt
+RequestBodyFile=t54_RequestBody.txt
+ResponseHeaderFile=t54_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_54.xml
+[ProtocolInfo]
+ProtocolId=QTWeb

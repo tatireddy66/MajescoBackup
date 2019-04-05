@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-ID:\Load Runner\CoverAll\Create Appl_working
+-IC:\Program Files (x86)\HP\LoadRunner\include
+-ed:\load runner\coverall\create appl_working\\logfile.log
+d:\load runner\coverall\create appl_working\\combined_Create Appl_working.c
+d:\load runner\coverall\create appl_working\\pre_cci.c

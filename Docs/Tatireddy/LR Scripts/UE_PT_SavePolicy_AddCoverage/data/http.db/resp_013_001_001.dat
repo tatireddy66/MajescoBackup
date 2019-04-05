@@ -1,0 +1,601 @@
+<stingray>
+ <status>success</status>
+ <id>AD09471A1B1F4A118D56834EED7E7D8950B3CF</id>
+ <vrmname>APPLIST</vrmname>
+ <servermode>3</servermode>
+ <target>middle</target>
+ <callback>1</callback>
+<html><![CDATA[<div style="width: 870px;" id="rightColumn" class="right column component EditableContent" ref="EditableContent" stingraytarget="">
+<div>
+<div style="Z-INDEX: 1000; CLEAR: none; TOP: auto; LEFT: auto" class="component EditorLabel" ref="EditorLabel"><label class="PageTitle" title="" tabindex="-1">UE@Work</label></div>
+
+<div style="HEIGHT: 165px" class="component StaticContainer AccountType" ref="StaticContainer" cli-cond="">
+<h3 style="VISIBILITY: visible" class="handle">Account Search</h3>
+<div style="TOP: 28px; LEFT: 7px" class="component EditorRadio" ref="EditorRadio"><input id="AccountType" title="Please click to filter by institutions." tabindex="0" onclick="GlobalScript.ToggleAccountSearch('institution');" name="AccountType" value="institution" class="" type="radio"><span style="cursor: pointer;" class="notRequired">Institution</span></div>
+<div style="TOP: 28px; LEFT: 107px" class="component EditorRadio" ref="EditorRadio"><input id="AccountType" title="Please click to filter by groups." tabindex="0" onclick="GlobalScript.ToggleAccountSearch('group')" name="AccountType" value="Group" class="" type="radio"><span style="cursor: pointer;" class="notRequired">Group</span></div>
+<div style="TOP: 28px; LEFT: 177px" class="component EditorRadio" ref="EditorRadio"><input id="AccountType" title="Please click to filter by brokerages." tabindex="0" onclick="GlobalScript.ToggleAccountSearch('brokerage')" name="AccountType" value="Agency - Brokerage" class="" type="radio"><span style="cursor: pointer;" class="notRequired">Brokerage</span></div>
+<div style="TOP: 28px; LEFT: 277px" class="component EditorRadio" ref="EditorRadio"><input id="AccountType" title="Please click to filter by vendors." tabindex="0" onclick="GlobalScript.ToggleAccountSearch('vendor')" name="AccountType" value="Claims" class="" type="radio"><span style="cursor: pointer;" class="notRequired">Vendor</span></div>
+<div style="TOP: 1px; LEFT: auto" class="component EditorLabel" ref="EditorLabel"><label class="Default" title="" tabindex="-1">Account Type</label></div>
+<div style="width: 175px; top: 67px; left: 0px;" class="component EditorText" ref="EditorText" cli-cond="" mp-help=""><span style="width: 169px; height: 15px; font-size: 1em; cursor: text; left: 4px; top: 1px;" class="notRequired">Account Name</span><input style="width: 175px;" id="AccountName" title="Please enter an account name." tabindex="0" name="AccountName" maxlength="30" class="" value="" type="text" valuelessattrs="disabled"></div>
+<div style="width: 183px; top: 67px; left: 200px;" id="MemberNumberDiv" class="component EditorText" ref="EditorText"><span style="width: 171px; height: 18px; font-size: 1em; cursor: text;" class="notRequired">Member Number</span><input style="width: 175px;" id="MemberNum" title="Please enter a member number." tabindex="0" name="MemberNum" maxlength="30" valuelessattrs="disabled" class="" value="" type="text"></div>
+<div style="width: 6px; top: 67px; left: 200px; display: none;" id="BrokerNumberDiv" class="component EditorText" ref="EditorText"><span style="width: 171px; height: 0px; font-size: 1em; cursor: text;" class="notRequired">Brokerage Number</span><input style="width: 175px;" id="BrokerNumber" title="Please enter the brokerage number." tabindex="0" name="BrokerNumber" maxlength="30" valuelessattrs="disabled" class="" value="" type="text"></div>
+<div style="width: 6px; top: 67px; left: 200px; display: none;" id="TaxIDDiv" class="component EditorText" ref="EditorText"><span style="width: 171px; height: 0px; font-size: 1em; cursor: text;" class="notRequired">Tax ID Number</span><input style="width: 175px;" id="TaxID" title="Please enter a Tax ID number." tabindex="0" name="TaxID" maxlength="30" valuelessattrs="disabled" class="" value="" type="text"></div>
+<div style="width: 183px; top: 102px; left: -1px;" class="component EditorText" ref="EditorText"><span style="width: 171px; height: 18px; font-size: 1em; cursor: text;" class="notRequired">DBA</span><input style="width: 175px;" id="DBA" title="Please enter a DBA." tabindex="0" name="DBA" maxlength="30" valuelessattrs="disabled" class="" value="" type="text"></div>
+<div style="width: 183px; top: 103px; left: 200px;" class="component EditorText" ref="EditorText"><span style="width: 171px; height: 18px; font-size: 1em; cursor: text;" class="notRequired">City</span><input style="width: 175px;" id="City" title="Please enter a city." tabindex="0" name="City" maxlength="30" valuelessattrs="disabled" class="" value="" type="text"></div>
+<div style="WIDTH: 181px; HEIGHT: 36px; TOP: 100px; LEFT: 400px" class="component EditorDropDown" ref="EditorDropDown"><span style="cursor: default;" class="notRequired"></span><select style="WIDTH: 175px" id="AState" title="Please select a state." tabindex="0" size="1" name="AState" valuelessattrs="disabled" class="">
+<option value="-1">Select a State</option>
+<option value="AL">Alabama</option>
+<option value="AK">Alaska</option>
+<option value="AZ">Arizona</option>
+<option value="AR">Arkansas</option>
+<option value="CA">California</option>
+<option value="CO">Colorado</option>
+<option value="CT">Connecticut</option>
+<option value="DE">Delaware</option>
+<option value="DC">District of Columbia</option>
+<option value="FL">Florida</option>
+<option value="GA">Georgia</option>
+<option value="GU">Guam</option>
+<option value="HI">Hawaii</option>
+<option value="ID">Idaho</option>
+<option value="IL">Illinois</option>
+<option value="IN">Indiana</option>
+<option value="IA">Iowa</option>
+<option value="KS">Kansas</option>
+<option value="KY">Kentucky</option>
+<option value="LA">Louisiana</option>
+<option value="ME">Maine</option>
+<option value="MD">Maryland</option>
+<option value="MA">Massachusetts</option>
+<option value="MI">Michigan</option>
+<option value="MN">Minnesota</option>
+<option value="MS">Mississippi</option>
+<option value="MO">Missouri</option>
+<option value="MT">Montana</option>
+<option value="NE">Nebraska</option>
+<option value="NV">Nevada</option>
+<option value="NH">New Hampshire</option>
+<option value="NJ">New Jersey</option>
+<option value="NM">New Mexico</option>
+<option value="NY">New York</option>
+<option value="NC">North Carolina </option>
+<option value="ND">North Dakota</option>
+<option value="OH">Ohio</option>
+<option value="OK">Oklahoma</option>
+<option value="OR">Oregon</option>
+<option value="PA">Pennsylvania</option>
+<option value="PR">Puerto Rico</option>
+<option value="RI">Rhode Island</option>
+<option value="SC">South Carolina</option>
+<option value="SD">South Dakota</option>
+<option value="TN">Tennessee</option>
+<option value="TX">Texas</option>
+<option value="UT">Utah</option>
+<option value="VT">Vermont</option>
+<option value="VI">Virgin Islands</option>
+<option value="VA">Virginia</option>
+<option value="WA">Washington</option>
+<option value="WV">West Virginia</option>
+<option value="WI">Wisconsin</option>
+<option value="WY">Wyoming</option></select></div>
+<div style="WIDTH: 125px; HEIGHT: 32px; TOP: 97px; LEFT: 630px" class="component EditorSubmitButton" ref="EditorSubmitButton" function="CLICK" definition="GlobalScript.ValidateAppListSearch('AccountType', this);" cli-cond="" mp-help=""><input style="WIDTH: 115px; HEIGHT: 22px" id="AccountSearchSubmit" title="Please click here to search accounts." tabindex="0" name="AccountSearchSubmit" value="Search" defaultbutton="false" class="" type="button" valuelessattrs="disabled"></div></div>
+<div style="HEIGHT: 165px" class="component StaticContainer" ref="StaticContainer" cli-cond="">
+<h3 style="VISIBILITY: visible" class="handle">Contact Search</h3>
+<div style="TOP: 1px; LEFT: auto" class="component EditorLabel" ref="EditorLabel"><label class="Default" title="" tabindex="-1">Contact Type</label></div>
+<div style="TOP: 28px; LEFT: 7px" class="component EditorRadio" ref="EditorRadio"><input id="ContactType" title="Please click to filter by institutions." tabindex="0" onclick="GlobalScript.ToggleContactSearch('Institution');" name="ContactType" value="Institution" class="" type="radio"><span style="cursor: pointer;" class="notRequired">Institution</span></div>
+<div style="TOP: 28px; LEFT: 107px" class="component EditorRadio" ref="EditorRadio"><input id="ContactType" title="Please click to filter by groups." tabindex="0" onclick="GlobalScript.ToggleContactSearch('Group');" name="ContactType" value="Group" class="" type="radio"><span style="cursor: pointer;" class="notRequired">Group</span></div>
+<div style="TOP: 28px; LEFT: 177px" class="component EditorRadio" ref="EditorRadio"><input id="ContactType" title="Please click to filter by brokers." tabindex="0" onclick="GlobalScript.ToggleContactSearch('Brokerage');" name="ContactType" value="Agent - Broker" class="" type="radio"><span style="cursor: pointer;" class="notRequired">Broker</span></div>
+<div style="TOP: 28px; LEFT: 257px" class="component EditorRadio" ref="EditorRadio"><input id="ContactType" title="Please click to filter by claims." tabindex="0" onclick="GlobalScript.ToggleContactSearch('Claims');" name="ContactType" value="Claims" class="" type="radio"><span style="cursor: pointer;" class="notRequired">Claims</span></div>
+<div style="TOP: 28px; LEFT: 337px" class="component EditorRadio" ref="EditorRadio"><input id="ContactType" title="Please click to filter by claimants." tabindex="0" onclick="GlobalScript.ToggleContactSearch('Claimant');" name="ContactType" value="Claimant" class="" type="radio"><span style="cursor: pointer;" class="notRequired">Claimant</span></div>
+<div style="width: 183px; top: 63px; left: auto;" class="component EditorText" ref="EditorText"><span style="width: 171px; height: 18px; font-size: 1em; cursor: text;" class="notRequired">First Name</span><input style="width: 175px;" id="FirstName" title="Please enter a first name." tabindex="0" name="FirstName" maxlength="30" valuelessattrs="disabled" class="" value="" type="text"></div>
+<div style="width: 183px; top: 63px; left: 200px;" class="component EditorText" ref="EditorText"><span style="width: 171px; height: 18px; font-size: 1em; cursor: text;" class="notRequired">Last Name</span><input style="width: 175px;" id="LastName" title="Please enter a last name." tabindex="0" name="LastName" maxlength="30" valuelessattrs="disabled" class="" value="" type="text"></div>
+<div style="width: 183px; top: 63px; left: 400px;" class="component EditorText" ref="EditorText" filter="PHONE" param="" dtype="STRING"><span style="width: 171px; height: 18px; font-size: 1em; cursor: text;" class="notRequired">Phone</span><input style="width: 175px;" id="Phone" title="Please enter a phone number." tabindex="0" name="Phone" maxlength="30" valuelessattrs="disabled" class="" value="" type="text"></div>
+<div style="width: 183px; top: 101px; left: auto;" id="ParentAccountDIV" class="component EditorText" ref="EditorText"><span style="width: 171px; height: 18px; font-size: 1em; cursor: text;" class="notRequired">Parent Account</span><input style="width: 175px;" id="ParentAccount" title="Please enter a parent account." tabindex="0" name="ParentAccount" maxlength="30" valuelessattrs="disabled" class="" value="" type="text"></div>
+<div style="width: 183px; top: 101px; left: 200px;" class="component EditorText" ref="EditorText"><span style="width: 171px; height: 18px; font-size: 1em; cursor: text;" class="notRequired">City</span><input style="width: 175px;" id="ContactCity" title="Please enter a city." tabindex="0" name="ContactCity" maxlength="30" valuelessattrs="disabled" class="" value="" type="text"></div>
+<div style="WIDTH: 181px; HEIGHT: 36px; TOP: 98px; LEFT: 400px" class="component EditorDropDown" ref="EditorDropDown"><span style="cursor: default;" class="notRequired"></span><select style="WIDTH: 175px" id="ContactState" title="Please select a State." tabindex="0" size="1" name="ContactState" valuelessattrs="disabled" class="">
+<option value="-1">Select a State</option>
+<option value="AL">Alabama</option>
+<option value="AK">Alaska</option>
+<option value="AZ">Arizona</option>
+<option value="AR">Arkansas</option>
+<option value="CA">California</option>
+<option value="CO">Colorado</option>
+<option value="CT">Connecticut</option>
+<option value="DE">Delaware</option>
+<option value="DC">District of Columbia</option>
+<option value="FL">Florida</option>
+<option value="GA">Georgia</option>
+<option value="GU">Guam</option>
+<option value="HI">Hawaii</option>
+<option value="ID">Idaho</option>
+<option value="IL">Illinois</option>
+<option value="IN">Indiana</option>
+<option value="IA">Iowa</option>
+<option value="KS">Kansas</option>
+<option value="KY">Kentucky</option>
+<option value="LA">Louisiana</option>
+<option value="ME">Maine</option>
+<option value="MD">Maryland</option>
+<option value="MA">Massachusetts</option>
+<option value="MI">Michigan</option>
+<option value="MN">Minnesota</option>
+<option value="MS">Mississippi</option>
+<option value="MO">Missouri</option>
+<option value="MT">Montana</option>
+<option value="NE">Nebraska</option>
+<option value="NV">Nevada</option>
+<option value="NH">New Hampshire</option>
+<option value="NJ">New Jersey</option>
+<option value="NM">New Mexico</option>
+<option value="NY">New York</option>
+<option value="NC">North Carolina </option>
+<option value="ND">North Dakota</option>
+<option value="OH">Ohio</option>
+<option value="OK">Oklahoma</option>
+<option value="OR">Oregon</option>
+<option value="PA">Pennsylvania</option>
+<option value="PR">Puerto Rico</option>
+<option value="RI">Rhode Island</option>
+<option value="SC">South Carolina</option>
+<option value="SD">South Dakota</option>
+<option value="TN">Tennessee</option>
+<option value="TX">Texas</option>
+<option value="UT">Utah</option>
+<option value="VT">Vermont</option>
+<option value="VI">Virgin Islands</option>
+<option value="VA">Virginia</option>
+<option value="WA">Washington</option>
+<option value="WV">West Virginia</option>
+<option value="WI">Wisconsin</option>
+<option value="WY">Wyoming</option></select></div>
+<div style="WIDTH: 125px; HEIGHT: 32px; TOP: 94px; LEFT: 630px" class="component EditorSubmitButton" ref="EditorSubmitButton" function="CLICK" definition="Communication.SerialRequest($(&quot;#rightColumn&quot;),false,this)"><input style="WIDTH: 115px; HEIGHT: 22px" id="ContactSearch" title="Please click here to search contacts." tabindex="0" name="ContactSearch" value="Search" valuelessattrs="disabled" defaultbutton="false" class="" type="button"></div>
+
+</div>
+
+<div style="HEIGHT: 280px" class="component StaticContainer" ref="StaticContainer">
+<h3 style="VISIBILITY: visible" class="handle">Claims Search</h3>
+<div style="WIDTH: 281px; HEIGHT: 36px; TOP: 3px; LEFT: auto" class="component EditorDropDown" ref="EditorDropDown"><span style="cursor: default;" class="notRequired"></span><select style="WIDTH: 275px" id="ClaimsProducts" title="Please select to filter by products." tabindex="0" size="1" name="ClaimsProducts" class="">
+<option value="-1"title="Products...">Products...</option>
+<option value="0"title="All Products">All Products</option>
+<option value="13"title="Auto Liability (Finite)">Auto Liability (Finite)</option>
+<option value="14"title="Auto Liability Publc School (D)">Auto Liability Publc School (D)</option>
+<option value="11"title="Auto Liability Public School">Auto Liability Public School</option>
+<option value="6"title="Buffer Excess Liability">Buffer Excess Liability</option>
+<option value="35"title="Community College Professional Liability">Community College Professional Liability</option>
+<option value="27"title="EBL">EBL</option>
+<option value="2"title="Educators Legal Liability">Educators Legal Liability</option>
+<option value="29"title="Excess Educators Legal Liability">Excess Educators Legal Liability</option>
+<option value="31"title="Excess Fiduciary Liability">Excess Fiduciary Liability</option>
+<option value="38"title="Excess Fiduciary Liability Following Form">Excess Fiduciary Liability Following Form</option>
+<option value="30"title="Excess Following Form Educators Legal Liability">Excess Following Form Educators Legal Liability</option>
+<option value="7"title="Excess General Liability Following">Excess General Liability Following</option>
+<option value="26"title="Experiential Student Policy">Experiential Student Policy</option>
+<option value="44"title="Extra Contractual Liability/Excess of Policy Limits">Extra Contractual Liability/Excess of Policy Limits</option>
+<option value="45"title="Extra Contractual Liability/Excess of Policy Limits">Extra Contractual Liability/Excess of Policy Limits</option>
+<option value="24"title="Fiduciary Liability">Fiduciary Liability</option>
+<option value="4"title="General Liability Excess">General Liability Excess</option>
+<option value="33"title="General Liability Excess (Claims-made)">General Liability Excess (Claims-made)</option>
+<option value="12"title="GL Public (Finite)">GL Public (Finite)</option>
+<option value="10"title="GL Public School">GL Public School</option>
+<option value="15"title="GL Public School (D)">GL Public School (D)</option>
+<option value="42"title="Higher Education Claims Made">Higher Education Claims Made</option>
+<option value="43"title="Higher Education Occurrence">Higher Education Occurrence</option>
+<option value="25"title="Licensed Professional Liability">Licensed Professional Liability</option>
+<option value="28"title="Primary Educators Legal Liability">Primary Educators Legal Liability</option>
+<option value="3"title="Primary General Liability">Primary General Liability</option>
+<option value="8"title="Primary General Liability (Higher Ded)">Primary General Liability (Higher Ded)</option>
+<option value="34"title="Public School Liability">Public School Liability</option>
+<option value="32"title="School Board Legal">School Board Legal</option>
+<option value="17"title="School Board Legal (CM)">School Board Legal (CM)</option>
+<option value="19"title="School Board Legal (CM-Finite)">School Board Legal (CM-Finite)</option>
+<option value="22"title="School Board Legal (DCM)">School Board Legal (DCM)</option>
+<option value="21"title="School Board Legal (DOC)">School Board Legal (DOC)</option>
+<option value="18"title="School Board Legal (OC)">School Board Legal (OC)</option>
+<option value="20"title="School Board Legal (OC-Finite)">School Board Legal (OC-Finite)</option>
+<option value="23"title="Specified Ventures Liability">Specified Ventures Liability</option>
+<option value="36"title="Trustees Legal Liability">Trustees Legal Liability</option>
+<option value="9"title="Umbrella Liability">Umbrella Liability</option></select></div>
+<div style="width: 130px; top: 3px; left: 357px;" class="component EditorText" ref="EditorText" filter="DATE|LESSTHANEQUALS" param="|06/23/2016" dtype="DATE|DATE"><span style="width: 118px; height: 18px; font-size: 1em; cursor: text;" class="notRequired">Loss Date</span><input style="width: 122px;" id="LossDate" class="hasDatepicker" title="Please enter the loss date." tabindex="0" name="LossDate" maxlength="30" value="" type="text"></div>
+<div style="TOP: 3px; LEFT: 636px" class="component EditorCheckBox" ref="EditorCheckBox"><input id="RecordOnly" title="Please click here to include record only." tabindex="0" name="RecordOnly" value="1" class="" type="checkbox"><span style="cursor: pointer;" class="notRequired">Include Record Only</span></div>
+<div style="TOP: 33px; LEFT: 2px" class="component EditorLabel" ref="EditorLabel"><label class="Default" title="" tabindex="-1">Claim Entered Between</label></div>
+<div style="width: 130px; top: 35px; left: 152px;" class="component EditorText" ref="EditorText" filter="DATE|LESSTHANEQUALS" param="|06/23/2016" dtype="DATE|DATE"><span style="width: 118px; height: 18px; font-size: 1em; cursor: text;" class="notRequired">Start Date</span><input style="width: 122px;" id="ClaimsStartDate" class="hasDatepicker" title="Please enter a start date." tabindex="0" name="ClaimsStartDate" maxlength="30" value="" type="text"></div>
+<div style="width: 130px; top: 35px; left: 357px;" class="component EditorText" ref="EditorText" filter="DATE|LESSTHANEQUALS" param="|06/23/2016" dtype="DATE|DATE"><span style="width: 118px; height: 18px; font-size: 1em; cursor: text;" class="notRequired">End Date</span><input style="width: 122px;" id="ClaimsEndDate" class="hasDatepicker" title="Please enter an end date." tabindex="0" name="ClaimsEndDate" maxlength="30" value="" type="text"></div>
+<div style="width: 275px; top: 70px; left: 0px;" class="component EditorText" ref="EditorText" cli-cond="" mp-help=""><span style="width: 269px; height: 15px; font-size: 1em; cursor: text; left: 4px; top: 1px;" class="notRequired">Claimant Name</span><input style="width: 275px;" id="ClaimsClaimantName" title="Please enter a claimant name." tabindex="0" name="ClaimsClaimantName" maxlength="30" class="" value="" type="text"></div>
+<div style="WIDTH: 206px; HEIGHT: 36px; TOP: 67px; LEFT: 357px" class="component EditorDropDown" ref="EditorDropDown"><span style="cursor: default;" class="notRequired"></span><select style="WIDTH: 200px" id="ClaimsClaimStatus" title="Please select a claim status." tabindex="0" size="1" name="ClaimsClaimStatus" class="">
+<option value="-1" >Claim Status...</option>
+<option value="1" >Open</option>
+<option value="5" >Re-opened</option>
+<option value="2" >Closed with Payment</option>
+<option value="7" >Closed without payment</option>
+<option value="10" >First Notice Of Loss</option>
+<option value="11" >Triage</option>
+<option value="13" >Closed Claims Handling</option></select></div>
+<div style="width: 283px; top: 105px; left: auto;" class="component EditorText" ref="EditorText"><span style="width: 271px; height: 18px; font-size: 1em; cursor: text;" class="notRequired">Member Name</span><input style="width: 275px;" id="ClaimsMemberName" title="Please enter a member name." tabindex="0" name="ClaimsMemberName" maxlength="30" class="" value="" type="text"></div>
+<div style="WIDTH: 206px; HEIGHT: 36px; TOP: 102px; LEFT: 357px" class="component EditorDropDown" ref="EditorDropDown"><span style="cursor: default;" class="notRequired"></span><select style="WIDTH: 200px" id="ClaimsAnalyst" title="Please select an analyst." tabindex="0" size="1" name="ClaimsAnalyst" class="">
+
+<option value="-1" >Analyst...</option>
+<option value="0" >All Analysts</option>
+<option value="874"> Aisha Fallen</option>
+<option value="15954"> Alicia Helms</option>
+<option value="15962"> Alicia Williams</option>
+<option value="875"> Angela Alkire</option>
+<option value="910"> Arden Colley</option>
+<option value="15961"> Ashlee Hodge</option>
+<option value="876"> Carla Marcolin</option>
+<option value="877"> Christine McHugh</option>
+<option value="878"> Cristina Wallace</option>
+<option value="879"> Dena Kaufmann</option>
+<option value="880"> Denise Crowley</option>
+<option value="881"> Dina Hazen</option>
+<option value="8437"> Donna Esposito</option>
+<option value="882"> Douglas Onley</option>
+<option value="883"> Emily Caputo</option>
+<option value="884"> Glenda Atkinson</option>
+<option value="8416"> Janine Carter</option>
+<option value="15956"> Jenny Casey</option>
+<option value="886"> Jim Smith</option>
+<option value="15952"> Joanne Owens</option>
+<option value="16524"> Joe McCullough</option>
+<option value="8614"> Karen Lee</option>
+<option value="15963"> KarenAnn Broe</option>
+<option value="15953"> Kelsey Feeheley</option>
+<option value="892"> Kenneth June</option>
+<option value="893"> Kimberly Cole</option>
+<option value="15957"> Kristin Scaduto</option>
+<option value="894"> Laura Morales</option>
+<option value="895"> Laura Olariu</option>
+<option value="16255"> Lisa Barnett</option>
+<option value="896"> Louise Cobbs</option>
+<option value="15969"> Matt OBrien</option>
+<option value="897"> Michael Krackov</option>
+<option value="16462"> Michele Hutchinson</option>
+<option value="898"> Nikole Alcala</option>
+<option value="15955"> Pamela Buchanan</option>
+<option value="899"> Rebecca Ambrose</option>
+<option value="900"> Rhonda Hurwitz</option>
+<option value="902"> Rick Donato</option>
+<option value="901"> Rick Schlegel</option>
+<option value="8606"> Rika Peterson</option>
+<option value="903"> Robb Jones</option>
+<option value="911"> Rose Anunda</option>
+<option value="904"> Samantha Ware</option>
+<option value="905"> Sarah Braughler</option>
+<option value="16769"> Subrat Dash</option>
+<option value="906"> Susannah Reynolds</option>
+<option value="907"> Tracey Altadonna</option>
+<option value="908"> Tracy McPherson</option>
+<option value="909"> Vicki Higman</option></select></div>
+<div style="width: 283px; top: 136px; left: auto;" class="component EditorText" ref="EditorText"><span style="width: 271px; height: 18px; font-size: 1em; cursor: text;" class="notRequired">Member Number</span><input style="width: 275px;" id="ClaimsMemberNum" title="Please enter member number." tabindex="0" name="ClaimsMemberNum" maxlength="30" class="" value="" type="text"></div>
+<div style="width: 206px; height: 35px; top: 133px; left: 357px;" class="component EditorDropDown" ref="EditorDropDown" cli-cond="" mp-help=""><span style="cursor: default;" class="notRequired"></span><select style="width: 200px;" id="ClaimsLoss" title="Please select a cause of loss." tabindex="0" size="1" name="ClaimsLoss" class="">
+<option value="-1"title="Cause of Loss...">Cause of Loss...</option>
+<option value="ACCIDE"title="Accident - causes injury to people">Accident - causes injury to people</option>
+<option value="ACCIDE1"title="Accident - causes injury to property">Accident - causes injury to property</option>
+<option value="AIRCRAFT"title="Aircraft">Aircraft</option>
+<option value="ALCOHCOL"title="Alcohol & Drugs">Alcohol & Drugs</option>
+<option value="ANTITRST"title="Antitrust">Antitrust</option>
+<option value="ASSAULT"title="Assault">Assault</option>
+<option value="ASSAUL1"title="Assault - sexual - perp <18">Assault - sexual - perp <18</option>
+<option value="ASSAUL2"title="Assault - sexual - perp 18 or older">Assault - sexual - perp 18 or older</option>
+<option value="ASSAUL"title="Assault Civil">Assault Civil</option>
+<option value="ATHLETIC"title="Athletic">Athletic</option>
+<option value="ATHLET"title="Athletic activity - other">Athletic activity - other</option>
+<option value="ATHLET1"title="Athletic activity - varsity">Athletic activity - varsity</option>
+<option value="AthlTBI"title="Athletic TBI">Athletic TBI</option>
+<option value="BRCHCONT"title="Breach of Contract">Breach of Contract</option>
+<option value="BRCHFID"title="Breach of Fiduciary Duty">Breach of Fiduciary Duty</option>
+<option value="CRD"title="Civil rights deprivation">Civil rights deprivation</option>
+<option value="CONSP"title="Conspiracy">Conspiracy</option>
+<option value="CONDISCH"title="Constructive Discharge">Constructive Discharge</option>
+<option value="CONFRAUD"title="Consumer Fraud Statute">Consumer Fraud Statute</option>
+<option value="CONVUJEN"title="Conversion/Unjust Enrichment">Conversion/Unjust Enrichment</option>
+<option value="CRTM"title="Copyright/trademark">Copyright/trademark</option>
+<option value="ProResp"title="Crisis Communications">Crisis Communications</option>
+<option value="DEFAME"title="Defamation">Defamation</option>
+<option value="DEF&PRIV"title="Defamation & Privacy Rights">Defamation & Privacy Rights</option>
+<option value="DISAGE"title="Discrimination-Age">Discrimination-Age</option>
+<option value="DISDISAB"title="Discrimination-Disability">Discrimination-Disability</option>
+<option value="DISGENDR"title="Discrimination-Gender">Discrimination-Gender</option>
+<option value="DISMARRG"title="Discrimination-Marital Status">Discrimination-Marital Status</option>
+<option value="DISORIG"title="Discrimination-National Origin">Discrimination-National Origin</option>
+<option value="DISOTHER"title="Discrimination-Other">Discrimination-Other</option>
+<option value="DISRACE"title="Discrimination-Race">Discrimination-Race</option>
+<option value="DISRELIG"title="Discrimination-Religious">Discrimination-Religious</option>
+<option value="DISRETAL"title="Discrimination-Retaliation">Discrimination-Retaliation</option>
+<option value="DISRVDIS"title="Discrimination-Reverse Discrimination">Discrimination-Reverse Discrimination</option>
+<option value="DISSEXOR"title="Discrimination-Sexual Orientation">Discrimination-Sexual Orientation</option>
+<option value="NDR"title="Drowning/near drowning">Drowning/near drowning</option>
+<option value="DUEPROCS"title="Due Process Violation">Due Process Violation</option>
+<option value="LOSIM24"title="Duplicate">Duplicate</option>
+<option value="EDUMALPR"title="Educational Malpractice">Educational Malpractice</option>
+<option value="EMPBENLI"title="Employee Benefit Liability">Employee Benefit Liability</option>
+<option value="ENV"title="Environment">Environment</option>
+<option value="FAILINDM"title="Failure to Indemnify">Failure to Indemnify</option>
+<option value="FAILSUPR"title="Failure to Supervise">Failure to Supervise</option>
+<option value="FALSARST"title="False Arrest/Imprisonment">False Arrest/Imprisonment</option>
+<option value="FALSCLM"title="False Claim Act">False Claim Act</option>
+<option value="FALSLGHT"title="False Light">False Light</option>
+<option value="FERPA"title="FERPA">FERPA</option>
+<option value="FREX"title="Fire/Explosion">Fire/Explosion</option>
+<option value="FSTAMNDV"title="First Amendment Violation">First Amendment Violation</option>
+<option value="FLSA"title="FLSA">FLSA</option>
+<option value="FLMA"title="FMLA">FMLA</option>
+<option value="FRAUDMIS"title="Fraud/Misrepresentation">Fraud/Misrepresentation</option>
+<option value="INCIDNT"title="Incident">Incident</option>
+<option value="EMOTDIST"title="Int'l Infliction of Emotional Distress">Int'l Infliction of Emotional Distress</option>
+<option value="INTPROP"title="Intellectual Property/Copyright">Intellectual Property/Copyright</option>
+<option value="INVPRIV"title="Invasion of Privacy">Invasion of Privacy</option>
+<option value="MALPROSC"title="Malicious Prosecution">Malicious Prosecution</option>
+<option value="MEDCT"title="Medical/Counseling Treatment">Medical/Counseling Treatment</option>
+<option value="NCAU"title="Natural Causes">Natural Causes</option>
+<option value="NEGL"title="Negligence">Negligence</option>
+<option value="NO"title="No Coverage">No Coverage</option>
+<option value="OPENRECS"title="Open Records/Meetings Laws">Open Records/Meetings Laws</option>
+<option value="OTHER"title="Other">Other</option>
+<option value="OTHSTATU"title="Other Statutory Violations">Other Statutory Violations</option>
+<option value="POLL"title="Pollution">Pollution</option>
+<option value="PRODUCTS"title="Products/completed">Products/completed</option>
+<option value="PROF"title="Professional Liability">Professional Liability</option>
+<option value="PROPERTY"title="Property Damage">Property Damage</option>
+<option value="RPRIV"title="Reputation/Privacy">Reputation/Privacy</option>
+<option value="SELFIN"title="Self-inflicted/Suicide/Intentional harm">Self-inflicted/Suicide/Intentional harm</option>
+<option value="SEXASSAUL"title="Sexual Harassment">Sexual Harassment</option>
+<option value="STF"title="Slip/trip/fall">Slip/trip/fall</option>
+<option value="CTBD"title="TBD">TBD</option>
+<option value="THEFTB"title="Theft/Burglary/Vandalism">Theft/Burglary/Vandalism</option>
+<option value="TITLEIX"title="Title IX">Title IX</option>
+<option value="VEHICL"title="Vehicle">Vehicle</option>
+<option value="VET"title="Veterinary Malpractice">Veterinary Malpractice</option>
+<option value="WATERC"title="Watercraft">Watercraft</option>
+<option value="WSTLBLOW"title="Whistleblower violations">Whistleblower violations</option>
+<option value="WRNGTERM"title="Wrongful Termination">Wrongful Termination</option></select></div>
+<div style="WIDTH: 281px; HEIGHT: 36px; TOP: 169px; LEFT: auto" class="component EditorDropDown" ref="EditorDropDown"><span style="cursor: default;" class="notRequired"></span><select style="WIDTH: 275px" id="ClaimsStateMemberInstitution" title="Please select a state." tabindex="0" size="1" name="ClaimsStateMemberInstitution" class="">
+<option value="-1">Select a State</option>
+<option value="AL">Alabama</option>
+<option value="AK">Alaska</option>
+<option value="AZ">Arizona</option>
+<option value="AR">Arkansas</option>
+<option value="CA">California</option>
+<option value="CO">Colorado</option>
+<option value="CT">Connecticut</option>
+<option value="DE">Delaware</option>
+<option value="DC">District of Columbia</option>
+<option value="FL">Florida</option>
+<option value="GA">Georgia</option>
+<option value="GU">Guam</option>
+<option value="HI">Hawaii</option>
+<option value="ID">Idaho</option>
+<option value="IL">Illinois</option>
+<option value="IN">Indiana</option>
+<option value="IA">Iowa</option>
+<option value="KS">Kansas</option>
+<option value="KY">Kentucky</option>
+<option value="LA">Louisiana</option>
+<option value="ME">Maine</option>
+<option value="MD">Maryland</option>
+<option value="MA">Massachusetts</option>
+<option value="MI">Michigan</option>
+<option value="MN">Minnesota</option>
+<option value="MS">Mississippi</option>
+<option value="MO">Missouri</option>
+<option value="MT">Montana</option>
+<option value="NE">Nebraska</option>
+<option value="NV">Nevada</option>
+<option value="NH">New Hampshire</option>
+<option value="NJ">New Jersey</option>
+<option value="NM">New Mexico</option>
+<option value="NY">New York</option>
+<option value="NC">North Carolina </option>
+<option value="ND">North Dakota</option>
+<option value="OH">Ohio</option>
+<option value="OK">Oklahoma</option>
+<option value="OR">Oregon</option>
+<option value="PA">Pennsylvania</option>
+<option value="PR">Puerto Rico</option>
+<option value="RI">Rhode Island</option>
+<option value="SC">South Carolina</option>
+<option value="SD">South Dakota</option>
+<option value="TN">Tennessee</option>
+<option value="TX">Texas</option>
+<option value="UT">Utah</option>
+<option value="VT">Vermont</option>
+<option value="VI">Virgin Islands</option>
+<option value="VA">Virginia</option>
+<option value="WA">Washington</option>
+<option value="WV">West Virginia</option>
+<option value="WI">Wisconsin</option>
+<option value="WY">Wyoming</option></select></div>
+<div style="WIDTH: 206px; HEIGHT: 36px; TOP: 166px; LEFT: 357px" class="component EditorDropDown" ref="EditorDropDown"><span style="cursor: default;" class="notRequired"></span><select style="WIDTH: 200px" id="ClaimsWrong" title="Please select a wrongful act." tabindex="0" size="1" name="ClaimsWrong" class="">
+<option value="-1"title="Wrongful Acts...">Wrongful Acts...</option>
+<option value="ACDMFREE"title="Academic Freedom">Academic Freedom</option>
+<option value="ACCOMM"title="Accommodation">Accommodation</option>
+<option value="ACCRED"title="Accreditation">Accreditation</option>
+<option value="ADDMIS"title="Admission">Admission</option>
+<option value="ARREST"title="Arrest">Arrest</option>
+<option value="ATHLTIC"title="Athletics">Athletics</option>
+<option value="BENEFIT"title="Benefits">Benefits</option>
+<option value="COPYRGHT"title="Copyright">Copyright</option>
+<option value="DEMOTE"title="Demotion">Demotion</option>
+<option value="DISCHRG"title="Discharge">Discharge</option>
+<option value="DISPACDM"title="Discipline, Academic">Discipline, Academic</option>
+<option value="DISPCOND"title="Discipline, Conduct">Discipline, Conduct</option>
+<option value="DISMISS"title="Dismissal/Expulsion">Dismissal/Expulsion</option>
+<option value="DSTLRN"title="Distance Learning">Distance Learning</option>
+<option value="FINAID"title="Financial Aid">Financial Aid</option>
+<option value="FRCWTHDR"title="Forced Withdraw">Forced Withdraw</option>
+<option value="FREERELG"title="Freedom of Religion">Freedom of Religion</option>
+<option value="FREESPCH"title="Freedom of Speech">Freedom of Speech</option>
+<option value="GRADES"title="Grades">Grades</option>
+<option value="HARSHOST"title="Harrassment-Hostile Environment">Harrassment-Hostile Environment</option>
+<option value="HARSQPQ"title="Harrassment-QPQ">Harrassment-QPQ</option>
+<option value="HIRING"title="Hiring">Hiring</option>
+<option value="HOUSING"title="Housing">Housing</option>
+<option value="INDEMNF"title="Indemnification">Indemnification</option>
+<option value="JOBTRANS"title="Job Transfer">Job Transfer</option>
+<option value="LEAVE"title="Leave">Leave</option>
+<option value="MEETINGS"title="Meetings">Meetings</option>
+<option value="MISREP"title="Misrepresentation">Misrepresentation</option>
+<option value="WNONE"title="NONE">NONE</option>
+<option value="PATENT"title="Patent">Patent</option>
+<option value="PERF"title="Performance Evaluation">Performance Evaluation</option>
+<option value="PROFM"title="Professional Misconduct">Professional Misconduct</option>
+<option value="CLOSED"title="Program Closure">Program Closure</option>
+<option value="PROMO"title="Promotion">Promotion</option>
+<option value="PUBLICTN"title="Publication">Publication</option>
+<option value="REC"title="Records">Records</option>
+<option value="REF"title="References">References</option>
+<option value="RIF"title="RIF/Layoff">RIF/Layoff</option>
+<option value="SEARCH"title="Search">Search</option>
+<option value="SUSP"title="Suspension">Suspension</option>
+<option value="WTBD"title="TBD">TBD</option>
+<option value="TENURE"title="Tenure Denial">Tenure Denial</option>
+<option value="TEN_REV"title="Tenure Revocation">Tenure Revocation</option>
+<option value="TRADE"title="Trademark">Trademark</option>
+<option value="TUITION"title="Tuition">Tuition</option>
+<option value="WAGES"title="Wages/Salary">Wages/Salary</option></select></div>
+<div style="width: 140px; top: 205px; left: auto;" class="component EditorText" ref="EditorText"><span style="width: 128px; height: 18px; font-size: 1em; cursor: text;" class="notRequired">Policy Code</span><input style="width: 132px;" id="ClaimsPolicyCode" title="Please enter the policy code." tabindex="0" name="ClaimsPolicyCode" maxlength="30" class="" value="" type="text"></div>
+<div style="width: 140px; top: 205px; left: 143px;" class="component EditorText" ref="EditorText"><span style="width: 128px; height: 18px; font-size: 1em; cursor: text;" class="notRequired">Claim Number</span><input style="width: 132px;" id="ClaimsClaimNum" title="Please enter the claim number." tabindex="0" name="ClaimsClaimNum" maxlength="30" class="" value="" type="text"></div>
+<div style="WIDTH: 206px; HEIGHT: 36px; TOP: 202px; LEFT: 357px" class="component EditorDropDown" ref="EditorDropDown"><span style="cursor: default;" class="notRequired"></span><select style="WIDTH: 200px" id="ClaimsAddFactors" title="Please select an additional factor." tabindex="0" size="1" name="ClaimsAddFactors" class="">
+<option value="-1"title="Additional Factors...">Additional Factors...</option>
+<option value="ABUSE"title="Alcohol/Drugs/Substance Abuse">Alcohol/Drugs/Substance Abuse</option>
+<option value="DEFECT"title="Defective Condition">Defective Condition</option>
+<option value="GREEK"title="Greek Organization">Greek Organization</option>
+<option value="HAZING"title="Hazing">Hazing</option>
+<option value="LEASED"title="Leased">Leased</option>
+<option value="MORE"title="More than one of the above">More than one of the above</option>
+<option value="NONE"title="None">None</option>
+<option value="ARISK"title="Risk transfer issue">Risk transfer issue</option>
+<option value="ATBD"title="TBD">TBD</option></select></div>
+<div style="WIDTH: 125px; HEIGHT: 32px; TOP: 200px; LEFT: 630px" class="component EditorSubmitButton" ref="EditorSubmitButton" function="CLICK" definition="if(GlobalScript.dateRangeCheck('ClaimsStartDate', 'ClaimsEndDate')){Communication.SerialRequest($(&quot;#rightColumn&quot;),false,this);}"><input style="WIDTH: 115px; HEIGHT: 22px" id="ClaimsSearch" title="Please click here to search claims." tabindex="0" name="ClaimsSearch" value="Search" defaultbutton="false" class="" type="button"></div>
+<div function="CLICK" definition="Communication.SerialRequest($(&quot;#rightColumn&quot;),false,this)" class="component EditorSubmitButton" ref="EditorSubmitButton" style="width: 125px; height: 32px; left: 630px; top: 155px;"><input value="Legal Bill" id="legalBill" name="legalBill" class="" tabindex="0" title="Please click here to follow this link." style="width: 115px; height: 22px;" defaultbutton="false" type="button"></div>
+</div>
+
+<div class="component DynamicContainer" ref="DynamicContainer" cli-cond="">
+<h3 class="handle">Tasks</h3>
+<div class="component EditorLabel" ref="EditorLabel"><label class="Default" title="" tabindex="-1"></label>
+<table width="100%" id="resulttable" class="TableWalker">
+<thead>
+<tr>
+<td column="[HWFP_NAME]" width="5%">Priority</td>
+<td column="hWF_Title" width="30%">Title</td>
+<td column="hWFCS_SubCategory" width="30%">Sub-Category</td>
+<td column="hWF_Due_Date" width="15%">Due Date</td>
+<td column="DaysOverdue" width="15%">Days Overdue</td>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<label></label></div></div></div>
+<div style="display: none;" class="component ScriptingContainer" ref="ScriptingContainer" cli-cond="">
+<h3 class="handle" lasttoggle="2">Javascript Functions</h3><pre style="display: none;"> function OnLoad(){
+  scroll(0,0);
+  if ('' != '') return;
+
+  if(''=='egl_quote1')
+  {
+     Communication.LinkRequest('egl_quote1.max?EntryMode=&amp;SubmissionID=&amp;PolicyNumber=');
+  }
+
+
+  $( '#resulttable' ).ready( function() {
+     var tbwobj = $('#resulttable');
+     initTableWalker( 'applist' , tbwobj, true, 10);
+     });
+
+  $("#IconTray").css("display", "block");
+  CustomScript.ReloadStyles();
+  $('#hellousername').remove();
+
+
+  $('#contactinfo').append('&lt;span id=hellousername style="font-weight: bold;"&gt;&lt;br&gt;&lt;br&gt;Hello, Current_USRName&lt;/span&gt;');
+
+  Communication.StartSessionTimer('43200','120');
+  var limit = 100;
+
+ 
+
+ $("#AccountName").autocomplete  ("applist.max", 
+  {
+      
+      selectFirst:false,
+      max:limit, 
+      extraParams:{
+          AJAX_ACTION: "GetMemberName", 
+          PreProcess: "false", 
+          AccountType: function(){return $('input[name="AccountType"]:checked').val()}, 
+          limit:limit
+          }   
+          
+          }); 
+
+$("#AccountName").bind( "result", function(event,ui) {Communication.CustomRequest("applist.max?AJAX_ACTION=AddAutoAccName&amp;ID=AD09471A1B1F4A118D56834EED7E7D8950B3CF&amp;AutoMemName="+$(this).val(),function(AjaxResp){})});     
+          
+  $("#DBA").autocomplete("applist.max", {selectFirst:false, max:limit, extraParams:{AJAX_ACTION: "GetDBA", PreProcess: "false", AccountType: function(){return $('input[name="AccountType"]:checked').val()}, limit:limit}});
+  $("#ParentAccount").autocomplete("applist.max", {selectFirst:false, max:limit, extraParams:{AJAX_ACTION: "GetParentAccount", PreProcess: "false", ContactType: function(){return $('input[name="ContactType"]:checked').val()}, limit:limit}});
+  $("#FirstName").autocomplete("applist.max",
+    {
+      max:limit
+      , extraParams:{
+         AJAX_ACTION: "GetFirstName"
+         , PreProcess: "false"
+         , ContactType: function(){return $('input[name="ContactType"]:checked').val()}
+         , limit:limit
+      }
+    });
+  $("#FirstName").bind('result', function(ev,data,v) {
+      var i=v.indexOf('&amp;nbsp;');
+      $("#FirstName").val(v.substr(0, i));
+      $("#LastName").val(v.substr(i+6));
+   });
+
+
+   $("#LastName").autocomplete("applist.max",
+    {
+      max:limit
+      , extraParams:{
+         AJAX_ACTION: "GetLastName"
+         , PreProcess: "false"
+         , ContactType: function(){return $('input[name="ContactType"]:checked').val()}
+      }
+    });
+  $("#LastName").bind('result', function(ev,data,v) {
+      var i=v.indexOf('&amp;nbsp;');
+      $("#FirstName").val(v.substr(0, i));
+      $("#LastName").val(v.substr(i+6));
+   });
+
+
+   $("#ClaimsMemberName").autocomplete("applist.max", {selectFirst:false, max:limit, extraParams:{AJAX_ACTION: "GetClaimsMemberName", PreProcess: "false", AccountType: function(){return $('input[name="AccountType"]:checked').val()}, RecordOnly: function(){return $('#RecordOnly').is(':checked');}}});
+
+   $("#ClaimsClaimantName").autocomplete("applist.max", {max:limit, extraParams:{AJAX_ACTION: "GetClaimsClaimantName", PreProcess: "false", RecordOnly: function(){return $('#RecordOnly').is(':checked');}}});
+   $("#ClaimsClaimantName").bind('result', function(ev,data,v) {
+      $("#ClaimsClaimantName").val(v);
+   });
+
+  Communication.CustomRequest("IconTray.max?action=gettooltip", CustomScript.ParseResponse);
+  Global.CheckWorkflow();
+  if (WorkflowInit) WorkflowInit('AD09471A1B1F4A118D56834EED7E7D8950B3CF');
+
+}
+
+
+
+/* Code copied from Global.js  */
+function ParseResponse(html)
+{
+  var temp = $(html);
+  $("#TooltipIcon").attr("alt", temp.attr("alt") );
+  $("#TooltipIcon").attr("status", temp.attr("status"));
+  $("#TooltipIcon").attr("src", temp.attr("src"));
+  Global.Tooltips(temp.attr("status") == "0" ? false : true);
+}
+
+function ReloadStyles(){
+var JSON_Text='{"Anchor":"#27499e","AnchorHover":"#e80600","BodyBackground":"#757B8A","ButtonBackground":"#B5B7BD","ContainerHeadBackgroundColor":"#113388","ContainerHeadTextColor":"#FFFFFF","FootColor":"#113388","HTagColor":"#27499e","InputBackground":"#B5B7BD","MenuBackgroundColor":"#113388","MenuBorderColorBottom":"#FFFFFF","MenuBorderColorLeft":"#FFFFFF","MenuBorderColorRight":"#FFFFFF","MenuBorderColorTop":"#FFFFFF","MenuDropdownBorderColor":"#FFFFFF","MenuHoverColor":"#B3C4DC","MenuTextColor":"#FFFFFF","NotRequired":"#27499e","PageTitle":"#292426","Required":"#800000","Shell":"#FFFFFF","TableAlternateRowColor":"#DDDDDD","TableHeadColor":"#CCCACA","TableRowColor":"#FFFFFF"}';
+if(JSON_Text!='')Global.ReloadStyles(JSON_Text);
+}
+</pre></div></div>
+<div style="CLEAR: both"></div>
+<div id="FooterSeparator"></div>
+]]></html>
+</stingray>

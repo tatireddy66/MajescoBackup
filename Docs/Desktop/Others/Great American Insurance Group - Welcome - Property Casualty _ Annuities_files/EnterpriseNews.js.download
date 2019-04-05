@@ -1,0 +1,43 @@
+﻿
+
+
+$(document).ready(function () {
+    var enterprisenewsjson = jQuery.parseJSON($(".enterprisenews-json").val());
+    var footernewsjson = jQuery.parseJSON($(".footernews-json").val());
+
+    $(".enterprisenews-template").html(
+		$("#clientEnterpriseNewsTemplate").render(enterprisenewsjson)
+	);
+    $(".footernews-template").html(
+		$("#clientFooterNewsTemplate").render(footernewsjson)
+	);
+
+    $("#enterprisenews-tabs").tabs();
+    $(".enterprisenews-itemid").click(function () {
+        var itemid = $(this).attr("itemid");
+        var guid = $(this).attr("guid");
+        if ($.browser.msie && $.browser.version.substr(0, 1) < 8) {
+            $(this).attr("href", "/Lists/MasterNews/DisplayForm.aspx?ID=" + itemid);
+        } else {
+            openDialog(guid);
+            $('html, body').animate({ scrollTop: 0 }, 'slow');
+            $(".newsitem-closebutton").click(function () {
+                CloseNewsModel()
+            });
+        }
+    });
+
+    $(".news-rss").click(function () {
+        window.open(this.href, 'popupwindow', 'scrollbars,resizable');
+        return false;
+    });
+});
+
+
+function openDialog(itemId) {
+    var options = SP.UI.$create_DialogOptions();
+    options.url = "/_layouts/GAIG.Portal.Enterprise/NewsItemApplicationPages.aspx?id=" + itemId;
+    options.width = 800;
+    options.height = 650;
+    SP.UI.ModalDialog.showModalDialog(options);
+}

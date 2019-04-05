@@ -1,0 +1,13 @@
+[t52]
+FileName1=t52.htm
+URL1=http://ueatworkuat.maxprocessing.com/claiminfo_coverages.max?AJAX_ACTION=GetFNETable&CLID=120715&t=1466686889386
+Total=2
+RequestHeaderFile=t52_RequestHeader.txt
+RequestBodyFile=t52_RequestBody.txt
+ResponseHeaderFile=t52_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_52.xml
+FileName2=t52_button_uncheck.png
+URL2=http://ueatworkuat.maxprocessing.com/images/button_uncheck.png
+[ProtocolInfo]
+ProtocolId=QTWeb

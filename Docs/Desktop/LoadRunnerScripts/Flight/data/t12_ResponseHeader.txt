@@ -1,0 +1,12 @@
+HTTP/1.1 200 OK
+Content-Type: application/octet-stream
+X-Content-Type-Options: nosniff
+Date: Wed, 05 Dec 2018 12:37:13 GMT
+Server: HTTP server (unknown)
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+Alt-Svc: quic=":443"; ma=2592000; v="44,43,39,35"
+Content-Length: 252
+Age: 2
+Via: HTTPS/1.1 localhost.localdomain
+

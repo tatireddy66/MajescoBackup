@@ -1,0 +1,629 @@
+<stingray>
+ <status>success</status>
+ <id>AD09471A1B1F4A118D56834EED7E7D8950B3CF</id>
+ <vrmname>CLAIMINFO_COVERAGES</vrmname>
+ <servermode>3</servermode>
+ <target>middle</target>
+ <callback>1</callback>
+<html><![CDATA[<div style="width: 878px;" id="rightColumn" class="right column component EditableContent" stingraytarget="" ref="EditableContent">
+    <div class="component EditorLabel" ref="EditorLabel" style="">
+        <label class="PageTitle" title="" tabindex="-1" style=" ">Coverage</label>
+    </div>
+    <div class="component EditorLabel" ref="EditorLabel">
+        <label class="Default" title="" tabindex="-1"></label>
+<div>
+    <table style="width:865px">
+        <tbody>
+            <tr>
+                <td colspan=8>&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan=8>&nbsp;</td>
+            </tr>
+
+            <tr>
+                <td style="text-align:left">
+                    <label class="Default">Claim #</label>
+                </td>
+                <td>
+                    <label class="InfoColor">155988</label>
+                </td>
+                <td style="text-align:left">
+                    <label class="Default">Claimant</label>
+                </td>
+                <td>
+                    <label class="InfoColor">Perf183 Test183</label>
+                </td>
+                <td style="text-align:left">
+                    <label class="Default">Policy #</label>
+                </td>
+                <td>
+                    <table>
+<tr>
+<td>
+<label class="InfoColor">
+    <!--<a title="Please click to view this policy." onclick="Communication.LinkRequest('PolInfo_InsInfo.max?RECID=139431&amp;FromNav=1');">-->
+LPD201500068800
+<!--</a>-->
+</label>
+</td>
+</tr></table>
+                </td>
+                <td style="text-align:left">
+                    <label class="Default">Institution</label>
+                </td>
+                <td>
+                    <label class="InfoColor"><a onclick="Communication.LinkRequest('account_information.max?Account_id=001U0000009BDp9IAG&AccountType=Institution');">Worcester Polytechnic Institute (688)</a></label>
+                </td>
+            </tr>
+
+            <tr>
+                <td style="text-align:left">
+                    <label class="Default">Product</label>
+                </td>
+                <td>
+                    <label class="InfoColor">LPL</label>
+                </td>
+                <td style="text-align:left">
+                    <label class="Default">DOL</label>
+                </td>
+                <td>
+                    <label class="InfoColor">4/4/2016</label>
+                </td>
+                <td style="text-align:left">
+                    <label class="Default">Status</label>
+                </td>
+                <td>
+                    <label class="InfoColor">Open</label>
+                </td>
+                <td style="text-align:left">
+                    <label class="Default">Analyst</label>
+                </td>
+                <td>
+                    <label class="InfoColor">Dina Hazen</label>
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="component DynamicContainer borderless" id="claimbarinfo" ref="DynamicContainer" style="height: auto;">
+    <h3 id="toggleheaderinfo" style="CURSOR: pointer; color:white; font-size: 10pt;" class="handle"
+        onclick="GlobalScript.GetClaimFinancialDetail(70433);GlobalScript.Toggleheader();">
+      <span style="DISPLAY: none;" id="header_toggle_minus" class="stat">-</span>
+      <span style="DISPLAY: inline;" id="header_toggle_plus" class="stat">+</span>Claim Financial Summary</h3>
+    <div id="divClaimFinancialDetail" style="overflow: hidden;height: auto;"></div>
+</div>
+    <tr>
+          <td colspan=8>&nbsp;</td>
+    </tr>
+<ul id="navigationBar" style="list-style-type:none;margin:auto;padding:0; width:100%; text-align: left;">
+<li style="display: inline;margin:0px; padding: 0px;list-style-type: none;">
+  <DIV style="display: inline;padding:0px; margin:0px; position:relative; HEIGHT:23px; left:0px; CURSOR:default;"
+  class="component EditorSubmitButton"   ref="EditorSubmitButton" condition definition="NavBarButtonClick(this);" function="CLICK">
+  <INPUT style="CURSOR:POINTER; WIDTH:auto; padding:0px 5px 0px 5px; margin:0px; HEIGHT:23px; margin-top:5px; "
+    class="ClNavbarSave" id="CLAIMS_EGL_PAGE1" name="CLAIMS_EGL_PAGE1" title="Please click here to view the Summary tab." value="Summary" CauseValidation="false" type=button />
+  </DIV>
+</li><li style="display: inline;margin:0px; padding: 0px;list-style-type: none;">
+  <DIV style="display: inline;padding:0px; margin:0px; position:relative; HEIGHT:23px; left:0px; CURSOR:default;"
+  class="component EditorSubmitButton"   ref="EditorSubmitButton" condition definition="NavBarButtonClick(this);" function="CLICK">
+  <INPUT style="CURSOR:POINTER; WIDTH:auto; padding:0px 5px 0px 5px; margin:0px; HEIGHT:23px; margin-top:5px; "
+    class="ClNavbarSave" id="CLAIMS_MODIFY2" name="CLAIMS_MODIFY2" title="Please click here to view the Claim Details tab." value="Claim Details" CauseValidation="false" type=button />
+  </DIV>
+</li><li style="display: inline;margin:0px; padding: 0px;list-style-type: none;">
+  <DIV style="display: inline;padding:0px; margin:0px; position:relative; HEIGHT:23px; left:0px; CURSOR:default;"
+  class="component EditorSubmitButton"   ref="EditorSubmitButton" condition definition="NavBarButtonClick(this);" function="CLICK">
+  <INPUT style="CURSOR:POINTER; WIDTH:auto; padding:0px 5px 0px 5px; margin:0px; HEIGHT:23px; margin-top:5px; "
+    class="ClNavbarSave" id="CLAIMINFO_CLAIMANTS" name="CLAIMINFO_CLAIMANTS" title="Please click here to view the Claimant tab." value="Claimant" CauseValidation="false" type=button />
+  </DIV>
+</li><li style="display: inline;margin:0px; padding: 0px;list-style-type: none;">
+  <DIV style="display: inline;padding:0px; margin:0px; position:relative; HEIGHT:23px; left:0px; CURSOR:default;"
+  class="component EditorSubmitButton"   ref="EditorSubmitButton" condition definition="NavBarButtonClick(this);" function="CLICK">
+  <INPUT style="CURSOR:POINTER; WIDTH:auto; padding:0px 5px 0px 5px; margin:0px; HEIGHT:23px; margin-top:5px; background-color:#E0E0E0; border-color:#303030;"
+    class="ClNavbarSave" id="CLAIMINFO_COVERAGES" name="CLAIMINFO_COVERAGES" title="Please click here to view the Coverage tab." value="Coverage" CauseValidation="false" type=button />
+  </DIV>
+</li><li style="display: inline;margin:0px; padding: 0px;list-style-type: none;">
+  <DIV style="display: inline;padding:0px; margin:0px; position:relative; HEIGHT:23px; left:0px; CURSOR:default;"
+  class="component EditorSubmitButton"   ref="EditorSubmitButton" condition definition="NavBarButtonClick(this);" function="CLICK">
+  <INPUT style="CURSOR:POINTER; WIDTH:auto; padding:0px 5px 0px 5px; margin:0px; HEIGHT:23px; margin-top:5px; "
+    class="ClNavbarSave" id="CLAIMINFO_CONTACT" name="CLAIMINFO_CONTACT" title="Please click here to view the Contacts tab." value="Contacts" CauseValidation="false" type=button />
+  </DIV>
+</li><li style="display: inline;margin:0px; padding: 0px;list-style-type: none;">
+  <DIV style="display: inline;padding:0px; margin:0px; position:relative; HEIGHT:23px; left:0px; CURSOR:default;"
+  class="component EditorSubmitButton"   ref="EditorSubmitButton" condition definition="NavBarButtonClick(this);" function="CLICK">
+  <INPUT style="CURSOR:POINTER; WIDTH:auto; padding:0px 5px 0px 5px; margin:0px; HEIGHT:23px; margin-top:5px; "
+    class="ClNavbarSave" id="CLAIMINFO_NOTES" name="CLAIMINFO_NOTES" title="Please click here to view the Notes tab." value="Notes" CauseValidation="false" type=button />
+  </DIV>
+</li><li style="display: inline;margin:0px; padding: 0px;list-style-type: none;">
+  <DIV style="display: inline;padding:0px; margin:0px; position:relative; HEIGHT:23px; left:0px; CURSOR:default;"
+  class="component EditorSubmitButton"   ref="EditorSubmitButton" condition definition="NavBarButtonClick(this);" function="CLICK">
+  <INPUT style="CURSOR:POINTER; WIDTH:auto; padding:0px 5px 0px 5px; margin:0px; HEIGHT:23px; margin-top:5px; "
+    class="ClNavbarSave" id="CLAIMINFO_ATTACHMENTS" name="CLAIMINFO_ATTACHMENTS" title="Please click here to view the Documents tab." value="Documents" CauseValidation="false" type=button />
+  </DIV>
+</li><li style="display: inline;margin:0px; padding: 0px;list-style-type: none;">
+  <DIV style="display: inline;padding:0px; margin:0px; position:relative; HEIGHT:23px; left:0px; CURSOR:default;"
+  class="component EditorSubmitButton"   ref="EditorSubmitButton" condition definition="NavBarButtonClick(this);" function="CLICK">
+  <INPUT style="CURSOR:POINTER; WIDTH:auto; padding:0px 5px 0px 5px; margin:0px; HEIGHT:23px; margin-top:5px; "
+    class="ClNavbarSave" id="CLAIMSINFO_LITIGATION" name="CLAIMSINFO_LITIGATION" title="Please click here to view the Litigation tab." value="Litigation" CauseValidation="false" type=button />
+  </DIV>
+</li><li style="display: inline;margin:0px; padding: 0px;list-style-type: none;">
+  <DIV style="display: inline;padding:0px; margin:0px; position:relative; HEIGHT:23px; left:0px; CURSOR:default;"
+  class="component EditorSubmitButton"   ref="EditorSubmitButton" condition definition="NavBarButtonClick(this);" function="CLICK">
+  <INPUT style="CURSOR:POINTER; WIDTH:auto; padding:0px 5px 0px 5px; margin:0px; HEIGHT:23px; margin-top:5px; "
+    class="ClNavbarSave" id="CLAIMINFO_FINANCIAL" name="CLAIMINFO_FINANCIAL" title="Please click here to view the Financials tab." value="Financials" CauseValidation="false" type=button />
+  </DIV>
+</li><li style="display: inline;margin:0px; padding: 0px;list-style-type: none;">
+  <DIV style="display: inline;padding:0px; margin:0px; position:relative; HEIGHT:23px; left:0px; CURSOR:default;"
+  class="component EditorSubmitButton"   ref="EditorSubmitButton" condition definition="NavBarButtonClick(this);" function="CLICK">
+  <INPUT style="CURSOR:POINTER; WIDTH:auto; padding:0px 5px 0px 5px; margin:0px; HEIGHT:23px; margin-top:5px; "
+    class="ClNavbarSave" id="CLAIMINFO_HISTORY" name="CLAIMINFO_HISTORY" title="Please click here to view the History tab." value="History" CauseValidation="false" type=button />
+  </DIV>
+</li><li style="display: inline;margin:0px; padding: 0px;list-style-type: none;">
+  <DIV style="display: inline;padding:0px; margin:0px; position:relative; HEIGHT:23px; left:0px; CURSOR:default;"
+  class="component EditorSubmitButton"   ref="EditorSubmitButton" condition definition="NavBarButtonClick(this);" function="CLICK">
+  <INPUT style="CURSOR:POINTER; WIDTH:auto; padding:0px 5px 0px 5px; margin:0px; HEIGHT:23px; margin-top:5px; "
+    class="ClNavbarSave" id="CLAIMINFO_TASKS" name="CLAIMINFO_TASKS" title="Please click here to view the Tasks tab." value="Tasks" CauseValidation="false" type=button />
+  </DIV>
+</li>
+</ul>
+ <table style="width:100%;">
+ 
+       
+  
+	
+        
+	
+        </table>
+<label></label>
+    </div>
+
+    
+
+    <!--<div style="Z-INDEX: 1000" class="component DynamicContainer" ref="DynamicContainer" cli-cond="" id="NotiDiv">
+        <h3 class="handle" onclick="CustomScript.ToggleSection(this);" style="cursor:pointer">Notifications</h3>
+        <div class="component StaticContainer borderless" ref="StaticContainer" cli-cond="" style="position: relative; height: 80px; display: block;">
+            <h3 class="handle" style="visibility: hidden;"></h3>
+        <div class="component EditorLabel" ref="EditorLabel" style="left: -5px; top: -15px;">
+             <label class="Default" tabindex="-1" title="" style=" ">The Limited Defense Endorsement exists on the policy selected.</label>
+        </div>
+        <div class="component EditorLabel" ref="EditorLabel" style="left: -5px; top: -35px;">
+             <label class="Default" tabindex="-1" title="" style=" ">The counsel type for the selected policy is SELECT.</label>
+        </div>
+        <div class="component EditorLabel" ref="EditorLabel" style="left: -5px; top: -55px;">
+             <label class="Default" tabindex="-1" title="" style=" ">The Schedule of Underlying Insurance exists, a review is required.</label>
+        </div>
+        </div>
+    </div>-->
+
+    <div style="Z-INDEX: 1000" class="component DynamicContainer" ref="DynamicContainer" cli-cond="" id="CovSelDiv">
+        <h3 class="handle" onclick="CustomScript.ToggleSection(this);" style="cursor:pointer">Coverage Selection</h3>
+
+        <div class="component StaticContainer borderless" ref="StaticContainer" cli-cond="" style="position: relative; height: 40px; display: block;">
+            <h3 class="handle" style="visibility: hidden;"></h3>
+            <div class="component EditorLabel" ref="EditorLabel" cli-cond="" mp-help="" style="left: -5px; top: -15px;" function="CLICK" definition="CustomScript.ToggleClmntTable();">
+                <label class="DefaultBold" tabindex="-1" title="" style=" " id="ClmntLabel">+ Claimant</label>
+            </div>
+            <div class="component EditorDropDown" ref="EditorDropDown" cli-cond="" mp-help="" style="width: 256px; height: 35px; left: 75px; top: -35px;"><span class="notRequired" style="cursor: default;"></span>
+                <br>
+                <select id="ClmntDD" name="ClmntDD" size="1" class="" tabindex="0" title="Please select a claimant to load the coverages associated." style="width: 250px;"> <option value="-1" selected>Select Claimant. . .</option> <option value="120715" >Perf183 Test183</option> <option value="120717" >s k enterprises</option></select>
+            </div>
+        </div>
+
+        <div class="component DynamicContainer" ref="DynamicContainer" cli-cond="" mp-help="" style="left: -5px; top: -15px;">
+            <label style="TEXT-ALIGN: justify; margin: 0px 5px 0px 25px; display: block;" class="Default" title="" tabindex="-1" id="CovTable"></label>
+        </div>
+
+        <div style="height: 30px; display: block;">
+            <h3 class="handle" style="visibility: hidden;"></h3>
+            <div function="CLICK" definition="Communication.SerialRequest($(&quot;#rightColumn&quot;),false,this)" class="component EditorSubmitButton" ref="EditorSubmitButton" style="width: 110px; height: 32px; left: 735px; top: -15px;" cli-cond="('1'='1')" mp-help="">
+                <input type="button" value="Add Claimant" id="AddClmnt" name="AddClmnt" class="" tabindex="0" title="Please click here to add a claimant." defaultbutton="false" style="width: 100px; height: 22px;" valuelessattrs="">
+            </div>
+        </div>
+    </div>
+
+    <div style="Z-INDEX: 1000" class="component DynamicContainer" ref="DynamicContainer" cli-cond="" id="schDiv">
+        <h3 class="handle" onclick="CustomScript.ToggleSection(this);" style="cursor:pointer">Schedules</h3>
+        <div class="component DynamicContainer" ref="DynamicContainer" cli-cond="" mp-help="" style="left: -5px;">
+            <label style="TEXT-ALIGN: justify; margin: 0px 5px 0px 25px; display: block;" class="Default" title="" tabindex="-1" id="SchedulesTable"></label>
+        </div>
+    </div>
+
+    <div style="Z-INDEX: 1000" class="component DynamicContainer" ref="DynamicContainer" id="PNEDiv">
+        <h3 class="handle" onclick="CustomScript.ToggleSection(this);" style="cursor:pointer">Policy Forms and Endorsements</h3>
+        <div class="component DynamicContainer" ref="DynamicContainer" cli-cond="" mp-help="" style="left: -5px;">
+            <label style="TEXT-ALIGN: justify; margin: 0px 5px 0px 25px; display: block;" class="Default" title="" tabindex="-1" id="FNETable">No Records Found...</label>
+        </div>
+
+    </div>
+
+    <div style="z-index: 1000;" class="component DynamicContainer" ref="DynamicContainer">
+        <h3 class="handle" onclick="CustomScript.ToggleSection(this);" style="cursor:pointer">Endorsement Quote List</h3>
+        <div class="component EditorLabel" ref="EditorLabel" cli-cond="" mp-help="">
+            <label class="Default" tabindex="-1" title="" style=" TEXT-ALIGN: justify; margin: 0px 5px 0px 5px; DISPLAY: block;"></label>
+        </div>
+    </div>
+
+    <div style="Z-INDEX: 1000" class="component DynamicContainer" ref="DynamicContainer" cli-cond="">
+        <h3 class="handle" onclick="CustomScript.ToggleSection(this);" style="cursor:pointer">Member Benefits</h3>
+        <div class="component StaticContainer borderless" ref="StaticContainer" style="position: relative; height: 30px;" cli-cond="">
+            <h3 class="handle" style="visibility: hidden;"></h3>
+            <div class="component EditorLabel" ref="EditorLabel" style="left: -5px; top: -25px;" cli-cond="" mp-help="">
+                <label class="Default" tabindex="-1" title="" style=" ">Total balance for policy year: $75,000.00</label>
+            </div>
+        </div>
+        <div class="component DynamicContainer borderless" ref="DynamicContainer" cli-cond="" mp-help="" id="MemberBenefit_Div">
+            <label style=" TEXT-ALIGN: left; MARGIN: 0px 0px 0px 10px; DISPLAY: block" class="Default" title="" tabindex="-1"><table id="MemberBenefitresults">
+<thead>
+<tr>
+<th>Benefit Date</th>
+<th>Benefit Name</th>
+<th>Service</th>
+<th>Limit</th>
+<!--<th>Balance</th>-->
+<th class="no-sort"></th>
+<th class="no-sort"></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table></label>
+        </div>
+    </div>
+
+    <div style="display: none;" class="component ScriptingContainer" ref="ScriptingContainer" cli-cond="">
+        <h3 class="handle" lasttoggle="2">Javascript Functions</h3><pre style="display: none;">function OnLoad() {
+    $('#tbw_MemberBenefitList').ready(function () {
+        var tbwobj1 = $('#tbw_MemberBenefitList');
+        initTableWalker('claiminfo_coverages', tbwobj1, true, 10);
+    });    
+    $('#tbw_EndorsementQuoteList').ready(function () {
+        var tbwobj2 = $('#tbw_EndorsementQuoteList');
+        initTableWalker('claiminfo_coverages', tbwobj2, true, 10);
+    });
+    $('#' + 'SetupComplete').css('background-color', 'red');
+    $('#' + 'SetupComplete').css('color', '#ffffff');
+    $('.rR_Expandable').children('li').children('div').filter('.rR_Column1').each(function() {
+        if ($(this).parent().children('ul').children('li').length &gt; 0) {
+            $(this).click(function(e) {
+                CustomScript.expandClick($(this));
+            });
+            $(this).css('cursor', 'pointer');
+            $(this).addClass('rR_Expand');
+        }
+    });
+    
+    scroll(0, 0);
+
+    //CustomScript.LoadClmntCovs_onload();
+
+    $('#CovTable').hide();
+    CustomScript.ToggleClmntTable();
+    CustomScript.LoadClmntCovs();
+    $("#ClmntDD").change(function() {
+        CustomScript.LoadClmntCovs();
+        CustomScript.LoadSchedule();
+        CustomScript.LoadFNE();
+    });
+
+    CustomScript.LoadSchedule();
+    CustomScript.LoadFNE();
+
+    $('#AddClmnt').hide();
+
+    $('#MemberBenefitresults').dataTable({
+             "info": false,
+             "iDisplayLength": 5,
+             "columnDefs": [ {
+                                 "targets": [ 4 ],
+                                 "searchable": false,
+                                 "orderable": false
+                             },
+                             {
+                                 "targets": [ 5 ],
+                                 "searchable": false,
+                                 "orderable": false
+                             }
+                           ]
+    });
+
+    $('#MemberBenefitresults_wrapper').css({ top: '-20px' });
+}
+
+function EnableMBSave() {
+   $('#Save').removeAttr('disabled');
+}
+
+function SaveMemberBenefits(PDCP_ID, TranType){
+
+   var claimant = $('#ClmntDD').val();
+   var clmid = '70433';
+   var MBLimit = '75000';
+   var params  = '';
+
+   var MBDate = $('#BenefitDate_' + PDCP_ID).val();
+
+   if (TranType == 'NA') {
+        jAlert('Reserve exist for this member benefits, please remove reserve first to proceed!');
+        return;
+   }
+
+   if (TranType == 'Insert' &amp;&amp; claimant == '-1') {
+        jAlert('Please select a claimant before applying Member Benefit coverage.');
+        return;
+   }
+
+   if(TranType === 'Insert' &amp;&amp; MBDate === '' ) {
+        jAlert('Benefit date is required!');
+        return;
+   }
+
+   params = '&amp;PDCP_ID=' + PDCP_ID + '&amp;MBDate=' + MBDate + '&amp;CLID=' + claimant + '&amp;CLMID=' + clmid + '&amp;TranType=' + TranType+'&amp;MBLimit=' + MBLimit;
+
+   Communication.CustomRequest('claiminfo_coverages.max?SubmitAct=Save' + params, function(AjaxResp) {
+        var JSONResult = jsonParse(AjaxResp);
+
+        if(JSONResult.SaveFlag == 1){
+             $('#MemberBenefitresults_wrapper').empty();
+             $('#MemberBenefitresults_wrapper').append(JSONResult.MemberBenefitList);
+             $('#MemberBenefitresults').dataTable({
+                      "info": false,
+                      "iDisplayLength": 5,
+                      "columnDefs": [ {
+                                 "targets": [ 4 ],
+                                 "searchable": false,
+                                 "orderable": false
+                             },
+                             {
+                                 "targets": [ 5 ],
+                                 "searchable": false,
+                                 "orderable": false
+                             }
+                           ]
+            }).show();
+
+            $('#MemberBenefit_Div div.component').each( function(){
+                 var ctrl =  Helper.GetEditorComponent(this)
+                 if (typeof(ctrl) != 'undefined') {
+                     ctrl.DefaultMode();
+                 }
+            });
+
+           $('#MemberBenefitresults_wrapper').css({ top: '-20px' });
+
+            jAlert('Your changes was saved successfully!');
+        }
+   });
+}
+
+function OpenEndorsement(repId, policyid, docName)
+{
+     window.open('claiminfo_coverages.max?ACTION=print&amp;sREP_ID=' + repId + '&amp;DOCNAME=' + docName + '&amp;PD_ID=' + policyid + '&amp;id=AD09471A1B1F4A118D56834EED7E7D8950B3CF&amp;t='+Date.now(),'_blank');
+}
+
+function VarifyMemberBenefit(control, flag) {
+    if(flag === '1') {
+        jAlert('Reserve exist for this member benefits, please remove reserve first to proceed!');
+        $(control).attr('checked', 'checked');
+    }
+}
+
+function UpdateCov(covid) {
+    var ischecked = (($('#CHECK_IMG_' + covid).attr('src') == "../../images/button_uncheck.png") ? '1' : '0');
+    var params = "CovID=" + covid + "&amp;ischecked=" + ischecked;
+
+    Communication.CustomRequest('claiminfo_coverages.max?AJAX_ACTION=checkWFcondition&amp;' + params, function(AjaxResp) {
+           var JSONResult = jsonParse(AjaxResp);
+           var message = '';
+           var update_enable = true;
+           if (JSONResult.paymentmade == "1"){
+               if (confirm("Coverage can not be added because payment have been made against this Coverage. \n Do you wish Billing group to Transfer this payment?") == true) {
+                   Communication.CustomRequest('claiminfo_coverages.max?AJAX_ACTION=transferPaymentWF');
+               } else {
+               }
+               update_enable = false;
+           }
+           if (JSONResult.ReserveExist == "1"){
+               message += '-&gt; Coverage can not be modified because Reserve exist on the coverage. Analyst will be notified.' + '\n';
+               update_enable = false;
+           }
+           if (JSONResult.ClaimReserveExist == "1"){
+               message += '-&gt; Reserve exist on this claim.' + '\n';
+           }
+           //if (JSONResult.CodeClaimClosed == "1"){
+           //    message += '-&gt; Coverage can not be modified because Claim Coding needs review.  Analyst will be notified.' + '\n';
+           //    update_enable = false;
+           //}
+           //if (JSONResult.CovLetterClosed == "1"){
+           //    message += '-&gt; Please review Coverage Letter.  Analyst will be notified.' + '\n';
+               //update_enable = false;
+           //}
+           if(message != '')
+               jAlert(message);
+           if (update_enable){
+               Communication.CustomRequest('claiminfo_coverages.max?AJAX_ACTION=UpdateCoverage&amp;' + params, function(AjaxResp) {
+               if (AjaxResp == "1") {
+                    CustomScript.LoadClmntCovs();
+                    CustomScript.LoadSchedule();
+                    CustomScript.LoadFNE();
+                }
+            });
+        }
+    });
+}
+
+function UpdateMemberBenefit(mb) {
+ 
+    var benEvntDate = $('#BenefitEventDate').val();
+   
+    var claimant = $('#ClmntDD').val();
+    if (claimant == '-1') {
+        alert('Please select a claimant before applying Member Benefit coverage.');
+        $('#MBS_' + mb).attr('checked', false);
+        return;
+    }
+     if(benEvntDate==='')
+    {  
+        alert('Please select Benefit Event Date.');
+        $('#MBS_' + mb).attr('checked', false);
+        return;
+    }
+    
+    if ($('#MBS_' + mb).is(':checked')) {
+            Communication.CustomRequest('claiminfo_coverages.max?AJAX_ACTION=UpdateMBS&amp;checked=1&amp;mb=' + mb + '&amp;BenefitDate=' + benEvntDate + '&amp;claimant=' + claimant
+            , function(AjaxResp) {  
+                  TableWalkerAjax( $('#tbw_MemberBenefitList'),'BenefitDate='+benEvntDate);
+                return;
+            });
+        }
+       else {
+           Communication.CustomRequest('claiminfo_coverages.max?AJAX_ACTION=UpdateMBS&amp;checked=0&amp;mb=' + mb + '&amp;BenefitDate=' + benEvntDate + '&amp;claimant=' + claimant
+           , function(AjaxResp) {  
+                 TableWalkerAjax( $('#tbw_MemberBenefitList'),'BenefitDate='+benEvntDate);
+               return;
+            });
+       }
+    
+}
+
+function LoadSchedule() {
+    var clmntid = $('#ClmntDD').val();
+    Communication.CustomRequest('claiminfo_coverages.max?AJAX_ACTION=GetScheduleTable&amp;CLID=' + clmntid, function(AjaxResp) {
+        $('#SchedulesTable').html(AjaxResp);
+        var ctrl = Helper.GetEditorComponent($('#schDiv'));
+        if (typeof(ctrl) != 'undefined')ctrl.DefaultMode();
+    });
+}
+
+function LoadFNE() {
+    var clmntid = $('#ClmntDD').val();
+    Communication.CustomRequest('claiminfo_coverages.max?AJAX_ACTION=GetFNETable&amp;CLID=' + clmntid, function(AjaxResp) {
+        $('#FNETable').html(AjaxResp);
+        var ctrl = Helper.GetEditorComponent($('#PNEDiv'));
+        if (typeof(ctrl) != 'undefined')ctrl.DefaultMode();
+    });
+}
+
+function LoadClmntCovs_onload() {
+    var clmntid = $('#ClmntDD').val();
+
+    Communication.CustomRequest('claiminfo_coverages.max?AJAX_ACTION=GetoldCovTable&amp;CLID=' + clmntid, function(AjaxResp) {
+        $('#CovTable').html(AjaxResp);
+
+        var wasShown = $('#CovTable').is(':visible');
+
+        $('#CovTable').show();
+
+        var ctrl = Helper.GetEditorComponent($('#CovSelDiv'));
+        if (typeof(ctrl) != 'undefined') ctrl.DefaultMode();
+
+        if (!wasShown) {
+            $('#CovTable').hide();
+        }
+    });
+}
+
+function LoadClmntCovs() {
+    var clmntid = $('#ClmntDD').val();
+
+    Communication.CustomRequest('claiminfo_coverages.max?AJAX_ACTION=GetCovTable&amp;CLID=' + clmntid, function(AjaxResp) {
+        $('#CovTable').html(AjaxResp);
+
+        var wasShown = $('#CovTable').is(':visible');
+
+        $('#CovTable').show();
+
+        var ctrl = Helper.GetEditorComponent($('#CovSelDiv'));
+        if (typeof(ctrl) != 'undefined') ctrl.DefaultMode();
+
+        if (!wasShown) {
+            $('#CovTable').hide();
+        }
+    });
+}
+
+function ToggleClmntTable() {
+    $('#CovTable').toggle();
+
+    if ($('#CovTable').is(':visible')) {
+        $('#ClmntLabel').html('- Claimant');
+    } else {
+        $('#ClmntLabel').html('+ Claimant');
+    }
+}
+
+function expandClick(div) {
+    if ($(div).hasClass('rR_Expand')) {
+        $(div).removeClass('rR_Expand');
+        $(div).addClass('rR_Collapse');
+    } else {
+        $(div).removeClass('rR_Collapse');
+        $(div).addClass('rR_Expand');
+    }
+
+    $(div).parent().children('ul').each(function() {
+        $(this).toggle();
+    });
+}
+
+function ToggleSection(el) {
+    $(el).children('.stat').toggle();
+    $(el).parent().children('div').toggle();
+}
+
+function EmailPopup() {
+    $('#dialog').remove();
+    if ($('input[name="forms"]:checked').length == 0) {
+        alert('You must first select a form.');
+        return;
+    }
+    $('#rightColumn').append('&lt;div style="width:500px; height:200px; margin-top: 0px; text-align: left; background-position: 0% 100%;' +
+        ' background-repeat: no-repeat; font-family: Verdana, Arial, Helvetica, sans-serif, "Trebuchet MS"; font-size: 10pt;' +
+        ' display: inline" class="component StaticContainer borderless" ref="StaticContainer" id="dialog"&gt;&lt;/div&gt;');
+    $('#dialog').html($('#dialogContent').html());
+
+    $('#dialog').dialog({
+        autoOpen: true,
+        modal: true,
+        width: 500,
+        height: 220,
+        title: "E-mail Documents",
+        beforeclose: function(event, ui) {},
+        buttons: {
+            'Cancel': function() {
+                $('#dialog').dialog('destroy');
+            },
+            'E-mail': function() {
+                var email = encodeURIComponent($('#dialog #EmailAddress').val());
+                var forms = new Array();
+                $('[name="forms"]:checked').each(function(index) {
+                    forms[index] = $(this).val();
+                });
+
+                Communication.CustomRequest('claiminfo_coverages.max?AJAX_ACTION=EmailForms&amp;forms=' + forms.join(',') + '&amp;email=' + email, function(AjaxResp) {
+                    var resp = JSON.parse(AjaxResp);
+                    $('#dialog #attachment_response').html(resp.response);
+                });
+            }
+        }
+    });
+}
+
+function OpenDocument(id,imageid){
+ 
+    if(imageid===''||imageid===null)
+    {
+        jAlert("To view documents for this policy please use ImageRight");
+        return;
+    }
+    var ImageFile = encodeURI(imagefile);    
+    window.open("../../staticpdf.max?id="+id+"&amp;File_ID"+imageid+"&amp;Image_Action=WC_AttImage","_blank");
+    
+}
+</pre>
+    </div>
+</div>
+<div style="CLEAR: both"></div>
+<div id="FooterSeparator"></div>
+]]></html>
+</stingray>

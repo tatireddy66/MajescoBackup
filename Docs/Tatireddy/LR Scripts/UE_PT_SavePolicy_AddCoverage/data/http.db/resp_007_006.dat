@@ -1,0 +1,86 @@
+WFPopup = new function() { 
+  return { 
+    usePopup : false,
+    popup : null,
+    open: function(SessionID)
+    {         
+       var url = 'wfwindow.htm?ID='+SessionID; 
+       if (WFPopup.popup) {
+         
+         if (WFPopup.popup.closed) { 
+           WFPopup.popup=null;
+         }
+             
+       }
+       if (!WFPopup.popup) WFPopup.popup=window.open(url, '_blank', 'height=500,width=780,location=0,menubar=0,resizable=1,scrollbars=1,titlebar=0,toolbar=0,directories=0');
+       else WFPopup.popup.focus();
+       return true;
+    },
+    close: function()
+    {
+      if (WFPopup.popup) {
+        WFPopup.popup.close();
+        WFPopup.popup=null;          
+      }
+    }
+  } 
+}
+
+
+function WorkflowClick(SessionID, OpenItemID, CallBack)
+{
+  try {
+    if (WFPopup.usePopup) { 
+      WFPopup.open(SessionID);
+      return;
+    }
+
+    var wd=$("#workflowdialog");
+    if (wd.length==0) {
+      $('#middle').before('<div id=workflowdialog></div>');
+      wd=$("#workflowdialog");
+      wd.dialog({
+        autoOpen: false,
+        width: 750,
+        modal: false,
+        resizable: false,
+        autoResize: true,
+        canMinimize: true,
+        canMaximize: true,
+        funcMaximize: function(t) { 
+          if (WFPopup.open(SessionID)) {
+            WFPopup.usePopup=true;
+            $('#workflowdialog').dialog("close"); 
+            return true; 
+          }
+        },
+        title: "Workflow Items" 
+      }); 
+
+      $("#workflowdialog").dialog("open").parent('div').css('top','100px');
+      CustomTemplate('Queues.max?preprocess=true&id='+SessionID, wd, 'WFScript', function() {
+        $("#workflowdialog").dialog("open");
+        if (WFScript.OnLoad) WFScript.OnLoad();
+        if (typeof OpenItemID!='undefined') WFScript.EditItem(OpenItemID,CallBack);
+      });
+    } else {
+      if ($('#workflowdialog').parents(".ui-dialog").is(":visible")){
+        wd.dialog("close");
+      } else {
+        wd.dialog("open");
+        if (WFScript.Reload) WFScript.Reload();
+        if (typeof OpenItemID!='undefined') WFScript.EditItem(OpenItemID,CallBack);
+      }		
+     //   wd.dialog("close");
+	//	$('#workflowdialog').html('');
+    }
+  } catch(err) {
+   alert(err);
+  }
+}
+
+function WorkflowInit(SessionID)
+{
+  $('#WorkflowIcon').unbind('click');
+  $('#WorkflowIcon').bind('click', function(){WorkflowClick(SessionID);});
+}

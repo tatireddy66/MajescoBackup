@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-ID:\Tatireddy\LR Scripts\WebTours
+-IC:\Program Files (x86)\HP\LoadRunner\include
+-ed:\tatireddy\lr scripts\webtours\\logfile.log
+d:\tatireddy\lr scripts\webtours\\combined_WebTours.c
+d:\tatireddy\lr scripts\webtours\\pre_cci.c

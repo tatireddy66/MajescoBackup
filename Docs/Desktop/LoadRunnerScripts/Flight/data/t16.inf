@@ -1,0 +1,15 @@
+[t16]
+FileName1=t16.htm
+URL1=https://www.google.com/search?source=hp&ei=cMYHXLWMKM21ggf28LLwCg&q=flights&oq=flights&gs_l=psy-ab.1.0.0l10.20364.21292..24961...0.0..0.1391.4868.7-4......0....1..gws-wiz.....0.qvGWmc7hqaE&safe=active
+Total=3
+RequestHeaderFile=t16_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t16_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_16.xml
+FileName2=t16_origin_destination_black_24dp.png
+URL2=https://www.gstatic.com/flights/app/2x/origin_destination_black_24dp.png
+FileName3=t16_googlelogo_color_92x30dp.png
+URL3=https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png
+[ProtocolInfo]
+ProtocolId=QTWeb

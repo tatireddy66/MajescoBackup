@@ -1,0 +1,15 @@
+[t21]
+FileName1=t21_client_204.htm
+URL1=https://www.google.com/client_204?&atyp=i&biw=1366&bih=667&ei=jMYHXJWIOaq7ggf-84HYDQ
+Total=3
+ContentType=text/html
+SnapshotXmlFile=snapshot_21.xml
+RequestHeaderFile=t21_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t21_ResponseHeader.txt
+FileName2=t21_bgasy.html
+URL2=https://www.google.com/async/bgasy?ei=jMYHXJWIOaq7ggf-84HYDQ&safe=active&yv=3&async=_fmt:jspb
+FileName3=t21_m=r36a9c,xj7LNb.html
+URL3=https://www.google.com/xjs/_/js/k=xjs.s.en.tPCw7UpEX34.O/am=DIBF2P8B8v8LQAEIXAU2WCCDEsOe/rt=j/d=1/exm=sx,Fkg7bd,HcFEGb,IvlUe,MC8mtf,OF7gzc,RMhBfe,T4BAC,TJw5qb,TbaHGc,Y33vzc,cdos,hsm,iDPoPb,jsa,mvYTse,r,tg8oTe,uz938c,vWNDde,ws9Tlc,xpltpb,yQ43ff,d,csi,sb_wiz,aa,abd,aspn,async,bgd,dvl,foot,ipv6,lu,m,mu,sf,sonic,spch,tl,vs,attl,adinfo,dpc,apmf,kae,exdc,xz7cCd,ZyRBae,qik19b,aam1T,zUPIy,sdJMUb,xDsbae,NMjSod,UW7JT,fEVMic,WgDvvc,TxZWcc,NBZ7u,BlFnV/ed=1/dg=2/rs=ACT90oGNct8mdx_1dUEHPJNcNnhtok7GAA/m=r36a9c,xj7LNb?xjs=s2
+[ProtocolInfo]
+ProtocolId=QTWeb

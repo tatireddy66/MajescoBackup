@@ -1,0 +1,2635 @@
+var GlobalScript = {
+	Origin: "External"
+/* LK: For Debug
+	,
+	OnLoad: function() {
+		jAlert(this.Origin);
+	}
+*/
+,checkforval: function (jradios, showonvalue, jshow)
+{
+  var nm = $(jradios).attr('name');
+  if ($('input[name="'+nm+'"]:checked').val()==showonvalue)
+    $(jshow).show();
+  else 
+    $(jshow).hide();
+}
+,checkforanyval: function (jradios, showonvalue, jshow)
+{
+  var r=$(jradios).is('[value="'+showonvalue+'"]:checked');
+  if (r) $(jshow).show(); else $(jshow).hide();
+  return r;
+}
+,checkverify: function( controls, isselector, jshow)
+{
+  var r=$(isselector).length>0;
+  if (r) $(jshow).show(); else $(jshow).hide();
+}
+
+,radiohideshow: function ( jradios, showonvalue, jshow, firenow )
+{
+  var $r=$(jradios);
+  $r.click ( function() { GlobalScript.checkforval(jradios, showonvalue, jshow )  });
+  if (firenow===true) GlobalScript.checkforval(jradios, showonvalue, jshow );
+}
+
+,anyradiovalue: function(jradios, showonvalue, jshow, firenow)
+{
+  var $r=$(jradios);
+  $r.click ( function() { GlobalScript.checkforanyval(jradios, showonvalue, jshow) });
+  if (firenow===true) GlobalScript.checkforanyval(jradios, showonvalue, jshow );
+}
+,checkboxshowhide: function(controls, isselector, jshow, firenow)
+{
+  var $r=$(controls);
+  $r.click ( function() { GlobalScript.checkverify(controls, isselector, jshow) });
+  if (firenow===true)   GlobalScript.checkverify(controls, isselector, jshow);
+}
+
+,Toggleheader: function() {
+    $('#toggleheaderinfo').children('.stat').toggle();
+    $('#toggleheaderinfo').parent().children('div').toggle();
+} 
+
+,GetClaimFinancialDetail: function(clmid){
+   if($('#header_toggle_plus').is(':visible')) {
+		if($('#divClaimFinancialDetail').is(':empty')){
+			$('#spinnerOverlay').css('display','block');
+   			Communication.CustomRequest('nb_claimtitle.max?AJAX_Action=LoadFinancial&CLMID=' + clmid , function(AjaxRes) {
+				var resp = JSON.parse(AjaxRes);
+				$('#divClaimFinancialDetail').empty().append(resp.ClaimFinancialDetail);
+				$('#divClaimFinancialDetail').css('display','block');
+				$('#spinnerOverlay').css('display','none');
+   			});
+		} 		
+   }
+}
+
+,ToggleAccountSearch : function (id){
+  $('#AccountName').attr('disabled', '');
+  $('#MemberNum').attr('disabled', '');
+  $('#TaxID').attr('disabled', '');
+  $('#DBA').attr('disabled', '');
+  $('#City').attr('disabled', '');
+  $('#AState').attr('disabled', '');
+  $('#BrokerNumber').attr('disabled', '');
+  $('#AccountSearchSubmit').attr('disabled', '');
+  if(id == 'vendor'){
+    $('#TaxIDDiv').show();
+	$('#MemberNumberDiv').hide();
+	$('#BrokerNumberDiv').hide();
+	
+  }else if(id == 'brokerage'){
+    $('#MemberNumberDiv').hide();
+	$('#BrokerNumberDiv').show();
+	$('#TaxIDDiv').hide();
+  }else{
+	$('#MemberNumberDiv').show();
+	$('#BrokerNumberDiv').hide();
+	$('#TaxIDDiv').hide();
+  }
+}
+
+
+, ToggleContactSearch : function (id){
+  $('#FirstName').attr('disabled', '');
+  $('#LastName').attr('disabled', '');
+  $('#Phone').attr('disabled', '');
+  $('#ParentAccount').attr('disabled', '');
+  $('#ContactCity').attr('disabled', '');
+  $('#ContactState').attr('disabled', '');
+  $('#ContactSearch').attr('disabled', '');
+  if(id == 'Claimant'){
+    $('#ParentAccountDIV').hide();
+  }else{
+    $('#ParentAccountDIV').show();
+  }
+}
+
+, ToggleEndorsementNumber : function (value){
+    
+	
+  if(value == 'Endorsement'){
+    $('#EndorsementNumberDiv').show();
+  }else{
+    $('#EndorsementNumberDiv').hide();
+  }
+}
+
+, ClaimsWorkflowClick : function (SessionID, taskID)
+{
+
+
+
+  try {
+    $("#workflowdialog").remove();
+    WFPopup.usePopup=false;
+    var wd=$("#workflowdialog");
+    if (wd.length==0) {
+      $('#middle').before('<div id=workflowdialog></div>');
+      wd=$("#workflowdialog");
+      wd.dialog({
+        autoOpen: false,
+        width: 780,
+        modal: false,
+        resizable: false,
+        autoResize: true,
+        canMinimize: true,
+        canMaximize: true,
+        close: function(event, ui){
+          $("#workflowdialog").remove();
+        },
+        funcMaximize: function(t) {
+          if (WFPopup.open(SessionID)) {
+            WFPopup.usePopup=true;
+            $('#workflowdialog').dialog("destroy");
+            return true;
+          }
+        },
+
+        title: "Workflow Items"
+      });
+
+
+
+      $("#workflowdialog").dialog("open").parent('div').css('top','500px');
+      CustomTemplate('Queues.max?preprocess=true&id='+SessionID+'&claimspage=0'+'&searchpage=1'+'&TRNID='+taskID, wd, 'WFScript', function() {
+
+        //$("#workflowdialog").dialog("open").css('height', '700px');
+                //$("#ADDWFITEMBUT").append('<input style="display:none;" id="claimcode" type="hidden" value="#ScCD_ClaimCode#"/>');
+        if (WFScript.OnLoad) WFScript.OnLoad();
+      });
+    } else {
+      if ($('#workflowdialog').parents(".ui-dialog").is(":visible")){
+        wd.dialog("close");
+      } else {
+        wd.dialog("open");
+        if (WFScript.Reload) WFScript.Reload();
+      }
+   
+    }
+  } catch(err) {
+   alert(err);
+  }
+
+}
+
+	//Checks to see if the second date in the range is greater than the first
+, dateRangeCheck : function(id1, id2){
+	var dateText1 = $('#'+id1).val();
+	var dateText2 = $('#'+id2).val();
+	if(dateText1 === '' || dateText2 === ''){
+		return true;
+	}
+	var date1 = new Date(dateText1);
+	var date2 = new Date(dateText2);
+	if(date2 < date1){
+		alert('The End Date must be after the Start Date.');
+		$('#'+id2).select();
+		return false;
+	}else{
+	return true;
+	}
+},
+annotateFile:function(docid, doctype, ID, attachAction, attachParams ){
+  docid=encodeURIComponent(docid);
+  doctype=encodeURIComponent(doctype);
+  ID=encodeURIComponent(ID);
+  $.ajax({
+    url: 'leadtoolstest.max?AJAX_ACTION=getInitials&ID='+ ID
+          +'&DOCID='+docid+'&DOCTYPE='+doctype,
+
+    dataType:'html',
+    success: function(response) {
+      j = $.parseJSON ( response );
+      if (j.FileExists == 0) {
+        alert('Sorry, the file cannot be found');
+        return null;
+      } else {
+        var LTURL = "../../Annotations.htm?";
+        LTURL += "ID=" + ID;
+        LTURL += "&DOCTYPE=" + doctype;
+        LTURL += "&DOCID=" + docid;
+        LTURL += "&USERID=" + encodeURIComponent(j.UserName);
+        if (typeof attachAction!='undefined') {
+          LTURL += "&ATTACHACTION="+encodeURIComponent(attachAction);
+          if (typeof attachParams!='undefined') LTURL += "&ATTACHPARAMS="+encodeURIComponent(attachParams);
+        }
+        return window.open(LTURL ,'_blank'); 
+      }
+    }
+  }); 
+},
+
+ShowAnnotations: function(ID,t,Annid){
+  if(ID === undefined || t === undefined || Annid === undefined)
+    return;
+  Communication.CustomRequest('AnnotationDetail.max?Action=AnnCheck&ltANP_ID='+Annid+'&ID='+ID,function(AjaxResp){
+	try{
+    var Result = JSON.parse(AjaxResp);
+    if(Result.Count == '1')
+      window.open('../../staticPDF.max?Image_Action=ANNImage&File_ID='+Annid+'&ID='+ID+'&t='+t);
+    else
+      Communication.ModalWindow('AnnotationDetail.max?ID='+ID+'&sIM_ID='+Result.ImgID);
+	} catch(err) {
+		alert('An error ocurred when trying to open the annotation, please try again. If the error persists, please contact with your supervisor.');
+	}
+  });
+}
+,fileUploadWithTaxonomy: function(url, cb, customhtml, customdesc, itemname, taxonomyvalue) {
+   customhtml += '<table style="width:100%"><tbody><tr><td>Category</td>\
+       <td><input name=uetaxonomy id=uetaxonomy value="" readonly type="text" style="width:100%"></td>\
+       <td><input id=changetaxonomy name=changetaxonomy type="button" value="Change"></td></tr></tbody></table>';
+   var res = fileUpload ( url, cb, customhtml, customdesc )
+   if (typeof taxonomyvalue == 'undefined') taxonomyvalue = '';
+   $('#uetaxonomy').val(taxonomyvalue).uetaxonomy('init', { "itemname": itemname });
+   $('#uetaxonomy').dblclick( function(){$('#changetaxonomy').click();});
+   $('#changetaxonomy').click( function() { $('#uetaxonomy').uetaxonomy('show');});
+   
+   return res;
+}
+,bindBlueBarCollapse: function(){
+	$('h3.collapsible').click(function(){
+		if($(this).parent().attr('collapsed') == 'true'){
+			$(this).parent().attr('collapsed', 'false').children(':not(.handle)').removeClass('collapsed');
+			var ctrl = Helper.GetEditorComponent( $(this).parent() );
+			if (typeof(ctrl) != 'undefined')ctrl.DefaultMode();
+		}else{
+			$(this).parent().attr('collapsed', 'true').children(':not(.handle)').addClass('collapsed');
+		}
+	});
+}
+,targetBlueBarToggle: function(handle, action){
+	if(action == 'open'){
+		if($(handle).parent().attr('collapsed') == 'true'){
+			$(handle).parent().attr('collapsed', 'false').children(':not(.handle)').removeClass('collapsed');
+		}
+	}else if (action == 'close'){
+		if($(handle).parent().attr('collapsed') != 'true'){
+			$(handle).parent().attr('collapsed', 'true').children(':not(.handle)').addClass('collapsed');
+		}
+	}
+}
+,settleReserveTransaction: function(resid, action, hWFID, CLMID){
+		Communication.CustomRequest('claiminfo_reserves.max?AJAX_ACTION=SETTLE_TRANS&cTR_ID='+resid+'&TRStatus='+action+'&hWFID='+hWFID+'&CLMID='+CLMID, function(AjaxResp){
+			var resp = JSON.parse(AjaxResp);
+			if(resp.response == 0)
+			{
+				jAlert('Please add a comment in order to deny the transaction');			
+			}
+			else
+			{
+				jAlert(resp.response);	
+				$('#workflowdialog').dialog("close");
+			}			
+		});
+	
+}
+,DeleteInput: function(ele) {
+	//console.log($(this));
+	//console.log($('input[deletebutton=ClosingsREP_Box]'));
+	// old crappy wrong var group2delete1 = $(ele).parents('div.outerwrapper').find('div.subwrapper').attr('groupid');
+  var group2delete = $(ele).parents('div.subwrapper').attr('groupid');
+  //console.log(group2delete);
+	var esp = $(ele).attr('deletebutton');
+	//console.log('DeleteInput: esp is: ' + esp);
+	var groupname = $(ele).attr('deletebutton').replace('_Box','');
+	//console.log('g2d: '+group2delete);
+	//console.log('gn: '+$(ele).attr('deletebutton').replace('_Box',''));
+
+	   if($(ele).parents('div.outerwrapper').find('div.subwrapper:last').attr('groupid') == '1') {
+		 jAlert('You cannot remove the main question rows.'); return;
+	   }
+	   if (confirm("Are you sure that you want to remove the last added rows in this section?")) {
+		 $(ele).parents('div.subwrapper').remove();
+		 Communication.CustomRequest('EGL_App_Create.max?AJAX_ACTION=DELROWS&GROUPNAME='+groupname+'&GROUP2DELETE='+group2delete, function(resp)
+		   {
+			 if(resp=='Completed') { }
+			 else { /*console.log(resp);*/ }
+		   });
+	   }  
+	   
+	// force recalculation if this is ESP group
+	GlobalScript.AppCalcESP();
+	   
+}
+,AddInput: function(ele,button) {
+/*console.log('adding inputs');*/
+    var btnname = $(button).attr('repeatbutton');
+	/*console.log(btnname);*/
+    var DONTADD = $('[repeatbutton='+btnname+']').parents('.outerwrapper').find('[questionid]:first').is(':hidden');
+	/*console.log(DONTADD);*/
+	if (DONTADD === true) { 
+	 jAlert('You cannot add rows until the primary question has been answered.'); return; }
+	
+    var inputs = $(ele).find('.subwrapper:last');
+/*	console.log(inputs);*/
+    var NewInput = $(inputs[inputs.length-1]).clone();
+/*    console.log(NewInput);*/
+    var names;
+    var groupid = $(NewInput).attr('groupid');
+    if(isNaN(groupid+1)){groupid = 2;}
+    else { groupid = parseInt(groupid)+1; }
+/*    console.log('groupid is '+groupid);*/
+
+
+
+    $(NewInput).find('input[name^=Q_]').parent('div').html('&nbsp;').css('padding-left','16px');
+    $(NewInput).find('input[name^=E_]').parent('div').html('&nbsp;');
+    $(NewInput).find('input[deletebutton]').parent('div').show();
+	$(NewInput).find('.HisTable').remove();
+
+    $(NewInput).find('.EmAdd_DIV').hide();
+    $(NewInput).find('.Status_DIV').hide();
+	$(NewInput).find('input[value^=History]').remove();
+
+    $(NewInput).attr('groupid',groupid);
+    /*$(NewInput).css('display','block');*/
+    $(NewInput).find(':input').each(function(){
+        if($(this).parent().attr('filter') == 'MONEY'){
+            names = $(this).attr('id').split('-');
+            $(this).parent().children('input[type=hidden]').remove();
+        }else{
+            names = $(this).attr('name').split('-');
+        }
+        baseName = names[0].split('_');
+        /*console.log(baseName);*/
+        if(isNaN(names[1]+1)){names[1] = 1;}
+        $(this).attr('name', baseName[0]+'_'+baseName[1]+'_'+'-'+(parseInt(names[1])+1)).attr('id', baseName[0]+'_'+baseName[1]+'_'+'-'+(parseInt(names[1])+1)).removeAttr('checked');
+		$(this).parents('div[questionid]').attr('groupid', parseInt(names[1])+1);
+        var tp=$(this).attr('type');
+        if(tp != 'button'){
+          if( tp == 'radio' || tp == 'checkbox' ) {
+            $(this).removeAttr('checked');
+          }
+          else {
+           $(this).removeAttr('defaultValue');
+           $(this).val('');
+           }
+        }
+    });
+    $(NewInput).find('table.EmAdd_Table').each(function(){
+        names = $(this).attr('id').split('-');
+        $(this).attr('id', names[0]+'-'+(parseInt(names[1])+1)).attr('name', names[0]+'-'+(parseInt(names[1])+1));
+        $(this).find('div.EmAdd_DIV').each(function(){
+            $(this).attr('id', names[0]+'-'+(parseInt(names[1])+1)).attr('name', names[0]+'-'+(parseInt(names[1])+1));
+        });
+    });
+
+	//Reset the option lists
+	$(NewInput).filter('select').each(function(){
+		$(this).find('option:eq(0)').attr('selected','selected');
+	});
+
+    //console.log($(button));
+    //console.log($(button).parent());
+    //console.log($(NewInput));
+
+/*    console.log($(NewInput).html());*/
+    var n = $(button).parent().before($(NewInput).outerHTML()).prev();
+    $('.DynamicContainer .component, .StaticContainer .component').each(function()
+    {
+      var ctrl = Helper.GetEditorComponent($(this));
+      if (typeof(ctrl) != 'undefined')ctrl.DefaultMode();
+    });
+	
+    var fnname = $(n).parents('div.qsection').attr('fnname');
+    /*console.log('fnname: '+fnname);*/
+	var inputs = n.find(':input');
+	inputs.filter(':radio,:checkbox').not('.Question').click( function() {
+	  if (typeof CustomScript[fnname]=='function') {
+	    var r = CustomScript[fnname](this);
+		// Chip sez - this is suspect: alert(r); 
+	    return r;
+	  }
+	});
+	inputs.not(':radio,:checkbox').change( function() {
+	  if (typeof CustomScript[fnname]=='function') return CustomScript[fnname](this);
+	});
+	
+	/*each( function() {
+	  $(this).change( function() { 
+        //console.log('changing cho cho cho');
+	    
+	  });
+	});*/
+	 CustomScript[fnname]();
+	
+	//var m = $(button).parents('[fnname]').attr('fnname');
+	//if(m.length > 0) { } 
+	
+    //$(NewInput).find('div').show();  
+	
+	
+	// CL - add change listener for ESP field: 
+	$(ele).find('[groupname=ESPQuesREP1_Box]').find('[name^=ESPStudNo_]').each(function(){ /*console.log('AddInput - found one...');*/  $(this).change(function(){ GlobalScript.AppCalcESP();})});
+	
+}
+,ViewHistory: function(recid, qid, grp, ele, qCode) {
+
+	var hisname = 'his-'+recid+'-'+qid +'-' +grp;
+		
+	if ( $('[name^='+hisname+']').length ){ 
+	    $(ele).css({'border':'1px solid #ccc'});
+		$('[name^='+hisname+']').remove();
+		return; 
+	} else {
+		$(ele).css({'background-image':'url(../images/ajax-loader.gif)',
+            		'background-repeat': 'no-repeat',
+					'background-position': 'center'}).val(' ');
+		Communication.CustomRequest('sys_makeQuestions.max?AJAX_ACTION=QuestionHistory&RECID='+recid+'&QID='+qid+'&GRP='+grp+'&qCode='+qCode, function(AjaxResp){
+			var colspan = $(ele).parents('tr').children('td').length;
+			resp = JSON.parse(AjaxResp);
+			/*console.log(resp);*/
+			if (resp.hisTable != '&nbsp;') { 
+			/*jAlert(resp.hisTable);*/
+				if ( $('[name^='+hisname+']').length == 0 ) {	
+				    $(ele).css({'border':'2px solid darkblue','background-image':'','background-repeat': '','background-position': ''}).val('History');
+					$(ele).parents('tr').after('<tr><td colspan="'+colspan+'">'+resp.hisTable+'</td></tr>'); 
+					
+					// if the answer has been given by other user after loading the page, actualize the history call
+					if (qid == '') {
+					   $(ele).parent().attr('definition',"GlobalScript.ViewHistory('"+recid+"','"+ resp.QID +"','"+ grp+"',this,'"+ qCode +"')");
+					   $(ele).unbind().click(function (){
+							GlobalScript.ViewHistory(recid,resp.QID,grp,ele,qCode);
+					   });
+					}
+				}
+			} else {
+			    $(ele).css({'background-color':'white','background-image':'','background-repeat': '','background-position': ''}).val('History');
+				jAlert('No history for this question');
+			}
+		}
+		);
+	}
+}
+,ReadOnlyOn: function(isInternalUser = 1) {
+//console.log('ReadOnlyOn');
+
+	//var NoProtect = $('#NoProtect').val();
+	//if(typeof(NoProtect) != 'undefined'){
+	//	return;
+	//}
+	
+	// used to check if we are on the insured_app_builder page...
+	var HaveProtectEmail = $('#HaveProtectEmail').val();
+
+	// Only run this for pages other than insured_app_builder.vrm
+	if( HaveProtectEmail == '1'){
+		
+		/*
+			When the broker submits to the underwriter for rating, they should only have access to the Obtain Signature button.
+			The logic (before this submit in May 2016) was not taking in to account the role or some other specific cases.
+			I added the parameter isInternalUser with a default of 1 in order to determine which buttons need to be disabled.
+		*/
+         // disable all buttons - except allowed ones
+		 if(isInternalUser == 1)
+		 {
+			$('#buttonDiv .EditorSubmitButton input').not('#exitBtn, #backBtn, #Notes, #releaseBtn, #recallBtn,  #rejectBtn, #previewBtn, #obtainSig').attr('disabled','disabled').addClass('protectassign');
+		 }
+		 else
+		 {
+			 $('#buttonDiv .EditorSubmitButton input').not('#exitBtn, #backBtn, #Notes, #previewBtn, #obtainSig').attr('disabled','disabled').addClass('protectassign');
+		 }
+         //disable all question inputs (EXcluding question assignment checkbox and email address )
+         //$('.ques input').not('.Question, .EmAdd_Input').attr('readonly',true).attr('disabled','disabled').css('background-color','#BBBBBB').attr('title','Read Only');
+
+         //disable all question inputs AND SELECTS (INcluding question assignment checkbox and email address )
+         $('.ques input, .ques select, .ques textarea').attr('readonly',true).attr('disabled','disabled').addClass('protectassign');
+		 // highlight as grey to show protected
+		 //$('.ques').css('background-color','#DDDDDD');
+		 
+		 // disable Assign to App manager and Assign to Other fields:
+		 //$('#QuestionsInstructions label').css('background-color','#DDDDDD');
+		 //$('#QuestionsAssignment label').css('background-color','#DDDDDD');
+		 $('#QuestionsAssignment').find('input').attr('readonly',true).attr('disabled','disabled').addClass('protectassign');
+		 
+         // disable ADDROWS and DELETE ROWS
+         $('#ADDROWS2, [id^=DELROWS]').attr('readonly',true).attr('disabled','disabled').addClass('protectassign');
+
+         //disable SECTION ASSIGN Checkbox and Textarea
+         $('.secassign_chk, .secassign_em').attr('readonly',true).attr('disabled','disabled').addClass('protectassign');
+		 
+		 //05/06/2015 Ziad Elharaoui - remove the disabled attr and protect assign from the history buttons 
+		 $('input:button[value="History"][name="his"]').removeAttr('disabled').removeClass('protectassign');
+
+         // Add 'Read Only' to heading (if not already there)
+		if($('.ReadOnlyMsg').size() == 0){
+			$('[id=MemberInfo]').after( "<br /><br /><div class='ReadOnlyMsg'>&nbsp;Read Only</div>" );
+		}
+
+	
+	}
+
+} 
+,OnlyRequired: function() {
+//console.log('OnlyRequired');
+
+	// UW has submitted - so protect non-required answers ( UW can only edit required answers for rating )  
+	
+	// disable all buttons - except allowed ones
+	$('#buttonDiv .EditorSubmitButton input').not('#exitBtn, #backBtn, #saveBtn2, #saveBtn, #continueBtn, #Notes, #previewBtn, #obtainSig, #submitBtn, #rejectBtn').attr('disabled','disabled').addClass('protectassign');
+		 
+	//disable all question inputs AND SELECTS (INcluding question assignment checkbox and email address )
+	// ... THAT ARE NOT ON REQUIRED QUESTIONS
+	$('.ques').not('.reqclass').find('input, select, textarea').attr('readonly',true).attr('disabled','disabled').addClass('protectassign');
+
+	// disable Assign to App manager and Assign to Other fields:
+	//$('#QuestionsInstructions label').css('background-color','#DDDDDD');
+	//$('#QuestionsAssignment label').css('background-color','#DDDDDD');
+	$('#QuestionsAssignment').find('input').attr('readonly',true).attr('disabled','disabled').addClass('protectassign');
+
+	// disable ADDROWS and DELETE ROWS
+	
+	$('[sectiontype="Repeat"]').each( function(){
+	
+		var reqcount = $(this).find('.reqclass').length;
+		
+		//console.log($(this).parents('.qsection').attr('displayname') + ': ' + reqcount);
+		if(reqcount == 0){
+		//changes done for UEAW-3689
+			//$(this).find('#ADDROWS2, [id^=DELROWS]').attr('readonly',true).attr('disabled','disabled').addClass('protectassign');
+		
+		}
+	
+	});
+
+	 //05/06/2015 Ziad Elharaoui - remove the disabled attr and protect assign from the history buttons 
+	 $('input:button[value="History"][name="his"]').removeAttr('disabled').removeClass('protectassign');
+		 
+	//disable SECTION ASSIGN Checkbox and Textarea
+	$('.secassign_chk, .secassign_em').attr('readonly',true).attr('disabled','disabled').addClass('protectassign');
+
+}
+,UnprotectAll: function() {
+//console.log('UnprotectAll');
+	
+	
+	// used to check if we are on the insured_app_builder page...
+	var HaveProtectEmail = $('#HaveProtectEmail').val();
+
+	// Only run this for pages other than insured_app_builder.vrm
+	if( HaveProtectEmail == '1'){
+		
+		//var NoProtect = $('#NoProtect').val();
+		//if(typeof(NoProtect) != 'undefined'){
+		//	return;
+		//}
+		
+		/*
+		// show the hidden question assignment fields for Professional Services
+		$('[displayname="Professional Services"]').show();
+		// show the hidden question assignment fields for Professional Services subordinate Service Sections
+		$('[displayname="Architectural"]').show();
+		$('[displayname="Engineering"]').show();
+		$('[displayname="Investment Management"]').show();
+		$('[displayname="Legal"]').show();
+		$('[displayname="Veterinarian"]').show();
+		*/
+		// unprotect all inputs (that were protected based on assignment: class = protectassign ...)
+		// when a submit button is hit - allows for normal procesing of rightColumn
+		 $('#Questions .protectassign').removeAttr('readonly').removeAttr('disabled').removeClass('protectassign');
+		 // not using .css('background-color','');
+	}
+
+ } 
+,ToggleEmailField: function(ele) {
+//console.log('ToggleEmailField');
+	//var NoProtect = $('#NoProtect').val();
+	//if(typeof(NoProtect) != 'undefined'){
+	//	return;
+	//}
+    //console.log($(ele));
+	//var ele = $(ele);
+	
+	
+	var n = $(ele).attr('name');
+    var name = n.substr(2,n.length);
+    //var id = $(ele).attr('id');
+	//console.log('Name:'+name+' ID:'+id);
+	
+
+	// used to check if we are on the insured_app_builder page...
+	var HaveProtectEmail = $('#HaveProtectEmail').val();
+
+    if ($(ele).is(':checked')) {
+	
+		// ASSIGNING
+	
+        $('#TBL_'+name).show();
+        $('#TBL_'+name).find('span').removeClass('notRequired').addClass('required');
+		$('#TBL_'+name).find('#Status_DIV').show();
+	
+	
+		// Only run this for pages other than insured_app_builder.vrm
+		if( HaveProtectEmail == '1'){
+
+			// determine if we need to protect this assigned question ( is it assigned to someone else? )
+		
+			var protectassign = 0;
+			var dontprotectemail = $('#DontProtectEmail').val();
+			var assignee = $(ele).parents('table').parent('div').find('.EmAdd_Input').val();
+			if(typeof(assignee) != 'undefined' && assignee != null){
+				assignee = $.trim(assignee); //trim it
+				if(assignee != dontprotectemail) { protectassign = 1; }
+			}
+			
+			//console.log('protectassign: '+protectassign);
+
+			if(protectassign) { 
+				// disable question assigned to someone else...
+				//console.log('protecting.....');
+				//$(ele).parents('table').parent('div').css('background-color','#DDDDDD').find('input').not('.Question, .EmAdd_Input, #Exit').attr('readonly',true).attr('disabled','disabled').addClass('protectassign');
+				$(ele).parents('table').parent('div').find('input').not('.Question, .EmAdd_Input, #Exit').attr('readonly',true).attr('disabled','disabled').addClass('protectassign');
+				
+				// this only disables SOME of the ADD ROWS divs and buttons...???
+				// This selector is crap $(ele).parents('table').parent('div').next('[sectiontype=Repeat]').css('background-color','#DDDDDD').find('input').attr('readonly',true).attr('disabled','disabled').addClass('protectassign');
+			}
+
+		}
+				
+    } else {
+	
+		// UNASSIGNING
+	
+        $('#TBL_'+name).find('span').removeClass('required').addClass('notRequired');
+        $('#TBL_'+name).hide();
+
+		
+		
+		
+		// Only run this for pages other than insured_app_builder.vrm
+		if(HaveProtectEmail == '1'){
+		// we are not interested in the current assignee email vs dontprotectemail - only that question is being un-assigned (unchecked)
+
+		// re-enable unassigned questions - IF they were protected ( class=protectassign )
+		//$(ele).parents('table').parent('div').css('background-color','').find('.protectassign').removeAttr('readonly').removeAttr('disabled').removeClass('protectassign');
+		$(ele).parents('table').parent('div').find('.protectassign').removeAttr('readonly').removeAttr('disabled').removeClass('protectassign');
+		// Parent Section ( Professional Services )
+			
+		
+		
+			// this only re-enables SOME of the ADD ROWS divs and buttons...???
+			// This selector is crap: $(ele).parents('table').parent('div').next('[sectiontype=Repeat][class=protectassign]').css('background-color','').find('input').removeAttr('readonly').removeAttr('disabled');
+			
+		}	
+    } 
+// disable and hide - individual question assignment fields
+		$('[displayname="Professional Services"]').find('.Question, .EmAdd_Input, .EmAdd_Span').each(function(){ $(this).attr('readonly',true).attr('disabled','disabled').addClass('protectassign');});	
+}
+,BlurEmail: function(ele) {
+
+
+	//var NoProtect = $('#NoProtect').val();
+	//if(typeof(NoProtect) != 'undefined'){
+		//return;
+	//}
+
+		// used to check if we are on the insured_app_builder page...
+		var HaveProtectEmail = $('#HaveProtectEmail').val();
+	
+		// Only run this for pages other than insured_app_builder.vrm
+		if(HaveProtectEmail == '1'){
+			// determine if we need to protect this assigned question ( is it assigned to someone else? )
+		
+			var protectassign = 0;
+			var dontprotectemail = $('#DontProtectEmail').val();
+			var assignee = $(ele).val();
+			if(typeof(assignee) != 'undefined' && assignee != null){
+				assignee = $.trim(assignee); //trim it
+				if(assignee != dontprotectemail) { protectassign = 1; }
+			}
+			
+			//console.log('protectassign: '+protectassign);
+
+			if(protectassign) { 
+				// disable question assigned to someone else...
+				//console.log('protecting.....');
+				//$(ele).parents('table').parent('div').css('background-color','#DDDDDD').find('input').not('.Question, .EmAdd_Input, #Exit').attr('readonly',true).attr('disabled','disabled').addClass('protectassign');
+				$(ele).parents('table').parent('div').find('input').not('.Question, .EmAdd_Input, #Exit').attr('readonly',true).attr('disabled','disabled').addClass('protectassign');
+				
+				// this only disables SOME of the ADD ROWS divs and buttons...???
+				// This selector is crap $(ele).parents('table').parent('div').next('[sectiontype=Repeat]').css('background-color','#DDDDDD').find('input').attr('readonly',true).attr('disabled','disabled').addClass('protectassign');
+			}
+
+			 else {
+				
+					
+
+					// we are not interested in the current assignee email vs dontprotectemail - only that question is being un-assigned (unchecked)
+
+					// re-enable unassigned questions - IF they were protected ( class=protectassign )
+					//$(ele).parents('table').parent('div').css('background-color','').find('.protectassign').removeAttr('readonly').removeAttr('disabled').removeClass('protectassign');
+					$(ele).parents('table').parent('div').find('.protectassign').removeAttr('readonly').removeAttr('disabled').removeClass('protectassign');
+						// this only re-enables SOME of the ADD ROWS divs and buttons...???
+						// This selector is crap: $(ele).parents('table').parent('div').next('[sectiontype=Repeat][class=protectassign]').css('background-color','').find('input').removeAttr('readonly').removeAttr('disabled');
+				}
+			}
+}
+,PreLoadAppQues: function() {
+/*	$('.Question').each(
+		function(){
+					var name = this.name.substr(2,this.name.length);
+					var quesid = this.id;
+					var groupid = quesid.substring(quesid.length-1,quesid.length);
+					//console.log(name);
+					if (groupid > 1) {
+					 //console.log('gid gt 1');
+					 $(this).removeAttr('checked');
+					 //$(this).hide();
+					 $('#E_'+name+'_-'+groupid).val('');
+					 //$('#E_DIV_'+name+'_-'+groupid).hide();
+					 $(this).find('input[name^=Q_]').parent('div').html('&nbsp;').css('padding-left','16px');
+					 $(this).find('input[name^=E_]').parent('div').html('&nbsp;');
+					}
+					
+					GlobalScript.ToggleEmailField(this);
+	});
+*/
+  $('input[name=his]').each( 
+    function() { 
+      var k = $(this).parents('div[groupid]').attr('groupid'); if (k>1) { $(this).parent().css('left','15px'); } });
+}
+,AppQgetName: function(str, idx){
+	var i = str.indexOf(' ',idx);
+	if (i<0) return str.substr(idx+1);
+	else { return str.substr(idx+1, i-idx-1); }
+}
+,AppQctrlList: function(nm, thecaller)
+{
+  //return $('div.ques[quescode^="'+nm+'"]');
+  /*var $c = $(thecaller);
+  var $grp=$c.parents('div.subwrapper');
+  if ($grp.length>0) {
+    return $grp.find('div.ques[quescode="'+nm+'"]');
+  } else */
+  return $('div.ques[quescode="'+nm+'"]');
+}
+
+,AppQHide: function(ctrl)
+{
+  //console.log('let me hide!');
+  // Note: In StingRay, disabled fields are not turned into #S variables when submits are hit
+  //( hence, this field will not be saved )
+  $(ctrl).find('input').not('#btLogClear').each( function(){ 
+      var $this=$(this);
+      $this.attr('disabled','disabled'); 
+      if ($this.is(':radio:checked'))      
+          $this.removeAttr('checked').change();
+      /*if ($(this).attr('type') == 'text') { $(this).val('').change(); } ---threw error for some reason..*/
+  });
+  $(ctrl).hide();
+  /*
+  var myquescode = $(ctrl).attr("quescode");
+  var myquestionid = $(ctrl).attr("questionid");
+  console.log("The quescode is: " + myquescode + " the questionid is: " + myquestionid);
+  */
+}
+,AppQShow: function(ctrl)
+{
+  //console.log('let me show!');
+  // Note: In StingRay, only fields not marked as disabled are turned into #S variables when submits are hit
+  //( hence, this field will be saved )
+  $(ctrl).find('input').each( function(){ $(this).removeAttr('disabled'); });
+  $(ctrl).show();
+}
+
+,AppQgetVal: function(nm, fromctrl, samegroup)
+{
+  var inp = null;
+  var justcached = false;
+  if (samegroup)  {
+    inp = $(fromctrl).parents('div.subwrapper').find(':input[name^="'+nm+'_"]');
+  } else {
+    //inp =  $(':input[name^="'+nm+'_"]');
+    if ((typeof CustomScript.__appcache== 'undefined')||(CustomScript.__appcache == null)) 
+      CustomScript.__appcache = new Array();
+
+    //assuming global control 
+    inp = CustomScript.__appcache[nm];
+    if (typeof inp == 'undefined')  {
+      inp = $('#'+nm+'_-1');
+      if (inp.length==0) {  inp = $('div.qsection').find(':input[name^="'+nm+'_"]'); }
+      CustomScript.__appcache[nm] = inp;
+      justcached = true;
+    };
+  }
+  // a lot of stuff to happen here soon!  
+  var x = ''; 
+  var typeofinp = inp.attr('type');
+  if (typeofinp == 'text' || typeofinp == 'select-one') { x = inp.val(); x = x.replace(/,/g,''); }
+  else {
+   if ((typeofinp == 'checkbox')&&(!samegroup)&&(justcached) ) { 
+     var p = inp.parents('div.ques');
+     inp = p.find('input[name^="'+nm+'"]');
+     CustomScript.__appcache[nm] = inp;          
+     //inp = $(':input[name^="'+nm+'_"]');
+   }
+   inp.filter(':checked').each( function() { x = x + $(this).val(); });  
+  }
+
+  return x;
+}
+
+,AppQCreateBody: function (formula, quescode, grpname, varcache, parentsection )
+{
+	//console.log(formula);
+	//console.log(quescode);
+	//console.log('groupname = "'+grpname+'"');
+	var s = "";
+	var v = formula;
+	//console.log('QC: '+quescode+' formula: '+v);
+	if (v=='') return '';
+	var j = 0;
+	
+	var grp = $('div.subwrapper[GroupName="'+grpname+'"]').first();
+	//console.log('group len = '+ grp.length);
+	var parentQuesCodes = '';
+	var andCond = '&&';
+	var orCond = '||';
+	var isAndorOr = '';
+	var isAnd = false;
+	var isOr = false;
+	
+	isAnd = formula.indexOf(andCond) >= 0;
+	isOr = formula.indexOf(orCond) >= 0;
+	
+	if (isOr)
+		isAndorOr = '||';
+	else if (isAnd)
+		isAndorOr = '&&';
+	else
+		isAndorOr = '';
+	
+	
+	var idx=v.indexOf(':');
+	while (idx>=0) {
+		s = s + v.substr(j, idx-j);
+		var nm = GlobalScript.AppQgetName(v, idx);		 
+		
+		//check if condition in formula is &&
+		if (parentQuesCodes != '')
+		{
+			parentQuesCodes += ',';				 
+		}
+			
+		parentQuesCodes += nm;
+		
+		//v = v.replace(':', '$(#')
+		j=idx+nm.length+1;
+		
+		// searching if the question is in the same group as question
+		var samegroupstr = 'false';
+		if (grp.find('div.ques[quescode="'+nm+'"]').length>0) {
+			samegroupstr = 'true';
+		}
+		
+		/*console.log('b: '+nm);
+			console.log('c: '+samegroupstr);	*/
+		var readfromcache = false;
+		if ((typeof varcache[nm]) == 'undefined') {
+			var tq =	$(parentsection).find('div.ques[quescode='+nm+']');
+			readfromcache = ( tq.parents('div.subwrapper').length==0 );
+		} else
+				readfromcache = true;
+		
+		if (readfromcache)
+		{
+			var ch = nm;
+			if ((typeof varcache[ch]) == 'undefined'){
+				varcache[ch]="GlobalScript.AppQgetVal('"+nm+"', ctrl, "+samegroupstr+")";
+			}
+			
+			s=s+"_"+nm;
+		} else 
+			s=s+"GlobalScript.AppQgetVal('"+nm+"', this, "+samegroupstr+")";
+		
+		/*console.log('d: '+"GlobalScript.AppQgetVal('"+nm+"', this, "+samegroupstr+")");	*/
+		
+		idx++;
+		idx=v.indexOf(':', idx);
+	}
+	
+  // Ensure that the parents (i.e., the questions that this question depend upon)
+  // are currently visible by creating a string containing visibility tests for
+  // all of them.
+
+	var parentVisTestString = '';  // "&& $('div[quescode=parent1]').is(':visible') && ..."
+
+  if (parentQuesCodes.trim().length > 0) {
+	  var aParentCodes = parentQuesCodes.split(',');
+	  var parentVisTests = [];
+    
+	  for (var i = 0; i < aParentCodes.length; i++) {			 
+		  isParentQuestionVisibleCheck = $('div[quescode=' + aParentCodes[i] + ']').is(':visible');
+		  parentVisTests.push("$('div[quescode=\"" + aParentCodes[i] + "\"]').is(':visible')");
+	  }	 
+	  
+	  if (parentVisTests.length > 0)
+		  parentVisTestString = ' && ' + parentVisTests.join(' && ');   // so we can append them to the formula
+	}
+
+	s = s + v.substr(j);
+	s = "GlobalScript.AppQctrlList('"+quescode+"', ctrl).each( function(){ if (" + s + parentVisTestString + ") GlobalScript.AppQShow(this); else GlobalScript.AppQHide(this); }); ";
+	return s;
+}
+    
+    
+,_AppQSecFormulaToJS: function(formula)
+{
+  if (typeof formula !='string') return '';
+  if (formula == '') return '';
+  
+  var idx = formula.indexOf(':');  
+  var evalstr = '';
+  var tmp_ptr = 0 ;
+  while (idx>=0) {
+		evalstr = evalstr + formula.substr(tmp_ptr, idx-tmp_ptr);
+				
+		var nm=GlobalScript.AppQgetName(formula, idx);
+		tmp_ptr= idx + nm.length + 1;
+		//console.log(nm);
+			
+		evalstr = evalstr +"GlobalScript.AppQgetVal('"+nm+"', this, false)";
+			
+		idx++;
+		idx = formula.indexOf(':', idx);
+
+	}
+		
+	//evalstr = 'if ('+evalstr')'
+		
+	evalstr = evalstr + formula.substr(tmp_ptr); 
+	return evalstr;
+}
+
+,AppQInit: function()
+{
+  var uninum = 0;
+
+  /* this is the code that will check visibility of each section!!! EPIC EPIC EPIC */
+  var schkbody = '';
+  
+  $('div.qsection').each( function(){
+	//console.log('Eaching a qsec');
+     var js = '';
+	 //schkbody = schkbody + ;
+     var varcache = new Object();
+	 var cursec = this;
+	 
+     /*console.log( $(this).find('h3').text() );*/
+     $(this).find('div.DynamicContainer.ques').each( function() {
+       var f = $(this).attr('formula');
+       if (typeof f == 'undefined') f ='';
+       if (f == '') return;
+       //console.log('f: '+f);
+	   var w = $(this).parent('div.subwrapper');
+	   var grp = '';
+	   if (w.length>0) {
+	     grp=w.attr('GroupName');
+	   }
+	   
+	   var qcode=$(this).attr('quescode');
+	   //console.log('qcode: '+qcode);
+	   if (qcode.length>0) { qscode = qcode; } else { qscode=''; }
+	   /*console.log('qscode: '+qscode+' formula: '+f);*/
+
+
+       var code=GlobalScript.AppQCreateBody(f, qscode, grp, varcache, cursec);
+
+
+       if (code!='') {
+         js += code;
+         js += "\n";
+       }
+     });
+     var localvars = '';
+     $.each(varcache, function (nm, code) {
+       localvars += ' var _'+nm+' = '+code+';\n';
+     });
+     js = ' if (!GlobalScript.AppQChkSec(ctrl)) return false; \n' + localvars + js +' return true;';
+           
+	 //var nm = $(this).find('h3').text();
+	 //console.log(nm);
+     /*console.log('JS: '+js);*/
+	 var nm = $(this).attr('displayname');
+	 nm = nm.split(' ')[0];
+	 nm = nm+uninum.toString();
+	 uninum++;
+	 var fnname= '__'+nm;
+	 $(this).attr('fnname', fnname).attr('id', fnname);
+  
+     try {
+	   /*console.log( 'creating js for '+fnname);
+	   console.log('\n\nJS IS: '+ js +'\n\n');*/
+       CustomScript[fnname]=new Function(['ctrl'], js);
+	   /*console.log('made the function: '+fnname);*/
+	   /*console.log( 'number of my inputs: '+ $(this).find(':input').length );*/
+
+       var inplist=$(this).find(':input');
+	   inplist.filter(':checkbox,:radio').not('.Question').click( function() {  return CustomScript[fnname](this) });
+	   inplist.not(':checkbox,:radio').change( function() {  return CustomScript[fnname](this) });
+
+	   /*console.log('did the change bind thing');*/
+	   CustomScript[fnname]();
+
+	   /*console.log('ran the function '+fnname);*/
+	 } catch(err) {
+	   //console.log('Error: '+err);
+           alert("Error evaluating question formula: " + err);
+	 }
+	 
+	  //console.log("foma: " +$(this).attr('formula'));
+  	  var sjs =  GlobalScript._AppQSecFormulaToJS( $(this).attr('formula') );
+	  if (sjs!='') {
+	    sjs = 'if ('+sjs+') CustomScript.$toshow = CustomScript.$toshow.add("#'+fnname+'"); else CustomScript.$tohide = CustomScript.$tohide.add("#'+fnname+'"); \n'; // _AppQSecFormulaToJS( $(this).attr('formula') )+'\n';
+	    schkbody = schkbody+sjs;
+	  }
+	 
+  });
+	if(schkbody.indexOf('PSWhatServ') == 0){
+	  try {
+		CustomScript['__SectionCheck']=new Function([], schkbody );
+	  } catch (err) {
+		alert("Error evaluating section check formula: " + err + ' schkbody: ' +schkbody )
+	  };
+		  
+	  // CL - trigger calculations for ESP fields:
+	  GlobalScript.AppCalcESP();
+	  GlobalScript.AppQ_LoadCommas();
+	}
+  
+  	//Added .not($('.Question')) to exclude Question Assignment checkboxes
+	$('div.noneabove').find('input:checkbox').not($('.Question')).click( function(){ GlobalScript.AppNoneOfAbove(this) } );
+}
+
+,ShowProfServicesDependent:function() {
+//$('[displayname=Architectural],[displayname=Engineering],[displayname=Legal],[displayname="Investment Management"],[displayname=Veterinarian],[displayname=None of the above]').hide();
+$('[displayname="Professional Services"]').find('input[type=checkbox]').each(function () {
+    var val =  $(this).val();
+	var chk = $(this).is(':checked')
+
+	if(val == 'Architectural') {
+		if(chk == true) {	
+			$('[displayname=Architectural]').show();
+		} else { 
+		    $('[displayname=Architectural]').hide();
+			$('[displayname="Architectural"]').find('.secassign_chk').attr('checked', false );
+			$('[displayname="Architectural"]').find('.secassign_em').val('');
+			//$('[displayname="Architectural"]').find('.Question, .EmAdd_Input, .EmAdd_Span').each(function(){ $(this).attr('readonly',true).attr('disabled','disabled').addClass('protectassign');});
+			$('[displayname="Architectural"]').find('.Question').attr('checked', false );
+			$('[displayname="Architectural"]').find('.EmAdd_Input').val('');
+			$('[displayname="Architectural"]').find('.EmAdd_Input').removeClass('required').addClass('notRequired');
+			$('[displayname="Architectural"]').find('.EmAdd_Span').hide();
+			$('[displayname="Architectural"]').find('.EmAdd_Span').removeClass('required').addClass('notRequired');
+			
+		}
+	} else if(val == 'Engineering_(aerospace,_nuclear,_petroleum,_and_mining_ineligible)') {
+		if(chk == true) {	
+			$('[displayname=Engineering]').show();
+		} else { 
+		    $('[displayname=Engineering]').hide();
+			$('[displayname="Engineering"]').find('.secassign_chk').attr('checked', false );
+			$('[displayname="Engineering"]').find('.secassign_em').val('');
+			//$('[displayname="Engineering"]').find('.Question, .EmAdd_Input, .EmAdd_Span').each(function(){ $(this).attr('readonly',true).attr('disabled','disabled').addClass('protectassign');});
+			$('[displayname="Engineering"]').find('.Question').attr('checked', false );
+			$('[displayname="Engineering"]').find('.EmAdd_Input').val('');
+			$('[displayname="Engineering"]').find('.EmAdd_Input').removeClass('required').addClass('notRequired');
+			$('[displayname="Engineering"]').find('.EmAdd_Span').hide();
+			$('[displayname="Engineering"]').find('.EmAdd_Span').removeClass('required').addClass('notRequired');
+		}
+	}
+	else if(val == 'Legal_(e.g._campus_legal_clinic;_legal_services_offered_independent_of_a_Professional_Internship_Program_must_be_scheduled_for_coverage)') {
+		if(chk == true) {	
+			$('[displayname=Legal]').show();
+		} else { 
+		    $('[displayname=Legal]').hide();
+			$('[displayname="Legal"]').find('.secassign_chk').attr('checked', false );
+			$('[displayname="Legal"]').find('.secassign_em').val('');
+			//$('[displayname="Legal"]').find('.Question, .EmAdd_Input, .EmAdd_Span').each(function(){ $(this).attr('readonly',true).attr('disabled','disabled').addClass('protectassign');});
+			$('[displayname="Legal"]').find('.Question').attr('checked', false );
+			$('[displayname="Legal"]').find('.EmAdd_Input').val('');
+			$('[displayname="Legal"]').find('.EmAdd_Input').removeClass('required').addClass('notRequired');
+			$('[displayname="Legal"]').find('.EmAdd_Span').hide();
+			$('[displayname="Legal"]').find('.EmAdd_Span').removeClass('required').addClass('notRequired');
+		}
+	}
+	else if(val == 'Investment_Management') {
+		if(chk == true) {	
+			$('[displayname=Investment Management]').show();
+		} else { 
+		    $('[displayname=Investment Management]').hide();
+			$('[displayname="Investment Management"]').find('.secassign_chk').attr('checked', false );
+			$('[displayname="Investment Management"]').find('.secassign_em').val('');
+			//$('[displayname="Investment Management"]').find('.Question, .EmAdd_Input, .EmAdd_Span').each(function(){ $(this).attr('readonly',true).attr('disabled','disabled').addClass('protectassign');});
+			$('[displayname="Investment Management"]').find('.Question').attr('checked', false );
+			$('[displayname="Investment Management"]').find('.EmAdd_Input').val('');
+			$('[displayname="Investment Management"]').find('.EmAdd_Input').removeClass('required').addClass('notRequired');
+			$('[displayname="Investment Management"]').find('.EmAdd_Span').hide();
+			$('[displayname="Investment Management"]').find('.EmAdd_Span').removeClass('required').addClass('notRequired');
+		}
+	}
+	else if(val == 'Veterinarian') {
+		if(chk == true) {	
+			$('[displayname=Veterinarian]').show();
+		} else { 
+		    $('[displayname=Veterinarian]').hide();
+			$('[displayname="Veterinarian"]').find('.secassign_chk').attr('checked', false );
+			$('[displayname="Veterinarian"]').find('.secassign_em').val('');
+			//$('[displayname="Veterinarian"]').find('.Question, .EmAdd_Input, .EmAdd_Span').each(function(){ $(this).attr('readonly',true).attr('disabled','disabled').addClass('protectassign');});
+			$('[displayname="Veterinarian"]').find('.Question').attr('checked', false );
+			$('[displayname="Veterinarian"]').find('.EmAdd_Input').val('');
+			$('[displayname="Veterinarian"]').find('.EmAdd_Input').removeClass('required').addClass('notRequired');
+			$('[displayname="Veterinarian"]').find('.EmAdd_Span').hide();
+			$('[displayname="Veterinarian"]').find('.EmAdd_Span').removeClass('required').addClass('notRequired');
+		}
+	}
+});
+
+}
+
+, ShowAttachments: function (tableRowId, attId,minusSign,plusSign,attactmentDocumentType,sombraIrFileId,sombraDocId2,uniqueRecordId) {
+
+    //alert(tableRowId);
+    //alert(attId);
+    //alert($('#' + tableRowId).attr("currentDisplayStatus"));
+
+    //$('#' + tableRowId).after('<tr><td>Hello World</td></tr>');
+
+    var displayStatus = $('#' + tableRowId).attr("currentDisplayStatus");
+    var className = $('#' + tableRowId).attr("class");
+
+    if (displayStatus == "openedOnce" || displayStatus == "open") {
+
+        if (displayStatus == "open") {
+            Communication.CustomRequest('/doc_lock_status.max?AJAX_ACTION=' + attactmentDocumentType + '&attId=' + attId
+                + '&sombraIrFileId=' + sombraIrFileId + '&sombraDocId2=' + sombraDocId2 + '&uniqueRecordId=' + uniqueRecordId
+                + '&cssClassName=' + className + '&parentRowId=' + tableRowId, function (r) {
+                var j = JSON.parse(r);
+
+                var newAttachmentRow = j.NewAttachmentRow;
+                //alert(newAttachmentRow);
+                $('#' + tableRowId).after(newAttachmentRow);
+
+            });
+
+            alert("Loading attachments please wait...");
+        }
+        else {
+            $('.'+className+'.'+tableRowId).show();
+        }
+
+        $('#' + plusSign).hide();
+        $('#' + minusSign).show();
+        $('#' + tableRowId).attr("currentDisplayStatus", "close");
+    }
+    else {
+
+        $('.' + className + '.' + tableRowId).hide();
+        $('#' + tableRowId).attr("currentDisplayStatus", "openedOnce");
+        $('#' + plusSign).show();
+        $('#' + minusSign).hide();
+    }
+
+}
+
+   
+, LoadDocuments: function (docId, fileName, callType,openTypeRequest,userName,sessionId,currentTime,currentUserId) {
+
+    if (fileName.indexOf("CONVERT") > -1) {
+
+        alert("The document you are trying to work with is migrated from Image Right.\n\nThe system is attempting to do a final conversion, depending on the size of the document the conversion process may take upto several minutes.\n\nOnce the conversion is completed all of the other system features will be enabled.\n\nPlease check back in a few minutes.");
+
+        if (fileName == "NOT-CONVERTED") {
+               Communication.CustomRequest('/leadtoolstest.max?AJAX_ACTION=EnsureDocConv&DOCID=' + docId + '&T=#STime_Stamp#', function (r) {
+               CustomScript.ProcessUpdate(r)
+             }
+           );
+        }
+
+        GlobalScript.RefreshDocumentTableWalker(callType);
+        return;
+    }
+
+    //leave if the file is not converted
+    if (openTypeRequest == "") {
+        return;
+    }
+
+    if (openTypeRequest.trim() == 'pdf') {
+        window.open('../../StaticPDF.max?id=' + sessionId + '&amp;t=' + currentTime + '&File_ID=' + docId + '&Image_Action=CL_AttImage');
+        return;
+    }
+
+    if (openTypeRequest.trim() == 'modify') {
+
+        var isLocked = false;
+        var lockedBy = "";
+
+        Communication.CustomRequest('/doc_lock_status.max?AJAX_ACTION=' + GlobalScript.GetLockStatusCheckAjaxAction(callType) + '&DOCID=' + docId + '&T=#STime_Stamp#', function (r) {
+            //alert("was here");
+            //GlobalScript.ProcessUpdate(r)
+            //alert("Check if locked");
+            //alert(r);
+
+            var j = JSON.parse(r);
+            var docId = j.DocumentID;
+            lockedBy = j.LockedBy;
+
+            //alert(j.LockedById);
+            //alert(currentUserId);
+
+            if (j.LockedById.length <= 0 || j.LockedById.toString() == currentUserId.toString()) {
+                isLocked = false;
+            }
+            else {
+                isLocked = true;
+            }
+
+            if (isLocked == false) {
+                //alert(currentUserId);
+                Communication.CustomRequest('/doc_lock_status.max?AJAX_ACTION=' + GlobalScript.GetLockAjaxAction(callType) + '&DOCID=' + docId + '&T=#STime_Stamp#', function (r) {
+                    alert("This document is now locked by you. Please release the lock when you are done working on it");
+                    var name = encodeURIComponent(userName);
+                    window.open('annotations.htm?ID=' + sessionId + '&DOCTYPE=SYSIMG&DOCID=' + docId + '&USERID=' + name + '&CURRUSERID=' + currentUserId);
+                });
+
+            }
+
+            else {
+                alert("The document you are trying to access is locked by " + lockedBy + ". Please check back later.");
+            }
+
+            GlobalScript.RefreshDocumentTableWalker(callType);
+
+        });
+    }
+}
+, GetLockStatusCheckAjaxAction: function (callType) {
+    if (callType.trim() == "generalresults") {
+        return "DocumentLockStatus";
+    }
+
+    else if (callType.trim() == "legacyUnderDocs") {
+        return "DocumentLockStatus";
+    }
+    else if (callType.trim() == "claimsImagesList") {
+        return "DocumentLockStatusClaims";
+    }
+    else if (callType.trim() == "fnolDocuments") {
+        return "DocumentLockStatusClaims";
+    }
+    else if (callType.trim() == "triageDocuments") {
+        return "DocumentLockStatusClaims";
+    }
+    else if (callType.trim() == "Claim/Litigation/Agency Action") {
+        return "DocumentLockStatusClaims";
+    }
+    else if (callType.trim() == "Claim/Litigation/Lawsuit") {
+        return "DocumentLockStatusClaims";
+    }
+    else if (callType.trim() == "Claim/Litigation/Mediation") {
+        return "DocumentLockStatusClaims";
+    }
+    else if (callType.trim() == "Claim/Litigation/Settlement") {
+        return "DocumentLockStatusClaims";
+    }
+    else if (callType.trim() == "Claim/Litigation/Jury") {
+        return "DocumentLockStatusClaims";
+    }
+    else if (callType.trim() == "Claim/Litigation/Appeal") {
+        return "DocumentLockStatusClaims";
+    }
+    else if (callType.trim() == "ClaimsBilling") {
+        return "DocumentLockStatusClaims";
+    }
+    else if (callType.trim() == "policyAttachments") {
+        return "DocumentLockStatusPolicyAttachments";
+    }
+
+    return "";
+}
+
+, GetLockAjaxAction: function (callType) {
+
+    if (callType.trim() == "generalresults") {
+        return "LockContactDocument";
+    }
+
+    else if (callType.trim() == "legacyUnderDocs") {
+        return "LockContactDocument";
+    }
+
+    else if (callType.trim() == "claimsImagesList") {
+        return "LockClaimDocument";
+    }
+    else if (callType.trim() == "fnolDocuments") {
+        return "LockClaimDocument";
+    }
+    else if (callType.trim() == "triageDocuments") {
+        return "LockClaimDocument";
+    }
+    else if (callType.trim() == "Claim/Litigation/Agency Action") {
+        return "LockClaimDocument";
+    }
+    else if (callType.trim() == "Claim/Litigation/Lawsuit") {
+        return "LockClaimDocument";
+    }
+    else if (callType.trim() == "Claim/Litigation/Mediation") {
+        return "LockClaimDocument";
+    }
+    else if (callType.trim() == "Claim/Litigation/Settlement") {
+        return "LockClaimDocument";
+    }
+    else if (callType.trim() == "Claim/Litigation/Jury") {
+        return "LockClaimDocument";
+    }
+    else if (callType.trim() == "Claim/Litigation/Appeal") {
+        return "LockClaimDocument";
+    }
+    else if (callType.trim() == "ClaimsBilling") {
+        return "LockClaimDocument";
+    }
+    else if (callType.trim() == "policyAttachments") {
+        return "LockPolicyAttachments";
+    }
+
+    return "";
+}
+
+, RefreshDocumentTableWalker: function (callType) {
+
+    if (callType.trim() == "generalresults") {
+        CustomScript.RefershGeneralFolderDocuments();
+    }
+
+    else if (callType.trim() == "legacyUnderDocs") {
+        CustomScript.RefershLegacyFolderDocments();
+    }
+
+    else if (callType.trim() == "claimsImagesList") {
+        CustomScript.RefreshClaimsDocuments();
+    }
+    else if (callType.trim() == "fnolDocuments") {
+        CustomScript.RefreshFNOLAttachments();
+    }
+    else if (callType.trim() == "triageDocuments") {
+        CustomScript.RefreshClaimsDocuments();
+    }
+    else if (callType.trim() == "Claim/Litigation/Agency Action") {
+        CustomScript.attachal();
+    }
+    else if (callType.trim() == "Claim/Litigation/Lawsuit") {
+        return CustomScript.attachls();
+    }
+    else if (callType.trim() == "Claim/Litigation/Mediation") {
+       return CustomScript.attachmed();
+    }
+    else if (callType.trim() == "Claim/Litigation/Settlement") {
+        return CustomScript.attachset();
+    }
+    else if (callType.trim() == "Claim/Litigation/Jury") {
+        return CustomScript.attachjury();
+    }
+    else if (callType.trim() == "Claim/Litigation/Appeal") {
+        return CustomScript.attachapp();
+    }
+    else if (callType.trim() == "policyAttachments") {
+        return CustomScript.RefreshAttach();
+    }
+    else if (callType.trim() == "policyDocumentsOnClaims") {
+        return CustomScript.RefreshFormList();
+    }
+    else if (callType.trim() == "ClaimsBilling") {
+        return CustomScript.RefershBillingDocuments();
+    }
+
+}
+, ProcessUpdate: function (response) {
+    alert("In the process complete function of second conversion");
+    alert(response);
+
+    var j = JSON.parse(response);
+    var docId = j.DocumentID;
+
+    alert(docId);
+
+}
+
+,Assign2Section: function(a,allq,uw) {
+	//var sectionname = $(a).parents('.qsection').attr('displayname');
+	var sectionname = $(a).parents('.qsection').attr('displayname');
+	
+	//This part of the code is not needed as we are not calling special function for Professional Services, it should behave like every other section
+	/*
+	//determine if the current section is Professional Services
+	if( sectionname == 'Professional Services' ) {
+		// handle Prof Service fields assignments in special function
+		GlobalScript.PropagateAssign();
+		// don't do any further processing!
+		return;
+	}
+	*/
+	//alert('Continuing with Assign2Section...');
+
+	//set affected elements to var
+	if (allq == '1') { 
+		var q_elements = $('.Question');
+		var em_elements = $('.EmAdd_Input');
+		var em = $(a).parents('#Questions').find('.secassign_em').val();
+	}
+	else { 
+		var q_elements = $(a).parents('.qsection').find('.Question');
+		var em_elements = $(a).parents('.qsection').find('.EmAdd_Input');
+		var em = $(a).parents('.qsection').find('.secassign_em').val();
+	}
+		
+	//get checked value
+	var chkd = $(a).attr('checked');
+	//get email address
+	//if email address is blank
+	if (chkd == true && em == '' && uw !== '1') { jAlert('Please enter an e-mail address to assign section to.'); $(a).attr('checked',false); return; }
+	//if its checked validate email address and return if invalid
+	
+
+	if (chkd == true && em !== '' && uw !== '1') {
+
+		Communication.CustomRequest('appmgr_app_builder.max?AJAX_ACTION=checkemail&email='+em, function(resp)
+			   {
+
+				 if(resp=='1') { 
+				 	 
+					$(a).parents('.qsection').find('.secassign_em').val(''); 
+					$(a).parents('.qsection').find('.EmAdd_Input').val(''); 
+					$(a).parents('.qsection').find('.Question').each( function() { $(this).removeAttr('checked',false); GlobalScript.ToggleEmailField(this); });					 
+					$(a).removeAttr('checked',false);
+					jAlert('Questions cannot be assigned to '+ em +' since this user already has application access.');
+				}
+				 if(resp=='0') { 
+
+				 	if (chkd == true) { 
+	
+	
+						try { Validator.Filters.EMAIL.filter(em); } catch(err) { jAlert(err); $(a).attr('checked',false); return; } 
+						
+						//set their email addresses
+						$(a).parents('.qsection').find('.EmAdd_Input').val(em);
+						
+						//check the questions and run their togglers
+						$(a).parents('.qsection').find('.Question').each( function() { $(this).attr('checked',true); GlobalScript.ToggleEmailField(this); });
+						
+
+					}
+					//its not checked clear the checks and address fields
+					else { 
+						if (uw !== 1) { $(a).parents('.qsection').find('.secassign_em').val(''); }
+						if (uw !== 1) { $(a).parents('.qsection').find('.EmAdd_Input').val(''); }
+						$(a).parents('.qsection').find('.Question').each( function() { $(this).removeAttr('checked',false); GlobalScript.ToggleEmailField(this); });
+
+					}
+
+				 }
+				 
+			   });
+	}		   
+	
+	if (chkd == false) { 
+		if (uw !== 1) { $(a).parents('.qsection').find('.secassign_em').val(''); }
+		if (uw !== 1) { $(a).parents('.qsection').find('.EmAdd_Input').val(''); }
+		$(a).parents('.qsection').find('.Question').each( function() { $(this).removeAttr('checked',false); GlobalScript.ToggleEmailField(this); });
+
+	}
+
+	
+}
+,Assign2Section_Blur: function(a) {
+
+	// skip this for Professional services
+	var sectionname = $(a).parents('.qsection').attr('displayname');
+	
+	//alert('Assign2Section_Blur displayname : ' + sectionname);
+
+	//This part of the code is not needed as we are not calling special function for Professional Services, it should behave like every other section
+	/*
+	//determine if the current section is Professional Services
+	if( sectionname == 'Professional Services' ) {
+		// handle Prof Service fields assignments in special function
+		GlobalScript.PropagateAssign();
+		// don't do any further processing!
+		return;
+	}
+	*/
+	//alert('Continuing with Assign2Section_Blur...');
+
+	// handle checked or unchecked checkbox for any section (including Professional Services)
+	var curr = $(a).val();
+	if (curr == '') { $(a).parents('.qsection').find('.secassign_chk').removeAttr('checked'); return; }
+	var chkd = $(a).parents('.qsection').find('.secassign_chk').is(':checked');
+	if (chkd === true) { 
+		try { Validator.Filters.EMAIL.filter(curr); } catch(err) { jAlert(err); $(a).attr('checked',false); return; } 
+		$(a).css('background-color','#fff');
+		$(a).parents('.qsection').find('.EmAdd_Input').val(curr);
+	}
+	
+}
+,RecallQuestion: function(a) {
+	$('[quescode='+a+']').find('.Question').removeAttr('checked');
+	GlobalScript.ToggleEmailField($('[quescode='+a+']').find('.Question'));
+}
+,SetAssignsOnLoad: function() {
+
+	$('div.qsection:visible').each( function() {
+		var sectionname = $(this).find('h3').text(); sectionname = sectionname.substring(0,7);
+		//console.log('Section: '+sectionname);
+        var total_q_in_sec = $(this).find('.Question:visible').length;
+		//console.log('total qs: '+total_q_in_sec);
+		var num_unchecked = 0;
+		var num_checked = 0;
+		$(this).find('.Question').each( function() {
+			if (num_unchecked>0) { return false; }
+			else if ($(this).is(':checked') == 'false') { num_unchecked++; return false; }
+			else if ($(this).is(':checked')) { num_checked++; }
+		})
+		//console.log('num checked: '+num_checked+' num unchecked: '+num_unchecked);
+		if (total_q_in_sec == num_checked) { $(this).find('.secassign_chk').attr('checked',true); }
+	});
+}
+,SetAssignsOnLoad2: function() {
+
+	$('.qsection:visible').each( function() {
+		var sectionname = $(this).find('h3').text(); sectionname = sectionname.substring(0,7);
+		//console.log('Section: '+sectionname);
+        var total_q_in_sec = $(this).find('.Question:visible').length;
+		//console.log('total qs: '+total_q_in_sec);
+		var num_unchecked = 0;
+		var num_checked = 0;
+		var emails = [];
+		var emails_not_same = 0;
+		
+		$(this).find('.Question').each( function() {
+			if (num_unchecked>0) { return false; }
+			else if ($(this).is(':checked') == 'false') { num_unchecked++; return false; }
+			else if ($(this).is(':checked')) { num_checked++; emails.push($(this).parents('.ques').find('.EmAdd_Input').val()); }
+		})
+		
+		for (i=0;i<emails.length;i++) {
+			if (i > 0 && emails[i] !== emails[i-1]) { emails_not_same++; }
+		}
+		//console.log('num checked: '+num_checked+' num unchecked: '+num_unchecked);
+		if (total_q_in_sec <= num_checked && emails_not_same == 0) { $(this).find('.secassign_chk').attr('checked',true); $(this).find('.secassign_em').val(emails[0]); }
+	});
+}
+,AppQChkSec: function(FROMCLICK) {
+   CustomScript.$toshow = $(); 
+   CustomScript.$tohide = $();
+
+   if (typeof CustomScript.__SectionCheck == 'function') 
+     CustomScript.__SectionCheck();
+	
+    if (typeof FROMCLICK!='undefined') {
+      var tohide = 0;	
+      var nm = '';
+      CustomScript.$tohide.each( function() { 
+           //console.log('checking if going to hide: ' +$(this).find('h3').text());
+           if ($(this).is(':visible'))  {
+             //console.log( 'it is yet visible');
+             nm=nm+$(this).attr('displayname').trim()+', ';
+             tohide++;
+            }
+      });
+      //console.log(tohide);
+      if (tohide>0){
+         nm=nm.substr(0, nm.length-2);
+         if (!confirm('This will remove all data associated with '+nm+'. Click OK to confirm.'))
+         return false;
+       }
+   }
+   
+	CustomScript.$toshow.show(); 
+	CustomScript.$tohide.hide().find('input.Question').removeAttr('checked'); 
+    //console.log('Running AJAX for group '+nm);
+	if (nm == '' || nm === undefined) { } 
+	else {
+	//console.log('Running AJAX for group '+nm);
+	Communication.CustomRequest('EGL_App_Create.max?AJAX_ACTION=DELSEC&GROUPNAME='+nm, function(resp)
+		   {
+			 if(resp=='Completed') {  }
+			 else { /*console.log(resp);*/ }
+		   });
+   }
+   //console.log(CustomScript.$toshow.length); 
+   //console.log(CustomScript.$tohide.length); 
+   
+   return true;
+  }
+,AppNoneOfAbove: function(ctrl){
+   var $ctrl = $(ctrl);
+   if (!$ctrl.is(':checked')) return;
+   var v = $ctrl.val().toLowerCase();
+   var p = $ctrl.parents('div.ques');
+   var isnone = (v.indexOf("none_of_the_above") >= 0) || (v.indexOf("none-of-the-above") >= 0)
+   if ( isnone  ) {
+     //p.find('input:checkbox').not($ctrl).removeAttr('checked');
+	 p.find('input:checkbox:checked').not($ctrl).not('.Question').each(function(){
+	        this.click();
+	 });
+   } else { 
+     p.find('input:checkbox').each( function(){
+       var l =  $( this ).val().toLowerCase();
+       if ( ( l.indexOf("none_of_the_above") >= 0 )||(l.indexOf("none-of-the-above") >= 0 ) )
+       {
+         $(this).removeAttr("checked");
+       }
+     });
+   }
+}
+// CL - ESP value calcs:
+,AppCalcESP: function(){
+
+	//console.log('Recalculating ....');
+
+  var a = 0;
+  var b = 0;
+    
+  $('[id^=ESPStudNo_]').each(function(){ 
+	b = parseInt(  $(this).val().replace(/,/g,'')  ); 
+	if( isNaN( b ) )
+	{ 
+		b = 0; 
+	}; 
+	a = a + b; 
+	//console.log('Total enrolled is: ' + a); 
+	}); 
+  
+  //console.log('set val');
+  $('[id^=ESPTtlEnrl_]').val(a);
+  
+  
+	var b = a * 17.00;
+
+	//console.log('Initial b: ' + b);
+	if(parseInt(b) < 1700.00){
+		b = 1700.00;
+	}
+	//console.log('Post min-prem b: ' + b);
+
+   $('[id^=ESPPolPRem_]').val(b).blur(); // this trigger the application of the money formatting
+   
+   //console.log('Adding change listener on initial load...');
+   
+   // CL - add change listener for ESP field: 
+	$('[name^=ESPStudNo_]').each(function(){ $(this).change(function(){ GlobalScript.AppCalcESP();})});
+   
+} // END AppCalcESP
+,AppQ_ThousandsSeparator: function(input) {
+	var output = input
+    if (parseFloat(input)) {
+        input = new String(input); // so you can perform string operations
+        var parts = input.split("."); // remove the decimal part
+        parts[0] = parts[0].split("").reverse().join("").replace(/(\d{3})(?!$)/g, "$1,").split("").reverse().join("");
+        output = parts.join(".");
+    }
+
+    return output;
+}
+/* To remove leading Zeros */
+,AppQ_LeadingZerosRemoval: function(name){
+	var str = $(name).val();
+	// remove $ and space before any validation
+	str = str.replace('$', '');
+	str = str.replace(' ', '');
+	if ((str.indexOf('0')==0) && (str.length>1))	
+	{
+		if(str.indexOf('.')!=1)
+		{
+			jAlert('Please remove leading zeros','Invalid Entry',function(){ $(name).focus();});
+			return;
+		}	
+		else { return; }
+	}  
+	else { return; }
+}
+/* Requires date fields to have year of 1800 or greater to get past datetime limitation */
+,AppQ_DateLimit: function(name) {
+    var str = $(name).val();
+	var inputDate = new Date(str);
+	var fullYear = inputDate.getFullYear();
+
+    if (str.length = 0) {
+     	return;
+	}
+	
+	if (fullYear < 1800) {
+		jAlert('Date must be on or after 01/01/1800','Invalid Entry',function(){ $(name).focus();});
+		return;
+	}  else {
+		return;
+	}
+}
+,AppQ_NumberFilter: function(name,filtertype,decimals) {
+	//var FVAL = $(name).val().replace(',','');
+	//var FVAL = $(name).val().replace(/,/g,'');
+		
+		var FVAL = GlobalScript.AppQ_LeadingZerosRemoval(name);
+		FVAL = $(name).val().replace(/,/g,'');
+
+		// if blank then nothing to validate
+        if (FVAL == '') { return; }
+		
+		//year min max.  This has to be before the check for '-' and '.' on keyup statement, or this code will never be reached by onBlur event when FVAL='-' or '.'
+		if (filtertype == 'Y') {
+			try {  
+				if (isNaN(FVAL)) { throw "Only integer values are accepted."; }
+			}
+			catch(e) { jAlert(e,'Invalid Entry',function(){ $(name).val(''); $(name).focus(); }); return; }	
+
+			try {
+				if (FVAL.indexOf('.') !== -1) { throw "Decimals are not allowed in this field."; }
+			}	
+			catch(e) { jAlert(e,'Invalid Entry',function() { $(name).val('').focus(); }); return; }
+
+			if (FVAL < 1700 || FVAL > 2100) { 
+				jAlert('Year fields must contain a value between 1700 and 2100.'); 
+				$(name).val('');
+				$(name).focus(); 
+				return; 
+			} else { 
+				return; 
+			}
+		}
+		
+		//allow negative integers on keyup
+		if (FVAL == '-' || FVAL == '.') { return; }
+	
+		//percent
+		if (filtertype == 'P') { 
+			//check if int
+			try { 
+				if (isNaN(FVAL)) { throw "Only integer values are accepted."; }
+			}
+			catch(e) { jAlert(e,'Invalid Entry',function(){ $(name).val(''); $(name).focus(); }); return; }
+		
+			if (FVAL > 100 || FVAL < 0) { 
+				jAlert('Percent fields must contain a value between 0 and 100.','Invalid Entry',function(){ $(name).focus();});
+				return;
+			}
+		}
+
+	
+	//if integer or decimal
+	if (filtertype == 'I' || filtertype == 'D') { 
+		try {
+		  if (isNaN(FVAL) || FVAL.indexOf('e') !== -1 || FVAL.indexOf('E') !== -1) { throw "Only integer values are accepted."; }
+		}
+		catch(e) { jAlert(e,'Invalid Entry',function(){ $(name).val('').focus(); }); return; }
+    
+    if (filtertype == 'I') {
+      try {
+        if (FVAL.indexOf('.') !== -1) { throw "Decimals are not allowed in this field."; }
+      }
+      catch(e) { jAlert(e,'Invalid Entry',function() { $(name).val('').focus(); }); return; }
+		}
+
+		if (FVAL > 2147483647) { 
+			jAlert('Integer values cannot exceed 2,147,483,647.'); 
+			$(name).val('');
+			$(name).focus();
+			return;
+		}
+
+    //separate number with commas
+		$(name).val(GlobalScript.AppQ_ThousandsSeparator(FVAL)); 
+	}
+
+}
+,AppQ_ValidateEmail: function(emailbox) {
+	var isrepeat = parseInt($(emailbox).parents('[sectiontype=Repeat]').length);
+	if (isrepeat == 0) { return; }
+	
+	var EmVal = $(emailbox).val();
+	if (EmVal == '') { return; }
+	
+	try { 
+		var z = Validator.Filters.EMAIL.filter(EmVal); 
+	} 
+	catch(e) { var dontdoit = 1;
+		jAlert(e,'Invalid E-mail Address',function(){ $(emailbox).val(''); 
+			return false; 
+		}); 
+	}
+	
+	//if (dontdoit !== 1) { $(emailbox).parents('[sectiontype=Repeat]').find('.EmAdd_Input').each(function() { $(this).val(EmVal); } ); }
+	
+	GlobalScript.BlurEmail(emailbox);
+}
+,AppQ_RemoveCommas: function() {
+
+	var allVisibleNumberInputs = $("div[Template='EditNumberInt']").filter(':visible').find('input:text');
+	//filter out the Email address assignment fields.
+	allVisibleNumberInputs.not('.EmAdd_Input') .each( function() { 	
+		var numval   = $(this).val();
+		var hascomma = numval.indexOf(','); 
+		if (hascomma > -1) { 
+			var nocomma = parseInt(numval.replace(/,/g,'')); 
+			$(this).val(nocomma); 
+		} 
+	});
+  $('.qsection').find('[type=text]:visible').not('[name^=Q_],[name^=E_],[class=secassign_em],[onblur],[class=hasDatepicker]').each(
+    function() { 
+      if ( $.trim( $(this).val() ) == '' ) {
+        $(this).val('');
+      }
+    }
+);
+}
+,AppQ_LoadCommas: function() {
+	$('[onblur]').each(function() { 
+		$(this).trigger('blur'); 
+	});
+}
+,modalAlert: function(message) {
+  $('#dialog').remove();
+  $('#rightColumn').append('<div style="width:500px; height:200px; margin-top: 0px; text-align: left; background-position: 0% 100%;'+
+                        ' background-repeat: no-repeat; font-family: Verdana, Arial, Helvetica, sans-serif, "Trebuchet MS"; font-size: 10pt;'+
+                        ' display: inline" class="component StaticContainer borderless" ref="StaticContainer" id="dialog"></div>');
+
+  $('#DiaNote').html(message);
+
+  $('#dialog').html($('#dialogContent').html());
+
+  $('#dialog').dialog( {
+     autoOpen:true
+     ,modal: true
+     ,height: 200
+     ,width: 500
+     ,title: "Warning"
+     ,beforeclose: function(event, ui) {}
+     ,buttons:{ 'OK': function()
+       {
+         $('#dialog').dialog('destroy');
+       }
+     }
+  });
+
+  // fix for disappearing buttons: close and reopen
+  $("#dialog").dialog("close");
+  $("#dialog").dialog("open");
+} // end modalAlert
+
+,modalConfirm: function(message, options1, callback1, options2, callback2, buttonref, dialogtype) {
+
+  // scroll to top of page
+  scroll(0,0);
+  //console.log('modalconfirm START');
+  //console.log(message);
+  var buttonsvar = '';
+
+  $('#dialog').remove();
+
+  switch (dialogtype) {
+    case 'Email':
+      var h = 600;
+      var w = 600; 
+      var title = 'Choose Recipients';
+      var divloc = $('#dialogContent').html();
+      var noteloc = '#dialog #DiaNote';
+      break;
+    case 'ObtainSig':
+      var h = 600;
+      var w = 600;      
+      var title = 'Obtain Signature';
+      var divloc = $('#dialogContentSig').html();
+      var noteloc = '#dialog #DiaNoteSig';
+      break;
+    default:
+      var h = 200;
+      var w = 500;
+      var title = 'Warning';
+      var divloc = $('#dialogContent').html();
+      var noteloc = '#dialog #DiaNote';
+  }
+
+  //console.log('divloc:'+divloc)
+
+  $('#rightColumn').append('<div style="width:'+w+'px; height:'+h+'px; margin-top: 0px; text-align: left; background-position: 0% 100%;'+
+                        ' background-repeat: no-repeat; font-family: Verdana, Arial, Helvetica, sans-serif, "Trebuchet MS"; font-size: 10pt;'+
+                        ' display: inline" class="component StaticContainer borderless" ref="StaticContainer" id="dialog"></div>'); 
+  $('#dialog').html(divloc);  
+  //$('#dialog').html('<p>EAT ME</p>');
+  $(noteloc).html(message);
+  //console.log('just filled in some content...')
+  // Initial call to jquery dialog
+  // set options
+  $('#dialog').dialog( {
+     autoOpen     : true
+     ,modal       : true
+     ,height      : h
+     ,width       : w
+     ,title       : title
+     ,beforeClose       : function(event, ui) { /*$('#dialog').dialog('destroy'); $('#dialog').remove();*/ }
+  });   
+
+  // Addtional call to the now created dialog object
+  // set buttons depending on dialogtype param of this method
+  //  ... IF confirm ELSE IF Email ELSE default 
+  if (dialogtype == 'confirm') { $('#dialog').dialog( "option", "buttons",  
+    { 
+      "Cancel":function() { 
+        $('#dialog').dialog('destroy');
+        $('#dialog').remove();
+        callback2(options2); 
+      },      
+      "Ok":function() { 
+        $('#dialog').dialog('destroy');
+        $('#dialog').remove();
+        callback1(options1);  
+      } 
+    } 
+   ); 
+	// fix for disappearing buttons: close and reopen 
+	// also fix height for broker version...
+	$("#dialog").dialog("close"); $("#dialog").dialog("open"); $('.ui-dialog').find('h3').css('height',20);
+  }
+  
+  else if (dialogtype == 'Email' || dialogtype == 'ObtainSig') { $('#dialog').dialog( "option", "buttons",  
+    { 
+      "Cancel":function() { 
+        $('#dialog').dialog('destroy');
+        $('#dialog').remove();
+        callback2(options2); 
+      },      
+      "Send":function() { 
+        /*$('#dialog').dialog('destroy'); -- this is done in the sendmodal function */
+        callback1(options1);  
+      } 
+    } 
+   ); 
+	// fix for disappearing buttons: close and reopen 
+	// also fix height for broker version...
+	$("#dialog").dialog("close"); $("#dialog").dialog("open"); $('.ui-dialog').find('h3').css('height',20);
+  }
+
+  else { 
+		$('#dialog').dialog( "option", "buttons", { "Ok":function() { $( this ).dialog( "destroy" ); } }  ); 
+	
+		// fix for disappearing buttons: close and reopen 
+		// also fix height for broker version...
+		$("#dialog").dialog("close"); $("#dialog").dialog("open"); $('.ui-dialog').find('h3').css('height',20);	
+		
+	}
+
+  
+  //console.log('modalconfirm End');
+}
+
+,SendModal: function(RECID) {
+	//console.log('sendModal Start');
+	var hash = $('.ui-dialog').find('input, textarea').serialize(),
+    split = hash.split('&'),
+    formdata = '&';
+    
+	//zelharaoui: Added ternary operator to avoid decoding 'EXTRAMSG' since it is a user input
+	for(var i = 0; i < split.length; i++){
+		var kv = split[i].split('=');
+		formdata = formdata + kv[0] + '=' + ( kv[0] == 'EXTRAMSG' ? kv[1] : decodeURIComponent(kv[1] ? kv[1].replace(/\+/g, ' ') : kv[1]) ) + '&'; 
+	}
+	
+	formdata = formdata.substr(0,formdata.length-1);
+	Communication.CustomRequest('sendassign.max?RECID='+RECID+formdata,function(response){ 
+	if(response == 'Completed') { 
+		 
+	} 
+	else { 
+		jAlert('The selected assignments have NOT been sent.<br /> An error occurred: ' + response);   
+	}; 
+	}); 
+	
+	$('#dialog:visible').dialog('destroy');
+	$('#dialog').remove();
+	jAlert('The selected assignments have been sent.');  
+	
+	//console.log('sendModal END');
+  
+}
+
+,removeNotes: function() {
+	var allNotes = $(".addsecnote");//get all notes elements.
+	if (allNotes.length)
+	{
+	    allNotes.remove();
+	}
+}
+
+,LaunchNotes: function(RECID, SID){
+    $('#dialogNotes').remove();
+
+    $('#rightColumn').append('<div style="margin: 3px; text-align: left; background-position: 0% 100%;'+
+  ' background-repeat: no-repeat; font-family: Verdana, Arial, Helvetica, sans-serif, "Trebuchet MS"; font-size: 10pt;'+
+  ' display: inline" class="component DynamicContainer borderless " ref="DynamicContainer" id="dialogNotes" ></div>');
+
+  CustomTemplate('polinfo_notes_add.max?preprocess=true&prebind_id='+RECID, $('#dialogNotes'), 'CustomScript', function(){
+
+  $('#dialogNotes').dialog({
+    autoOpen:true,
+    modal: true,
+    maxWidth: 928,
+	width: '90%',
+    height: 660,
+    title: "Add Notes",
+    beforeclose: function(event,ui){},
+    buttons:{
+      'Cancel':function(){
+        $('#dialogNotes').dialog('destroy');
+      },
+      'Save': function(){
+ 	   var select1 = $('.ui-dialog').find( "select" ).val();
+//alert(select1)	
+		var ProductIDs =  "&ProductIDs=" + select1;
+//alert(ProductIDs);
+        var urlParams = $('.ui-dialog').find( "input, textarea" ).serialize();
+
+        //alert('Call Params: polinfo_notes_add.max?prebind_id=#SRECID#&AJAXACTION=modalAdd&id=#SID#&PD_PolicyCode=&taxonomy=Underwriting&' + urlParams + '<<<');
+        // CustomRequest with RECID SessionID and serialized inputs
+        Communication.CustomRequest('polinfo_notes_add.max?prebind_id='+RECID+'&AJAXACTION=modalAdd&id='+ SID + '&PD_PolicyCode=&taxonomy=Underwriting&' + urlParams + ProductIDs);
+
+
+        $('#dialogNotes').dialog('destroy');
+		$('#memotable .tbw_sort:first h6').click();
+      }
+    }
+  }); // end .dialog
+  
+  //Fix max-width bug
+    $('#dialogNotes').parent()
+	    .css('max-width',$('#dialogNotes').dialog('option','maxWidth'));
+
+  // fix for disappearing buttons: close and reopen
+    $("#dialogNotes").dialog("close");
+    $("#dialogNotes").dialog("open");
+
+  $('.ui-dialog #dialogNotes #ButtonSave input').remove();
+  //$('.ui-dialog #dialognotes').parents('.ui-dialogue').attr('id','dialogNotesContainer');
+  //$('#dialogNotesContainer #dialogNotes #ButtonSave input').remove();
+
+
+
+
+
+  }, false); // end function end CustomTemplate
+
+} // end LaunchNotes
+
+,LaunchNotesEdit: function(editURL, NoteId, NoteSource, RECID, SID){
+    $('#dialogNotes').remove();
+
+    $('#rightColumn').append('<div style="margin: 3px; text-align: left; background-position: 0% 100%;'+
+  ' background-repeat: no-repeat; font-family: Verdana, Arial, Helvetica, sans-serif, "Trebuchet MS"; font-size: 10pt;'+
+  ' display: inline" class="component DynamicContainer borderless " ref="DynamicContainer" id="dialogNotes" ></div>');
+
+  
+  /* editURL
+  <a class="Default" style="CURSOR: pointer" onclick="GlobalScript.LaunchNotesEdit(&quot;PolInfo_Notes_Add.max?ACT_ID=164&amp;NoteSource=Internal&amp;goback=egl_app_create&amp;prebind_id=1173&quot;);">5/7/2014 1:18:48 PM</a>
+  
+   CustomTemplate('polinfo_notes_add.max?preprocess=true&prebind_id='+RECID, $('#dialogNotes'), 'CustomScript', function(){
+  */
+  
+  CustomTemplate(editURL, $('#dialogNotes'), 'CustomScript', function(){
+
+  $('#dialogNotes').dialog({
+    autoOpen:true,
+    modal: true,
+    maxWidth: 928,
+	width: '90%',
+    height: 660,
+    title: "View/Edit Notes",
+    beforeclose: function(event,ui){},
+    buttons:{
+      'Cancel':function(){
+        $('#dialogNotes').dialog('destroy');
+      },
+      'Save': function(){
+       var select1 = $('.ui-dialog').find( "select" ).val();
+//alert(select1)	
+		var ProductIDs =  "&ProductIDs=" + select1;
+//alert(ProductIDs);
+		var urlParams = $('.ui-dialog').find( "input, textarea" ).serialize();
+
+        //alert('Call Params: polinfo_notes_add.max?prebind_id=#SRECID#&AJAXACTION=modalAdd&id=#SID#&PD_PolicyCode=&taxonomy=Underwriting&' + urlParams + '<<<');
+
+        // CustomRequest with RECID SessionID and serialized inputs
+        //Communication.CustomRequest('polinfo_notes_add.max?prebind_id='+RECID+'&AJAXACTION=modalAdd&id='+ SID + //'&PD_PolicyCode=&taxonomy=Underwriting&' + urlParams);
+		Communication.CustomRequest('polinfo_notes_add.max?prebind_id='+RECID+'&NoteId='+NoteId+'&NoteSource='+NoteSource+'&AJAXACTION=modalUpdate&id='+ SID + '&PD_PolicyCode=&taxonomy=Underwriting&' + urlParams + ProductIDs);
+
+
+        $('#dialogNotes').dialog('destroy');
+
+      }
+    }
+  }); // end .dialog
+
+  //Fix max-width bug
+    $('#dialogNotes').parent()
+	  .css('max-width',$('#dialogNotes').dialog('option','maxWidth'));
+  
+  // fix for disappearing buttons: close and reopen
+    $("#dialogNotes").dialog("close");
+    $("#dialogNotes").dialog("open");
+
+  $('.ui-dialog #dialogNotes #ButtonSave input').remove();
+  //$('.ui-dialog #dialognotes').parents('.ui-dialogue').attr('id','dialogNotesContainer');
+  //$('#dialogNotesContainer #dialogNotes #ButtonSave input').remove();
+
+
+
+
+
+  }, false); // end function end CustomTemplate
+
+} // end LaunchNotesEdit
+
+,LaunchComments:function (RECID, SID, PAGEIN,object){
+    $('#dialogComments').remove();
+
+	var page = PAGEIN;
+	var disableme = '';
+	var commentBoxTitle = 'Add Comments';
+	
+	var commentElement = object;
+    //get the Add Comments parents and filter the div that has the displayname of the current SectionHeader. This gives the SectionHeader for which the comment is being added.
+	var sectionHeaderCommented = commentElement.parents().filter("div[displayName]").attr("displayName");
+	var commentSectionHeaderURLParam = { sechead: sectionHeaderCommented };
+	var secHeadParam = $.param(commentSectionHeaderURLParam);
+    	
+	if(page == 'egl_app_create'){
+		//disableme = 'disabled';
+		disableme = 'readonly';  //changed as IE was not showing the scrollbars for the textarea
+		commentBoxTitle = 'Review Comments';
+	}
+    //debugging code
+	//alert('insured_app_builder.max?RECID=' + RECID + '&AJAXACTION=getComment&id=' + SID + '&' + secHeadParam);
+	Communication.CustomRequest('insured_app_builder.max?RECID=' + RECID + '&AJAXACTION=getComment&id=' + SID + '&' + secHeadParam,
+		function(resp) {
+			$('#rightColumn').append('<div style="margin: 3px; text-align: center; background-position: 0% 100%;'+
+				' background-repeat: no-repeat; font-family: Verdana, Arial, Helvetica, sans-serif, "Trebuchet MS"; font-size: 10pt;'+
+			  ' display: inline" class="component DynamicContainer borderless " ref="DynamicContainer" id="dialogComments" >'+
+			  '<textarea id="CMT_Comment" name="CMT_Comment" ' + disableme + ' style="width:97%; height: 96%; margin: 0px; background-color: #EEE;">' + resp + '</textarea>' +
+			  '</div>');
+
+			 $('#dialogComments').dialog({
+				autoOpen:true,
+				open: function(event,ui){
+				    var originalCommentVal = $('#CMT_Comment').val();
+				    if (originalCommentVal.length > 0)
+				        $('#CMT_Comment').focus().val('').val(originalCommentVal);
+				    else
+				        $('#CMT_Comment').focus();
+				},
+				modal: true,
+				maxWidth: 928,
+				width: '90%',
+				height: 660,
+				title: commentBoxTitle,  
+				beforeclose: function(event,ui){},
+				buttons:{
+				  'Cancel':function(){
+					$('#dialogComments').dialog('destroy');
+				  },
+				  'Save': function(){
+				      var urlParams = $('.ui-dialog').find("input, textarea, select").serialize();
+					  if(page != 'egl_app_create'){//only save for appmanager,broker and assignee
+						Communication.CustomRequest('insured_app_builder.max?RECID=' + RECID + '&AJAXACTION=modalComment&id=' + SID + '&' + secHeadParam + '&' + urlParams);
+					  }
+					  $('#dialogComments').dialog('destroy');
+				  }
+				}
+			  }); // end .dialog
+				//Fix max-width bug
+			    $('#dialogComments').parent().css('max-width',$('#dialogComments').dialog('option','maxWidth'));
+ 			    // fix for disappearing buttons: close and reopen
+                $("#dialogComments").dialog("close");
+                $("#dialogComments").dialog("open");
+				
+				if(disableme == 'disabled'){
+					$(".ui-dialog button:contains('Save')").attr("disabled", true).css('display','none');
+					$(".ui-dialog button:contains('Cancel')").text('Close');
+                                        $('.ui-dialog-title').text('View Comments');
+				}
+		} // end callback function of Communication.CustomRequest
+	); // end Communication.CustomRequest
+} // end LaunchComments 
+
+
+
+
+
+
+,RequiredVisibleCheck: function(buttonref) {
+
+     var curr_val = '';
+     var unanswered = 0;
+     var required = 0;
+
+    // start  outer (each question) loop
+    $('[class~="reqclass"]:visible').not('[template="QuesHeading"]').each( function() {
+      
+      curr_val = '';      
+      // start inner (parse answer(s) loop
+      $(this).find('input').not('[name="his"], [name^="Q_"], [name^="E_"]').each( function() {
+          if( $(this).attr('type') == 'checkbox' || $(this).attr('type') == 'radio') {
+            if( $(this).attr('checked') == true || $(this).attr('checked') == 'checked') { 
+              curr_val += 'checked'; 
+            }
+          }
+          else { curr_val += $(this).val(); }
+      });
+      // end inner parse answer loop 
+      if( $.trim( curr_val ) == '') { unanswered += 1; }
+      /*console.log('Unanswered Required Questions: ' + unanswered);*/
+      
+      if( unanswered > 0 ) { return false; }// early exit: do not process remaining questions
+
+    }); // end outer (each question) loop
+
+    if( unanswered > 0 ) { //(message, options1, callback1, options2, callback2, buttonref
+      GlobalScript.modalConfirm(
+        'You have unanswered required questions on this application. <br />Do you wish to continue?', 
+        buttonref,
+        function(option1) {
+          GlobalScript.AppQ_RemoveCommas();
+          Communication.SerialRequest($('#rightColumn'),false,option1); 
+        },
+        'b',
+        function(option2) { },
+        buttonref,
+        'confirm');
+    } else {
+      GlobalScript.AppQ_RemoveCommas();
+      Communication.SerialRequest($('#rightColumn'),false,buttonref);
+    } 
+}
+
+
+
+,UnansweredCheck: function(buttonref) {
+
+     var curr_val = '';
+     var unanswered = 0;
+     var assigned = 0;
+
+    // start  outer (each question) loop
+    $('[class~="ques"]:visible').not('[template="QuesHeading"]').each( function() {
+      assigned = $(this).find('[name^=Q_]').is(':checked');
+      if (assigned === false) { return; }
+      curr_val = '';      
+      // start inner (parse answer(s) loop
+      $(this).find('input').not('[name="his"], [name^="Q_"], [name^="E_"]').each( function() {
+          if( $(this).attr('type') == 'checkbox' || $(this).attr('type') == 'radio') {
+            if( $(this).attr('checked') == true || $(this).attr('checked') == 'checked') { 
+              curr_val += 'checked'; 
+            }
+          }
+          else { curr_val += $(this).val(); }
+      });
+      // end inner parse answer loop 
+      if( $.trim( curr_val ) == '') { unanswered += 1; }
+      /*console.log('Unanswered Questions: ' + unanswered);*/
+      
+      if( unanswered > 0 ) { return false; }// early exit: do not process remaining questions
+
+    }); // end outer (each question) loop
+
+    if( unanswered > 0 ) { //(message, options1, callback1, options2, callback2, buttonref
+      GlobalScript.modalConfirm(
+        'You have unanswered questions on this application. <br />Do you wish to continue?', 
+        buttonref,
+        function(option1) {
+          GlobalScript.AppQ_RemoveCommas();
+          Communication.SerialRequest($('#rightColumn'),false,option1); 
+        },
+        'b',
+        function(option2) { },
+        buttonref,
+        'confirm');
+    } else {
+      GlobalScript.AppQ_RemoveCommas();
+      Communication.SerialRequest($('#rightColumn'),false,buttonref);
+    } 
+}
+,num_of_assignments: function() {
+  var numofassigned = 0;
+  $('[name^=Q_]').each(function() { if ($(this).is(':checked')) { numofassigned++ } });
+  return numofassigned;
+}
+,AssignToEmail: function(checkBox,eInput,saveBtn) {
+
+	// EXAMPLE CALL:									checkbox, input, save button 
+	//				onclick="GlobalScript.AssignToEmail(this,$('#EmailAll'),$('#saveBtn'));" 
+	// cleanup
+	$('#dialog').remove();
+	
+    var ischecked = $(checkBox).attr('checked');
+    var EmailAddr = $(eInput).val();
+    EmailAddr.trim();
+    var dontdoit = 0;
+
+	//alert('In AssignToEmail :: EmailAddr: ' + EmailAddr + ' ischecked is: ' + ischecked );
+
+    if( ischecked )
+		{
+
+			if(EmailAddr == '') 
+			{
+                GlobalScript.modalConfirm('Please enter an email address before checking the checkbox.','a',function(){},'b',function(){},'','');
+				$(checkBox).attr('checked',false);
+				return;
+            } else
+			{
+				try
+				{
+					var z = Validator.Filters.EMAIL.filter(EmailAddr);
+				}
+				catch(e)
+				{
+					dontdoit = 1;
+					$(checkBox).attr('checked',false);
+					GlobalScript.modalConfirm('Invalid E-mail Address','a',function(){},'b',function(){},'','');
+				}
+				
+                if(dontdoit == 0)
+                {
+				    //alert('In AssignToEmail :: ischecked :: setting all to EmailAddr: ' + EmailAddr );
+				    GlobalScript.modalConfirm('Are you sure you want to assign all questions to: ' +  EmailAddr + ' ?', EmailAddr, function(cbEmailAddr)
+					{
+						//This is not needed as Professional Services will behave the same as every other section
+						//GlobalScript.PropagateAssign();			
+						if (eInput.attr('id') != 'EmailPOC')
+						{
+							$('[name^=Q_]').attr('checked',true).trigger('click').attr('checked',true); $('[name^=E_]').val(cbEmailAddr);
+						}
+						// uncheck the Other checkbox and blank the address -- commented for now because we need to know which box is checked
+						//$('.AssignToEmail').attr('checked',false);
+						//$('.clearThisEmail').val('');
+						
+						// this no longer used....GlobalScript.profServAssign2Section();			
+						// replaced above with below:
+						
+						
+						//This part of the code is not needed as the Professional Services section should behave like every other section
+						/*
+						// check the Professional Service section assignment checkbox
+						$('[displayname="Professional Services"]').find('.secassign_chk').attr('checked', true);
+						// set the Professional Services email to the App Mgr or Other email
+						$('[displayname="Professional Services"]').find('.secassign_em').val(cbEmailAddr);
+						// call the Professional services assignment function to handle the assignment
+						// GlobalScript.ProfServAssign();   **** removed 9/18/2013 by mark westling
+						
+						/*GlobalScript.modalConfirm('All Questions have been assigned to: ' + cbEmailAddr + '. Autosaving assignments...',
+							'a',function(){},'b',function(){},'','');*/
+							jAlert('All Questions have been assigned to: ' + cbEmailAddr + '. Autosaving assignments...');
+							// save assignments
+							//$(saveBtn).click();
+							//GlobalScript.AppQ_RemoveCommas(); 
+							//CustomScript.SetQuesIDs(); 
+							//Communication.SerialRequest($("#rightColumn"),false,$(saveBtn));
+						$(saveBtn).click();
+												
+				    }, 
+					'', 
+					function(cbnotusedparam)
+					{
+						// cancelled - so clear checkbox (input field remains)
+						$(checkBox).attr('checked',false);
+					}, '', 'confirm'
+					);
+                                }
+
+			}
+		}
+} // end AssignToEmail
+,SigObtainedCheck: function(recid, userid, sigobtained, sigdate) {
+
+  if (sigobtained == '1') {  
+    if( confirm('A signature was previously requested on '+sigdate+'. Are you sure you want to request a new signature?') ) {
+      GlobalScript.RequestSig(recid,userid); 
+    } else { return; }
+  } else { 
+    Communication.CustomRequest('save_then_send_email.max?AJAX_ACTION=CHECKSIG&RECID='+recid, function(resp)
+      {
+        if(resp == '0') { GlobalScript.RequestSig(recid,userid); }
+        else {  
+          if( confirm('A signature was previously requested on '+resp+'. Are you sure you want to request a new signature?') ) {
+                GlobalScript.RequestSig(recid,userid); 
+              } else { return; }
+        }
+      });     
+  }
+
+}
+,RequestSig: function(recid,userid) {
+  var html = '<form id="RequestSig"><div><p style="display:none;color:red" id="error"></p>'
+            +'<h4>Warning: Obtaining a signature will lock the application from any further changes.</h4>'
+            +'<h4>Name of recipient:</h4><input style="width:150px" id="ObtainSigName" name="ObtainSigName" type="text" alt="Please enter recipient name.">'
+            +'<h4>Title of recipient:</h4><input style="width:150px" id="ObtainSigTitle" name="ObtainSigTitle" type="text" alt="Please enter recipient title.">'
+            +'<h4>E-mail address to send the signature request:</h4><input style="width:150px" id="ObtainSigFrom" name="ObtainSigFrom" type="text" alt="Please enter e-mail address to send the signature request.">'
+            +'<h4>Optional message to append:</h4><textarea rows=3 cols=60 id="ObtainSigMessage" name="ObtainSigMessage"></textarea></div></form>';
+  //message, options1, callback1, options2, callback2, buttonref, dialogtype
+  GlobalScript.modalConfirm(html, 'a', function(a){ GlobalScript.SendDocusign(recid,userid); }, 'b', function(b){},'','ObtainSig');
+
+}
+,SendDocusign: function(recid,userid) {
+  var email_only = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+  var email = $('#ObtainSigFrom').val();
+  var name = $('#ObtainSigName').val();
+
+  if(!email_only.test(email)) {
+    $('#ObtainSigFrom').val('');
+    $('#error').html('Invalid address');
+    $('#error').show();
+    return;
+  }
+  if (name == '') {
+    $('#ObtainSigName').val('');
+    $('#error').html('Recipient name is required');
+    $('#error').show();
+    return;
+  }
+
+  var hash = $('#RequestSig').find('input, textarea').serialize(),
+    split = hash.split('&'),
+    formdata = '&';
+
+  for(var i = 0; i < split.length; i++){
+    var kv = split[i].split('=');
+    formdata = formdata + kv[0] + '=' + decodeURIComponent(kv[1] ? kv[1].replace(/\+/g, ' ') : kv[1]) + '&';
+  }
+  
+  formdata = formdata.substr(0,formdata.length-1);
+  
+  Communication.CustomRequest('save_then_send_email.max?AJAX_ACTION=REQSIG&RECID='+recid+formdata,function(response){ 
+  if(response == 'Completed') { 
+     /*console.log('it worked');*/
+  } 
+  else { 
+    jAlert('The selected assignments have NOT been sent.<br /> An error occurred: ' + response);   
+  }; 
+  });   
+
+  $('#dialog:visible').dialog('destroy');
+  $('#dialog').remove();
+  jAlert('A request for Docusign signature has been queued to be sent to the recipient.');  
+
+  /*Disable stuff to prevent further changes*/
+  $('#Questions').find('input,textarea,select').not('[name=his],#AddAttachments').attr('disabled',true);
+  $('.addsecnote,.addcomment').hide();
+  $('[name=saveBtn],[name=Save],[name=Submit],[name=submitBtn],[name=continueBtn],[name=sendAssign],[name=recallBtn]').attr('disabled',true);       
+}
+,ObtainSigMode: function(state) {
+  if (state == '1') {
+    /* IF ObtainSig = 1 THEN DISABLE */
+    $('#Questions').find('input,textarea,select').not('[name=his],#AddAttachments').attr('disabled',true);
+    $('.addsecnote').hide(); //Ziad Elharaoui on 04/21/2015. keeping add comment when we obtain signature
+    $('#ObtainSigWarning').show();  
+    $('[name=saveBtn],[name=Save],[name=appComplete],[name=continueBtn],[name=sendAssign],[name=recallBtn],[name=removeassignBtn], [name=releaseBtn]').attr('disabled',true);//Ziad Elharaoui on 04/21/2015. removing the submit from the list that we disable    
+  }
+}
+
+,ParseGroupCohortList : function(){
+  var d = new Array();
+  $('#CohortList input[type=checkbox]:checked').each(function(){d.push($(this).val())});
+  $('#groupcohortlist').val(d.join(','));
+}
+,ValidateAppListSearch : function(searchType, searchButton) { 
+  var selectedGroup = $('.'+searchType).find(':input[name"'+searchType+'"][type="radio"]:checked').val();
+
+   //this would not hurt but it will prevent errors if any changes happen in the future
+   if (typeof(selectedGroup) == 'undefined')
+   {
+       jAlert("Please select a search group before proceeding.");
+       return;
+   }
+
+   //get static values that are shared between the radio button group
+   var accountName = $('#AccountName').val();
+   var dba = $('#DBA').val();
+   var city = $('#City').val();
+   var state = $('#AState').val() == '-1' ? '' : $('#AState').val();
+
+   //object to get the different values for the field that is not shared between the group. The key is the name of the radio button and the value is the ID of the input field that we are searching.
+   var NumberLookup = {
+    'institution': 'MemberNum',
+    'Group': 'MemberNum',
+    'Agency - Brokerage': 'BrokerNumber',
+    'Claims':'TaxID'
+   };
+
+   //grab the right value -- This gives us more readability compared to 4 nested if-elses
+   var accountNumberKey = NumberLookup[selectedGroup];
+
+   //validate that we got a value for the account number field
+   if (typeof(accountNumberKey) == 'undefined')
+   {
+       jAlert("An error has occured. The account number field is not found.");
+       return;
+   }
+
+   var accountNumber = $('#'+accountNumberKey).val();
+
+   // only validate the true account number fields. Tax ID can have characters that faild numeric validation
+   if (accountNumberKey != 'TaxID')
+   {
+      var isValid = /^\d*$/.test(accountNumber); //regex to validate integer. parseInt() and Numeric() do not work properly.
+      if ((!isValid) && (accountNumber != '') && (accountNumber != 0))
+      {
+          jAlert("The account number/Tax ID fields take integer values only.");
+          return;
+      }
+   }
+   else
+   {
+	   if( accountNumber.indexOf('\'') > -1) 
+	   {
+			jAlert("The Tax ID field should not contain an apostrophe.");
+			return; 
+	   } 	   	   
+   }	   
+   //make sure the user selected at least one value other than state
+   if (accountName == '' && dba == '' && city == '' && accountNumber == '')
+   {
+       jAlert("Please enter at least one search criteria other than state.");
+       return;
+   }
+
+   //check to make sure that the user input does not contain an apostrophe
+   if( accountName.indexOf('\'') > -1) 
+   {
+	    accountName = accountName.replace(/'/g,'\'\'');
+		$('#AccountName').val(accountName);
+   }
+
+   if( dba.indexOf('\'') > -1) 
+   {
+	    dba = dba.replace(/'/g,'\'\''); 
+		$('#DBA').val(dba);		
+   } 
+
+   if( city.indexOf('\'') > -1) 
+   {
+	    city = city.replace(/'/g,'\'\'');  
+		$('#City').val(city);	
+   }    
+   //Server.Transfer call to redirect to the account_search_result
+   Communication.SerialRequest($('#rightColumn'), false, searchButton);  		
+}
+// Unobtrusive Javascript filters for numeric inputs.
+// Works by assigning classes to certain kinds of input tags (e.g., money input).
+// If all money fields have the class "Money", you can then put this in your onLoad
+// event for the page:
+//
+// $('.Money').keypress(GlobalScript.FilterPositiveMoney);
+//
+
+// See http://api.jquery.com/keypress/ for details. Also note that while Chrome returns a
+// value of 0 for all non-printing (e.g., delete, arrow, backspace, etc.) e.which calls,
+// FireFox returns 8 for backspace.
+
+ ,isDigitOrInvisibleChar: function(k) { return (k === 0) || (k === 8) || (k >= 48 && k <=57) }
+ ,isDecimalChar: function(k) { return k === 46 }         // period, decimal point
+ ,isSignChar:  function(k) { return k === 45 }           // hyphen, subtract
+ ,isMoneyChar: function(k) { return k === 36 }
+  
+  ,FilterPositiveInteger: function(e) { var k = e.which;
+                                        if (!(GlobalScript.isDigitOrInvisibleChar(k))) { e.preventDefault(); return false; } }
+  ,FilterSignedInteger:   function(e) { var k = e.which;
+                                        if (!(GlobalScript.isDigitOrInvisibleChar(k) ||
+                                              GlobalScript.isSignChar(k))) { e.preventDefault(); return false; } }
+  ,FilterPositiveFloat:   function(e) { var k = e.which; 
+                                        if (!(GlobalScript.isDigitOrInvisibleChar(k) ||
+                                              GlobalScript.isDecimalChar(k))) { e.preventDefault(); return false; } }
+  ,FilterSignedFloat:     function(e) { var k = e.which; 
+                                        if (!(GlobalScript.isDigitOrInvisibleChar(k) ||
+                                              GlobalScript.isDecimalChar(k) ||
+                                              GlobalScript.isSignChar(k))) { e.preventDefault(); return false; } }
+  ,FilterPositiveMoney:   function(e) { var k = e.which; 
+                                        if (!(GlobalScript.isDigitOrInvisibleChar(k) ||
+                                              GlobalScript.isMoneyChar(k))) { e.preventDefault(); return false; } }
+  ,FilterSignedMoney:     function(e) { var k = e.which; 
+                                        if (!(GlobalScript.isDigitOrInvisibleChar(k) ||
+                                              GlobalScript.isMoneyChar(k) ||
+                                              GlobalScript.isSignChar(k))) { e.preventDefault(); return false; } }
+  ,FilterPositiveFloatMoney: function(e) { var k = e.which; 
+                                           if (!(GlobalScript.isDigitOrInvisibleChar(k) ||
+                                                 GlobalScript.isMoneyChar(k) ||
+                                                 GlobalScript.isDecimalChar(k))) { e.preventDefault(); return false; } }
+  ,FilterSignedFloatMoney:   function(e) { var k = e.which; 
+                                           if (!(GlobalScript.isDigitOrInvisibleChar(k) ||
+                                                 GlobalScript.isMoneyChar(k) ||
+                                                 GlobalScript.isDecimalChar(k) ||
+                                                 GlobalScript.isSignChar(k))) { e.preventDefault(); return false; } }
+};
+
+ // aliases for compatability
+GlobalScript.FilterUnsignedInteger     = GlobalScript.FilterPositiveInteger; 
+GlobalScript.FilterUnsignedFloat       = GlobalScript.FilterPositiveFloat; 
+GlobalScript.FilterUnsignedMoney       = GlobalScript.FilterPositiveMoney; 
+GlobalScript.FilterUnsignedFloatMoney  = GlobalScript.FilterPositiveFloatMoney; 

@@ -1,0 +1,11 @@
+[t67]
+FileName1=t67.xml
+URL1=https://clients2.google.com/service/update2?cup2key=6:319805849&cup2hreq=8e0edbf82ae45be0771e93557d1f605b87a30862f947be9ad0922cec2e66b100
+Total=1
+RequestHeaderFile=t67_RequestHeader.txt
+RequestBodyFile=t67_RequestBody.txt
+ResponseHeaderFile=t67_ResponseHeader.txt
+ContentType=text/xml
+SnapshotXmlFile=snapshot_67.xml
+[ProtocolInfo]
+ProtocolId=QTWeb

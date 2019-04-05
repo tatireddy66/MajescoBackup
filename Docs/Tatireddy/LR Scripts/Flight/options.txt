@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-ID:\Tatireddy\LR Scripts\Flight
+-IC:\Program Files (x86)\HP\LoadRunner\include
+-ed:\tatireddy\lr scripts\flight\\logfile.log
+d:\tatireddy\lr scripts\flight\\combined_Flight.c
+d:\tatireddy\lr scripts\flight\\pre_cci.c

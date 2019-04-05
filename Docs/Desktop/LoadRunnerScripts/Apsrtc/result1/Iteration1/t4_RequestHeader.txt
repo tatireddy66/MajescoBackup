@@ -1,0 +1,13 @@
+POST http://www.apsrtconline.in/oprs-web/forward/booking/avail/services.do?txtJourneyDate=18/11/2017&startPlaceId=1386430615487&endPlaceId=14911&txtLinkJourneyDate=&ajaxAction=fw&qryType=0&X=1510893045771 HTTP/1.1
+Cookie: JSESSIONID=TpP0hTmJm2NMHnc5p2ndhhn8crP0DSRtW0HhR09ghmJgTBTBbn3qLyRVCqrW0p9n!1628198587!-1574871768
+Content-Type: application/x-www-form-urlencoded
+Referer: http://www.apsrtconline.in/oprs-web/avail/services.do
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+Accept-Encoding: gzip, deflate
+Accept-Language: en-IN
+Accept: */*
+Host: www.apsrtconline.in
+Content-Length: 59
+Proxy-Connection: Keep-Alive
+Pragma: no-cache
+

@@ -1,0 +1,212 @@
+﻿/****************************/
+/* BEGIN Text Styles for  "Mark Up Styles" DROPDOWN -- located in all publishing HTML fields */
+
+/*  DELETE TEXT STYLES FROM THIS STYLE SHEET AFTER THE NEW STYLE SHEET IS MOVED TO CERTIFICATION */
+
+
+/****************************/
+/*HEADINGS*/
+/*HEADING 1  Page Title*/
+.ms-rteElement-H1{
+		color:#007a85;
+		margin-top:0;
+		font-family:Arial, Helvetica, sans-serif;
+		font-size:22px;
+		list-style:none;
+		list-style-image:none;	
+		word-wrap: normal;
+}
+/*HEADING 2 Section Content Heading*/
+.ms-rteElement-H2{
+		color:#003366;
+		font-family:"proxima-nova-condensed-1","proxima-nova-condensed-2", "Arial Narrow"  !Important;
+		font-size:16px;
+		font-weight:bold;
+		border-bottom:1px #000000 solid;
+		width:100%;
+		text-align:left;
+}
+/*HEADING 3 Subheading*/
+.ms-rteElement-H3{
+		color:#007a85;
+		font-family:"proxima-nova-condensed-1","proxima-nova-condensed-2", "Arial Narrow"  !Important;
+		font-size:12px;
+		font-weight:bold;
+		margin-top:0;
+		padding-top:0;
+}
+/*HEADING 4 - Paragraph Subheading*/
+.ms-rteElement-H4{
+		color:#465264;
+		font-style:normal;
+		font-weight:bold;
+		font-size:12px;
+		font-family:Arial, Helvetica, sans-serif;
+		margin-bottom:8px;
+
+}
+h5.ms-rteelement-H5 {
+  -ms-name: "Heading 5";
+}
+
+h5.ms-rteelement-H5{
+		color:#007a85;
+		font-family:"proxima-nova-condensed-1","proxima-nova-condensed-2", "Arial Narrow"  !Important;
+		font-size:14px;
+		font-weight:bold;
+		margin-top:0;
+		padding-top:0;
+}
+h6.ms-rteelement-H6 {
+  -ms-name: "Callout Title Teal Proxima";
+}
+
+h6.ms-rteelement-H6{
+		color:#007a85;
+		font-family:"proxima-nova-condensed-1","proxima-nova-condensed-2", "Arial Narrow"  !Important;
+		font-size:12px;
+		font-weight:bold;
+		font-style:normal;
+		margin-top:0;
+		padding-top:0;
+
+}
+
+/*Colored Headings*/
+
+
+/*COLORED HEADING 1 - Introduction Text*/
+.ms-rteElement-H1B{
+		color:#007A85;
+		margin-top:0;
+		font-family:Arial, Helvetica, sans-serif;
+		font-size:14px;
+}
+/*COLORED HEADING 2 Side Bold Link*/
+.ms-rteElement-H2B{
+	color:#003366;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	font-weight:bold;
+
+}
+/*COLORED HEADING 3 Side text link*/
+.ms-rteElement-H3B{
+	color:#003366;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+
+
+}
+/*COLORED HEADING 4 - Homepage Paragraph Text*/
+.ms-rteElement-H4B{
+	color:#465264;
+	font-style:normal;
+	font-size:14px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+/*COLORED HEADING 5 - Search Results
+H5B.ms-rteelement-H5B {
+  -ms-name: "SubHeading";
+}
+H5B.ms-rteelement-H5B{
+		color:#007a85;
+		font-family:"proxima-nova-condensed-1","proxima-nova-condensed-2", "Arial Narrow"  !Important;
+		font-size:14px;
+		font-weight:bold;
+		margin-top:0;
+		padding-top:0;
+}
+h6B.ms-rteelement-H6B {
+  -ms-name: "SubHeading Teal 14 Bold";
+}
+
+h6B.ms-rteelement-H6B{
+		color:#007a85 !Important;
+		font-family:"proxima-nova-condensed-1","proxima-nova-condensed-2", "Arial Narrow"  !Important;
+		font-size:14px !Important;
+		font-weight:bold !Important;
+		margin-top:0 !Important;
+		padding-top:0 !Important;
+}*/
+
+
+/*PARAGRAPH*/
+.ms-rteElement-P{
+	font-size:12px;
+	padding:0px;
+	margin:0px;
+	color:#465264;
+	font-family:Arial, Helvetica, sans-serif;
+	padding-bottom:8px;
+
+}
+/*CALLOUT BOXES*/
+.ms-rteElement-Callout1{
+	color:#007a85;
+	background-color:#fff;
+	border:none;
+	/*border-top:#007a85 solid 10px;*/
+	float:none;
+	width:180px;
+	min-height:150px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:15px;
+	background-image:url('/Style%20Library/GAIG_CorporateMaster/images/gradient.gif');
+	background-repeat:repeat-x;
+	margin-right:20px;
+	margin-top:-2px; /*ensures*/
+	
+
+}
+/*Right Column Boxes (Agent Portal / Related Products)*/
+.ms-rteElement-Callout2{
+	color:#007a85;
+	background-color:#fff;
+	border:#999999 1px solid;
+	border-bottom:none;
+	font-family:Arial, Helvetica, sans-serif;
+	background-image:url('/Style%20Library/GAIG_CorporateMaster/images/gradient.gif');
+	background-repeat:repeat-x;
+	width:278px;
+	position:relative;
+	display:block;
+	float:left;
+	zoom:1;
+	margin-top:2px;
+}
+/*Video*/
+.ms-rteElement-Callout3{
+	color:#007a85;
+	background-color:#fff;
+	border:#999999 1px solid;
+	border-bottom:none;
+	font-family:Arial, Helvetica, sans-serif;
+	background-image:url('/Style%20Library/GAIG_CorporateMaster/images/gradient.gif');
+	background-repeat:repeat-x;
+	width:278px;
+	position:relative;
+	display:block;
+	float:left;
+	zoom:1;
+	margin-top:2px;
+}
+.ms-rteElement-Callout4{
+	background-color:#fff;
+	border:none;
+	color:#007a85;
+	border-top:#007a85 solid 7px;
+	float:none;
+	width:inherit;
+	min-height:150px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:15px;
+	background-image:url('/Style%20Library/GAIG_CorporateMaster/images/gradient.gif');
+	background-repeat:repeat-x;
+}
+
+
+/****************************/
+/* END HTML Mark Up Styles*/
+/****************************/
